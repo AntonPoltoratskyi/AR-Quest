@@ -97,12 +97,10 @@
 		141AC4011FC764D000200877 /* QuestPlatformMobileApp */ = {
 			isa = PBXGroup;
 			children = (
-				141AC4021FC764D000200877 /* AppDelegate.swift */,
-				141AC4041FC764D000200877 /* ViewController.swift */,
-				141AC4061FC764D000200877 /* Main.storyboard */,
-				141AC4091FC764D000200877 /* Assets.xcassets */,
-				141AC40B1FC764D000200877 /* LaunchScreen.storyboard */,
-				141AC40E1FC764D000200877 /* Info.plist */,
+				141AC4341FC7676200200877 /* ViewControllers */,
+				141AC4331FC7671E00200877 /* Storyboards */,
+				141AC4301FC766DA00200877 /* Application */,
+				141AC4321FC7670D00200877 /* Resources */,
 			);
 			path = QuestPlatformMobileApp;
 			sourceTree = "<group>";
@@ -123,6 +121,40 @@
 				141AC4241FC764D000200877 /* Info.plist */,
 			);
 			path = QuestPlatformMobileAppUITests;
+			sourceTree = "<group>";
+		};
+		141AC4301FC766DA00200877 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				141AC4021FC764D000200877 /* AppDelegate.swift */,
+				141AC40E1FC764D000200877 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		141AC4321FC7670D00200877 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				141AC4091FC764D000200877 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		141AC4331FC7671E00200877 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				141AC40B1FC764D000200877 /* LaunchScreen.storyboard */,
+				141AC4061FC764D000200877 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		141AC4341FC7676200200877 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				141AC4041FC764D000200877 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,7 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QuestPlatformMobileApp/Info.plist;
+				INFOPLIST_FILE = QuestPlatformMobileApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QuestPlatformMobileApp/Info.plist;
+				INFOPLIST_FILE = QuestPlatformMobileApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
