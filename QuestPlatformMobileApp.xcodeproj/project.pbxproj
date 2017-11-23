@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		141AC4031FC764D000200877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AC4021FC764D000200877 /* AppDelegate.swift */; };
+		141AC4051FC764D000200877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AC4041FC764D000200877 /* ViewController.swift */; };
+		141AC4081FC764D000200877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141AC4061FC764D000200877 /* Main.storyboard */; };
+		141AC40A1FC764D000200877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141AC4091FC764D000200877 /* Assets.xcassets */; };
+		141AC40D1FC764D000200877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141AC40B1FC764D000200877 /* LaunchScreen.storyboard */; };
+		141AC4181FC764D000200877 /* QuestPlatformMobileAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AC4171FC764D000200877 /* QuestPlatformMobileAppTests.swift */; };
+		141AC4231FC764D000200877 /* QuestPlatformMobileAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AC4221FC764D000200877 /* QuestPlatformMobileAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		141AC4141FC764D000200877 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 141AC3F71FC764CF00200877 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 141AC3FE1FC764CF00200877;
+			remoteInfo = QuestPlatformMobileApp;
+		};
+		141AC41F1FC764D000200877 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 141AC3F71FC764CF00200877 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 141AC3FE1FC764CF00200877;
+			remoteInfo = QuestPlatformMobileApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		141AC3FF1FC764D000200877 /* QuestPlatformMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestPlatformMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		141AC4021FC764D000200877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		141AC4041FC764D000200877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		141AC4071FC764D000200877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		141AC4091FC764D000200877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		141AC40C1FC764D000200877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		141AC40E1FC764D000200877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		141AC4131FC764D000200877 /* QuestPlatformMobileAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestPlatformMobileAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		141AC4171FC764D000200877 /* QuestPlatformMobileAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestPlatformMobileAppTests.swift; sourceTree = "<group>"; };
+		141AC4191FC764D000200877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		141AC41E1FC764D000200877 /* QuestPlatformMobileAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestPlatformMobileAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		141AC4221FC764D000200877 /* QuestPlatformMobileAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestPlatformMobileAppUITests.swift; sourceTree = "<group>"; };
+		141AC4241FC764D000200877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		141AC3FC1FC764CF00200877 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		141AC4101FC764D000200877 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		141AC41B1FC764D000200877 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		141AC3F61FC764CF00200877 = {
+			isa = PBXGroup;
+			children = (
+				141AC4011FC764D000200877 /* QuestPlatformMobileApp */,
+				141AC4161FC764D000200877 /* QuestPlatformMobileAppTests */,
+				141AC4211FC764D000200877 /* QuestPlatformMobileAppUITests */,
+				141AC4001FC764D000200877 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		141AC4001FC764D000200877 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				141AC3FF1FC764D000200877 /* QuestPlatformMobileApp.app */,
+				141AC4131FC764D000200877 /* QuestPlatformMobileAppTests.xctest */,
+				141AC41E1FC764D000200877 /* QuestPlatformMobileAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		141AC4011FC764D000200877 /* QuestPlatformMobileApp */ = {
+			isa = PBXGroup;
+			children = (
+				141AC4021FC764D000200877 /* AppDelegate.swift */,
+				141AC4041FC764D000200877 /* ViewController.swift */,
+				141AC4061FC764D000200877 /* Main.storyboard */,
+				141AC4091FC764D000200877 /* Assets.xcassets */,
+				141AC40B1FC764D000200877 /* LaunchScreen.storyboard */,
+				141AC40E1FC764D000200877 /* Info.plist */,
+			);
+			path = QuestPlatformMobileApp;
+			sourceTree = "<group>";
+		};
+		141AC4161FC764D000200877 /* QuestPlatformMobileAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				141AC4171FC764D000200877 /* QuestPlatformMobileAppTests.swift */,
+				141AC4191FC764D000200877 /* Info.plist */,
+			);
+			path = QuestPlatformMobileAppTests;
+			sourceTree = "<group>";
+		};
+		141AC4211FC764D000200877 /* QuestPlatformMobileAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				141AC4221FC764D000200877 /* QuestPlatformMobileAppUITests.swift */,
+				141AC4241FC764D000200877 /* Info.plist */,
+			);
+			path = QuestPlatformMobileAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		141AC3FE1FC764CF00200877 /* QuestPlatformMobileApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 141AC4271FC764D000200877 /* Build configuration list for PBXNativeTarget "QuestPlatformMobileApp" */;
+			buildPhases = (
+				141AC3FB1FC764CF00200877 /* Sources */,
+				141AC3FC1FC764CF00200877 /* Frameworks */,
+				141AC3FD1FC764CF00200877 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuestPlatformMobileApp;
+			productName = QuestPlatformMobileApp;
+			productReference = 141AC3FF1FC764D000200877 /* QuestPlatformMobileApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		141AC4121FC764D000200877 /* QuestPlatformMobileAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 141AC42A1FC764D000200877 /* Build configuration list for PBXNativeTarget "QuestPlatformMobileAppTests" */;
+			buildPhases = (
+				141AC40F1FC764D000200877 /* Sources */,
+				141AC4101FC764D000200877 /* Frameworks */,
+				141AC4111FC764D000200877 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				141AC4151FC764D000200877 /* PBXTargetDependency */,
+			);
+			name = QuestPlatformMobileAppTests;
+			productName = QuestPlatformMobileAppTests;
+			productReference = 141AC4131FC764D000200877 /* QuestPlatformMobileAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		141AC41D1FC764D000200877 /* QuestPlatformMobileAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 141AC42D1FC764D000200877 /* Build configuration list for PBXNativeTarget "QuestPlatformMobileAppUITests" */;
+			buildPhases = (
+				141AC41A1FC764D000200877 /* Sources */,
+				141AC41B1FC764D000200877 /* Frameworks */,
+				141AC41C1FC764D000200877 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				141AC4201FC764D000200877 /* PBXTargetDependency */,
+			);
+			name = QuestPlatformMobileAppUITests;
+			productName = QuestPlatformMobileAppUITests;
+			productReference = 141AC41E1FC764D000200877 /* QuestPlatformMobileAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		141AC3F71FC764CF00200877 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Anton Poltoratskyi";
+				TargetAttributes = {
+					141AC3FE1FC764CF00200877 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					141AC4121FC764D000200877 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 141AC3FE1FC764CF00200877;
+					};
+					141AC41D1FC764D000200877 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 141AC3FE1FC764CF00200877;
+					};
+				};
+			};
+			buildConfigurationList = 141AC3FA1FC764CF00200877 /* Build configuration list for PBXProject "QuestPlatformMobileApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 141AC3F61FC764CF00200877;
+			productRefGroup = 141AC4001FC764D000200877 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				141AC3FE1FC764CF00200877 /* QuestPlatformMobileApp */,
+				141AC4121FC764D000200877 /* QuestPlatformMobileAppTests */,
+				141AC41D1FC764D000200877 /* QuestPlatformMobileAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		141AC3FD1FC764CF00200877 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				141AC40D1FC764D000200877 /* LaunchScreen.storyboard in Resources */,
+				141AC40A1FC764D000200877 /* Assets.xcassets in Resources */,
+				141AC4081FC764D000200877 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		141AC4111FC764D000200877 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		141AC41C1FC764D000200877 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		141AC3FB1FC764CF00200877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				141AC4051FC764D000200877 /* ViewController.swift in Sources */,
+				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		141AC40F1FC764D000200877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				141AC4181FC764D000200877 /* QuestPlatformMobileAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		141AC41A1FC764D000200877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				141AC4231FC764D000200877 /* QuestPlatformMobileAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		141AC4151FC764D000200877 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 141AC3FE1FC764CF00200877 /* QuestPlatformMobileApp */;
+			targetProxy = 141AC4141FC764D000200877 /* PBXContainerItemProxy */;
+		};
+		141AC4201FC764D000200877 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 141AC3FE1FC764CF00200877 /* QuestPlatformMobileApp */;
+			targetProxy = 141AC41F1FC764D000200877 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		141AC4061FC764D000200877 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				141AC4071FC764D000200877 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		141AC40B1FC764D000200877 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				141AC40C1FC764D000200877 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		141AC4251FC764D000200877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		141AC4261FC764D000200877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		141AC4281FC764D000200877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuestPlatformMobileApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		141AC4291FC764D000200877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuestPlatformMobileApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		141AC42B1FC764D000200877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuestPlatformMobileAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuestPlatformMobileApp.app/QuestPlatformMobileApp";
+			};
+			name = Debug;
+		};
+		141AC42C1FC764D000200877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuestPlatformMobileAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuestPlatformMobileApp.app/QuestPlatformMobileApp";
+			};
+			name = Release;
+		};
+		141AC42E1FC764D000200877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuestPlatformMobileAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuestPlatformMobileApp;
+			};
+			name = Debug;
+		};
+		141AC42F1FC764D000200877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuestPlatformMobileAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.poltoratskyi.QuestPlatformMobileAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuestPlatformMobileApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		141AC3FA1FC764CF00200877 /* Build configuration list for PBXProject "QuestPlatformMobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141AC4251FC764D000200877 /* Debug */,
+				141AC4261FC764D000200877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		141AC4271FC764D000200877 /* Build configuration list for PBXNativeTarget "QuestPlatformMobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141AC4281FC764D000200877 /* Debug */,
+				141AC4291FC764D000200877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		141AC42A1FC764D000200877 /* Build configuration list for PBXNativeTarget "QuestPlatformMobileAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141AC42B1FC764D000200877 /* Debug */,
+				141AC42C1FC764D000200877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		141AC42D1FC764D000200877 /* Build configuration list for PBXNativeTarget "QuestPlatformMobileAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141AC42E1FC764D000200877 /* Debug */,
+				141AC42F1FC764D000200877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 141AC3F71FC764CF00200877 /* Project object */;
+}
