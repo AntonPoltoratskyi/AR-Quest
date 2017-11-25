@@ -14,6 +14,32 @@
 		141AC40D1FC764D000200877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141AC40B1FC764D000200877 /* LaunchScreen.storyboard */; };
 		141AC4181FC764D000200877 /* QuestPlatformMobileAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AC4171FC764D000200877 /* QuestPlatformMobileAppTests.swift */; };
 		141AC4231FC764D000200877 /* QuestPlatformMobileAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141AC4221FC764D000200877 /* QuestPlatformMobileAppUITests.swift */; };
+		14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F671FC96382001EDEAB /* Bundle.swift */; };
+		14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F691FC96382001EDEAB /* DispatchQueue.swift */; };
+		14FE2F861FC96382001EDEAB /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F6B1FC96382001EDEAB /* Dictionary.swift */; };
+		14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F6D1FC96382001EDEAB /* FileManager.swift */; };
+		14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F6F1FC96382001EDEAB /* Geometry.swift */; };
+		14FE2F891FC96382001EDEAB /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F711FC96382001EDEAB /* Integer.swift */; };
+		14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F731FC96382001EDEAB /* Sequence.swift */; };
+		14FE2F8C1FC96382001EDEAB /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F781FC96382001EDEAB /* CellViewModel.swift */; };
+		14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */; };
+		14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */; };
+		14FE2F8F1FC96382001EDEAB /* ClosureTapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7D1FC96382001EDEAB /* ClosureTapRecognizer.swift */; };
+		14FE2F901FC96382001EDEAB /* KeyboardInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7F1FC96382001EDEAB /* KeyboardInteracting.swift */; };
+		14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */; };
+		14FE2F921FC96382001EDEAB /* UIResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F831FC96382001EDEAB /* UIResources.swift */; };
+		14FE2F961FC96466001EDEAB /* ApplicationCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F941FC96466001EDEAB /* ApplicationCore.swift */; };
+		14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F951FC96466001EDEAB /* ApplicationService.swift */; };
+		14FE2FA21FC9653B001EDEAB /* DebugSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9A1FC9653B001EDEAB /* DebugSettings.swift */; };
+		14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9C1FC9653B001EDEAB /* Device.swift */; };
+		14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */; };
+		14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9F1FC9653B001EDEAB /* FatalErrors.swift */; };
+		14FE2FA61FC9653B001EDEAB /* PropertyListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FA11FC9653B001EDEAB /* PropertyListParser.swift */; };
+		14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FA91FC9661E001EDEAB /* LocationService.swift */; };
+		14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */; };
+		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
+		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
+		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +73,34 @@
 		141AC41E1FC764D000200877 /* QuestPlatformMobileAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestPlatformMobileAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		141AC4221FC764D000200877 /* QuestPlatformMobileAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestPlatformMobileAppUITests.swift; sourceTree = "<group>"; };
 		141AC4241FC764D000200877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FE2F671FC96382001EDEAB /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		14FE2F691FC96382001EDEAB /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		14FE2F6B1FC96382001EDEAB /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		14FE2F6D1FC96382001EDEAB /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		14FE2F6F1FC96382001EDEAB /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		14FE2F711FC96382001EDEAB /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
+		14FE2F731FC96382001EDEAB /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		14FE2F781FC96382001EDEAB /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintUtils.swift; sourceTree = "<group>"; };
+		14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		14FE2F7D1FC96382001EDEAB /* ClosureTapRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTapRecognizer.swift; sourceTree = "<group>"; };
+		14FE2F7F1FC96382001EDEAB /* KeyboardInteracting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInteracting.swift; sourceTree = "<group>"; };
+		14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		14FE2F831FC96382001EDEAB /* UIResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResources.swift; sourceTree = "<group>"; };
+		14FE2F941FC96466001EDEAB /* ApplicationCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCore.swift; sourceTree = "<group>"; };
+		14FE2F951FC96466001EDEAB /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		14FE2F9A1FC9653B001EDEAB /* DebugSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugSettings.swift; sourceTree = "<group>"; };
+		14FE2F9C1FC9653B001EDEAB /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		14FE2F9F1FC9653B001EDEAB /* FatalErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatalErrors.swift; sourceTree = "<group>"; };
+		14FE2FA11FC9653B001EDEAB /* PropertyListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListParser.swift; sourceTree = "<group>"; };
+		14FE2FA91FC9661E001EDEAB /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
+		14FE2FB01FC96636001EDEAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
+		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +136,8 @@
 				141AC4161FC764D000200877 /* QuestPlatformMobileAppTests */,
 				141AC4211FC764D000200877 /* QuestPlatformMobileAppUITests */,
 				141AC4001FC764D000200877 /* Products */,
+				8EEECCC7E04F44808B03638D /* Pods */,
+				A44D1FF1E4D2765CE428CC05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +154,9 @@
 		141AC4011FC764D000200877 /* QuestPlatformMobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				14FE2F981FC9653B001EDEAB /* Utils */,
+				14FE2F651FC96382001EDEAB /* Extensions */,
+				14FE2FA71FC9661E001EDEAB /* Services */,
 				141AC4341FC7676200200877 /* ViewControllers */,
 				141AC4331FC7671E00200877 /* Storyboards */,
 				141AC4301FC766DA00200877 /* Application */,
@@ -127,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				141AC4021FC764D000200877 /* AppDelegate.swift */,
+				14FE2F931FC96466001EDEAB /* Services */,
 				141AC40E1FC764D000200877 /* Info.plist */,
 			);
 			path = Application;
@@ -157,6 +218,236 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		14FE2F651FC96382001EDEAB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F661FC96382001EDEAB /* Bundle */,
+				14FE2F681FC96382001EDEAB /* Concurrency */,
+				14FE2F6A1FC96382001EDEAB /* Dictionary */,
+				14FE2F6C1FC96382001EDEAB /* Files */,
+				14FE2F6E1FC96382001EDEAB /* Geometry */,
+				14FE2F701FC96382001EDEAB /* Integer */,
+				14FE2F721FC96382001EDEAB /* Sequence */,
+				14FE2F761FC96382001EDEAB /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		14FE2F661FC96382001EDEAB /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F671FC96382001EDEAB /* Bundle.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		14FE2F681FC96382001EDEAB /* Concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F691FC96382001EDEAB /* DispatchQueue.swift */,
+			);
+			path = Concurrency;
+			sourceTree = "<group>";
+		};
+		14FE2F6A1FC96382001EDEAB /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F6B1FC96382001EDEAB /* Dictionary.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		14FE2F6C1FC96382001EDEAB /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F6D1FC96382001EDEAB /* FileManager.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		14FE2F6E1FC96382001EDEAB /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F6F1FC96382001EDEAB /* Geometry.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		14FE2F701FC96382001EDEAB /* Integer */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F711FC96382001EDEAB /* Integer.swift */,
+			);
+			path = Integer;
+			sourceTree = "<group>";
+		};
+		14FE2F721FC96382001EDEAB /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F731FC96382001EDEAB /* Sequence.swift */,
+			);
+			path = Sequence;
+			sourceTree = "<group>";
+		};
+		14FE2F761FC96382001EDEAB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F771FC96382001EDEAB /* Cells */,
+				14FE2F791FC96382001EDEAB /* Constraints */,
+				14FE2F7C1FC96382001EDEAB /* Gestures */,
+				14FE2F7E1FC96382001EDEAB /* Keyboard */,
+				14FE2F801FC96382001EDEAB /* Navigation */,
+				14FE2F821FC96382001EDEAB /* UIResources */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		14FE2F771FC96382001EDEAB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F781FC96382001EDEAB /* CellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		14FE2F791FC96382001EDEAB /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */,
+				14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		14FE2F7C1FC96382001EDEAB /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F7D1FC96382001EDEAB /* ClosureTapRecognizer.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		14FE2F7E1FC96382001EDEAB /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F7F1FC96382001EDEAB /* KeyboardInteracting.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		14FE2F801FC96382001EDEAB /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		14FE2F821FC96382001EDEAB /* UIResources */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F831FC96382001EDEAB /* UIResources.swift */,
+			);
+			path = UIResources;
+			sourceTree = "<group>";
+		};
+		14FE2F931FC96466001EDEAB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F941FC96466001EDEAB /* ApplicationCore.swift */,
+				14FE2F951FC96466001EDEAB /* ApplicationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		14FE2F981FC9653B001EDEAB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F991FC9653B001EDEAB /* Debug */,
+				14FE2F9B1FC9653B001EDEAB /* Device */,
+				14FE2F9D1FC9653B001EDEAB /* Errors */,
+				14FE2FA01FC9653B001EDEAB /* PropertyListParser */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		14FE2F991FC9653B001EDEAB /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F9A1FC9653B001EDEAB /* DebugSettings.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		14FE2F9B1FC9653B001EDEAB /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F9C1FC9653B001EDEAB /* Device.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		14FE2F9D1FC9653B001EDEAB /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */,
+				14FE2F9F1FC9653B001EDEAB /* FatalErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		14FE2FA01FC9653B001EDEAB /* PropertyListParser */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2FA11FC9653B001EDEAB /* PropertyListParser.swift */,
+			);
+			path = PropertyListParser;
+			sourceTree = "<group>";
+		};
+		14FE2FA71FC9661E001EDEAB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2FB01FC96636001EDEAB /* Result.swift */,
+				14FE2FA81FC9661E001EDEAB /* Location */,
+				14FE2FAA1FC9661E001EDEAB /* Session */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		14FE2FA81FC9661E001EDEAB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2FA91FC9661E001EDEAB /* LocationService.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		14FE2FAA1FC9661E001EDEAB /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */,
+				14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		8EEECCC7E04F44808B03638D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */,
+				82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A44D1FF1E4D2765CE428CC05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +455,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 141AC4271FC764D000200877 /* Build configuration list for PBXNativeTarget "QuestPlatformMobileApp" */;
 			buildPhases = (
+				97851B69AEC0105FEBD4BEEB /* [CP] Check Pods Manifest.lock */,
 				141AC3FB1FC764CF00200877 /* Sources */,
 				141AC3FC1FC764CF00200877 /* Frameworks */,
 				141AC3FD1FC764CF00200877 /* Resources */,
+				0429F5904CA3FC8C085D8054 /* [CP] Embed Pods Frameworks */,
+				B9682F26CC829EE0985A6A10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,13 +580,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0429F5904CA3FC8C085D8054 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97851B69AEC0105FEBD4BEEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9682F26CC829EE0985A6A10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		141AC3FB1FC764CF00200877 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
+				14FE2F921FC96382001EDEAB /* UIResources.swift in Sources */,
 				141AC4051FC764D000200877 /* ViewController.swift in Sources */,
+				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
+				14FE2FA21FC9653B001EDEAB /* DebugSettings.swift in Sources */,
+				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
+				14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */,
+				14FE2FA61FC9653B001EDEAB /* PropertyListParser.swift in Sources */,
+				14FE2F8C1FC96382001EDEAB /* CellViewModel.swift in Sources */,
+				14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */,
+				14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */,
+				14FE2F861FC96382001EDEAB /* Dictionary.swift in Sources */,
+				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
+				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
+				14FE2F901FC96382001EDEAB /* KeyboardInteracting.swift in Sources */,
+				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
+				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
+				14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */,
+				14FE2F961FC96466001EDEAB /* ApplicationCore.swift in Sources */,
+				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
+				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
+				14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */,
+				14FE2F8F1FC96382001EDEAB /* ClosureTapRecognizer.swift in Sources */,
+				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
+				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
+				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +823,7 @@
 		};
 		141AC4281FC764D000200877 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +838,7 @@
 		};
 		141AC4291FC764D000200877 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
