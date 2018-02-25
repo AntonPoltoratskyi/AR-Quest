@@ -9,17 +9,23 @@
 import Foundation
 
 extension Bundle {
-    var bundleIdentifier: String {
+    
+    public var bundleIdentifier: String {
         return object(forInfoDictionaryKey: kCFBundleIdentifierKey as String) as! String
     }
-    var bundleName: String {
+    
+    /// Project bundle name
+    public var bundleName: String {
         return object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String
     }
-    var displayName: String {
+    
+    /// App name which displaying in Springboard
+    public var displayName: String {
         let displayName = object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
         return displayName ?? self.bundleName
     }
-    var buildVersion: String? {
+    
+    public var buildVersion: String? {
         return object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String
     }
 }

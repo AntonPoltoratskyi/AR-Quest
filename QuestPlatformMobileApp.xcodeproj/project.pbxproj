@@ -21,13 +21,9 @@
 		14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F6F1FC96382001EDEAB /* Geometry.swift */; };
 		14FE2F891FC96382001EDEAB /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F711FC96382001EDEAB /* Integer.swift */; };
 		14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F731FC96382001EDEAB /* Sequence.swift */; };
-		14FE2F8C1FC96382001EDEAB /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F781FC96382001EDEAB /* CellViewModel.swift */; };
 		14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */; };
 		14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */; };
-		14FE2F8F1FC96382001EDEAB /* ClosureTapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7D1FC96382001EDEAB /* ClosureTapRecognizer.swift */; };
-		14FE2F901FC96382001EDEAB /* KeyboardInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7F1FC96382001EDEAB /* KeyboardInteracting.swift */; };
 		14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */; };
-		14FE2F921FC96382001EDEAB /* UIResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F831FC96382001EDEAB /* UIResources.swift */; };
 		14FE2F961FC96466001EDEAB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F941FC96466001EDEAB /* Application.swift */; };
 		14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F951FC96466001EDEAB /* ApplicationService.swift */; };
 		14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */; };
@@ -41,6 +37,18 @@
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
+		853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4BD2042BF8B00E82595 /* ClosureGestureRecognizer.swift */; };
+		853DD4C12042BF8B00E82595 /* UIViewController+KeyboardHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4BE2042BF8B00E82595 /* UIViewController+KeyboardHandling.swift */; };
+		853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4BF2042BF8B00E82595 /* KeyboardInteracting.swift */; };
+		853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4C52042C3BF00E82595 /* ClosureTapRecognizer.swift */; };
+		853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D12042C4E900E82595 /* UITableView+ReusableCell.swift */; };
+		853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D22042C4E900E82595 /* UICollectionView+ReusableCell.swift */; };
+		853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D42042C4E900E82595 /* MKMapView+ViewModels.swift */; };
+		853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D52042C4E900E82595 /* UITableView+ViewModels.swift */; };
+		853DD4DE2042C4E900E82595 /* UICollectionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D62042C4E900E82595 /* UICollectionView+ViewModel.swift */; };
+		853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D72042C4E900E82595 /* CellViewModel.swift */; };
+		853DD4E02042C4E900E82595 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D82042C4E900E82595 /* Reusable.swift */; };
+		853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4D92042C4E900E82595 /* XibInitializable.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,13 +90,9 @@
 		14FE2F6F1FC96382001EDEAB /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		14FE2F711FC96382001EDEAB /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		14FE2F731FC96382001EDEAB /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		14FE2F781FC96382001EDEAB /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintUtils.swift; sourceTree = "<group>"; };
 		14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
-		14FE2F7D1FC96382001EDEAB /* ClosureTapRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTapRecognizer.swift; sourceTree = "<group>"; };
-		14FE2F7F1FC96382001EDEAB /* KeyboardInteracting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInteracting.swift; sourceTree = "<group>"; };
 		14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
-		14FE2F831FC96382001EDEAB /* UIResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResources.swift; sourceTree = "<group>"; };
 		14FE2F941FC96466001EDEAB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		14FE2F951FC96466001EDEAB /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugOptions.swift; sourceTree = "<group>"; };
@@ -103,6 +107,18 @@
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
+		853DD4BD2042BF8B00E82595 /* ClosureGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureGestureRecognizer.swift; sourceTree = "<group>"; };
+		853DD4BE2042BF8B00E82595 /* UIViewController+KeyboardHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardHandling.swift"; sourceTree = "<group>"; };
+		853DD4BF2042BF8B00E82595 /* KeyboardInteracting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInteracting.swift; sourceTree = "<group>"; };
+		853DD4C52042C3BF00E82595 /* ClosureTapRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureTapRecognizer.swift; sourceTree = "<group>"; };
+		853DD4D12042C4E900E82595 /* UITableView+ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableCell.swift"; sourceTree = "<group>"; };
+		853DD4D22042C4E900E82595 /* UICollectionView+ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableCell.swift"; sourceTree = "<group>"; };
+		853DD4D42042C4E900E82595 /* MKMapView+ViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+ViewModels.swift"; sourceTree = "<group>"; };
+		853DD4D52042C4E900E82595 /* UITableView+ViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+ViewModels.swift"; sourceTree = "<group>"; };
+		853DD4D62042C4E900E82595 /* UICollectionView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ViewModel.swift"; sourceTree = "<group>"; };
+		853DD4D72042C4E900E82595 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		853DD4D82042C4E900E82595 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		853DD4D92042C4E900E82595 /* XibInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibInitializable.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,13 +239,8 @@
 		14FE2F651FC96382001EDEAB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2F661FC96382001EDEAB /* Bundle */,
-				14FE2F681FC96382001EDEAB /* Concurrency */,
-				14FE2F6A1FC96382001EDEAB /* Dictionary */,
-				14FE2F6C1FC96382001EDEAB /* Files */,
-				14FE2F6E1FC96382001EDEAB /* Geometry */,
-				14FE2F701FC96382001EDEAB /* Integer */,
-				14FE2F721FC96382001EDEAB /* Sequence */,
+				853DD4B92042BE5000E82595 /* Standart Library */,
+				853DD4BA2042BE8500E82595 /* Foundation */,
 				14FE2F761FC96382001EDEAB /* UIKit */,
 			);
 			path = Extensions;
@@ -295,11 +306,12 @@
 			isa = PBXGroup;
 			children = (
 				14FE2F771FC96382001EDEAB /* Cells */,
-				14FE2F791FC96382001EDEAB /* Constraints */,
-				14FE2F7C1FC96382001EDEAB /* Gestures */,
-				14FE2F7E1FC96382001EDEAB /* Keyboard */,
-				14FE2F801FC96382001EDEAB /* Navigation */,
+				853DD4C42042BFD000E82595 /* Keyboard */,
+				853DD4C72042C3F700E82595 /* Gestures */,
 				14FE2F821FC96382001EDEAB /* UIResources */,
+				14FE2F6E1FC96382001EDEAB /* Geometry */,
+				14FE2F801FC96382001EDEAB /* Navigation */,
+				14FE2F791FC96382001EDEAB /* Layout */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -307,34 +319,20 @@
 		14FE2F771FC96382001EDEAB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2F781FC96382001EDEAB /* CellViewModel.swift */,
+				853DD4D82042C4E900E82595 /* Reusable.swift */,
+				853DD4D32042C4E900E82595 /* ViewModels */,
+				853DD4D02042C4E900E82595 /* DirectCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		14FE2F791FC96382001EDEAB /* Constraints */ = {
+		14FE2F791FC96382001EDEAB /* Layout */ = {
 			isa = PBXGroup;
 			children = (
 				14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */,
 				14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */,
 			);
-			path = Constraints;
-			sourceTree = "<group>";
-		};
-		14FE2F7C1FC96382001EDEAB /* Gestures */ = {
-			isa = PBXGroup;
-			children = (
-				14FE2F7D1FC96382001EDEAB /* ClosureTapRecognizer.swift */,
-			);
-			path = Gestures;
-			sourceTree = "<group>";
-		};
-		14FE2F7E1FC96382001EDEAB /* Keyboard */ = {
-			isa = PBXGroup;
-			children = (
-				14FE2F7F1FC96382001EDEAB /* KeyboardInteracting.swift */,
-			);
-			path = Keyboard;
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		14FE2F801FC96382001EDEAB /* Navigation */ = {
@@ -348,7 +346,7 @@
 		14FE2F821FC96382001EDEAB /* UIResources */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2F831FC96382001EDEAB /* UIResources.swift */,
+				853DD4D92042C4E900E82595 /* XibInitializable.swift */,
 			);
 			path = UIResources;
 			sourceTree = "<group>";
@@ -451,6 +449,64 @@
 				141AC40E1FC764D000200877 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		853DD4B92042BE5000E82595 /* Standart Library */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F6A1FC96382001EDEAB /* Dictionary */,
+				14FE2F701FC96382001EDEAB /* Integer */,
+				14FE2F721FC96382001EDEAB /* Sequence */,
+			);
+			path = "Standart Library";
+			sourceTree = "<group>";
+		};
+		853DD4BA2042BE8500E82595 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2F661FC96382001EDEAB /* Bundle */,
+				14FE2F6C1FC96382001EDEAB /* Files */,
+				14FE2F681FC96382001EDEAB /* Concurrency */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		853DD4C42042BFD000E82595 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4C52042C3BF00E82595 /* ClosureTapRecognizer.swift */,
+				853DD4BF2042BF8B00E82595 /* KeyboardInteracting.swift */,
+				853DD4BE2042BF8B00E82595 /* UIViewController+KeyboardHandling.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		853DD4C72042C3F700E82595 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4BD2042BF8B00E82595 /* ClosureGestureRecognizer.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		853DD4D02042C4E900E82595 /* DirectCell */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4D12042C4E900E82595 /* UITableView+ReusableCell.swift */,
+				853DD4D22042C4E900E82595 /* UICollectionView+ReusableCell.swift */,
+			);
+			path = DirectCell;
+			sourceTree = "<group>";
+		};
+		853DD4D32042C4E900E82595 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4D72042C4E900E82595 /* CellViewModel.swift */,
+				853DD4D52042C4E900E82595 /* UITableView+ViewModels.swift */,
+				853DD4D62042C4E900E82595 /* UICollectionView+ViewModel.swift */,
+				853DD4D42042C4E900E82595 /* MKMapView+ViewModels.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
@@ -661,32 +717,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
-				14FE2F921FC96382001EDEAB /* UIResources.swift in Sources */,
+				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
+				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				141AC4051FC764D000200877 /* ViewController.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
+				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
 				14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */,
-				14FE2F8C1FC96382001EDEAB /* CellViewModel.swift in Sources */,
+				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
 				14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */,
 				14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */,
 				14FE2F861FC96382001EDEAB /* Dictionary.swift in Sources */,
+				853DD4DE2042C4E900E82595 /* UICollectionView+ViewModel.swift in Sources */,
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
-				14FE2F901FC96382001EDEAB /* KeyboardInteracting.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */,
+				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* Application.swift in Sources */,
+				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
+				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
+				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
+				853DD4C12042BF8B00E82595 /* UIViewController+KeyboardHandling.swift in Sources */,
 				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
+				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
 				14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */,
-				14FE2F8F1FC96382001EDEAB /* ClosureTapRecognizer.swift in Sources */,
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
