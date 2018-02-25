@@ -2,7 +2,7 @@
 //  SessionStorage.swift
 //  QuestPlatformMobileApp
 //
-//  Created by Yaroslav Kolesnik on 7/7/17.
+//  Created by Anton Poltoratskyi on 7/7/17.
 //  Copyright © 2017 Anton Poltoratskyi. All rights reserved.
 //
 
