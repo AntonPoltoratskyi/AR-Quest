@@ -22,8 +22,7 @@
 		14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */; };
 		14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */; };
 		14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */; };
-		14FE2F961FC96466001EDEAB /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F941FC96466001EDEAB /* Application.swift */; };
-		14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F951FC96466001EDEAB /* ApplicationService.swift */; };
+		14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F941FC96466001EDEAB /* AppDelegateProxy.swift */; };
 		14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */; };
 		14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9C1FC9653B001EDEAB /* Device.swift */; };
 		14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */; };
@@ -110,8 +109,7 @@
 		14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintUtils.swift; sourceTree = "<group>"; };
 		14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
-		14FE2F941FC96466001EDEAB /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		14FE2F951FC96466001EDEAB /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		14FE2F941FC96466001EDEAB /* AppDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateProxy.swift; sourceTree = "<group>"; };
 		14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugOptions.swift; sourceTree = "<group>"; };
 		14FE2F9C1FC9653B001EDEAB /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
@@ -244,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				141AC4021FC764D000200877 /* AppDelegate.swift */,
+				14FE2F941FC96466001EDEAB /* AppDelegateProxy.swift */,
 				14FE2F931FC96466001EDEAB /* Services */,
 			);
 			path = Application;
@@ -383,8 +382,6 @@
 		14FE2F931FC96466001EDEAB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2F941FC96466001EDEAB /* Application.swift */,
-				14FE2F951FC96466001EDEAB /* ApplicationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -866,10 +863,9 @@
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
-				14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
-				14FE2F961FC96466001EDEAB /* Application.swift in Sources */,
+				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				853DD4F62042CA1800E82595 /* ResponseRepresentable.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,

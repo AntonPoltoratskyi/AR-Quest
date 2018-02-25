@@ -9,7 +9,11 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: Application {
+class AppDelegate: AppDelegateProxy {
+    
+    public override lazy var services: [ApplicationService] = {
+        return []
+    }()
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         setupViewHierarchy()
