@@ -30,15 +30,17 @@
 		14FE2F921FC96382001EDEAB /* UIResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F831FC96382001EDEAB /* UIResources.swift */; };
 		14FE2F961FC96466001EDEAB /* ApplicationCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F941FC96466001EDEAB /* ApplicationCore.swift */; };
 		14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F951FC96466001EDEAB /* ApplicationService.swift */; };
-		14FE2FA21FC9653B001EDEAB /* DebugSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9A1FC9653B001EDEAB /* DebugSettings.swift */; };
+		14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */; };
 		14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9C1FC9653B001EDEAB /* Device.swift */; };
 		14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */; };
 		14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9F1FC9653B001EDEAB /* FatalErrors.swift */; };
-		14FE2FA61FC9653B001EDEAB /* PropertyListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FA11FC9653B001EDEAB /* PropertyListParser.swift */; };
 		14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FA91FC9661E001EDEAB /* LocationService.swift */; };
 		14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */; };
 		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
 		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
+		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
+		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
+		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,16 +91,18 @@
 		14FE2F831FC96382001EDEAB /* UIResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResources.swift; sourceTree = "<group>"; };
 		14FE2F941FC96466001EDEAB /* ApplicationCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCore.swift; sourceTree = "<group>"; };
 		14FE2F951FC96466001EDEAB /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
-		14FE2F9A1FC9653B001EDEAB /* DebugSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugSettings.swift; sourceTree = "<group>"; };
+		14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugOptions.swift; sourceTree = "<group>"; };
 		14FE2F9C1FC9653B001EDEAB /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 		14FE2F9F1FC9653B001EDEAB /* FatalErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatalErrors.swift; sourceTree = "<group>"; };
-		14FE2FA11FC9653B001EDEAB /* PropertyListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListParser.swift; sourceTree = "<group>"; };
 		14FE2FA91FC9661E001EDEAB /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		14FE2FB01FC96636001EDEAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
+		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
+		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
+		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -364,9 +368,9 @@
 			isa = PBXGroup;
 			children = (
 				14FE2F991FC9653B001EDEAB /* Debug */,
+				14FE2F9D1FC9653B001EDEAB /* ErrorHandling */,
 				14FE2F9B1FC9653B001EDEAB /* Device */,
-				14FE2F9D1FC9653B001EDEAB /* Errors */,
-				14FE2FA01FC9653B001EDEAB /* PropertyListParser */,
+				14FE2FA01FC9653B001EDEAB /* PropertyList */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -374,7 +378,9 @@
 		14FE2F991FC9653B001EDEAB /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2F9A1FC9653B001EDEAB /* DebugSettings.swift */,
+				853DD4B12042B51300E82595 /* DebugFormatter.swift */,
+				14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */,
+				853DD4B32042B74D00E82595 /* DebugLogs.swift */,
 			);
 			path = Debug;
 			sourceTree = "<group>";
@@ -387,21 +393,21 @@
 			path = Device;
 			sourceTree = "<group>";
 		};
-		14FE2F9D1FC9653B001EDEAB /* Errors */ = {
+		14FE2F9D1FC9653B001EDEAB /* ErrorHandling */ = {
 			isa = PBXGroup;
 			children = (
 				14FE2F9E1FC9653B001EDEAB /* ErrorHandling.swift */,
 				14FE2F9F1FC9653B001EDEAB /* FatalErrors.swift */,
 			);
-			path = Errors;
+			path = ErrorHandling;
 			sourceTree = "<group>";
 		};
-		14FE2FA01FC9653B001EDEAB /* PropertyListParser */ = {
+		14FE2FA01FC9653B001EDEAB /* PropertyList */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2FA11FC9653B001EDEAB /* PropertyListParser.swift */,
+				853DD4B52042B7EB00E82595 /* PropertyList.swift */,
 			);
-			path = PropertyListParser;
+			path = PropertyList;
 			sourceTree = "<group>";
 		};
 		14FE2FA71FC9661E001EDEAB /* Services */ = {
@@ -587,9 +593,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -602,13 +611,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuestPlatformMobileApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9682F26CC829EE0985A6A10 /* [CP] Copy Pods Resources */ = {
@@ -633,14 +645,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				14FE2F921FC96382001EDEAB /* UIResources.swift in Sources */,
 				141AC4051FC764D000200877 /* ViewController.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
-				14FE2FA21FC9653B001EDEAB /* DebugSettings.swift in Sources */,
+				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
+				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
+				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */,
-				14FE2FA61FC9653B001EDEAB /* PropertyListParser.swift in Sources */,
 				14FE2F8C1FC96382001EDEAB /* CellViewModel.swift in Sources */,
 				14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */,
 				14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */,

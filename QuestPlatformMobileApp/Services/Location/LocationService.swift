@@ -146,12 +146,12 @@ extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
-            debugPrint("Access to location not determined", inCase: .locationUpdates)
+            debugPrint("Access to location not determined", inCase: .location)
         case .restricted, .denied:
-            debugPrint("Access to location denied", inCase: .locationUpdates)
+            debugPrint("Access to location denied", inCase: .location)
             self.state = .none
         case .authorizedAlways, .authorizedWhenInUse:
-            debugPrint("Access to location granted", inCase: .locationUpdates)
+            debugPrint("Access to location granted", inCase: .location)
             // Start updating location only after success authorization
             self.continueLocationUpdates()
         }
@@ -180,7 +180,7 @@ extension LocationService: CLLocationManagerDelegate {
             case let .success(placemark):
                 self?.lastAcquiredPlacemark = placemark
             case let .failure(error):
-                debugPrint("Did receive error while try to get placemark for location: \(currentLocation), error: \(error)", inCase: .locationUpdates)
+                debugPrint("Did receive error while try to get placemark for location: \(currentLocation), error: \(error)", inCase: .location)
             }
             self?.handleReceivedPlacemarkResult(result)
         }

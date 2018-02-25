@@ -10,7 +10,9 @@ import Foundation
 
 extension DispatchQueue {
     
-    static func label(forType type: AnyObject.Type, inBundle bundle: Bundle) -> String {
-        return "\(bundle.bundleIdentifier)-\(String(describing: type))"
+    static func queue(for type: AnyClass, qos: DispatchQoS = .default) -> DispatchQueue {
+        let bundle = Bundle(for: type)
+        let label = "\(bundle.bundleIdentifier).\(String(describing: type))"
+        return DispatchQueue(label: label, qos: qos)
     }
 }
