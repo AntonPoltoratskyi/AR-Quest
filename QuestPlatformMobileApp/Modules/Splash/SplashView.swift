@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SnapKit
 
 final class SplashView: UIView {
     
     private(set) lazy var label: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Splash"
         self.addSubview(label)
         return label
     }()
@@ -36,9 +37,8 @@ final class SplashView: UIView {
     private func setupSubviews() {
         backgroundColor = .white
         
-        label.text = "Splash"
-
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        label.snp.makeConstraints { maker in
+            maker.center.equalToSuperview()
+        }
     }
 }
