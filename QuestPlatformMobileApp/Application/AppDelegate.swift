@@ -22,9 +22,9 @@ class AppDelegate: AppDelegateProxy {
     
     private func setupViewHierarchy() {
         let splash = SplashAssembly().build()
-        let splashViewController = splash.view
+        let navigation = NavigationAssembly(embeddedModule: splash.input)
     
-        self.window?.rootViewController = splashViewController
+        self.window?.rootViewController = navigation.build().view
         self.window?.makeKeyAndVisible()
     }
 }

@@ -12,6 +12,7 @@ protocol SplashViewInput: class {
 }
 
 protocol SplashViewOutput: class {
+    func didFinishSplashAnimation()
 }
 
 final class SplashViewController: UIViewController, View {
@@ -34,8 +35,12 @@ final class SplashViewController: UIViewController, View {
         self.view = contentView
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.output.didFinishSplashAnimation()
+        }
     }
 }
 

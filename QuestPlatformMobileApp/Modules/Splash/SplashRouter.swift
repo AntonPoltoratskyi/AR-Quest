@@ -9,8 +9,14 @@
 import UIKit
 
 protocol SplashRouterInput: class {
+    func presentLogin()
 }
 
 final class SplashRouter: Router, SplashRouterInput {
     weak var viewController: UIViewController!
+    
+    func presentLogin() {
+        let login = LoginAssembly().build()
+        viewController.navigationController?.setViewControllers([login.view], animated: true)
+    }
 }

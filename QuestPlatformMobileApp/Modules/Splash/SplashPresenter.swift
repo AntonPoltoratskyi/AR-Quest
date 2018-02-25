@@ -8,8 +8,12 @@
 
 import Foundation
 
+// MARK: - Module Input
+
 protocol SplashModuleInput: ModuleInput {
 }
+
+// MARK: - Presenter
 
 final class SplashPresenter: SplashModuleInput, Presenter {
 
@@ -21,13 +25,17 @@ final class SplashPresenter: SplashModuleInput, Presenter {
     var interactor: Interactor!
     var router: Router!
     
-    
 }
 
+// MARK: - SplashViewOutput
 extension SplashPresenter: SplashViewOutput {
     
+    func didFinishSplashAnimation() {
+        router.presentLogin()
+    }
 }
 
+// MARK: - SplashInteractorOutput
 extension SplashPresenter: SplashInteractorOutput {
     
 }
