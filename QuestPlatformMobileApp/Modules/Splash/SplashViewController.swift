@@ -15,8 +15,8 @@ protocol SplashViewOutput: class {
 }
 
 final class SplashViewController: UIViewController, View {
-
-    var output: SplashViewOutput!
+    typealias Output = SplashViewOutput
+    var output: Output!
     
     
     // MARK: - Views
@@ -30,7 +30,12 @@ final class SplashViewController: UIViewController, View {
     // MARK: - Life Cycle
     
     override func loadView() {
+        super.loadView()
         self.view = contentView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
 

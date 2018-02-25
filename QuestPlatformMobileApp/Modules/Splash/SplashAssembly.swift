@@ -10,9 +10,9 @@ import Foundation
 
 final class SplashAssembly: Assembly {
     
-    typealias ModuleInput = SplashModuleInput
+    typealias Input = Module<SplashModuleInput>
 
-    static func build() -> SplashModuleInput {
+    func build() -> Input {
         let view = SplashViewController()
         let presenter = SplashPresenter()
         let interactor = SplashInteractor()
@@ -28,6 +28,6 @@ final class SplashAssembly: Assembly {
         presenter.interactor = interactor
         presenter.router = router
         
-        return presenter
+        return Module(input: presenter, view: view)
     }
 }

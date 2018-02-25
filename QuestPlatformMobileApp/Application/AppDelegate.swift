@@ -12,7 +12,16 @@ import UIKit
 class AppDelegate: Application {
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+        setupViewHierarchy()
         return true
+    }
+    
+    private func setupViewHierarchy() {
+        let splash = SplashAssembly().build()
+        let splashViewController = splash.view
+    
+        self.window?.rootViewController = splashViewController
+        self.window?.makeKeyAndVisible()
     }
 }
 

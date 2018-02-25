@@ -21,7 +21,7 @@ open class Application: UIResponder, ApplicationServiceDelegate {
     
     // MARK: UIApplicationDelegate
     
-    open var window: UIWindow?
+    open var window: UIWindow? = UIWindow()
     
     open func applicationDidFinishLaunching(_ application: UIApplication) {
         services.forEach { $0.applicationDidFinishLaunching?(application) }

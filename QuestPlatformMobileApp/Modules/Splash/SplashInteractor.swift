@@ -15,5 +15,6 @@ protocol SplashInteractorOutput: class {
 }
 
 final class SplashInteractor: Interactor, SplashInteractorInput {
-    weak var output: SplashInteractorOutput!
+    typealias Output = SplashInteractorOutput
+    weak var output: Output!
 }
