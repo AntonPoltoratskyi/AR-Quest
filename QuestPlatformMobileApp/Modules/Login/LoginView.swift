@@ -78,16 +78,20 @@ final class LoginView: UIView {
             let horizontalOffset: CGFloat = 24
             maker.leading.equalToSuperview().offset(horizontalOffset)
             maker.trailing.equalToSuperview().inset(horizontalOffset)
-            maker.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(52)
+            maker.bottom.equalToSuperview().inset(52)
             maker.height.equalTo(52)
         }
         
+        passwordTextField.returnKeyType = .done
+        passwordTextField.isSecureTextEntry = true
         passwordTextField.snp.makeConstraints { maker in
             maker.leading.trailing.equalTo(continueButton)
             maker.bottom.equalTo(continueButton.snp.top).offset(-57)
             maker.height.equalTo(52)
         }
         
+        emailTextField.returnKeyType = .next
+        emailTextField.keyboardType = .emailAddress
         emailTextField.snp.makeConstraints { maker in
             maker.leading.trailing.equalTo(continueButton)
             maker.bottom.equalTo(passwordTextField.snp.top).offset(-24)

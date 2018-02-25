@@ -50,11 +50,19 @@ class QuestTextField: UITextField {
     
     // MARK: - Text Area
     
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
+    private func inputRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 24, dy: 0)
     }
     
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return inputRect(forBounds: bounds)
+    }
+    
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.insetBy(dx: 24, dy: 0)
+        return inputRect(forBounds: bounds)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return inputRect(forBounds: bounds)
     }
 }
