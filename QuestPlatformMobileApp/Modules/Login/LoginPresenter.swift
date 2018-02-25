@@ -27,7 +27,6 @@ final class LoginPresenter: Presenter, LoginModuleInput {
     
 }
 
-
 // MARK: - LoginViewOutput
 extension LoginPresenter: LoginViewOutput {
     
@@ -36,4 +35,15 @@ extension LoginPresenter: LoginViewOutput {
 // MARK: - LoginInteractorOutput
 extension LoginPresenter: LoginInteractorOutput {
     
+    func didLogin(user: User) {
+        
+    }
+    
+    func didRegister(user: User) {
+        
+    }
+    
+    func didFailure(_ error: Error) {
+        
+    }
 }

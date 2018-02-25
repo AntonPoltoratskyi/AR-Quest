@@ -79,6 +79,10 @@
 		853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5252042FE7800E82595 /* NavigationAssembly.swift */; };
 		853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5262042FE7800E82595 /* NavigationInteractor.swift */; };
 		857ADD8A204319FA00CA0D42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD89204319FA00CA0D42 /* User.swift */; };
+		857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */; };
+		857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */; };
+		857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD912043216B00CA0D42 /* AuthCredentials.swift */; };
+		857ADD942043221800CA0D42 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD932043221800CA0D42 /* NetworkService.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +183,10 @@
 		853DD5252042FE7800E82595 /* NavigationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAssembly.swift; sourceTree = "<group>"; };
 		853DD5262042FE7800E82595 /* NavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
 		857ADD89204319FA00CA0D42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
+		857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkRouter.swift; sourceTree = "<group>"; };
+		857ADD912043216B00CA0D42 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
+		857ADD932043221800CA0D42 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -603,6 +611,7 @@
 			isa = PBXGroup;
 			children = (
 				853DD4EB2042C79800E82595 /* NetworkClient.swift */,
+				857ADD932043221800CA0D42 /* NetworkService.swift */,
 				853DD4EC2042C79800E82595 /* URLSessionNetworkClient.swift */,
 				853DD4ED2042C79800E82595 /* URLRequestConvertible.swift */,
 			);
@@ -675,6 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				14FE2FAA1FC9661E001EDEAB /* Session */,
+				857ADD8B2043203800CA0D42 /* Auth */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -685,6 +695,16 @@
 				857ADD89204319FA00CA0D42 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		857ADD8B2043203800CA0D42 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				857ADD912043216B00CA0D42 /* AuthCredentials.swift */,
+				857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */,
+				857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
@@ -945,6 +965,7 @@
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
+				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				853DD4F62042CA1800E82595 /* ResponseRepresentable.swift in Sources */,
@@ -953,14 +974,17 @@
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
 				853DD52A2042FE7800E82595 /* NavigationViewController.swift in Sources */,
+				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
+				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
 				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
 				853DD4C12042BF8B00E82595 /* UIViewController+KeyboardHandling.swift in Sources */,
 				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
 				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
 				14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */,
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
+				857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */,
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,

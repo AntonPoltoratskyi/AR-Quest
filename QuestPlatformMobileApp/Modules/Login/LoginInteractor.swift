@@ -9,12 +9,41 @@
 import Foundation
 
 protocol LoginInteractorInput: class {
+    func login(with credentials: LoginCredentials)
+    func register(with credentials: SignUpCredentials)
 }
 
 protocol LoginInteractorOutput: class {
+    func didLogin(user: User)
+    func didRegister(user: User)
+    func didFailure(_ error: Error)
 }
 
 final class LoginInteractor: Interactor, LoginInteractorInput {
     typealias Output = LoginInteractorOutput
     weak var output: LoginInteractorOutput!
+    
+    var authService: AuthNetworkService!
+    
+    func login(with credentials: LoginCredentials) {
+        authService.login(with: credentials) { [weak self] result in
+            switch result {
+            case let .success(user):
+                self?.output.didLogin(user: user)
+            case let .failure(error):
+                self?.output.didFailure(error)
+            }
+        }
+    }
+    
+    func register(with credentials: SignUpCredentials) {
+        authService.register(with: credentials) { [weak self] result in
+            switch result {
+            case let .success(user):
+                self?.output.didRegister(user: user)
+            case let .failure(error):
+                self?.output.didFailure(error)
+            }
+        }
+    }
 }

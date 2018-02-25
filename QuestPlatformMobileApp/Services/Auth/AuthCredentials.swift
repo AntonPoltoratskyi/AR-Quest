@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  AuthCredentials.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 25.02.2018.
@@ -8,12 +8,13 @@
 
 import Foundation
 
-final class User: Codable {
+struct LoginCredentials {
+    var email: String
+    var password: String
+}
+
+struct SignUpCredentials {
     var name: String
     var email: String
-    
-    init(name: String, email: String) {
-        self.name = name
-        self.email = email
-    }
+    var password: String
 }
