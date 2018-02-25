@@ -21,6 +21,7 @@ public struct DebugOptions: OptionSet {
     public static let resources = DebugOptions(rawValue: 1 << 3)
     public static let location  = DebugOptions(rawValue: 1 << 4)
     public static let database  = DebugOptions(rawValue: 1 << 5)
+    public static let session   = DebugOptions(rawValue: 1 << 6)
     
     public static let all       = DebugOptions(rawValue: Int.max)
 }

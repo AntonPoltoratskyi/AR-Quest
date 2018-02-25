@@ -78,6 +78,7 @@
 		853DD52A2042FE7800E82595 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5242042FE7800E82595 /* NavigationViewController.swift */; };
 		853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5252042FE7800E82595 /* NavigationAssembly.swift */; };
 		853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5262042FE7800E82595 /* NavigationInteractor.swift */; };
+		857ADD8A204319FA00CA0D42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD89204319FA00CA0D42 /* User.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +178,7 @@
 		853DD5242042FE7800E82595 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		853DD5252042FE7800E82595 /* NavigationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAssembly.swift; sourceTree = "<group>"; };
 		853DD5262042FE7800E82595 /* NavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
+		857ADD89204319FA00CA0D42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				853DD4B72042BB9600E82595 /* Library */,
+				857ADD88204319D100CA0D42 /* Models */,
+				857ADD872043196D00CA0D42 /* Services */,
 				853DD4F72042CB2000E82595 /* Modules */,
 				141AC4331FC7671E00200877 /* Storyboards */,
 				141AC4301FC766DA00200877 /* Application */,
@@ -457,7 +461,6 @@
 		14FE2FA71FC9661E001EDEAB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2FAA1FC9661E001EDEAB /* Session */,
 				853DD4E22042C79800E82595 /* Network */,
 				14FE2FA81FC9661E001EDEAB /* Location */,
 			);
@@ -666,6 +669,22 @@
 				853DD5252042FE7800E82595 /* NavigationAssembly.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		857ADD872043196D00CA0D42 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2FAA1FC9661E001EDEAB /* Session */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		857ADD88204319D100CA0D42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				857ADD89204319FA00CA0D42 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
@@ -901,6 +920,7 @@
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,
 				853DD5202042FC6600E82595 /* LoginView.swift in Sources */,
+				857ADD8A204319FA00CA0D42 /* User.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				853DD51C2042FC6600E82595 /* LoginRouter.swift in Sources */,
 				853DD51D2042FC6600E82595 /* LoginViewController.swift in Sources */,
