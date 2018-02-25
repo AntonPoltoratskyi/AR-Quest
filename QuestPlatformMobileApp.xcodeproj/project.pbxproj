@@ -57,6 +57,18 @@
 		853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4EC2042C79800E82595 /* URLSessionNetworkClient.swift */; };
 		853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4ED2042C79800E82595 /* URLRequestConvertible.swift */; };
 		853DD4F62042CA1800E82595 /* ResponseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4F52042CA1800E82595 /* ResponseRepresentable.swift */; };
+		853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4F92042CB5E00E82595 /* SplashViewController.swift */; };
+		853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4FB2042CCD200E82595 /* SplashPresenter.swift */; };
+		853DD4FE2042CCE100E82595 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4FD2042CCE100E82595 /* SplashInteractor.swift */; };
+		853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4FF2042CCEB00E82595 /* SplashRouter.swift */; };
+		853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5012042CCF500E82595 /* SplashAssembly.swift */; };
+		853DD5042042CD3600E82595 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5032042CD3600E82595 /* SplashView.swift */; };
+		853DD5072042CE1A00E82595 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5062042CE1A00E82595 /* View.swift */; };
+		853DD5092042CE2300E82595 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5082042CE2300E82595 /* Presenter.swift */; };
+		853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD50A2042CE2B00E82595 /* Interactor.swift */; };
+		853DD50D2042CE3200E82595 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD50C2042CE3200E82595 /* Router.swift */; };
+		853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD50E2042CE3A00E82595 /* Assembly.swift */; };
+		853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5102042D12A00E82595 /* ModuleInput.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +147,18 @@
 		853DD4EC2042C79800E82595 /* URLSessionNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkClient.swift; sourceTree = "<group>"; };
 		853DD4ED2042C79800E82595 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
 		853DD4F52042CA1800E82595 /* ResponseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseRepresentable.swift; sourceTree = "<group>"; };
+		853DD4F92042CB5E00E82595 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		853DD4FB2042CCD200E82595 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		853DD4FD2042CCE100E82595 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		853DD4FF2042CCEB00E82595 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		853DD5012042CCF500E82595 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		853DD5032042CD3600E82595 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		853DD5062042CE1A00E82595 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		853DD5082042CE2300E82595 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		853DD50A2042CE2B00E82595 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		853DD50C2042CE3200E82595 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		853DD50E2042CE3A00E82595 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		853DD5102042D12A00E82595 /* ModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleInput.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				853DD4B72042BB9600E82595 /* Library */,
+				853DD4F72042CB2000E82595 /* Modules */,
 				141AC4341FC7676200200877 /* ViewControllers */,
 				141AC4331FC7671E00200877 /* Storyboards */,
 				141AC4301FC766DA00200877 /* Application */,
@@ -456,6 +481,7 @@
 				14FE2F981FC9653B001EDEAB /* Utils */,
 				14FE2F651FC96382001EDEAB /* Extensions */,
 				14FE2FA71FC9661E001EDEAB /* Services */,
+				853DD5052042CE0D00E82595 /* VIPER */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -571,6 +597,40 @@
 				853DD4ED2042C79800E82595 /* URLRequestConvertible.swift */,
 			);
 			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		853DD4F72042CB2000E82595 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4F82042CB4500E82595 /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		853DD4F82042CB4500E82595 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5032042CD3600E82595 /* SplashView.swift */,
+				853DD4F92042CB5E00E82595 /* SplashViewController.swift */,
+				853DD4FB2042CCD200E82595 /* SplashPresenter.swift */,
+				853DD4FD2042CCE100E82595 /* SplashInteractor.swift */,
+				853DD4FF2042CCEB00E82595 /* SplashRouter.swift */,
+				853DD5012042CCF500E82595 /* SplashAssembly.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		853DD5052042CE0D00E82595 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5102042D12A00E82595 /* ModuleInput.swift */,
+				853DD5062042CE1A00E82595 /* View.swift */,
+				853DD5082042CE2300E82595 /* Presenter.swift */,
+				853DD50A2042CE2B00E82595 /* Interactor.swift */,
+				853DD50C2042CE3200E82595 /* Router.swift */,
+				853DD50E2042CE3A00E82595 /* Assembly.swift */,
+			);
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
@@ -781,20 +841,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853DD5072042CE1A00E82595 /* View.swift in Sources */,
 				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
+				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
+				853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */,
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
+				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				141AC4051FC764D000200877 /* ViewController.swift in Sources */,
+				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
+				853DD4FE2042CCE100E82595 /* SplashInteractor.swift in Sources */,
+				853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
+				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
+				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
 				853DD4F02042C79800E82595 /* WebResponse.swift in Sources */,
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
+				853DD50D2042CE3200E82595 /* Router.swift in Sources */,
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
 				14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
@@ -808,6 +878,7 @@
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
+				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				14FE2F971FC96466001EDEAB /* ApplicationService.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
@@ -818,6 +889,7 @@
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
+				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
 				853DD4C12042BF8B00E82595 /* UIViewController+KeyboardHandling.swift in Sources */,
 				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
 				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
