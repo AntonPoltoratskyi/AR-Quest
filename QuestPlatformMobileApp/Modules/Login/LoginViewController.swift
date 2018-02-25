@@ -24,6 +24,7 @@ final class LoginViewController: UIViewController, View {
     
     private lazy var contentView: LoginView = {
         let contentView = LoginView()
+        contentView.continueButton.addTarget(self, action: #selector(actionLogin(sender:)), for: .touchUpInside)
         return contentView
     }()
     
@@ -37,6 +38,13 @@ final class LoginViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionLogin(sender: UIButton) {
+        
     }
 }
 

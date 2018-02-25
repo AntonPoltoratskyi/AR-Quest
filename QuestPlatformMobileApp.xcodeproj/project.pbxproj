@@ -83,6 +83,10 @@
 		857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */; };
 		857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD912043216B00CA0D42 /* AuthCredentials.swift */; };
 		857ADD942043221800CA0D42 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD932043221800CA0D42 /* NetworkService.swift */; };
+		857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9620432A8D00CA0D42 /* QuestButton.swift */; };
+		857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9A20432B0C00CA0D42 /* UIColor.swift */; };
+		857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9C20432BCA00CA0D42 /* Theme.swift */; };
+		857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9F20432E6300CA0D42 /* QuestTextField.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +191,10 @@
 		857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkRouter.swift; sourceTree = "<group>"; };
 		857ADD912043216B00CA0D42 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 		857ADD932043221800CA0D42 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		857ADD9620432A8D00CA0D42 /* QuestButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestButton.swift; sourceTree = "<group>"; };
+		857ADD9A20432B0C00CA0D42 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		857ADD9C20432BCA00CA0D42 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		857ADD9F20432E6300CA0D42 /* QuestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTextField.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +250,7 @@
 		141AC4011FC764D000200877 /* QuestPlatformMobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				857ADD9520432A6E00CA0D42 /* QuestUIKit */,
 				853DD4B72042BB9600E82595 /* Library */,
 				857ADD88204319D100CA0D42 /* Models */,
 				857ADD872043196D00CA0D42 /* Services */,
@@ -371,6 +380,7 @@
 				853DD4C42042BFD000E82595 /* Keyboard */,
 				853DD4C72042C3F700E82595 /* Gestures */,
 				14FE2F821FC96382001EDEAB /* UIResources */,
+				857ADD9920432AF700CA0D42 /* Colors */,
 				14FE2F6E1FC96382001EDEAB /* Geometry */,
 				14FE2F801FC96382001EDEAB /* Navigation */,
 				14FE2F791FC96382001EDEAB /* Layout */,
@@ -707,6 +717,24 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		857ADD9520432A6E00CA0D42 /* QuestUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				857ADD9C20432BCA00CA0D42 /* Theme.swift */,
+				857ADD9620432A8D00CA0D42 /* QuestButton.swift */,
+				857ADD9F20432E6300CA0D42 /* QuestTextField.swift */,
+			);
+			path = QuestUIKit;
+			sourceTree = "<group>";
+		};
+		857ADD9920432AF700CA0D42 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				857ADD9A20432B0C00CA0D42 /* UIColor.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -928,6 +956,7 @@
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
 				853DD4FE2042CCE100E82595 /* SplashInteractor.swift in Sources */,
+				857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */,
 				853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
@@ -949,6 +978,7 @@
 				14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
 				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
+				857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */,
 				14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */,
 				14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */,
 				853DD51E2042FC6600E82595 /* LoginAssembly.swift in Sources */,
@@ -968,12 +998,14 @@
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
+				857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */,
 				853DD4F62042CA1800E82595 /* ResponseRepresentable.swift in Sources */,
 				853DD51B2042FC6600E82595 /* LoginPresenter.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
 				853DD52A2042FE7800E82595 /* NavigationViewController.swift in Sources */,
+				857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,

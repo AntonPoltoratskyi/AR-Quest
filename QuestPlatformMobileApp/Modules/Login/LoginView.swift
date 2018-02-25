@@ -11,11 +11,38 @@ import SnapKit
 
 final class LoginView: UIView {
     
-    private(set) lazy var label: UILabel = {
-        let label = UILabel()
-        label.text = "Login"
-        self.addSubview(label)
-        return label
+    private(set) lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        self.addSubview(scrollView)
+        return scrollView
+    }()
+    
+    private lazy var contentView: UIView = {
+        let contentView = UIView()
+        scrollView.addSubview(contentView)
+        return contentView
+    }()
+    
+    private(set) lazy var continueButton: QuestButton = {
+        let button = QuestButton()
+        button.setTitle("Continue", for: .normal)
+        contentView.addSubview(button)
+        return button
+    }()
+    
+    private(set) lazy var emailTextField: QuestTextField = {
+        let textField = QuestTextField()
+        textField.placeholder = "Email"
+        contentView.addSubview(textField)
+        return textField
+    }()
+    
+    private(set) lazy var passwordTextField: QuestTextField = {
+        let textField = QuestTextField()
+        textField.placeholder = "Password"
+        contentView.addSubview(textField)
+        return textField
     }()
     
     
@@ -36,8 +63,35 @@ final class LoginView: UIView {
     
     private func setupSubviews() {
         backgroundColor = .white
-        label.snp.makeConstraints { maker in
-            maker.center.equalToSuperview()
+        
+        scrollView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+            maker.width.equalToSuperview()
+            maker.height.equalTo(self).priority(.high)
+        }
+        
+        continueButton.snp.makeConstraints { maker in
+            let horizontalOffset: CGFloat = 24
+            maker.leading.equalToSuperview().offset(horizontalOffset)
+            maker.trailing.equalToSuperview().inset(horizontalOffset)
+            maker.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(52)
+            maker.height.equalTo(52)
+        }
+        
+        passwordTextField.snp.makeConstraints { maker in
+            maker.leading.trailing.equalTo(continueButton)
+            maker.bottom.equalTo(continueButton.snp.top).offset(-57)
+            maker.height.equalTo(52)
+        }
+        
+        emailTextField.snp.makeConstraints { maker in
+            maker.leading.trailing.equalTo(continueButton)
+            maker.bottom.equalTo(passwordTextField.snp.top).offset(-24)
+            maker.height.equalTo(52)
         }
     }
 }
