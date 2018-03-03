@@ -30,6 +30,19 @@ final class LoginPresenter: Presenter, LoginModuleInput {
 // MARK: - LoginViewOutput
 extension LoginPresenter: LoginViewOutput {
     
+    func didClickLogin(email: String?, password: String?) {
+        do {
+            let validEmail = try EmailValidator().validated(email)
+            let validPassword = try PasswordValidator().validated(password)
+            
+            let credentials = LoginCredentials(email: validEmail, password: validPassword)
+            interactor.login(with: credentials)
+        } catch {
+            if let error = error as? ErrorRepresentable {
+                view.showError(error.errorMessage)
+            }
+        }
+    }
 }
 
 // MARK: - LoginInteractorOutput
@@ -44,6 +57,8 @@ extension LoginPresenter: LoginInteractorOutput {
     }
     
     func didFailure(_ error: Error) {
-        
+        if let error = error as? ErrorRepresentable {
+            view.showError(error.errorMessage)
+        }
     }
 }

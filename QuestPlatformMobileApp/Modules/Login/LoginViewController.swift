@@ -9,9 +9,11 @@
 import UIKit
 
 protocol LoginViewInput: class {
+    func showError(_ errorMessage: String)
 }
 
 protocol LoginViewOutput: class {
+    func didClickLogin(email: String?, password: String?)
 }
 
 final class LoginViewController: UIViewController, View, KeyboardInteracting {
@@ -61,7 +63,9 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
     // MARK: - Actions
     
     @objc private func actionLogin(sender: UIButton) {
-        
+        let email = contentView.emailTextField.text
+        let password = contentView.passwordTextField.text
+        output.didClickLogin(email: email, password: password)
     }
 }
 
@@ -83,4 +87,7 @@ extension LoginViewController: UITextFieldDelegate {
 // MARK: - LoginViewInput
 extension LoginViewController: LoginViewInput {
     
+    func showError(_ errorMessage: String) {
+        // TODO: add error label and show error message
+    }
 }

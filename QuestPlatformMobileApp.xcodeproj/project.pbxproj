@@ -31,6 +31,9 @@
 		14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */; };
 		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
 		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
+		85125717204AEFEA00995543 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125716204AEFEA00995543 /* Validator.swift */; };
+		85125719204AF04700995543 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125718204AF04700995543 /* EmailValidator.swift */; };
+		8512571B204AF72200995543 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512571A204AF72200995543 /* PasswordValidator.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -139,6 +142,9 @@
 		14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		14FE2FB01FC96636001EDEAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
+		85125716204AEFEA00995543 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		85125718204AF04700995543 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		8512571A204AF72200995543 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -503,6 +509,16 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		85125715204AEFCC00995543 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				85125716204AEFEA00995543 /* Validator.swift */,
+				85125718204AF04700995543 /* EmailValidator.swift */,
+				8512571A204AF72200995543 /* PasswordValidator.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
 		853DD4B72042BB9600E82595 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +709,7 @@
 		857ADD872043196D00CA0D42 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				85125715204AEFCC00995543 /* Validation */,
 				14FE2FAA1FC9661E001EDEAB /* Session */,
 				857ADD8B2043203800CA0D42 /* Auth */,
 			);
@@ -949,6 +966,7 @@
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
 				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
+				85125719204AF04700995543 /* EmailValidator.swift in Sources */,
 				853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */,
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
@@ -964,6 +982,7 @@
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,
+				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
 				853DD4F02042C79800E82595 /* WebResponse.swift in Sources */,
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
@@ -1004,6 +1023,7 @@
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
+				85125717204AEFEA00995543 /* Validator.swift in Sources */,
 				853DD52A2042FE7800E82595 /* NavigationViewController.swift in Sources */,
 				857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
