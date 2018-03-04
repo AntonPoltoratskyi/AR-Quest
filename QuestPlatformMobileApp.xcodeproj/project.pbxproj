@@ -95,6 +95,17 @@
 		85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740E1204C541D002AC5FE /* LoginFormView.swift */; };
 		85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740E3204C5542002AC5FE /* RegistrationFormView.swift */; };
 		85F740E6204C605B002AC5FE /* QuestCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740E5204C605B002AC5FE /* QuestCircleView.swift */; };
+		85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740FC204C8A25002AC5FE /* SideMenuContainerPresenter.swift */; };
+		85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740FD204C8A25002AC5FE /* SideMenuContainerRouter.swift */; };
+		85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740FE204C8A25002AC5FE /* SideMenuContainerViewController.swift */; };
+		85F74105204C8A25002AC5FE /* SideMenuContainerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740FF204C8A25002AC5FE /* SideMenuContainerAssembly.swift */; };
+		85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74100204C8A25002AC5FE /* SideMenuContainerInteractor.swift */; };
+		85F74114204C8B31002AC5FE /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7410E204C8B31002AC5FE /* MenuPresenter.swift */; };
+		85F74115204C8B31002AC5FE /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7410F204C8B31002AC5FE /* MenuRouter.swift */; };
+		85F74116204C8B31002AC5FE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74110204C8B31002AC5FE /* MenuViewController.swift */; };
+		85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74111204C8B31002AC5FE /* MenuAssembly.swift */; };
+		85F74118204C8B31002AC5FE /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74112204C8B31002AC5FE /* MenuInteractor.swift */; };
+		85F74119204C8B31002AC5FE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74113204C8B31002AC5FE /* MenuView.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +222,17 @@
 		85F740E1204C541D002AC5FE /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		85F740E3204C5542002AC5FE /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 		85F740E5204C605B002AC5FE /* QuestCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCircleView.swift; sourceTree = "<group>"; };
+		85F740FC204C8A25002AC5FE /* SideMenuContainerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerPresenter.swift; sourceTree = "<group>"; };
+		85F740FD204C8A25002AC5FE /* SideMenuContainerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerRouter.swift; sourceTree = "<group>"; };
+		85F740FE204C8A25002AC5FE /* SideMenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerViewController.swift; sourceTree = "<group>"; };
+		85F740FF204C8A25002AC5FE /* SideMenuContainerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerAssembly.swift; sourceTree = "<group>"; };
+		85F74100204C8A25002AC5FE /* SideMenuContainerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerInteractor.swift; sourceTree = "<group>"; };
+		85F7410E204C8B31002AC5FE /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		85F7410F204C8B31002AC5FE /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		85F74110204C8B31002AC5FE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		85F74111204C8B31002AC5FE /* MenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
+		85F74112204C8B31002AC5FE /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		85F74113204C8B31002AC5FE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -647,9 +669,10 @@
 		853DD4F72042CB2000E82595 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				853DD5212042FE5E00E82595 /* Navigation */,
+				85F740E8204C85DC002AC5FE /* Containers */,
 				853DD4F82042CB4500E82595 /* Splash */,
 				853DD5142042FC5600E82595 /* Login */,
+				85F7410D204C8B21002AC5FE /* Menu */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -911,6 +934,120 @@
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
+		85F740E8204C85DC002AC5FE /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				85F740FB204C8A13002AC5FE /* SideMenuContainer */,
+				853DD5212042FE5E00E82595 /* Navigation */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		85F740FB204C8A13002AC5FE /* SideMenuContainer */ = {
+			isa = PBXGroup;
+			children = (
+				85F7410A204C8A3F002AC5FE /* View */,
+				85F74108204C8A33002AC5FE /* Presenter */,
+				85F7410C204C8A4D002AC5FE /* Interactor */,
+				85F74109204C8A3A002AC5FE /* Router */,
+				85F7410B204C8A44002AC5FE /* Assembly */,
+			);
+			path = SideMenuContainer;
+			sourceTree = "<group>";
+		};
+		85F74108204C8A33002AC5FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85F740FC204C8A25002AC5FE /* SideMenuContainerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85F74109204C8A3A002AC5FE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85F740FD204C8A25002AC5FE /* SideMenuContainerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85F7410A204C8A3F002AC5FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85F740FE204C8A25002AC5FE /* SideMenuContainerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F7410B204C8A44002AC5FE /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85F740FF204C8A25002AC5FE /* SideMenuContainerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85F7410C204C8A4D002AC5FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85F74100204C8A25002AC5FE /* SideMenuContainerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85F7410D204C8B21002AC5FE /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				85F7411A204C8B3C002AC5FE /* View */,
+				85F7411B204C8B41002AC5FE /* Presenter */,
+				85F7411C204C8B48002AC5FE /* Interactor */,
+				85F7411D204C8B4F002AC5FE /* Router */,
+				85F7411E204C8B56002AC5FE /* Assembly */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		85F7411A204C8B3C002AC5FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85F74110204C8B31002AC5FE /* MenuViewController.swift */,
+				85F74113204C8B31002AC5FE /* MenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F7411B204C8B41002AC5FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85F7410E204C8B31002AC5FE /* MenuPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85F7411C204C8B48002AC5FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85F74112204C8B31002AC5FE /* MenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85F7411D204C8B4F002AC5FE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85F7410F204C8B31002AC5FE /* MenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85F7411E204C8B56002AC5FE /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85F74111204C8B31002AC5FE /* MenuAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1126,6 +1263,7 @@
 				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
+				85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */,
 				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
 				85125719204AF04700995543 /* EmailValidator.swift in Sources */,
 				853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */,
@@ -1150,6 +1288,7 @@
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,
 				853DD5202042FC6600E82595 /* LoginView.swift in Sources */,
 				857ADD8A204319FA00CA0D42 /* User.swift in Sources */,
+				85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				853DD51C2042FC6600E82595 /* LoginRouter.swift in Sources */,
 				853DD51D2042FC6600E82595 /* LoginViewController.swift in Sources */,
@@ -1164,6 +1303,7 @@
 				853DD4DE2042C4E900E82595 /* UICollectionView+ViewModel.swift in Sources */,
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
+				85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */,
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
@@ -1172,15 +1312,20 @@
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
+				85F74114204C8B31002AC5FE /* MenuPresenter.swift in Sources */,
+				85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
+				85F74115204C8B31002AC5FE /* MenuRouter.swift in Sources */,
 				85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */,
+				85F74119204C8B31002AC5FE /* MenuView.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
+				85F74118204C8B31002AC5FE /* MenuInteractor.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */,
 				85F740E6204C605B002AC5FE /* QuestCircleView.swift in Sources */,
@@ -1191,6 +1336,7 @@
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
 				85125717204AEFEA00995543 /* Validator.swift in Sources */,
 				853DD52A2042FE7800E82595 /* NavigationViewController.swift in Sources */,
+				85F74105204C8A25002AC5FE /* SideMenuContainerAssembly.swift in Sources */,
 				857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
@@ -1204,8 +1350,10 @@
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
 				857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */,
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
+				85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
+				85F74116204C8B31002AC5FE /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

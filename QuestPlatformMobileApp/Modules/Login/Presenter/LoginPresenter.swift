@@ -67,11 +67,11 @@ extension LoginPresenter: LoginViewOutput {
 extension LoginPresenter: LoginInteractorOutput {
     
     func didLogin(user: User) {
-        
+        router.showContent()
     }
     
     func didRegister(user: User) {
-        
+        router.showContent()
     }
     
     func didFailure(_ error: Error) {

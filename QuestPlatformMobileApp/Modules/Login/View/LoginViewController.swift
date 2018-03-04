@@ -64,6 +64,14 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
         self.state = .signIn
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        #if DEBUG
+            contentView.loginForm.emailTextField.text = "test@test.com"
+            contentView.loginForm.passwordTextField.text = "qwerty123"
+        #endif
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         registerForKeyboardNotifications()
