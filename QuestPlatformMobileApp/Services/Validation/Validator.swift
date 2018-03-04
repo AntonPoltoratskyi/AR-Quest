@@ -10,7 +10,7 @@ import Foundation
 
 protocol Validator {
     associatedtype Input
-    func validated(_ input: Input?) throws -> Bool
+    func validated(_ input: Input?) throws -> Input
 }
 
 enum ValidationError: Error, ErrorRepresentable {
