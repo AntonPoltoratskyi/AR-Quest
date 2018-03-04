@@ -17,6 +17,15 @@ final class SplashView: UIView {
         self.addSubview(view)
         return view
     }()
+    
+    private(set) lazy var backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.alpha = 0.6
+        imageView.image = #imageLiteral(resourceName: "splash")
+        imageView.contentMode = .scaleAspectFill
+        self.addSubview(imageView)
+        return imageView
+    }()
 
     private(set) lazy var largeTitleLabel: UILabel = {
         let label = UILabel()
@@ -24,6 +33,7 @@ final class SplashView: UIView {
         label.text = "Welcome to Quest"
         label.textAlignment = .center
         label.numberOfLines = 0
+        label.textColor = .white
         contentView.addSubview(label)
         return label
     }()
@@ -34,6 +44,7 @@ final class SplashView: UIView {
         label.text = "The best way to have fun and discover more emotions and places. Let's get started!"
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.textColor = .white
         contentView.addSubview(label)
         return label
     }()
@@ -50,6 +61,7 @@ final class SplashView: UIView {
         label.font = UIFont.appFont(ofSize: 12, weight: .regular)
         label.text = "Continue with:"
         label.textAlignment = .center
+        label.textColor = .white
         buttonsContainer.addSubview(label)
         return label
     }()
@@ -86,7 +98,11 @@ final class SplashView: UIView {
     // MARK: - UI Setup
     
     private func setupSubviews() {
-        backgroundColor = .white
+        backgroundColor = Theme.Button.Color.darkGray
+        
+        backgroundImageView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
         
         contentView.snp.makeConstraints { maker in
             maker.top.equalToSuperview()
