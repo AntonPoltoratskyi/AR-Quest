@@ -19,8 +19,6 @@
 		14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F6F1FC96382001EDEAB /* Geometry.swift */; };
 		14FE2F891FC96382001EDEAB /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F711FC96382001EDEAB /* Integer.swift */; };
 		14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F731FC96382001EDEAB /* Sequence.swift */; };
-		14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */; };
-		14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */; };
 		14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */; };
 		14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F941FC96466001EDEAB /* AppDelegateProxy.swift */; };
 		14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */; };
@@ -129,8 +127,6 @@
 		14FE2F6F1FC96382001EDEAB /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		14FE2F711FC96382001EDEAB /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		14FE2F731FC96382001EDEAB /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintUtils.swift; sourceTree = "<group>"; };
-		14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		14FE2F811FC96382001EDEAB /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		14FE2F941FC96466001EDEAB /* AppDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateProxy.swift; sourceTree = "<group>"; };
 		14FE2F9A1FC9653B001EDEAB /* DebugOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugOptions.swift; sourceTree = "<group>"; };
@@ -257,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				857ADD9520432A6E00CA0D42 /* QuestUIKit */,
-				853DD4B72042BB9600E82595 /* Library */,
+				853DD4B72042BB9600E82595 /* QuestCoreKit */,
 				857ADD88204319D100CA0D42 /* Models */,
 				857ADD872043196D00CA0D42 /* Services */,
 				853DD4F72042CB2000E82595 /* Modules */,
@@ -389,7 +385,6 @@
 				857ADD9920432AF700CA0D42 /* Colors */,
 				14FE2F6E1FC96382001EDEAB /* Geometry */,
 				14FE2F801FC96382001EDEAB /* Navigation */,
-				14FE2F791FC96382001EDEAB /* Layout */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -402,15 +397,6 @@
 				853DD4D02042C4E900E82595 /* DirectCell */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		14FE2F791FC96382001EDEAB /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				14FE2F7A1FC96382001EDEAB /* ConstraintUtils.swift */,
-				14FE2F7B1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift */,
-			);
-			path = Layout;
 			sourceTree = "<group>";
 		};
 		14FE2F801FC96382001EDEAB /* Navigation */ = {
@@ -519,7 +505,7 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		853DD4B72042BB9600E82595 /* Library */ = {
+		853DD4B72042BB9600E82595 /* QuestCoreKit */ = {
 			isa = PBXGroup;
 			children = (
 				14FE2F981FC9653B001EDEAB /* Utils */,
@@ -527,7 +513,7 @@
 				14FE2FA71FC9661E001EDEAB /* Services */,
 				853DD5052042CE0D00E82595 /* VIPER */,
 			);
-			path = Library;
+			path = QuestCoreKit;
 			sourceTree = "<group>";
 		};
 		853DD4B82042BC2500E82595 /* Supporting Files */ = {
@@ -994,11 +980,9 @@
 				853DD51D2042FC6600E82595 /* LoginViewController.swift in Sources */,
 				853DD50D2042CE3200E82595 /* Router.swift in Sources */,
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
-				14FE2F8D1FC96382001EDEAB /* ConstraintUtils.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
 				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
 				857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */,
-				14FE2F8E1FC96382001EDEAB /* UIView+NSLayoutConstraint.swift in Sources */,
 				14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */,
 				853DD51E2042FC6600E82595 /* LoginAssembly.swift in Sources */,
 				14FE2F861FC96382001EDEAB /* Dictionary.swift in Sources */,
