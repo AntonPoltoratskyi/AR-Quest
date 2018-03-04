@@ -88,6 +88,6 @@ extension LoginViewController: UITextFieldDelegate {
 extension LoginViewController: LoginViewInput {
     
     func showError(_ errorMessage: String) {
-        // TODO: add error label and show error message
+        contentView.errorLabel.text = "*\(errorMessage)"
     }
 }

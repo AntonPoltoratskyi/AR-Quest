@@ -45,6 +45,13 @@ final class LoginView: UIView {
         return textField
     }()
     
+    private(set) lazy var errorLabel: QuestErrorLabel = {
+        let label = QuestErrorLabel()
+        label.textAlignment = .center
+        contentView.addSubview(label)
+        return label
+    }()
+    
     
     // MARK: - Init
     
@@ -71,7 +78,7 @@ final class LoginView: UIView {
         contentView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
             maker.width.equalToSuperview()
-            maker.height.equalTo(self).priority(.high)
+            maker.height.equalToSuperview()
         }
         
         continueButton.snp.makeConstraints { maker in
@@ -96,6 +103,11 @@ final class LoginView: UIView {
             maker.leading.trailing.equalTo(continueButton)
             maker.bottom.equalTo(passwordTextField.snp.top).offset(-24)
             maker.height.equalTo(52)
+        }
+        
+        errorLabel.snp.makeConstraints { maker in
+            maker.leading.trailing.equalTo(passwordTextField)
+            maker.top.equalTo(passwordTextField.snp.bottom).offset(8)
         }
     }
 }

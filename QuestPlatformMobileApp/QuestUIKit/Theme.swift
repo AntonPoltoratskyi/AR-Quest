@@ -29,4 +29,12 @@ enum Theme {
             static let `default` = UIFont.systemFont(ofSize: 15, weight: .regular)
         }
     }
+    enum Label {
+        enum Color {
+            static let error = UIColor.red
+        }
+        enum Font {
+            static let error = UIFont.systemFont(ofSize: 13, weight: .regular)
+        }
+    }
 }
