@@ -647,12 +647,11 @@
 		853DD4F82042CB4500E82595 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				853DD5032042CD3600E82595 /* SplashView.swift */,
-				853DD4F92042CB5E00E82595 /* SplashViewController.swift */,
-				853DD4FB2042CCD200E82595 /* SplashPresenter.swift */,
-				853DD4FD2042CCE100E82595 /* SplashInteractor.swift */,
-				853DD4FF2042CCEB00E82595 /* SplashRouter.swift */,
-				853DD5012042CCF500E82595 /* SplashAssembly.swift */,
+				85F740D3204C4535002AC5FE /* View */,
+				85F740D2204C452F002AC5FE /* Presenter */,
+				85F740D1204C4527002AC5FE /* Interactor */,
+				85F740D0204C4520002AC5FE /* Router */,
+				85F740CF204C4519002AC5FE /* Assembly */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -674,12 +673,11 @@
 		853DD5142042FC5600E82595 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				853DD51A2042FC6600E82595 /* LoginView.swift */,
-				853DD5172042FC6600E82595 /* LoginViewController.swift */,
-				853DD5152042FC6600E82595 /* LoginPresenter.swift */,
-				853DD5192042FC6600E82595 /* LoginInteractor.swift */,
-				853DD5162042FC6600E82595 /* LoginRouter.swift */,
-				853DD5182042FC6600E82595 /* LoginAssembly.swift */,
+				85F740CA204C44E9002AC5FE /* View */,
+				85F740CB204C44F1002AC5FE /* Presenter */,
+				85F740CC204C44FB002AC5FE /* Interactor */,
+				85F740CD204C4502002AC5FE /* Router */,
+				85F740CE204C4509002AC5FE /* Assembly */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -687,11 +685,11 @@
 		853DD5212042FE5E00E82595 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				853DD5242042FE7800E82595 /* NavigationViewController.swift */,
-				853DD5222042FE7800E82595 /* NavigationPresenter.swift */,
-				853DD5262042FE7800E82595 /* NavigationInteractor.swift */,
-				853DD5232042FE7800E82595 /* NavigationRouter.swift */,
-				853DD5252042FE7800E82595 /* NavigationAssembly.swift */,
+				85F740D4204C4543002AC5FE /* View */,
+				85F740D5204C4548002AC5FE /* Presenter */,
+				85F740D6204C454E002AC5FE /* Interactor */,
+				85F740D8204C455C002AC5FE /* Router */,
+				85F740D7204C4556002AC5FE /* Assembly */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -742,6 +740,128 @@
 				857ADD9A20432B0C00CA0D42 /* UIColor.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		85F740CA204C44E9002AC5FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				853DD51A2042FC6600E82595 /* LoginView.swift */,
+				853DD5172042FC6600E82595 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F740CB204C44F1002AC5FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5152042FC6600E82595 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85F740CC204C44FB002AC5FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5192042FC6600E82595 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85F740CD204C4502002AC5FE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5162042FC6600E82595 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85F740CE204C4509002AC5FE /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5182042FC6600E82595 /* LoginAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85F740CF204C4519002AC5FE /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5012042CCF500E82595 /* SplashAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85F740D0204C4520002AC5FE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4FF2042CCEB00E82595 /* SplashRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85F740D1204C4527002AC5FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4FD2042CCE100E82595 /* SplashInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85F740D2204C452F002AC5FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4FB2042CCD200E82595 /* SplashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85F740D3204C4535002AC5FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5032042CD3600E82595 /* SplashView.swift */,
+				853DD4F92042CB5E00E82595 /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F740D4204C4543002AC5FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5242042FE7800E82595 /* NavigationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F740D5204C4548002AC5FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5222042FE7800E82595 /* NavigationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85F740D6204C454E002AC5FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5262042FE7800E82595 /* NavigationInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85F740D7204C4556002AC5FE /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5252042FE7800E82595 /* NavigationAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85F740D8204C455C002AC5FE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				853DD5232042FE7800E82595 /* NavigationRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
