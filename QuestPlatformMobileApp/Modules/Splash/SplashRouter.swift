@@ -17,6 +17,6 @@ final class SplashRouter: Router, SplashRouterInput {
     
     func presentLogin() {
         let login = LoginAssembly().build()
-        viewController.navigationController?.setViewControllers([login.view], animated: true)
+        viewController.navigationController?.pushViewController(login.view, animated: true)
     }
 }

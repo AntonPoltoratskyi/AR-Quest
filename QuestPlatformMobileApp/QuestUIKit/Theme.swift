@@ -13,6 +13,7 @@ enum Theme {
         enum Color {
             static let title = UIColor.white
             static let lightBlue = UIColor(r: 58, g: 204, b: 225)
+            static let darkGray = UIColor(r: 53, g: 58, b: 80)
         }
         enum Font {
             static let `default` = UIFont.systemFont(ofSize: 15, weight: .regular)
@@ -38,3 +39,10 @@ enum Theme {
         }
     }
 }
+
+extension UIFont {
+    static func appFont(ofSize fontSize: CGFloat, weight: Weight) -> UIFont {
+        return systemFont(ofSize: fontSize, weight: weight)
+    }
+}
+

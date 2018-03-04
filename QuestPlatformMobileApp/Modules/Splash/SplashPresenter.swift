@@ -30,8 +30,12 @@ final class SplashPresenter: SplashModuleInput, Presenter {
 // MARK: - SplashViewOutput
 extension SplashPresenter: SplashViewOutput {
     
-    func didFinishSplashAnimation() {
+    func loginWithEmail() {
         router.presentLogin()
+    }
+    
+    func loginWithFacebook() {
+        
     }
 }
 

@@ -12,7 +12,8 @@ protocol SplashViewInput: class {
 }
 
 protocol SplashViewOutput: class {
-    func didFinishSplashAnimation()
+    func loginWithEmail()
+    func loginWithFacebook()
 }
 
 final class SplashViewController: UIViewController, View {
@@ -24,8 +25,14 @@ final class SplashViewController: UIViewController, View {
 
     private lazy var contentView: SplashView = {
         let contentView = SplashView()
+        contentView.emailButton.addTarget(self, action: #selector(actionLoginWithEmail(_:)), for: .touchUpInside)
+        contentView.facebookButton.addTarget(self, action: #selector(actionLoginWithFacebook(_:)), for: .touchUpInside)
         return contentView
     }()
+    
+    private var buttons: [UIButton] {
+        return [contentView.emailButton, contentView.facebookButton]
+    }
     
     
     // MARK: - Life Cycle
@@ -35,12 +42,43 @@ final class SplashViewController: UIViewController, View {
         self.view = contentView
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.output.didFinishSplashAnimation()
-        }
+        contentView.buttonsContainer.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0.7, animations: {
+            self.contentView.buttonsContainer.alpha = 1
+        })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        enableButtons(true)
+    }
+    
+    
+    // MARK: - UI Setup
+    
+    private func setupUI() {
+    }
+    
+    
+    // MARK: - Actions
+    
+    private func enableButtons(_ isEnabled: Bool) {
+        buttons.forEach { $0.isEnabled = isEnabled }
+    }
+    
+    @objc private func actionLoginWithEmail(_ sender: UIButton) {
+        enableButtons(false)
+        output.loginWithEmail()
+    }
+    
+    @objc private func actionLoginWithFacebook(_ sender: UIButton) {
+        enableButtons(false)
+        output.loginWithFacebook()
     }
 }
 
