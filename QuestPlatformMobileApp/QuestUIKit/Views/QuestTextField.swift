@@ -41,8 +41,8 @@ class QuestTextField: UITextField {
         backgroundColor = Theme.TextField.Color.background
         font = Theme.TextField.Font.default
         layer.cornerRadius = 12
-        layer.shadowOpacity = 0.08
-        layer.shadowRadius = 16
+        layer.shadowOpacity = 0.12
+        layer.shadowRadius = 6
         layer.shadowColor = Theme.TextField.Color.shadow.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 4)
     }
