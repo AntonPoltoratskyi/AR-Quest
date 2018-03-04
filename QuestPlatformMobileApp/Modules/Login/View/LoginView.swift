@@ -49,6 +49,13 @@ final class LoginView: UIView {
         return contentView
     }()
     
+    private(set) lazy var backgroundCircleView: QuestCircleView = {
+        let backgroundCircleView = QuestCircleView()
+        backgroundCircleView.backgroundColor = Theme.Background.blueBackground
+        contentView.addSubview(backgroundCircleView)
+        return backgroundCircleView
+    }()
+    
     private(set) lazy var continueButton: QuestButton = {
         let button = QuestButton()
         button.setTitle("Continue", for: .normal)
@@ -102,6 +109,12 @@ final class LoginView: UIView {
             maker.edges.equalToSuperview()
             maker.width.equalToSuperview()
             maker.height.equalToSuperview()
+        }
+        
+        backgroundCircleView.snp.makeConstraints { maker in
+            maker.centerY.equalToSuperview().offset(-40)
+            maker.centerX.equalTo(contentView.snp.trailing)
+            maker.width.height.equalTo(contentView.snp.width)
         }
         
         continueButton.snp.makeConstraints { maker in

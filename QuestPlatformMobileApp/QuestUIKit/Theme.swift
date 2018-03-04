@@ -50,6 +50,9 @@ enum Theme {
             static let `default` = UIFont.appFont(ofSize: 12, weight: .medium)
         }
     }
+    enum Background {
+        static let blueBackground = UIColor(r: 102, g: 94, b: 255)
+    }
 }
 
 extension UIFont {
