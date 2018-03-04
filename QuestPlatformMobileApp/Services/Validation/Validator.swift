@@ -16,6 +16,7 @@ protocol Validator {
 enum ValidationError: Error, ErrorRepresentable {
     case invalidEmail
     case invalidPassword
+    case passwordNotMatch
     
     var errorMessage: String {
         switch self {
@@ -23,6 +24,8 @@ enum ValidationError: Error, ErrorRepresentable {
             return "Invalid email"
         case .invalidPassword:
             return "Invalid password"
+        case .passwordNotMatch:
+            return "Password doesn't match"
         }
     }
 }

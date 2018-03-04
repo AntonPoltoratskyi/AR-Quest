@@ -30,13 +30,31 @@ final class LoginPresenter: Presenter, LoginModuleInput {
 // MARK: - LoginViewOutput
 extension LoginPresenter: LoginViewOutput {
     
-    func didClickLogin(email: String?, password: String?) {
+    func didClickSignIn(email: String?, password: String?) {
         do {
             let validEmail = try EmailValidator().validated(email)
             let validPassword = try PasswordValidator().validated(password)
             
             let credentials = LoginCredentials(email: validEmail, password: validPassword)
             interactor.login(with: credentials)
+        } catch {
+            if let error = error as? ErrorRepresentable {
+                view.showError(error.errorMessage)
+            }
+        }
+    }
+    
+    func didClickSignUp(email: String?, password: String?, confirmationPassword: String?) {
+        do {
+            let validEmail = try EmailValidator().validated(email)
+            let validPassword = try PasswordValidator().validated(password)
+            
+            guard validPassword == confirmationPassword else {
+                throw ValidationError.passwordNotMatch
+            }
+            
+            let credentials = SignUpCredentials(email: validEmail, password: validPassword)
+            interactor.register(with: credentials)
         } catch {
             if let error = error as? ErrorRepresentable {
                 view.showError(error.errorMessage)

@@ -92,6 +92,8 @@
 		85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */; };
 		85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */; };
 		85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DF204C4D9E002AC5FE /* Collection+ViewLayout.swift */; };
+		85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740E1204C541D002AC5FE /* LoginFormView.swift */; };
+		85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740E3204C5542002AC5FE /* RegistrationFormView.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +207,8 @@
 		85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
 		85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestSegmentedControl.swift; sourceTree = "<group>"; };
 		85F740DF204C4D9E002AC5FE /* Collection+ViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ViewLayout.swift"; sourceTree = "<group>"; };
+		85F740E1204C541D002AC5FE /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		85F740E3204C5542002AC5FE /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -870,6 +874,8 @@
 		85F740D9204C462F002AC5FE /* Forms */ = {
 			isa = PBXGroup;
 			children = (
+				85F740E1204C541D002AC5FE /* LoginFormView.swift */,
+				85F740E3204C5542002AC5FE /* RegistrationFormView.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -1161,8 +1167,10 @@
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
+				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
+				85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,

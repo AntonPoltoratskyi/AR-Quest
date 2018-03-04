@@ -30,6 +30,7 @@ class QuestSegmentedControl: UIView {
     
     private(set) lazy var actionsContainerView: UIView = {
         let containerView = UIView()
+        containerView.backgroundColor = .clear
         self.addSubview(containerView)
         return containerView
     }()
@@ -52,6 +53,8 @@ class QuestSegmentedControl: UIView {
     // MARK: - Setup
     
     private func setup() {
+        backgroundColor = .clear
+        
         actionsContainerView.snp.makeConstraints { maker in
             maker.top.bottom.centerX.equalToSuperview()
             maker.leading.greaterThanOrEqualToSuperview()

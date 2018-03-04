@@ -9,15 +9,26 @@
 import UIKit
 import SnapKit
 
+protocol LoginViewDelegate: class {
+    func loginViewDidSelectSignIn(_ loginView: LoginView)
+    func loginViewDidSelectSignUp(_ loginView: LoginView)
+}
+
 final class LoginView: UIView {
+    
+    weak var delegate: LoginViewDelegate?
+    
+    // MARK: - Views
     
     private(set) lazy var segmentedControl: QuestSegmentedControl = {
         let actions: [ControlAction] = [
             ControlAction(title: "SIGN IN") { [weak self] in
-                
+                guard let sSelf = self else { return }
+                sSelf.delegate?.loginViewDidSelectSignIn(sSelf)
             },
             ControlAction(title: "SIGN UP") { [weak self] in
-                
+                guard let sSelf = self else { return }
+                sSelf.delegate?.loginViewDidSelectSignUp(sSelf)
             }
         ]
         let control = QuestSegmentedControl(actions: actions)
@@ -45,25 +56,16 @@ final class LoginView: UIView {
         return button
     }()
     
-    private(set) lazy var emailTextField: QuestTextField = {
-        let textField = QuestTextField()
-        textField.placeholder = "Email"
-        contentView.addSubview(textField)
-        return textField
+    private(set) lazy var loginForm: LoginFormView = {
+        let form = LoginFormView()
+        contentView.addSubview(form)
+        return form
     }()
     
-    private(set) lazy var passwordTextField: QuestTextField = {
-        let textField = QuestTextField()
-        textField.placeholder = "Password"
-        contentView.addSubview(textField)
-        return textField
-    }()
-    
-    private(set) lazy var errorLabel: QuestErrorLabel = {
-        let label = QuestErrorLabel()
-        label.textAlignment = .center
-        contentView.addSubview(label)
-        return label
+    private(set) lazy var registrationForm: RegistrationFormView = {
+        let form = RegistrationFormView()
+        contentView.addSubview(form)
+        return form
     }()
     
     
@@ -110,25 +112,29 @@ final class LoginView: UIView {
             maker.buttonHeight()
         }
         
-        passwordTextField.returnKeyType = .done
-        passwordTextField.isSecureTextEntry = true
-        passwordTextField.snp.makeConstraints { maker in
-            maker.leading.trailing.equalTo(continueButton)
+        loginForm.snp.makeConstraints { maker in
             maker.bottom.equalTo(continueButton.snp.top).offset(-57)
-            maker.textFieldHeight()
-        }
-        
-        emailTextField.returnKeyType = .next
-        emailTextField.keyboardType = .emailAddress
-        emailTextField.snp.makeConstraints { maker in
             maker.leading.trailing.equalTo(continueButton)
-            maker.bottom.equalTo(passwordTextField.snp.top).offset(-24)
-            maker.textFieldHeight()
         }
         
-        errorLabel.snp.makeConstraints { maker in
-            maker.leading.trailing.equalTo(passwordTextField)
-            maker.top.equalTo(passwordTextField.snp.bottom).offset(8)
+        registrationForm.snp.makeConstraints { maker in
+            maker.bottom.equalTo(continueButton.snp.top).offset(-57)
+            maker.leading.trailing.equalTo(continueButton)
         }
+        
+        showLoginForm()
+    }
+    
+    
+    // MARK: - Actions
+    
+    func showLoginForm() {
+        loginForm.isHidden = false
+        registrationForm.isHidden = true
+    }
+    
+    func showSignUpForm() {
+        loginForm.isHidden = true
+        registrationForm.isHidden = false
     }
 }

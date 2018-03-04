@@ -13,7 +13,8 @@ protocol LoginViewInput: class {
 }
 
 protocol LoginViewOutput: class {
-    func didClickLogin(email: String?, password: String?)
+    func didClickSignIn(email: String?, password: String?)
+    func didClickSignUp(email: String?, password: String?, confirmationPassword: String?)
 }
 
 final class LoginViewController: UIViewController, View, KeyboardInteracting {
@@ -21,12 +22,23 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
     typealias Output = LoginViewOutput
     var output: Output!
     
+    enum State {
+        case signIn
+        case signUp
+    }
+    private var state: State = .signIn {
+        didSet {
+            keyboardInputViews.flatMap { $0 as? UITextField }.forEach { $0.delegate = self }
+        }
+    }
+    
     
     // MARK: - Views
     
     private lazy var contentView: LoginView = {
         let contentView = LoginView()
         contentView.continueButton.addTarget(self, action: #selector(actionLogin(sender:)), for: .touchUpInside)
+        contentView.delegate = self
         return contentView
     }()
     
@@ -35,7 +47,12 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
     }
     
     var keyboardInputViews: [KeyboardInputView] {
-        return [contentView.emailTextField, contentView.passwordTextField]
+        switch state {
+        case .signIn:
+            return [contentView.loginForm.emailTextField, contentView.loginForm.passwordTextField]
+        case .signUp:
+            return [contentView.registrationForm.emailTextField, contentView.registrationForm.passwordTextField, contentView.registrationForm.confirmPasswordTextField]
+        }
     }
     
     
@@ -44,9 +61,7 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
     override func loadView() {
         super.loadView()
         self.view = contentView
-        keyboardInputViews
-            .flatMap { $0 as? UITextField }
-            .forEach { $0.delegate = self }
+        self.state = .signIn
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,12 +78,35 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
     // MARK: - Actions
     
     @objc private func actionLogin(sender: UIButton) {
-        let email = contentView.emailTextField.text
-        let password = contentView.passwordTextField.text
-        output.didClickLogin(email: email, password: password)
+        switch self.state {
+        case .signIn:
+            let email = contentView.loginForm.emailTextField.text
+            let password = contentView.loginForm.passwordTextField.text
+            output.didClickSignIn(email: email, password: password)
+        case .signUp:
+            let email = contentView.registrationForm.emailTextField.text
+            let password = contentView.registrationForm.passwordTextField.text
+            let confirmationPassword = contentView.registrationForm.confirmPasswordTextField.text
+            output.didClickSignUp(email: email, password: password, confirmationPassword: confirmationPassword)
+        }
     }
 }
 
+// MARK: - LoginViewDelegate
+extension LoginViewController: LoginViewDelegate {
+    
+    func loginViewDidSelectSignIn(_ loginView: LoginView) {
+        self.state = .signIn
+        contentView.showLoginForm()
+    }
+    
+    func loginViewDidSelectSignUp(_ loginView: LoginView) {
+        self.state = .signUp
+        contentView.showSignUpForm()
+    }
+}
+
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -88,6 +126,11 @@ extension LoginViewController: UITextFieldDelegate {
 extension LoginViewController: LoginViewInput {
     
     func showError(_ errorMessage: String) {
-        contentView.errorLabel.text = "*\(errorMessage)"
+        switch self.state {
+        case .signIn:
+            contentView.loginForm.errorLabel.text = "*\(errorMessage)"
+        case .signUp:
+            contentView.registrationForm.errorLabel.text = "*\(errorMessage)"
+        }
     }
 }

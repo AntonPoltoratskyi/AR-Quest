@@ -51,12 +51,12 @@ final class AuthNetworkServiceStub: AuthNetworkService {
     }
     
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
-        let user = User(name: "Stub User", email: credentials.email)
+        let user = User(name: credentials.email, email: credentials.email)
         completion(.success(user))
     }
     
     func register(with credentials: SignUpCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
-        let user = User(name: credentials.name, email: credentials.email)
+        let user = User(name: credentials.email, email: credentials.email)
         completion(.success(user))
     }
 }
