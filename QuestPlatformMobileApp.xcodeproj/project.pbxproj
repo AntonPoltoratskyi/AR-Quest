@@ -89,7 +89,9 @@
 		857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9C20432BCA00CA0D42 /* Theme.swift */; };
 		857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9F20432E6300CA0D42 /* QuestTextField.swift */; };
 		85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */; };
-		85F740C5204C24D8002AC5FE /* SnapKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C4204C24D8002AC5FE /* SnapKitExtensions.swift */; };
+		85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */; };
+		85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */; };
+		85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DF204C4D9E002AC5FE /* Collection+ViewLayout.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -200,7 +202,9 @@
 		857ADD9C20432BCA00CA0D42 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		857ADD9F20432E6300CA0D42 /* QuestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTextField.swift; sourceTree = "<group>"; };
 		85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestErrorLabel.swift; sourceTree = "<group>"; };
-		85F740C4204C24D8002AC5FE /* SnapKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKitExtensions.swift; sourceTree = "<group>"; };
+		85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
+		85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestSegmentedControl.swift; sourceTree = "<group>"; };
+		85F740DF204C4D9E002AC5FE /* Collection+ViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ViewLayout.swift"; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -726,10 +730,8 @@
 			isa = PBXGroup;
 			children = (
 				857ADD9C20432BCA00CA0D42 /* Theme.swift */,
-				857ADD9620432A8D00CA0D42 /* QuestButton.swift */,
-				857ADD9F20432E6300CA0D42 /* QuestTextField.swift */,
-				85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */,
-				85F740C4204C24D8002AC5FE /* SnapKitExtensions.swift */,
+				85F740DC204C469F002AC5FE /* Views */,
+				85F740DD204C46A8002AC5FE /* Extensions */,
 			);
 			path = QuestUIKit;
 			sourceTree = "<group>";
@@ -745,6 +747,7 @@
 		85F740CA204C44E9002AC5FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				85F740D9204C462F002AC5FE /* Forms */,
 				853DD51A2042FC6600E82595 /* LoginView.swift */,
 				853DD5172042FC6600E82595 /* LoginViewController.swift */,
 			);
@@ -862,6 +865,41 @@
 				853DD5232042FE7800E82595 /* NavigationRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		85F740D9204C462F002AC5FE /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+		85F740DC204C469F002AC5FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				857ADD9620432A8D00CA0D42 /* QuestButton.swift */,
+				857ADD9F20432E6300CA0D42 /* QuestTextField.swift */,
+				85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */,
+				85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85F740DD204C46A8002AC5FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85F740DE204C46BB002AC5FE /* SnapKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		85F740DE204C46BB002AC5FE /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */,
+				85F740DF204C4D9E002AC5FE /* Collection+ViewLayout.swift */,
+			);
+			path = SnapKit;
 			sourceTree = "<group>";
 		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
@@ -1118,6 +1156,7 @@
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
+				85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
@@ -1126,7 +1165,8 @@
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
-				85F740C5204C24D8002AC5FE /* SnapKitExtensions.swift in Sources */,
+				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
+				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */,

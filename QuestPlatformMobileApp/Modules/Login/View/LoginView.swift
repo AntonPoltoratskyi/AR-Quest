@@ -11,6 +11,20 @@ import SnapKit
 
 final class LoginView: UIView {
     
+    private(set) lazy var segmentedControl: QuestSegmentedControl = {
+        let actions: [ControlAction] = [
+            ControlAction(title: "SIGN IN") { [weak self] in
+                
+            },
+            ControlAction(title: "SIGN UP") { [weak self] in
+                
+            }
+        ]
+        let control = QuestSegmentedControl(actions: actions)
+        self.addSubview(control)
+        return control
+    }()
+    
     private(set) lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
@@ -71,8 +85,15 @@ final class LoginView: UIView {
     private func setupSubviews() {
         backgroundColor = .white
         
+        segmentedControl.snp.makeConstraints { maker in
+            maker.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30)
+            maker.leading.trailing.equalToSuperview()
+            maker.segmentedControlActionHeight()
+        }
+        
         scrollView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
+            maker.leading.trailing.bottom.equalToSuperview()
+            maker.top.equalTo(segmentedControl.snp.bottom)
         }
         
         contentView.snp.makeConstraints { maker in

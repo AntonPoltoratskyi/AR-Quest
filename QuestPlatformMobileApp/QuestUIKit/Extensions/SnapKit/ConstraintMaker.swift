@@ -1,5 +1,5 @@
 //
-//  SnapKitExtensions.swift
+//  ConstraintMaker.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 04.03.2018.
@@ -18,5 +18,10 @@ extension ConstraintMaker {
     @discardableResult
     func textFieldHeight() -> ConstraintMakerEditable {
         return self.height.equalTo(52)
+    }
+    
+    @discardableResult
+    func segmentedControlActionHeight() -> ConstraintMakerEditable {
+        return self.height.equalTo(32)
     }
 }

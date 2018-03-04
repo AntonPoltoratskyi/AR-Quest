@@ -16,7 +16,7 @@ enum Theme {
             static let darkGray = UIColor(r: 53, g: 58, b: 80)
         }
         enum Font {
-            static let `default` = UIFont.systemFont(ofSize: 15, weight: .regular)
+            static let `default` = UIFont.appFont(ofSize: 15, weight: .regular)
         }
     }
     enum TextField {
@@ -27,7 +27,7 @@ enum Theme {
             static let shadow = UIColor(r: 69, g: 91, b: 99)
         }
         enum Font {
-            static let `default` = UIFont.systemFont(ofSize: 15, weight: .regular)
+            static let `default` = UIFont.appFont(ofSize: 15, weight: .regular)
         }
     }
     enum Label {
@@ -35,7 +35,19 @@ enum Theme {
             static let error = UIColor.red
         }
         enum Font {
-            static let error = UIFont.systemFont(ofSize: 13, weight: .regular)
+            static let error = UIFont.appFont(ofSize: 13, weight: .regular)
+        }
+    }
+    enum SegmentedControl {
+        enum Color {
+            static let normalColor = UIColor.clear
+            static let selectedColor = UIColor(r: 102, g: 94, b: 255)
+            
+            static let normalTextColor = UIColor(r: 120, g: 132, b: 158)
+            static let selectedTextColor = UIColor.white
+        }
+        enum Font {
+            static let `default` = UIFont.appFont(ofSize: 12, weight: .medium)
         }
     }
 }
