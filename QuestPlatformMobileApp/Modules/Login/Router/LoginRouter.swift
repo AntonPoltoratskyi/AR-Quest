@@ -18,9 +18,12 @@ final class LoginRouter: Router, LoginRouterInput {
     
     func showContent() {
         let menuContainer = SideMenuContainerAssembly().build()
-        let leftMenu = MenuAssembly().build()
         
-        menuContainer.input.setupCenter(leftMenu.view)
+        let leftMenu = MenuAssembly().build()
+        let mainPage = MainAssembly().build()
+        
+        menuContainer.input.setupLeft(leftMenu.view)
+        menuContainer.input.setupCenter(mainPage.view)
         
         viewController.present(menuContainer.view, animated: true, completion: nil)
     }
