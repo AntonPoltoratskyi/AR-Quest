@@ -94,6 +94,12 @@
 		85841F2D2051B453009C4BE0 /* LocationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F272051B453009C4BE0 /* LocationAssembly.swift */; };
 		85841F2E2051B453009C4BE0 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F282051B453009C4BE0 /* LocationInteractor.swift */; };
 		85841F2F2051B453009C4BE0 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F292051B453009C4BE0 /* LocationView.swift */; };
+		85841F3D2051BA5B009C4BE0 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F372051BA5B009C4BE0 /* MainPresenter.swift */; };
+		85841F3E2051BA5B009C4BE0 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F382051BA5B009C4BE0 /* MainRouter.swift */; };
+		85841F3F2051BA5B009C4BE0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F392051BA5B009C4BE0 /* MainViewController.swift */; };
+		85841F402051BA5B009C4BE0 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F3A2051BA5B009C4BE0 /* MainAssembly.swift */; };
+		85841F412051BA5B009C4BE0 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F3B2051BA5B009C4BE0 /* MainInteractor.swift */; };
+		85841F422051BA5B009C4BE0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F3C2051BA5B009C4BE0 /* MainView.swift */; };
 		85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */; };
 		85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */; };
 		85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */; };
@@ -227,6 +233,12 @@
 		85841F272051B453009C4BE0 /* LocationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAssembly.swift; sourceTree = "<group>"; };
 		85841F282051B453009C4BE0 /* LocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
 		85841F292051B453009C4BE0 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		85841F372051BA5B009C4BE0 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		85841F382051BA5B009C4BE0 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		85841F392051BA5B009C4BE0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		85841F3A2051BA5B009C4BE0 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		85841F3B2051BA5B009C4BE0 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		85841F3C2051BA5B009C4BE0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestErrorLabel.swift; sourceTree = "<group>"; };
 		85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
 		85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestSegmentedControl.swift; sourceTree = "<group>"; };
@@ -685,6 +697,7 @@
 				853DD4F82042CB4500E82595 /* Splash */,
 				853DD5142042FC5600E82595 /* Login */,
 				85F7410D204C8B21002AC5FE /* Menu */,
+				85841F362051BA43009C4BE0 /* Main */,
 				85841F232051B1F8009C4BE0 /* Location */,
 			);
 			path = Modules;
@@ -837,6 +850,59 @@
 				85841F252051B453009C4BE0 /* LocationRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		85841F362051BA43009C4BE0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				85841F432051BA66009C4BE0 /* View */,
+				85841F442051BA6C009C4BE0 /* Presenter */,
+				85841F472051BA7F009C4BE0 /* Interactor */,
+				85841F452051BA73009C4BE0 /* Router */,
+				85841F462051BA78009C4BE0 /* Assembly */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		85841F432051BA66009C4BE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85841F3C2051BA5B009C4BE0 /* MainView.swift */,
+				85841F392051BA5B009C4BE0 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85841F442051BA6C009C4BE0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85841F372051BA5B009C4BE0 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85841F452051BA73009C4BE0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85841F382051BA5B009C4BE0 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85841F462051BA78009C4BE0 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85841F3A2051BA5B009C4BE0 /* MainAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85841F472051BA7F009C4BE0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85841F3B2051BA5B009C4BE0 /* MainInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		85F740CA204C44E9002AC5FE /* View */ = {
@@ -1344,10 +1410,12 @@
 				85841F2B2051B453009C4BE0 /* LocationRouter.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
+				85841F3D2051BA5B009C4BE0 /* MainPresenter.swift in Sources */,
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				85841F2D2051B453009C4BE0 /* LocationAssembly.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
+				85841F3E2051BA5B009C4BE0 /* MainRouter.swift in Sources */,
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
@@ -1382,6 +1450,7 @@
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
 				85F74114204C8B31002AC5FE /* MenuPresenter.swift in Sources */,
+				85841F412051BA5B009C4BE0 /* MainInteractor.swift in Sources */,
 				85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
@@ -1390,6 +1459,7 @@
 				85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */,
 				85F74119204C8B31002AC5FE /* MenuView.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
+				85841F422051BA5B009C4BE0 /* MainView.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
@@ -1402,6 +1472,7 @@
 				853DD4F62042CA1800E82595 /* ResponseRepresentable.swift in Sources */,
 				853DD51B2042FC6600E82595 /* LoginPresenter.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
+				85841F3F2051BA5B009C4BE0 /* MainViewController.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
 				85125717204AEFEA00995543 /* Validator.swift in Sources */,
@@ -1422,6 +1493,7 @@
 				857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */,
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
 				85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */,
+				85841F402051BA5B009C4BE0 /* MainAssembly.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
 				85F74116204C8B31002AC5FE /* MenuViewController.swift in Sources */,
