@@ -103,6 +103,7 @@
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
+		85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A58F205EF4A000C6F547 /* SCNNode.swift */; };
 		85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */; };
 		85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */; };
 		85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */; };
@@ -245,6 +246,7 @@
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
+		85D8A58F205EF4A000C6F547 /* SCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
 		85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestErrorLabel.swift; sourceTree = "<group>"; };
 		85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
 		85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestSegmentedControl.swift; sourceTree = "<group>"; };
@@ -915,6 +917,7 @@
 		85D8A56A205ECA9E00C6F547 /* SceneKit */ = {
 			isa = PBXGroup;
 			children = (
+				85D8A58F205EF4A000C6F547 /* SCNNode.swift */,
 				85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */,
 				85D8A56D205ECAF400C6F547 /* SCNVector3.swift */,
 				85D8A56F205ECB1300C6F547 /* Radians.swift */,
@@ -1418,6 +1421,7 @@
 				853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */,
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
+				85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
