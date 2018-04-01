@@ -9,5 +9,9 @@
 import Foundation
 
 final class Quest: Codable {
+    let name: String
     
+    init(name: String) {
+        self.name = name
+    }
 }
