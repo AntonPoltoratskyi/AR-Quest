@@ -11,4 +11,17 @@ import Foundation
 final class QuestDetailsInteractor: Interactor, QuestDetailsInteractorInput {
     typealias Output = QuestDetailsInteractorOutput
     weak var output: QuestDetailsInteractorOutput!
+    
+    var questNetworkService: QuestNetworkService!
+    
+    func loadTasks(for quest: Quest) {
+        questNetworkService.loadTasks(for: quest) { [weak self] result in
+            switch result {
+            case let .success(tasks):
+                self?.output?.didLoadTasks(tasks)
+            case let .failure(error):
+                self?.output?.didReceiveError(error)
+            }
+        }
+    }
 }

@@ -53,6 +53,7 @@
 		851702292071579E0081F611 /* QuestDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702222071579E0081F611 /* QuestDetailsAssembly.swift */; };
 		8517022A2071579E0081F611 /* QuestDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702232071579E0081F611 /* QuestDetailsInteractor.swift */; };
 		8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702242071579E0081F611 /* QuestDetailsView.swift */; };
+		8517023220715AF40081F611 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023120715AF40081F611 /* Task.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -217,6 +218,7 @@
 		851702222071579E0081F611 /* QuestDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetailsAssembly.swift; sourceTree = "<group>"; };
 		851702232071579E0081F611 /* QuestDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetailsInteractor.swift; sourceTree = "<group>"; };
 		851702242071579E0081F611 /* QuestDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetailsView.swift; sourceTree = "<group>"; };
+		8517023120715AF40081F611 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -957,6 +959,7 @@
 			children = (
 				857ADD89204319FA00CA0D42 /* User.swift */,
 				85170212207125800081F611 /* Quest.swift */,
+				8517023120715AF40081F611 /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1620,6 +1623,7 @@
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				85841F2D2051B453009C4BE0 /* LocationAssembly.swift in Sources */,
+				8517023220715AF40081F611 /* Task.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
 				85841F3E2051BA5B009C4BE0 /* MainRouter.swift in Sources */,
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,

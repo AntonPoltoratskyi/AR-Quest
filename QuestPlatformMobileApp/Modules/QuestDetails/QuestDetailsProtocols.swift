@@ -16,19 +16,24 @@ protocol QuestDetailsModuleInput: ModuleInput {
 // MARK: - View
 
 protocol QuestDetailsViewInput: class {
+    
 }
 
 // MARK: -
 protocol QuestDetailsViewOutput: class {
+    func viewDidLoad()
 }
 
 // MARK: - Interactor
 
 protocol QuestDetailsInteractorInput: class {
+    func loadTasks(for quest: Quest)
 }
 
 // MARK: -
 protocol QuestDetailsInteractorOutput: class {
+    func didLoadTasks(_ tasks: [Task])
+    func didReceiveError(_ error: Error)
 }
 
 // MARK: - Router

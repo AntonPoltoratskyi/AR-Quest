@@ -24,9 +24,19 @@ final class QuestDetailsPresenter: Presenter, QuestDetailsModuleInput {
 // MARK: - QuestDetailsViewOutput
 extension QuestDetailsPresenter: QuestDetailsViewOutput {
     
+    func viewDidLoad() {
+        interactor.loadTasks(for: quest)
+    }
 }
 
 // MARK: - QuestDetailsInteractorOutput
 extension QuestDetailsPresenter: QuestDetailsInteractorOutput {
     
+    func didLoadTasks(_ tasks: [Task]) {
+        
+    }
+    
+    func didReceiveError(_ error: Error) {
+        
+    }
 }
