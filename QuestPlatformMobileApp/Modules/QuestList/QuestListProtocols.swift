@@ -16,22 +16,29 @@ protocol QuestListModuleInput: ModuleInput {
 // MARK: - View
 
 protocol QuestListViewInput: class {
+    func setupQuests(_ models: [QuestCellModel])
 }
 
 // MARK: -
 protocol QuestListViewOutput: class {
+    func viewDidLoad()
 }
 
 // MARK: - Interactor
 
 protocol QuestListInteractorInput: class {
+    func loadQuests()
 }
 
 // MARK: -
 protocol QuestListInteractorOutput: class {
+    func didLoadQuests(_ quests: [Quest])
+    func didReceiveError(_ error: Error)
 }
 
 // MARK: - Router
 
 protocol QuestListRouterInput: class {
+    func showQuest(_ quest: Quest)
+    func showCodeJoin()
 }

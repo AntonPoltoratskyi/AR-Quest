@@ -11,4 +11,12 @@ import UIKit
 final class QuestListRouter: Router, QuestListRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func showQuest(_ quest: Quest) {
+        
+    }
+    
+    func showCodeJoin() {
+        
+    }
 }

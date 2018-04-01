@@ -10,6 +10,12 @@ import UIKit
 
 final class QuestCellModel: CellViewModel {
     
+    let quest: Quest
+    
+    init(quest: Quest) {
+        self.quest = quest
+    }
+    
     func setup(cell: QuestTableViewCell) {
         
     }

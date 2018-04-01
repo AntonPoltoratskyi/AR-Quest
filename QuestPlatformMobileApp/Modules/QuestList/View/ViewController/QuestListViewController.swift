@@ -13,7 +13,11 @@ final class QuestListViewController: UIViewController, View {
     typealias Output = QuestListViewOutput
     var output: Output!
     
-    private var cells: [QuestCellModel] = []
+    private var cells: [QuestCellModel] = [] {
+        didSet {
+            contentView.tableView.reloadData()
+        }
+    }
     
     
     // MARK: - Views
@@ -41,12 +45,16 @@ final class QuestListViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        output.viewDidLoad()
     }
 }
 
 // MARK: - QuestListViewInput
 extension QuestListViewController: QuestListViewInput {
     
+    func setupQuests(_ models: [QuestCellModel]) {
+        self.cells = models
+    }
 }
 
 // MARK: - Table View

@@ -9,6 +9,11 @@
 import Foundation
 
 final class QuestListInteractor: Interactor, QuestListInteractorInput {
+    
     typealias Output = QuestListInteractorOutput
     weak var output: QuestListInteractorOutput!
+    
+    func loadQuests() {
+        
+    }
 }

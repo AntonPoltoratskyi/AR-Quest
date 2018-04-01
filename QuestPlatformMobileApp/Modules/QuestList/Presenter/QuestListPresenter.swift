@@ -23,9 +23,19 @@ final class QuestListPresenter: Presenter, QuestListModuleInput {
 // MARK: - QuestListViewOutput
 extension QuestListPresenter: QuestListViewOutput {
     
+    func viewDidLoad() {
+        interactor.loadQuests()
+    }
 }
 
 // MARK: - QuestListInteractorOutput
 extension QuestListPresenter: QuestListInteractorOutput {
     
+    func didLoadQuests(_ quests: [Quest]) {
+        view.setupQuests(quests.map { QuestCellModel(quest: $0) })
+    }
+    
+    func didReceiveError(_ error: Error) {
+        
+    }
 }
