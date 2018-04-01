@@ -54,6 +54,8 @@
 		8517022A2071579E0081F611 /* QuestDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702232071579E0081F611 /* QuestDetailsInteractor.swift */; };
 		8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702242071579E0081F611 /* QuestDetailsView.swift */; };
 		8517023220715AF40081F611 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023120715AF40081F611 /* Task.swift */; };
+		85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170235207161F90081F611 /* QuestTaskTableViewCell.swift */; };
+		85170238207165100081F611 /* QuestTaskCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170237207165100081F611 /* QuestTaskCellModel.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -219,6 +221,8 @@
 		851702232071579E0081F611 /* QuestDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetailsInteractor.swift; sourceTree = "<group>"; };
 		851702242071579E0081F611 /* QuestDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetailsView.swift; sourceTree = "<group>"; };
 		8517023120715AF40081F611 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		85170235207161F90081F611 /* QuestTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTaskTableViewCell.swift; sourceTree = "<group>"; };
+		85170237207165100081F611 /* QuestTaskCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTaskCellModel.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -715,8 +719,8 @@
 		8517022C207157A90081F611 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				851702242071579E0081F611 /* QuestDetailsView.swift */,
-				851702202071579E0081F611 /* QuestDetailsViewController.swift */,
+				85170234207161CC0081F611 /* TableView */,
+				85170233207161C20081F611 /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -751,6 +755,24 @@
 				8517021F2071579E0081F611 /* QuestDetailsRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		85170233207161C20081F611 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				851702242071579E0081F611 /* QuestDetailsView.swift */,
+				851702202071579E0081F611 /* QuestDetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		85170234207161CC0081F611 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				85170235207161F90081F611 /* QuestTaskTableViewCell.swift */,
+				85170237207165100081F611 /* QuestTaskCellModel.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		853DD4B72042BB9600E82595 /* QuestCoreKit */ = {
@@ -1656,6 +1678,7 @@
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
 				85841F2F2051B453009C4BE0 /* LocationView.swift in Sources */,
 				85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */,
+				85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */,
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
 				8517020120711E370081F611 /* QuestListRouter.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
@@ -1705,6 +1728,7 @@
 				85F74105204C8A25002AC5FE /* SideMenuContainerAssembly.swift in Sources */,
 				857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */,
 				85170218207127A80081F611 /* QuestNetworkRouter.swift in Sources */,
+				85170238207165100081F611 /* QuestTaskCellModel.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
