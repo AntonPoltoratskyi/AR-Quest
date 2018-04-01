@@ -11,14 +11,16 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: AppDelegateProxy {
     
-    public override lazy var services: [ApplicationService] = {
-        return []
-    }()
+    
+    // MARK: - Events
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         setupViewHierarchy()
         return true
     }
+    
+    
+    // MARK: - View Hierarchy
     
     private func setupViewHierarchy() {
         let splash = SplashAssembly().build()
@@ -28,4 +30,3 @@ class AppDelegate: AppDelegateProxy {
         self.window?.makeKeyAndVisible()
     }
 }
-

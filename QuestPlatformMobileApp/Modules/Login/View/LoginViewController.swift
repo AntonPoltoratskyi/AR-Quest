@@ -28,7 +28,7 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
     }
     private var state: State = .signIn {
         didSet {
-            keyboardInputViews.flatMap { $0 as? UITextField }.forEach { $0.delegate = self }
+            keyboardInputViews.compactMap { $0 as? UITextField }.forEach { $0.delegate = self }
         }
     }
     
