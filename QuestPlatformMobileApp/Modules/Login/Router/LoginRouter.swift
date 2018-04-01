@@ -22,8 +22,10 @@ final class LoginRouter: Router, LoginRouterInput {
         let leftMenu = MenuAssembly().build()
         let mainPage = MainAssembly().build()
         
+        let navigation = NavigationAssembly(embeddedModule: mainPage.input).build()
+        
         menuContainer.input.setupLeft(leftMenu.view)
-        menuContainer.input.setupCenter(mainPage.view)
+        menuContainer.input.setupCenter(navigation.view)
         
         viewController.present(menuContainer.view, animated: true, completion: nil)
     }

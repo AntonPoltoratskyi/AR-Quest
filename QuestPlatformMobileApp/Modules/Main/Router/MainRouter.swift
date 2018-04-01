@@ -17,6 +17,7 @@ final class MainRouter: Router, MainRouterInput {
     weak var viewController: UIViewController!
     
     func showQuestList() {
-        
+        let questList = QuestListAssembly().build()
+        viewController.navigationController?.pushViewController(questList.view, animated: true)
     }
 }

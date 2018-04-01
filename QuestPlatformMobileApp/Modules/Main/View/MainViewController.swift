@@ -45,6 +45,7 @@ final class MainViewController: UIViewController, View {
     
     private lazy var contentView: MainView = {
         let contentView = MainView()
+        contentView.joinButton.addTarget(self, action: #selector(actionJoin(sender:)), for: .touchUpInside)
         return contentView
     }()
     
@@ -73,6 +74,13 @@ final class MainViewController: UIViewController, View {
             contentView.countLabel.text = String(nearbyEventsCount)
             contentView.descriptionLabel.text = "Quests around You"
         }
+    }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionJoin(sender: UIButton) {
+        output.didClickJoin()
     }
 }
 
