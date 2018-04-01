@@ -18,6 +18,7 @@ final class QuestDetailsPresenter: Presenter, QuestDetailsModuleInput {
     var interactor: Interactor!
     var router: Router!
     
+    var quest: Quest!
 }
 
 // MARK: - QuestDetailsViewOutput

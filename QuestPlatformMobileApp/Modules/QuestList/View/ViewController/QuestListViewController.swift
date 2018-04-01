@@ -71,4 +71,10 @@ extension QuestListViewController: UITableViewDataSource, UITableViewDelegate {
     private func cellModel(at indexPath: IndexPath) -> QuestCellModel {
         return cells[indexPath.row]
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedModel = cellModel(at: indexPath)
+        output.didSelectQuest(selectedModel)
+    }
 }

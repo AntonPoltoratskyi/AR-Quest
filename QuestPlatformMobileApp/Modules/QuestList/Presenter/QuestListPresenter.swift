@@ -26,6 +26,10 @@ extension QuestListPresenter: QuestListViewOutput {
     func viewDidLoad() {
         interactor.loadQuests()
     }
+    
+    func didSelectQuest(_ questModel: QuestCellModel) {
+        router.showQuest(questModel.quest)
+    }
 }
 
 // MARK: - QuestListInteractorOutput

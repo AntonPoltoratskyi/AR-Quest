@@ -12,6 +12,12 @@ final class QuestDetailsAssembly: Assembly {
     
     typealias Input = Module<QuestDetailsModuleInput>
     
+    private let quest: Quest
+
+    init(quest: Quest) {
+        self.quest = quest
+    }
+    
     func build() -> Input {
         let view = QuestDetailsViewController()
         let presenter = QuestDetailsPresenter()
@@ -27,6 +33,8 @@ final class QuestDetailsAssembly: Assembly {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
+        
+        presenter.quest = quest
         
         return Module(input: presenter, view: view)
     }
