@@ -50,6 +50,13 @@ final class MainView: UIView {
         return label
     }()
     
+    private(set) lazy var joinButton: QuestButton = {
+        let button = QuestButton()
+        button.setTitle("Join", for: .normal)
+        contentView.addSubview(button)
+        return button
+    }()
+    
     
     // MARK: - Init
     
@@ -91,6 +98,13 @@ final class MainView: UIView {
         descriptionLabel.snp.makeConstraints { maker in
             maker.top.equalTo(countLabel.snp.bottom).offset(4)
             maker.left.right.bottom.equalToSuperview()
+        }
+        
+        joinButton.snp.makeConstraints { maker in
+            maker.width.equalTo(200)
+            maker.centerX.equalToSuperview()
+            maker.bottom.equalToSuperview().inset(64)
+            maker.buttonHeight()
         }
     }
 }

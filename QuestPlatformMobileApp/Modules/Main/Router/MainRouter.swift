@@ -9,9 +9,14 @@
 import UIKit
 
 protocol MainRouterInput: class {
+    func showQuestList()
 }
 
 final class MainRouter: Router, MainRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func showQuestList() {
+        
+    }
 }

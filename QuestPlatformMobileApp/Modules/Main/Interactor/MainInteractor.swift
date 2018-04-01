@@ -9,12 +9,19 @@
 import Foundation
 
 protocol MainInteractorInput: class {
+    func loadQuests()
 }
 
 protocol MainInteractorOutput: class {
+    func didLoadQuestCount(_ count: Int)
 }
 
 final class MainInteractor: Interactor, MainInteractorInput {
+    
     typealias Output = MainInteractorOutput
     weak var output: MainInteractorOutput!
+    
+    func loadQuests() {
+        output.didLoadQuestCount(5)
+    }
 }

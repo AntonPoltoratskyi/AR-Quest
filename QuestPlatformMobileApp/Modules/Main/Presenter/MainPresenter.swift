@@ -32,12 +32,14 @@ final class MainPresenter: Presenter, MainModuleInput {
 extension MainPresenter: MainViewOutput {
     
     func viewDidLoad() {
-        let viewModel = MainViewModel(state: .loaded(nearbyEvents: 5))
+        let viewModel = MainViewModel(state: .loading)
         view.setup(viewModel)
+        
+        interactor.loadQuests()
     }
     
     func didClickJoin() {
-        
+        router.showQuestList()
     }
     
     func didClickSearch() {
@@ -52,4 +54,8 @@ extension MainPresenter: MainViewOutput {
 // MARK: - MainInteractorOutput
 extension MainPresenter: MainInteractorOutput {
     
+    func didLoadQuestCount(_ count: Int) {
+        let viewModel = MainViewModel(state: .loaded(nearbyEvents: 5))
+        view.setup(viewModel)
+    }
 }
