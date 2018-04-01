@@ -11,3 +11,8 @@ import Foundation
 public protocol Reusable {
     static var uniqueIdentifier: String { get }
 }
+extension Reusable {
+    public static var uniqueIdentifier: String {
+        return String(describing: self)
+    }
+}

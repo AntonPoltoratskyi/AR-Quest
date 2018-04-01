@@ -18,6 +18,7 @@ final class QuestListRouter: Router, QuestListRouterInput {
     }
     
     func showCodeJoin() {
-        
+        let codeInput = CodeInputAssembly().build()
+        viewController.navigationController?.pushViewController(codeInput.view, animated: true)
     }
 }

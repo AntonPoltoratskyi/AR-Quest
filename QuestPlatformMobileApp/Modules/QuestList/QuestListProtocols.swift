@@ -22,6 +22,7 @@ protocol QuestListViewInput: class {
 // MARK: -
 protocol QuestListViewOutput: class {
     func viewDidLoad()
+    func didClickJoinByCode()
     func didSelectQuest(_ questModel: QuestCellModel)
 }
 

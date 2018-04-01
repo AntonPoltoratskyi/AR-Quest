@@ -63,6 +63,8 @@
 		851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023E2071671C0081F611 /* CodeInputAssembly.swift */; };
 		851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023F2071671C0081F611 /* CodeInputInteractor.swift */; };
 		851702472071671C0081F611 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702402071671C0081F611 /* CodeInputView.swift */; };
+		8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517024E207169320081F611 /* UITableView+HeaderFooter.swift */; };
+		85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170254207169D60081F611 /* CodeInputHeaderView.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -237,6 +239,8 @@
 		8517023E2071671C0081F611 /* CodeInputAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputAssembly.swift; sourceTree = "<group>"; };
 		8517023F2071671C0081F611 /* CodeInputInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputInteractor.swift; sourceTree = "<group>"; };
 		851702402071671C0081F611 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
+		8517024E207169320081F611 /* UITableView+HeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderFooter.swift"; sourceTree = "<group>"; };
+		85170254207169D60081F611 /* CodeInputHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputHeaderView.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -525,6 +529,7 @@
 			children = (
 				853DD4D82042C4E900E82595 /* Reusable.swift */,
 				853DD4D32042C4E900E82595 /* ViewModels */,
+				8517024D207169150081F611 /* HeaderFooter */,
 				853DD4D02042C4E900E82595 /* DirectCell */,
 			);
 			path = Cells;
@@ -693,8 +698,8 @@
 		8517020C207121430081F611 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				8517020E207121650081F611 /* QuestTableViewCell.swift */,
-				85170210207122C80081F611 /* QuestCellModel.swift */,
+				85170253207169AF0081F611 /* Header */,
+				85170252207169A50081F611 /* Cell */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -841,6 +846,31 @@
 				8517023B2071671C0081F611 /* CodeInputRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		8517024D207169150081F611 /* HeaderFooter */ = {
+			isa = PBXGroup;
+			children = (
+				8517024E207169320081F611 /* UITableView+HeaderFooter.swift */,
+			);
+			path = HeaderFooter;
+			sourceTree = "<group>";
+		};
+		85170252207169A50081F611 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8517020E207121650081F611 /* QuestTableViewCell.swift */,
+				85170210207122C80081F611 /* QuestCellModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		85170253207169AF0081F611 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				85170254207169D60081F611 /* CodeInputHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		853DD4B72042BB9600E82595 /* QuestCoreKit */ = {
@@ -1771,6 +1801,7 @@
 				85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */,
 				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
+				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
 				85F74115204C8B31002AC5FE /* MenuRouter.swift in Sources */,
@@ -1817,6 +1848,7 @@
 				14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */,
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
 				85841F2C2051B453009C4BE0 /* LocationViewController.swift in Sources */,
+				8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */,
 				85D8A570205ECB1300C6F547 /* Radians.swift in Sources */,
 				857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */,
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,

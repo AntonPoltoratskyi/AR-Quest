@@ -14,11 +14,6 @@ public protocol AnyCellViewModel: Reusable {
     static var cellType: AnyViewCell.Type { get }
     func setup(cell: AnyViewCell)
 }
-extension AnyCellViewModel {
-    public static var uniqueIdentifier: String {
-        return String(describing: cellType)
-    }
-}
 
 public protocol CellViewModel: AnyCellViewModel {
     associatedtype Cell: AnyViewCell

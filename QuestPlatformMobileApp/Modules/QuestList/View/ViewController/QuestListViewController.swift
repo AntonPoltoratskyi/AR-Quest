@@ -27,6 +27,9 @@ final class QuestListViewController: UIViewController, View {
             
         let tableView = contentView.tableView
         
+        tableView.register(headerFooter: CodeInputHeaderView.self)
+        tableView.sectionHeaderHeight = CodeInputHeaderView.Layout.height
+        
         tableView.register(viewModel: QuestCellModel.self)
         tableView.rowHeight = QuestCellModel.Cell.Layout.height
         tableView.dataSource = self
@@ -46,6 +49,13 @@ final class QuestListViewController: UIViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewDidLoad()
+    }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionJoinByCode(sender: UIButton) {
+        output.didClickJoinByCode()
     }
 }
 
@@ -70,6 +80,12 @@ extension QuestListViewController: UITableViewDataSource, UITableViewDelegate {
     
     private func cellModel(at indexPath: IndexPath) -> QuestCellModel {
         return cells[indexPath.row]
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(ofType: CodeInputHeaderView.self)
+        headerView.joinButton.addTarget(self, action: #selector(actionJoinByCode(sender:)), for: .touchUpInside)
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -27,6 +27,10 @@ extension QuestListPresenter: QuestListViewOutput {
         interactor.loadQuests()
     }
     
+    func didClickJoinByCode() {
+        router.showCodeJoin()
+    }
+    
     func didSelectQuest(_ questModel: QuestCellModel) {
         router.showQuest(questModel.quest)
     }
