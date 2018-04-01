@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import SnapKit
 
 final class QuestListView: UIView {
     
     // MARK: - Views
     
-    private(set) lazy var label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
-        return label
+    private(set) lazy var backgroundView: QuestBackgroundView = {
+        let backgroundView = QuestBackgroundView()
+        addSubview(backgroundView)
+        return backgroundView
+    }()
+    
+    private(set) lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        addSubview(tableView)
+        return tableView
     }()
     
     
@@ -38,9 +45,12 @@ final class QuestListView: UIView {
     private func setup() {
         backgroundColor = .white
         
-        label.text = "QuestList"
+        backgroundView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
         
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        tableView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
     }
 }

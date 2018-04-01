@@ -40,6 +40,8 @@
 		8517020420711E370081F611 /* QuestListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FD20711E370081F611 /* QuestListAssembly.swift */; };
 		8517020520711E370081F611 /* QuestListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FE20711E370081F611 /* QuestListInteractor.swift */; };
 		8517020620711E370081F611 /* QuestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FF20711E370081F611 /* QuestListView.swift */; };
+		8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517020E207121650081F611 /* QuestTableViewCell.swift */; };
+		85170211207122C80081F611 /* QuestCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170210207122C80081F611 /* QuestCellModel.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -191,6 +193,8 @@
 		851701FD20711E370081F611 /* QuestListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListAssembly.swift; sourceTree = "<group>"; };
 		851701FE20711E370081F611 /* QuestListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListInteractor.swift; sourceTree = "<group>"; };
 		851701FF20711E370081F611 /* QuestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListView.swift; sourceTree = "<group>"; };
+		8517020E207121650081F611 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
+		85170210207122C80081F611 /* QuestCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCellModel.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -606,8 +610,8 @@
 		8517020720711E3F0081F611 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				851701FF20711E370081F611 /* QuestListView.swift */,
-				851701FB20711E370081F611 /* QuestListViewController.swift */,
+				8517020C207121430081F611 /* TableView */,
+				8517020D2071214C0081F611 /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +646,24 @@
 				851701FE20711E370081F611 /* QuestListInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8517020C207121430081F611 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8517020E207121650081F611 /* QuestTableViewCell.swift */,
+				85170210207122C80081F611 /* QuestCellModel.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		8517020D2071214C0081F611 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				851701FF20711E370081F611 /* QuestListView.swift */,
+				851701FB20711E370081F611 /* QuestListViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		853DD4B72042BB9600E82595 /* QuestCoreKit */ = {
@@ -1515,6 +1537,7 @@
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				8517020320711E370081F611 /* QuestListProtocols.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
+				8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */,
 				853DD4F02042C79800E82595 /* WebResponse.swift in Sources */,
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,
@@ -1552,6 +1575,7 @@
 				85F74114204C8B31002AC5FE /* MenuPresenter.swift in Sources */,
 				85841F412051BA5B009C4BE0 /* MainInteractor.swift in Sources */,
 				85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */,
+				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
