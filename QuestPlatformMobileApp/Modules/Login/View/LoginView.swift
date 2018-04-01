@@ -49,11 +49,10 @@ final class LoginView: UIView {
         return contentView
     }()
     
-    private(set) lazy var backgroundCircleView: QuestCircleView = {
-        let backgroundCircleView = QuestCircleView()
-        backgroundCircleView.backgroundColor = Theme.Background.blueBackground
-        contentView.addSubview(backgroundCircleView)
-        return backgroundCircleView
+    private(set) lazy var backgroundView: QuestBackgroundView = {
+        let backgroundView = QuestBackgroundView()
+        contentView.addSubview(backgroundView)
+        return backgroundView
     }()
     
     private(set) lazy var continueButton: QuestButton = {
@@ -80,18 +79,18 @@ final class LoginView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupSubviews()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupSubviews()
+        setup()
     }
     
     
-    // MARK: - UI Setup
+    // MARK: - Setup
     
-    private func setupSubviews() {
+    private func setup() {
         backgroundColor = .white
         
         segmentedControl.snp.makeConstraints { maker in
@@ -111,10 +110,8 @@ final class LoginView: UIView {
             maker.height.equalToSuperview()
         }
         
-        backgroundCircleView.snp.makeConstraints { maker in
-            maker.centerY.equalToSuperview().offset(-40)
-            maker.centerX.equalTo(contentView.snp.trailing)
-            maker.width.height.equalTo(contentView.snp.width)
+        backgroundView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
         }
         
         continueButton.snp.makeConstraints { maker in

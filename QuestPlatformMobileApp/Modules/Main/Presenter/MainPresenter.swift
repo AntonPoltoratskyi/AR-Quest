@@ -31,6 +31,22 @@ final class MainPresenter: Presenter, MainModuleInput {
 // MARK: - MainViewOutput
 extension MainPresenter: MainViewOutput {
     
+    func viewDidLoad() {
+        let viewModel = MainViewModel(state: .loaded(nearbyEvents: 5))
+        view.setup(viewModel)
+    }
+    
+    func didClickJoin() {
+        
+    }
+    
+    func didClickSearch() {
+        
+    }
+    
+    func didClickProfile() {
+        
+    }
 }
 
 // MARK: - MainInteractorOutput
