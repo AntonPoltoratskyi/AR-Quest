@@ -50,6 +50,12 @@ enum Theme {
             static let `default` = UIFont.appFont(ofSize: 12, weight: .medium)
         }
     }
+    enum CardView {
+        enum Color {
+            static let backgroundColor = UIColor.white
+            static let shadow = UIColor(r: 69, g: 91, b: 99)
+        }
+    }
     enum Background {
         static let blueBackground = UIColor(r: 102, g: 94, b: 255)
     }

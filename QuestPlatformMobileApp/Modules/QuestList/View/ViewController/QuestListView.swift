@@ -21,6 +21,7 @@ final class QuestListView: UIView {
     
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
         tableView.tableFooterView = UIView()
         addSubview(tableView)

@@ -13,11 +13,17 @@ final class QuestTableViewCell: UITableViewCell {
     
     // MARK: - Views
     
+    private(set) lazy var cardView: QuestCardView = {
+        let cardView = QuestCardView()
+        contentView.addSubview(cardView)
+        return cardView
+    }()
+    
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Layout.Colors.titleColor
         label.font = Layout.Fonts.titleFont
-        contentView.addSubview(label)
+        cardView.addSubview(label)
         return label
     }()
     
@@ -38,6 +44,12 @@ final class QuestTableViewCell: UITableViewCell {
     // MARK: - Setup
     
     private func setup() {
+        backgroundColor = .clear
+        
+        cardView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
+        
         titleLabel.snp.makeConstraints { maker in
             maker.leading.equalToSuperview().offset(Layout.titleLabel.horizontalInset)
             maker.trailing.equalToSuperview().inset(Layout.titleLabel.horizontalInset)
