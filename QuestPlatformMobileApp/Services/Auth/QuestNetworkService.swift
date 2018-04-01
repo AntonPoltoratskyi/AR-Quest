@@ -29,7 +29,7 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
         // TODO: set token
         let target = QuestNetworkRouter.list(token: nil)
         networkClient.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
-            completion(result.processCollection())
+            completion(result.process())
         }
     }
     
@@ -37,7 +37,7 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
         // TODO: set token
         let target = QuestNetworkRouter.tasks(quest: quest, token: nil)
         networkClient.request(to: target) { (result: ResponseResult<WebResponse<[Task]>>) in
-            completion(result.processCollection())
+            completion(result.process())
         }
     }
 }

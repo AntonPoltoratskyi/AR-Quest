@@ -27,28 +27,6 @@ public extension ResponseResult where T: ResponseRepresentable {
     }
 }
 
-// MARK: - Collections
-
-public protocol JsonArray: RandomAccessCollection { }
-extension Array: JsonArray { }
-
-public extension ResponseResult where T: ResponseRepresentable, T.ResponseData: JsonArray {
-    
-    public typealias ResultCollection = [T.ResponseData.Element]
-    
-    public func processCollection() -> ResponseResult<ResultCollection> {
-        switch self {
-        case let .success(response):
-            if response.status, let data = response.data {
-                return .success(data.map { $0 })
-            }
-            return processing(errorMessage: response.error)
-        case let .failure(error):
-            return processing(error: error)
-        }
-    }
-}
-
 // MARK: - Error Handling
 
 extension ResponseResult {
