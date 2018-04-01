@@ -12,14 +12,14 @@ public protocol ApplicationService: UIApplicationDelegate { }
 
 public class AppDelegateProxy: UIResponder, UIApplicationDelegate {
 
-    // MARK: Services
+    // MARK: - Services
     
     public lazy var services: [ApplicationService] = {
         return []
     }()
     
     
-    // MARK: UIApplicationDelegate
+    // MARK: - UIApplicationDelegate
     
     public var window: UIWindow? = UIWindow()
     
@@ -33,7 +33,7 @@ public class AppDelegateProxy: UIResponder, UIApplicationDelegate {
         
         return services.reduce(false) { result, service -> Bool in
             let next = service.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? true
-            return result || next
+            return result && next
         }
     }
     

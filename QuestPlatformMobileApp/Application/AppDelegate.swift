@@ -15,8 +15,9 @@ class AppDelegate: AppDelegateProxy {
     // MARK: - Events
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+        let result = super.application(application, didFinishLaunchingWithOptions: launchOptions)
         setupViewHierarchy()
-        return true
+        return result
     }
     
     
