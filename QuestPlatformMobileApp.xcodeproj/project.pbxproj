@@ -56,6 +56,13 @@
 		8517023220715AF40081F611 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023120715AF40081F611 /* Task.swift */; };
 		85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170235207161F90081F611 /* QuestTaskTableViewCell.swift */; };
 		85170238207165100081F611 /* QuestTaskCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170237207165100081F611 /* QuestTaskCellModel.swift */; };
+		851702412071671C0081F611 /* CodeInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023A2071671C0081F611 /* CodeInputPresenter.swift */; };
+		851702422071671C0081F611 /* CodeInputRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023B2071671C0081F611 /* CodeInputRouter.swift */; };
+		851702432071671C0081F611 /* CodeInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023C2071671C0081F611 /* CodeInputViewController.swift */; };
+		851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023D2071671C0081F611 /* CodeInputProtocols.swift */; };
+		851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023E2071671C0081F611 /* CodeInputAssembly.swift */; };
+		851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517023F2071671C0081F611 /* CodeInputInteractor.swift */; };
+		851702472071671C0081F611 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702402071671C0081F611 /* CodeInputView.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -223,6 +230,13 @@
 		8517023120715AF40081F611 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		85170235207161F90081F611 /* QuestTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTaskTableViewCell.swift; sourceTree = "<group>"; };
 		85170237207165100081F611 /* QuestTaskCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTaskCellModel.swift; sourceTree = "<group>"; };
+		8517023A2071671C0081F611 /* CodeInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputPresenter.swift; sourceTree = "<group>"; };
+		8517023B2071671C0081F611 /* CodeInputRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputRouter.swift; sourceTree = "<group>"; };
+		8517023C2071671C0081F611 /* CodeInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputViewController.swift; sourceTree = "<group>"; };
+		8517023D2071671C0081F611 /* CodeInputProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputProtocols.swift; sourceTree = "<group>"; };
+		8517023E2071671C0081F611 /* CodeInputAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputAssembly.swift; sourceTree = "<group>"; };
+		8517023F2071671C0081F611 /* CodeInputInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputInteractor.swift; sourceTree = "<group>"; };
+		851702402071671C0081F611 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -775,6 +789,60 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		85170239207167000081F611 /* CodeInput */ = {
+			isa = PBXGroup;
+			children = (
+				8517023D2071671C0081F611 /* CodeInputProtocols.swift */,
+				85170248207167290081F611 /* View */,
+				851702492071672E0081F611 /* Presenter */,
+				8517024A207167350081F611 /* Interactor */,
+				8517024C207167420081F611 /* Router */,
+				8517024B2071673B0081F611 /* Assembly */,
+			);
+			path = CodeInput;
+			sourceTree = "<group>";
+		};
+		85170248207167290081F611 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8517023C2071671C0081F611 /* CodeInputViewController.swift */,
+				851702402071671C0081F611 /* CodeInputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		851702492071672E0081F611 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8517023A2071671C0081F611 /* CodeInputPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8517024A207167350081F611 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8517023F2071671C0081F611 /* CodeInputInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8517024B2071673B0081F611 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				8517023E2071671C0081F611 /* CodeInputAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		8517024C207167420081F611 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8517023B2071671C0081F611 /* CodeInputRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		853DD4B72042BB9600E82595 /* QuestCoreKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -911,6 +979,7 @@
 				85841F232051B1F8009C4BE0 /* Location */,
 				851701F820711DD20081F611 /* QuestList */,
 				8517021D2071576E0081F611 /* QuestDetails */,
+				85170239207167000081F611 /* CodeInput */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1620,6 +1689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				853DD5072042CE1A00E82595 /* View.swift in Sources */,
+				851702422071671C0081F611 /* CodeInputRouter.swift in Sources */,
 				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
@@ -1652,10 +1722,12 @@
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				8517020320711E370081F611 /* QuestListProtocols.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
+				851702472071671C0081F611 /* CodeInputView.swift in Sources */,
 				8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */,
 				853DD4F02042C79800E82595 /* WebResponse.swift in Sources */,
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,
+				851702432071671C0081F611 /* CodeInputViewController.swift in Sources */,
 				851702272071579E0081F611 /* QuestDetailsViewController.swift in Sources */,
 				853DD5202042FC6600E82595 /* LoginView.swift in Sources */,
 				857ADD8A204319FA00CA0D42 /* User.swift in Sources */,
@@ -1677,14 +1749,17 @@
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
 				85841F2F2051B453009C4BE0 /* LocationView.swift in Sources */,
+				851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */,
 				85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */,
 				85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */,
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
 				8517020120711E370081F611 /* QuestListRouter.swift in Sources */,
+				851702412071671C0081F611 /* CodeInputPresenter.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
 				85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
+				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
 				8517020220711E370081F611 /* QuestListViewController.swift in Sources */,
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
@@ -1732,6 +1807,7 @@
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
+				851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */,
 				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
 				8517021A20714EF40081F611 /* QuestCardView.swift in Sources */,
 				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
