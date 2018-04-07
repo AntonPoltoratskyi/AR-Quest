@@ -35,6 +35,7 @@ final class QuestDetailsAssembly: Assembly {
         presenter.router = router
         
         presenter.quest = quest
+        interactor.questNetworkService = QuestNetworkServiceStub(networkClient: URLSessionNetworkClient())
         
         return Module(input: presenter, view: view)
     }
