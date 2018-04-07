@@ -17,6 +17,7 @@ enum ValidationError: Error, ErrorRepresentable {
     case invalidEmail
     case invalidPassword
     case passwordNotMatch
+    case invalidCode
     
     var errorMessage: String {
         switch self {
@@ -26,6 +27,8 @@ enum ValidationError: Error, ErrorRepresentable {
             return "Invalid password"
         case .passwordNotMatch:
             return "Password doesn't match"
+        case .invalidCode:
+            return "Invalid code"
         }
     }
 }

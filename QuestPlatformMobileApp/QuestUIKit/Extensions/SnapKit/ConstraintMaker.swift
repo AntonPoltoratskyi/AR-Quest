@@ -24,4 +24,9 @@ extension ConstraintMaker {
     func segmentedControlActionHeight() -> ConstraintMakerEditable {
         return self.height.equalTo(32)
     }
+    
+    func horizontalInset(_ inset: CGFloat) {
+        self.left.equalToSuperview().offset(inset)
+        self.right.equalToSuperview().inset(inset)
+    }
 }

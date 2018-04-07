@@ -13,6 +13,7 @@ import Foundation
 protocol QuestNetworkService: NetworkService {
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void)
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void)
+    func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void)
 }
 
 // MARK: - Service
@@ -40,6 +41,14 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
             completion(result.process())
         }
     }
+    
+    func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
+        // TODO: set token
+        let target = QuestNetworkRouter.join(code: code, token: nil)
+        networkClient.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
+            completion(result.process())
+        }
+    }
 }
 
 // MARK: - Stub
@@ -60,5 +69,10 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void) {
         let tasks: [Task] = (1...20).map { i in Task(name: "Quest #\(i)") }
         completion(.success(tasks))
+    }
+    
+    func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
+        let quest = Quest(name: "Quest #1")
+        completion(.success(quest))
     }
 }

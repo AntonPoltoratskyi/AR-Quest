@@ -101,7 +101,7 @@ final class MainView: UIView {
         }
         
         joinButton.snp.makeConstraints { maker in
-            maker.width.equalTo(200)
+            maker.horizontalInset(16)
             maker.centerX.equalToSuperview()
             maker.bottom.equalToSuperview().inset(64)
             maker.buttonHeight()

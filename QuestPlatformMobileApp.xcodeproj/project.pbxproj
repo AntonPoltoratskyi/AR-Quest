@@ -65,6 +65,7 @@
 		851702472071671C0081F611 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851702402071671C0081F611 /* CodeInputView.swift */; };
 		8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517024E207169320081F611 /* UITableView+HeaderFooter.swift */; };
 		85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170254207169D60081F611 /* CodeInputHeaderView.swift */; };
+		851A4C412078C24A008F488E /* CodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851A4C402078C24A008F488E /* CodeValidator.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -241,6 +242,7 @@
 		851702402071671C0081F611 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
 		8517024E207169320081F611 /* UITableView+HeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderFooter.swift"; sourceTree = "<group>"; };
 		85170254207169D60081F611 /* CodeInputHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputHeaderView.swift; sourceTree = "<group>"; };
+		851A4C402078C24A008F488E /* CodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidator.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -637,6 +639,7 @@
 				85125716204AEFEA00995543 /* Validator.swift */,
 				85125718204AF04700995543 /* EmailValidator.swift */,
 				8512571A204AF72200995543 /* PasswordValidator.swift */,
+				851A4C402078C24A008F488E /* CodeValidator.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -810,8 +813,8 @@
 		85170248207167290081F611 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8517023C2071671C0081F611 /* CodeInputViewController.swift */,
 				851702402071671C0081F611 /* CodeInputView.swift */,
+				8517023C2071671C0081F611 /* CodeInputViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1856,6 +1859,7 @@
 				85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */,
 				85841F402051BA5B009C4BE0 /* MainAssembly.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
+				851A4C412078C24A008F488E /* CodeValidator.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
 				85170213207125800081F611 /* Quest.swift in Sources */,
 				85F74116204C8B31002AC5FE /* MenuViewController.swift in Sources */,

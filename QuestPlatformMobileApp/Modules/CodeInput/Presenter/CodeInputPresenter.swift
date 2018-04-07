@@ -23,9 +23,27 @@ final class CodeInputPresenter: Presenter, CodeInputModuleInput {
 // MARK: - CodeInputViewOutput
 extension CodeInputPresenter: CodeInputViewOutput {
     
+    func didClickJoin(to questCode: String?) {
+        // TODO: validate
+        do {
+            let validCode = try CodeValidator().validated(questCode)
+            interactor.join(to: validCode)
+        } catch {
+            if let error = error as? ErrorRepresentable {
+                view.showError(error.errorMessage)
+            }
+        }
+    }
 }
 
 // MARK: - CodeInputInteractorOutput
 extension CodeInputPresenter: CodeInputInteractorOutput {
     
+    func didJoin(to quest: Quest) {
+        
+    }
+    
+    func didReceiveError(_ error: Error) {
+        
+    }
 }

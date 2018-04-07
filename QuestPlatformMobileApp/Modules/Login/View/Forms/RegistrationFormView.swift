@@ -11,12 +11,13 @@ import SnapKit
 
 class RegistrationFormView: UIView {
     
-    
     // MARK: - Views
     
     private(set) lazy var emailTextField: QuestTextField = {
         let textField = QuestTextField()
         textField.placeholder = "Email"
+        textField.returnKeyType = .next
+        textField.keyboardType = .emailAddress
         addSubview(textField)
         return textField
     }()
@@ -24,6 +25,8 @@ class RegistrationFormView: UIView {
     private(set) lazy var passwordTextField: QuestTextField = {
         let textField = QuestTextField()
         textField.placeholder = "Password"
+        textField.returnKeyType = .next
+        textField.isSecureTextEntry = true
         addSubview(textField)
         return textField
     }()
@@ -31,6 +34,8 @@ class RegistrationFormView: UIView {
     private(set) lazy var confirmPasswordTextField: QuestTextField = {
         let textField = QuestTextField()
         textField.placeholder = "Confirm password"
+        textField.returnKeyType = .done
+        textField.isSecureTextEntry = true
         addSubview(textField)
         return textField
     }()
@@ -38,6 +43,7 @@ class RegistrationFormView: UIView {
     private(set) lazy var errorLabel: QuestErrorLabel = {
         let label = QuestErrorLabel()
         label.textAlignment = .center
+        label.setContentHuggingPriority(.required, for: .vertical)
         addSubview(label)
         return label
     }()
@@ -62,31 +68,24 @@ class RegistrationFormView: UIView {
         
         let verticalPadding = 24
         
-        errorLabel.setContentHuggingPriority(.required, for: .vertical)
         errorLabel.snp.makeConstraints { maker in
             maker.bottom.equalToSuperview()
             maker.leading.trailing.equalToSuperview()
             maker.top.equalTo(confirmPasswordTextField.snp.bottom).offset(8)
             maker.height.equalTo(16)
         }
-        
-        confirmPasswordTextField.returnKeyType = .done
-        confirmPasswordTextField.isSecureTextEntry = true
+    
         confirmPasswordTextField.snp.makeConstraints { maker in
             maker.leading.trailing.equalToSuperview()
             maker.top.equalTo(passwordTextField.snp.bottom).offset(verticalPadding)
             maker.textFieldHeight()
         }
         
-        passwordTextField.returnKeyType = .next
-        passwordTextField.isSecureTextEntry = true
         passwordTextField.snp.makeConstraints { maker in
             maker.leading.trailing.equalToSuperview()
             maker.textFieldHeight()
         }
-        
-        emailTextField.returnKeyType = .next
-        emailTextField.keyboardType = .emailAddress
+    
         emailTextField.snp.makeConstraints { maker in
             maker.leading.trailing.top.equalToSuperview()
             maker.bottom.equalTo(passwordTextField.snp.top).offset(-verticalPadding)

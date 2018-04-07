@@ -28,6 +28,8 @@ final class CodeInputAssembly: Assembly {
         presenter.interactor = interactor
         presenter.router = router
         
+        interactor.questNetworkService = QuestNetworkServiceStub(networkClient: URLSessionNetworkClient())
+        
         return Module(input: presenter, view: view)
     }
 }

@@ -16,19 +16,24 @@ protocol CodeInputModuleInput: ModuleInput {
 // MARK: - View
 
 protocol CodeInputViewInput: class {
+    func showError(_ errorMessage: String)
 }
 
 // MARK: -
 protocol CodeInputViewOutput: class {
+    func didClickJoin(to questCode: String?)
 }
 
 // MARK: - Interactor
 
 protocol CodeInputInteractorInput: class {
+    func join(to questCode: String)
 }
 
 // MARK: -
 protocol CodeInputInteractorOutput: class {
+    func didJoin(to quest: Quest)
+    func didReceiveError(_ error: Error)
 }
 
 // MARK: - Router

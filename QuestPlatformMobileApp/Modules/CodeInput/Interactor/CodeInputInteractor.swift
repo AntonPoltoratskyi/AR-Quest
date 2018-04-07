@@ -11,4 +11,17 @@ import Foundation
 final class CodeInputInteractor: Interactor, CodeInputInteractorInput {
     typealias Output = CodeInputInteractorOutput
     weak var output: CodeInputInteractorOutput!
+    
+    var questNetworkService: QuestNetworkService!
+    
+    func join(to questCode: String) {
+        questNetworkService.joinToQuest(with: questCode) { [weak self] result in
+            switch result {
+            case let .success(quest):
+                self?.output?.didJoin(to: quest)
+            case let .failure(error):
+                self?.output?.didReceiveError(error)
+            }
+        }
+    }
 }
