@@ -23,6 +23,12 @@ final class QuestCardView: UIView {
         }
     }
     
+    var cardHighlightedColor: UIColor = Theme.CardView.Color.highlightedColor {
+        didSet {
+            contentView.backgroundColor = cardColor
+        }
+    }
+    
     var cardShadowColor: UIColor = Theme.CardView.Color.shadow {
         didSet {
             contentView.layer.shadowColor = cardShadowColor.cgColor
@@ -73,6 +79,17 @@ final class QuestCardView: UIView {
         
         contentView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview().inset(contentInset)
+        }
+    }
+    
+    
+    // MARK: - Actions
+    
+    func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            contentView.backgroundColor = cardHighlightedColor
+        } else {
+            contentView.backgroundColor = cardColor
         }
     }
 }

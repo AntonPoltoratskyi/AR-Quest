@@ -53,6 +53,7 @@ enum Theme {
     enum CardView {
         enum Color {
             static let backgroundColor = UIColor.white
+            static let highlightedColor = UIColor.lightGray.withAlphaComponent(0.7)
             static let shadow = UIColor(r: 69, g: 91, b: 99)
         }
     }
