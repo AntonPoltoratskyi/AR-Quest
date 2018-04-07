@@ -11,4 +11,8 @@ import UIKit
 final class CodeInputRouter: Router, CodeInputRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func join(to quest: Quest) {
+        
+    }
 }

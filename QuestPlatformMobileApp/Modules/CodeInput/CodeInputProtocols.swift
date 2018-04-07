@@ -39,4 +39,5 @@ protocol CodeInputInteractorOutput: class {
 // MARK: - Router
 
 protocol CodeInputRouterInput: class {
+    func join(to quest: Quest)
 }

@@ -40,7 +40,7 @@ extension CodeInputPresenter: CodeInputViewOutput {
 extension CodeInputPresenter: CodeInputInteractorOutput {
     
     func didJoin(to quest: Quest) {
-        
+        router.join(to: quest)
     }
     
     func didReceiveError(_ error: Error) {
