@@ -23,21 +23,25 @@ protocol QuestDetailsViewInput: class {
 // MARK: -
 protocol QuestDetailsViewOutput: class {
     func viewDidLoad()
+    func didClickJoin()
 }
 
 // MARK: - Interactor
 
 protocol QuestDetailsInteractorInput: class {
     func loadTasks(for quest: Quest)
+    func join(to quest: Quest)
 }
 
 // MARK: -
 protocol QuestDetailsInteractorOutput: class {
     func didLoadTasks(_ tasks: [Task])
+    func didJoin(to quest: Quest)
     func didReceiveError(_ error: Error)
 }
 
 // MARK: - Router
 
 protocol QuestDetailsRouterInput: class {
+    func join(to quest: Quest)
 }

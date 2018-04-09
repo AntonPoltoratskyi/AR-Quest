@@ -38,6 +38,8 @@ final class QuestDetailsViewController: UIViewController, View {
         tableView.rowHeight = QuestTaskCellModel.Cell.Layout.height
         tableView.estimatedRowHeight = tableView.rowHeight
         
+        contentView.joinButton.addTarget(self, action: #selector(actionJoin(sender:)), for: .touchUpInside)
+        
         return contentView
     }()
     
@@ -51,15 +53,14 @@ final class QuestDetailsViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         output.viewDidLoad()
     }
     
     
-    // MARK: - UI Setup
+    // MARK: - Actions
     
-    private func setupUI() {
-        
+    @objc private func actionJoin(sender: UIButton) {
+        output.didClickJoin()
     }
 }
 

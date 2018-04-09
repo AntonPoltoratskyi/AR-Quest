@@ -56,6 +56,13 @@ final class QuestDetailsView: UIView {
         return label
     }()
     
+    private(set) lazy var joinButton: QuestButton = {
+        let joinButton = QuestButton()
+        joinButton.setTitle("Join", for: .normal)
+        topHeaderView.addSubview(joinButton)
+        return joinButton
+    }()
+    
     private(set) lazy var separatorView: UIView = {
         let separatorView = UIView()
         separatorView.backgroundColor = Theme.Header.Separator.background
@@ -130,7 +137,15 @@ final class QuestDetailsView: UIView {
         questNameLabel.snp.makeConstraints { maker in
             maker.bottom.equalToSuperview().inset(Layout.questNameLabel.bottom)
             maker.left.equalToSuperview().offset(horizontal)
-            maker.right.equalToSuperview().inset(horizontal)
+            maker.right.lessThanOrEqualTo(joinButton.snp.left).offset(-horizontal).priority(999)
+        }
+        
+        joinButton.contentEdgeInsets = Layout.joinButton.contentEdges
+        joinButton.setContentCompressionResistancePriority(.required, for: .horizontal)
+        joinButton.setContentHuggingPriority(.required, for: .horizontal)
+        joinButton.snp.makeConstraints { maker in
+            maker.right.equalToSuperview().inset(Layout.joinButton.right)
+            maker.bottom.equalToSuperview().inset(Layout.joinButton.bottom)
         }
         
         separatorView.snp.makeConstraints { maker in
@@ -152,6 +167,12 @@ extension QuestDetailsView {
         enum questNameLabel {
             static let bottom: CGFloat = 8
             static let horizontalInset: CGFloat = 16
+        }
+        
+        enum joinButton {
+            static let bottom: CGFloat = 8
+            static let right: CGFloat = 16
+            static let contentEdges: UIEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
         }
         
         enum separatorView {

@@ -14,6 +14,7 @@ protocol QuestNetworkService: NetworkService {
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void)
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void)
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void)
+    func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void)
 }
 
 // MARK: - Service
@@ -44,7 +45,15 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
         // TODO: set token
-        let target = QuestNetworkRouter.join(code: code, token: nil)
+        let target = QuestNetworkRouter.joinBy(code: code, token: nil)
+        networkClient.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
+            completion(result.process())
+        }
+    }
+    
+    func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
+        // TODO: set token
+        let target = QuestNetworkRouter.joinTo(quest: quest, token: nil)
         networkClient.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
             completion(result.process())
         }
@@ -73,6 +82,10 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
         let quest = Quest(name: "Quest #1")
+        completion(.success(quest))
+    }
+    
+    func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
         completion(.success(quest))
     }
 }

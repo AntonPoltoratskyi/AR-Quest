@@ -28,6 +28,10 @@ extension QuestDetailsPresenter: QuestDetailsViewOutput {
         view.setupQuestInfo(quest)
         interactor.loadTasks(for: quest)
     }
+    
+    func didClickJoin() {
+        interactor.join(to: quest)
+    }
 }
 
 // MARK: - QuestDetailsInteractorOutput
@@ -35,6 +39,10 @@ extension QuestDetailsPresenter: QuestDetailsInteractorOutput {
     
     func didLoadTasks(_ tasks: [Task]) {
         view.setupTasks(tasks.map { QuestTaskCellModel(task: $0) })
+    }
+    
+    func didJoin(to quest: Quest) {
+        router.join(to: quest)
     }
     
     func didReceiveError(_ error: Error) {

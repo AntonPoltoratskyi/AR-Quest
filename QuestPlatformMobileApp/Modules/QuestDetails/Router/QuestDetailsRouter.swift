@@ -11,4 +11,8 @@ import UIKit
 final class QuestDetailsRouter: Router, QuestDetailsRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func join(to quest: Quest) {
+        
+    }
 }
