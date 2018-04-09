@@ -120,6 +120,7 @@
 		855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7488207B77ED000421DA /* ProfileAssembly.swift */; };
 		855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7489207B77ED000421DA /* ProfileInteractor.swift */; };
 		855D7491207B77ED000421DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D748A207B77ED000421DA /* ProfileView.swift */; };
+		855D749A207B8764000421DA /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855D7498207B8764000421DA /* Test.storyboard */; };
 		857ADD8A204319FA00CA0D42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD89204319FA00CA0D42 /* User.swift */; };
 		857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */; };
 		857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */; };
@@ -304,6 +305,7 @@
 		855D7488207B77ED000421DA /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 		855D7489207B77ED000421DA /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		855D748A207B77ED000421DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		855D7499207B8764000421DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Test.storyboard; sourceTree = "<group>"; };
 		857ADD89204319FA00CA0D42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkRouter.swift; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				141AC40B1FC764D000200877 /* LaunchScreen.storyboard */,
+				855D7498207B8764000421DA /* Test.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -805,8 +808,8 @@
 		85170234207161CC0081F611 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				85170235207161F90081F611 /* QuestTaskTableViewCell.swift */,
 				85170237207165100081F611 /* QuestTaskCellModel.swift */,
+				85170235207161F90081F611 /* QuestTaskTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1714,6 +1717,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855D749A207B8764000421DA /* Test.storyboard in Resources */,
 				141AC40D1FC764D000200877 /* LaunchScreen.storyboard in Resources */,
 				141AC40A1FC764D000200877 /* Assets.xcassets in Resources */,
 			);
@@ -1991,6 +1995,14 @@
 				141AC40C1FC764D000200877 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		855D7498207B8764000421DA /* Test.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				855D7499207B8764000421DA /* Base */,
+			);
+			name = Test.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

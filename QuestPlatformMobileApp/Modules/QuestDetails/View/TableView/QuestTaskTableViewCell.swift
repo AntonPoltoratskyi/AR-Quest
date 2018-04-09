@@ -45,6 +45,7 @@ final class QuestTaskTableViewCell: UITableViewCell {
     
     private func setup() {
         backgroundColor = .clear
+        selectionStyle = .none
         
         cardView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
@@ -55,6 +56,14 @@ final class QuestTaskTableViewCell: UITableViewCell {
             maker.trailing.equalToSuperview().inset(Layout.titleLabel.horizontalInset)
             maker.centerY.equalToSuperview()
         }
+    }
+    
+    
+    // MARK: - Actions
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        cardView.setHighlighted(highlighted, animated: animated)
     }
 }
 

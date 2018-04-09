@@ -60,6 +60,18 @@ enum Theme {
     enum Background {
         static let blueBackground = UIColor(r: 102, g: 94, b: 255)
     }
+    
+    enum Header {
+        enum Font {
+            static let `default` = UIFont.appFont(ofSize: 24, weight: .semibold)
+        }
+        enum Color {
+            static let background = UIColor.white
+        }
+        enum Separator {
+            static let background = UIColor.darkText
+        }
+    }
 }
 
 extension UIFont {
@@ -67,4 +79,3 @@ extension UIFont {
         return systemFont(ofSize: fontSize, weight: weight)
     }
 }
-

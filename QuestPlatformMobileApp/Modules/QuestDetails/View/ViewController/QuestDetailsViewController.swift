@@ -13,13 +13,31 @@ final class QuestDetailsViewController: UIViewController, View {
     typealias Output = QuestDetailsViewOutput
     var output: Output!
     
-    private var cells: [QuestTaskCellModel] = []
+    private var cells: [QuestTaskCellModel] = [] {
+        didSet {
+            contentView.tableView.reloadData()
+            contentView.tableView.layoutIfNeeded()
+            
+            let height = contentView.tableView.contentSize.height
+            contentView.tableView.snp.updateConstraints { maker in
+                maker.height.equalTo(height)
+            }
+        }
+    }
     
     
     // MARK: - Views
     
     private lazy var contentView: QuestDetailsView = {
         let contentView = QuestDetailsView()
+        
+        let tableView = contentView.tableView
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(viewModel: QuestTaskCellModel.self)
+        tableView.rowHeight = QuestTaskCellModel.Cell.Layout.height
+        tableView.estimatedRowHeight = tableView.rowHeight
+        
         return contentView
     }()
     
@@ -33,13 +51,28 @@ final class QuestDetailsViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         output.viewDidLoad()
+    }
+    
+    
+    // MARK: - UI Setup
+    
+    private func setupUI() {
+        
     }
 }
 
 // MARK: - QuestDetailsViewInput
 extension QuestDetailsViewController: QuestDetailsViewInput {
     
+    func setupQuestInfo(_ quest: Quest) {
+        contentView.questNameLabel.text = quest.name
+    }
+    
+    func setupTasks(_ models: [QuestTaskCellModel]) {
+        cells = models
+    }
 }
 
 // MARK: - Table View
@@ -55,5 +88,9 @@ extension QuestDetailsViewController: UITableViewDataSource, UITableViewDelegate
     
     private func cellModel(at indexPath: IndexPath) -> QuestTaskCellModel {
         return cells[indexPath.row]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

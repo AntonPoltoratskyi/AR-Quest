@@ -16,7 +16,8 @@ protocol QuestDetailsModuleInput: ModuleInput {
 // MARK: - View
 
 protocol QuestDetailsViewInput: class {
-    
+    func setupQuestInfo(_ quest: Quest)
+    func setupTasks(_ models: [QuestTaskCellModel])
 }
 
 // MARK: -

@@ -25,6 +25,7 @@ final class QuestDetailsPresenter: Presenter, QuestDetailsModuleInput {
 extension QuestDetailsPresenter: QuestDetailsViewOutput {
     
     func viewDidLoad() {
+        view.setupQuestInfo(quest)
         interactor.loadTasks(for: quest)
     }
 }
@@ -33,7 +34,7 @@ extension QuestDetailsPresenter: QuestDetailsViewOutput {
 extension QuestDetailsPresenter: QuestDetailsInteractorOutput {
     
     func didLoadTasks(_ tasks: [Task]) {
-        
+        view.setupTasks(tasks.map { QuestTaskCellModel(task: $0) })
     }
     
     func didReceiveError(_ error: Error) {

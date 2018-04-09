@@ -67,7 +67,7 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     }
     
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void) {
-        let tasks: [Task] = (1...20).map { i in Task(name: "Quest #\(i)") }
+        let tasks: [Task] = (1...20).map { i in Task(name: "Task #\(i)") }
         completion(.success(tasks))
     }
     
