@@ -1019,15 +1019,14 @@
 			isa = PBXGroup;
 			children = (
 				85F740E8204C85DC002AC5FE /* Containers */,
-				853DD4F82042CB4500E82595 /* Splash */,
-				853DD5142042FC5600E82595 /* Login */,
+				855D7497207B7A5A000421DA /* Auth */,
 				85F7410D204C8B21002AC5FE /* Menu */,
 				85841F362051BA43009C4BE0 /* Main */,
+				855D7483207B7702000421DA /* Profile */,
 				85841F232051B1F8009C4BE0 /* Location */,
+				85170239207167000081F611 /* CodeInput */,
 				851701F820711DD20081F611 /* QuestList */,
 				8517021D2071576E0081F611 /* QuestDetails */,
-				85170239207167000081F611 /* CodeInput */,
-				855D7483207B7702000421DA /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1134,6 +1133,15 @@
 				855D7484207B77ED000421DA /* ProfilePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		855D7497207B7A5A000421DA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4F82042CB4500E82595 /* Splash */,
+				853DD5142042FC5600E82595 /* Login */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		857ADD872043196D00CA0D42 /* Services */ = {
