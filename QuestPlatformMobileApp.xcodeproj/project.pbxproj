@@ -124,6 +124,7 @@
 		855D74A0207BA375000421DA /* BackSwipable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D749F207BA375000421DA /* BackSwipable.swift */; };
 		855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */; };
 		855D74A4207BA629000421DA /* SlideAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */; };
+		855D74A6207BACE1000421DA /* QuestRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A5207BACE1000421DA /* QuestRoundImageView.swift */; };
 		857ADD8A204319FA00CA0D42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD89204319FA00CA0D42 /* User.swift */; };
 		857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */; };
 		857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */; };
@@ -312,6 +313,7 @@
 		855D749F207BA375000421DA /* BackSwipable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackSwipable.swift; sourceTree = "<group>"; };
 		855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePanRecognizer.swift; sourceTree = "<group>"; };
 		855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		855D74A5207BACE1000421DA /* QuestRoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestRoundImageView.swift; sourceTree = "<group>"; };
 		857ADD89204319FA00CA0D42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkRouter.swift; sourceTree = "<group>"; };
@@ -1472,6 +1474,7 @@
 				85F740E5204C605B002AC5FE /* QuestCircleView.swift */,
 				851701F620710D100081F611 /* QuestBackgroundView.swift */,
 				8517021920714EF40081F611 /* QuestCardView.swift */,
+				855D74A5207BACE1000421DA /* QuestRoundImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1887,6 +1890,7 @@
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
 				85841F2F2051B453009C4BE0 /* LocationView.swift in Sources */,
+				855D74A6207BACE1000421DA /* QuestRoundImageView.swift in Sources */,
 				851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */,
 				855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */,
 				85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */,
