@@ -19,6 +19,10 @@ final class LocationViewController: UIViewController, View {
     typealias Output = LocationViewOutput
     var output: Output!
     
+    private lazy var swipeController: SwipeController = {
+        return SwipeController(target: self)
+    }()
+    
     
     // MARK: - Views
     
@@ -37,6 +41,7 @@ final class LocationViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeController.addGesture()
     }
 }
 

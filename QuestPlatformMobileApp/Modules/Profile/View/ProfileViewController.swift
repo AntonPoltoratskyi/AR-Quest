@@ -13,6 +13,10 @@ final class ProfileViewController: UIViewController, View {
     typealias Output = ProfileViewOutput
     var output: Output!
     
+    private lazy var swipeController: SwipeController = {
+        return SwipeController(target: self)
+    }()
+    
     
     // MARK: - Views
     
@@ -31,6 +35,7 @@ final class ProfileViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeController.addGesture()
     }
 }
 

@@ -13,6 +13,10 @@ final class QuestListViewController: UIViewController, View {
     typealias Output = QuestListViewOutput
     var output: Output!
     
+    private lazy var swipeController: SwipeController = {
+        return SwipeController(target: self)
+    }()
+    
     private var cells: [QuestCellModel] = [] {
         didSet {
             contentView.tableView.reloadData()
@@ -48,6 +52,7 @@ final class QuestListViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeController.addGesture()
         output.viewDidLoad()
     }
     

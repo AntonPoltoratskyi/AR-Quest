@@ -12,6 +12,10 @@ final class CodeInputViewController: UIViewController, View, KeyboardInteracting
     
     typealias Output = CodeInputViewOutput
     var output: Output!
+    
+    private lazy var swipeController: SwipeController = {
+        return SwipeController(target: self)
+    }()
 
     var scrollView: UIScrollView! {
         return contentView.scrollView
@@ -40,6 +44,7 @@ final class CodeInputViewController: UIViewController, View, KeyboardInteracting
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeController.addGesture()
     }
     
     override func viewDidAppear(_ animated: Bool) {
