@@ -13,6 +13,10 @@ final class QuestDetailsViewController: UIViewController, View {
     typealias Output = QuestDetailsViewOutput
     var output: Output!
     
+    private lazy var swipeController: SwipeController = {
+        return SwipeController(target: self)
+    }()
+    
     private var cells: [QuestTaskCellModel] = [] {
         didSet {
             contentView.tableView.reloadData()
@@ -53,6 +57,7 @@ final class QuestDetailsViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeController.addGesture()
         output.viewDidLoad()
     }
     

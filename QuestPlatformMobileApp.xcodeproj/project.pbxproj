@@ -121,6 +121,9 @@
 		855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7489207B77ED000421DA /* ProfileInteractor.swift */; };
 		855D7491207B77ED000421DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D748A207B77ED000421DA /* ProfileView.swift */; };
 		855D749A207B8764000421DA /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855D7498207B8764000421DA /* Test.storyboard */; };
+		855D74A0207BA375000421DA /* BackSwipable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D749F207BA375000421DA /* BackSwipable.swift */; };
+		855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */; };
+		855D74A4207BA629000421DA /* SlideAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */; };
 		857ADD8A204319FA00CA0D42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD89204319FA00CA0D42 /* User.swift */; };
 		857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */; };
 		857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */; };
@@ -306,6 +309,9 @@
 		855D7489207B77ED000421DA /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		855D748A207B77ED000421DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		855D7499207B8764000421DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Test.storyboard; sourceTree = "<group>"; };
+		855D749F207BA375000421DA /* BackSwipable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackSwipable.swift; sourceTree = "<group>"; };
+		855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePanRecognizer.swift; sourceTree = "<group>"; };
+		855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		857ADD89204319FA00CA0D42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkRouter.swift; sourceTree = "<group>"; };
@@ -1147,6 +1153,16 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		855D749E207BA359000421DA /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */,
+				855D749F207BA375000421DA /* BackSwipable.swift */,
+				855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
 		857ADD872043196D00CA0D42 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -1183,6 +1199,7 @@
 			children = (
 				857ADD9C20432BCA00CA0D42 /* Theme.swift */,
 				85F740DC204C469F002AC5FE /* Views */,
+				855D749E207BA359000421DA /* Gestures */,
 				85F740DD204C46A8002AC5FE /* Extensions */,
 			);
 			path = QuestUIKit;
@@ -1825,6 +1842,7 @@
 				857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */,
 				853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */,
 				851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */,
+				855D74A4207BA629000421DA /* SlideAnimatedTransitioning.swift in Sources */,
 				85841F2B2051B453009C4BE0 /* LocationRouter.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
@@ -1857,6 +1875,7 @@
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
 				85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */,
 				855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */,
+				855D74A0207BA375000421DA /* BackSwipable.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
 				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
 				857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */,
@@ -1930,6 +1949,7 @@
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
 				851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */,
+				855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */,
 				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
 				8517021A20714EF40081F611 /* QuestCardView.swift in Sources */,
 				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
