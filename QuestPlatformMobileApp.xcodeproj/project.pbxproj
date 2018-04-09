@@ -406,7 +406,7 @@
 			children = (
 				857ADD9520432A6E00CA0D42 /* QuestUIKit */,
 				853DD4B72042BB9600E82595 /* QuestCoreKit */,
-				857ADD88204319D100CA0D42 /* Models */,
+				857ADD88204319D100CA0D42 /* Entity */,
 				857ADD872043196D00CA0D42 /* Services */,
 				853DD4F72042CB2000E82595 /* Modules */,
 				141AC4331FC7671E00200877 /* Storyboards */,
@@ -1158,14 +1158,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		857ADD88204319D100CA0D42 /* Models */ = {
+		857ADD88204319D100CA0D42 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				857ADD89204319FA00CA0D42 /* User.swift */,
 				85170212207125800081F611 /* Quest.swift */,
 				8517023120715AF40081F611 /* Task.swift */,
 			);
-			path = Models;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		857ADD8B2043203800CA0D42 /* Auth */ = {
