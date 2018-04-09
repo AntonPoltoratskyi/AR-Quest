@@ -113,6 +113,13 @@
 		853DD52A2042FE7800E82595 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5242042FE7800E82595 /* NavigationViewController.swift */; };
 		853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5252042FE7800E82595 /* NavigationAssembly.swift */; };
 		853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5262042FE7800E82595 /* NavigationInteractor.swift */; };
+		855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7484207B77ED000421DA /* ProfilePresenter.swift */; };
+		855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7485207B77ED000421DA /* ProfileRouter.swift */; };
+		855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7486207B77ED000421DA /* ProfileViewController.swift */; };
+		855D748E207B77ED000421DA /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7487207B77ED000421DA /* ProfileProtocols.swift */; };
+		855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7488207B77ED000421DA /* ProfileAssembly.swift */; };
+		855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7489207B77ED000421DA /* ProfileInteractor.swift */; };
+		855D7491207B77ED000421DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D748A207B77ED000421DA /* ProfileView.swift */; };
 		857ADD8A204319FA00CA0D42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD89204319FA00CA0D42 /* User.swift */; };
 		857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */; };
 		857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */; };
@@ -290,6 +297,13 @@
 		853DD5242042FE7800E82595 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		853DD5252042FE7800E82595 /* NavigationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAssembly.swift; sourceTree = "<group>"; };
 		853DD5262042FE7800E82595 /* NavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
+		855D7484207B77ED000421DA /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		855D7485207B77ED000421DA /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		855D7486207B77ED000421DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		855D7487207B77ED000421DA /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		855D7488207B77ED000421DA /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		855D7489207B77ED000421DA /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		855D748A207B77ED000421DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		857ADD89204319FA00CA0D42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkRouter.swift; sourceTree = "<group>"; };
@@ -1013,6 +1027,7 @@
 				851701F820711DD20081F611 /* QuestList */,
 				8517021D2071576E0081F611 /* QuestDetails */,
 				85170239207167000081F611 /* CodeInput */,
+				855D7483207B7702000421DA /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1065,6 +1080,60 @@
 				85F740D7204C4556002AC5FE /* Assembly */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		855D7483207B7702000421DA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				855D7487207B77ED000421DA /* ProfileProtocols.swift */,
+				855D7492207B77F8000421DA /* View */,
+				855D7496207B7849000421DA /* Presenter */,
+				855D7494207B7809000421DA /* Interactor */,
+				855D7495207B783E000421DA /* Router */,
+				855D7493207B77FE000421DA /* Assembly */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		855D7492207B77F8000421DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				855D748A207B77ED000421DA /* ProfileView.swift */,
+				855D7486207B77ED000421DA /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		855D7493207B77FE000421DA /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				855D7488207B77ED000421DA /* ProfileAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		855D7494207B7809000421DA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				855D7489207B77ED000421DA /* ProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		855D7495207B783E000421DA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				855D7485207B77ED000421DA /* ProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		855D7496207B7849000421DA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				855D7484207B77ED000421DA /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		857ADD872043196D00CA0D42 /* Services */ = {
@@ -1726,15 +1795,18 @@
 				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
+				855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */,
 				85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */,
 				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
 				85125719204AF04700995543 /* EmailValidator.swift in Sources */,
+				855D748E207B77ED000421DA /* ProfileProtocols.swift in Sources */,
 				853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */,
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
 				85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */,
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
+				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
 				853DD4FE2042CCE100E82595 /* SplashInteractor.swift in Sources */,
@@ -1755,6 +1827,7 @@
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				8517020320711E370081F611 /* QuestListProtocols.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
+				855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */,
 				851702472071671C0081F611 /* CodeInputView.swift in Sources */,
 				8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */,
 				853DD4F02042C79800E82595 /* WebResponse.swift in Sources */,
@@ -1771,6 +1844,7 @@
 				853DD50D2042CE3200E82595 /* Router.swift in Sources */,
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
 				85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */,
+				855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
 				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
 				857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */,
@@ -1783,12 +1857,14 @@
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
 				85841F2F2051B453009C4BE0 /* LocationView.swift in Sources */,
 				851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */,
+				855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */,
 				85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */,
 				85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */,
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
 				8517020120711E370081F611 /* QuestListRouter.swift in Sources */,
 				851702412071671C0081F611 /* CodeInputPresenter.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
+				855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
 				85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
