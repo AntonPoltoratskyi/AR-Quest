@@ -125,6 +125,13 @@
 		855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */; };
 		855D74A4207BA629000421DA /* SlideAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */; };
 		855D74A6207BACE1000421DA /* QuestRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A5207BACE1000421DA /* QuestRoundImageView.swift */; };
+		855D74B1207BB045000421DA /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74AA207BB045000421DA /* AboutPresenter.swift */; };
+		855D74B2207BB045000421DA /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74AB207BB045000421DA /* AboutRouter.swift */; };
+		855D74B3207BB045000421DA /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74AC207BB045000421DA /* AboutViewController.swift */; };
+		855D74B4207BB045000421DA /* AboutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74AD207BB045000421DA /* AboutProtocols.swift */; };
+		855D74B5207BB045000421DA /* AboutAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74AE207BB045000421DA /* AboutAssembly.swift */; };
+		855D74B6207BB045000421DA /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74AF207BB045000421DA /* AboutInteractor.swift */; };
+		855D74B7207BB045000421DA /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74B0207BB045000421DA /* AboutView.swift */; };
 		857ADD8A204319FA00CA0D42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD89204319FA00CA0D42 /* User.swift */; };
 		857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */; };
 		857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */; };
@@ -314,6 +321,13 @@
 		855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePanRecognizer.swift; sourceTree = "<group>"; };
 		855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		855D74A5207BACE1000421DA /* QuestRoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestRoundImageView.swift; sourceTree = "<group>"; };
+		855D74AA207BB045000421DA /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		855D74AB207BB045000421DA /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		855D74AC207BB045000421DA /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		855D74AD207BB045000421DA /* AboutProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProtocols.swift; sourceTree = "<group>"; };
+		855D74AE207BB045000421DA /* AboutAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAssembly.swift; sourceTree = "<group>"; };
+		855D74AF207BB045000421DA /* AboutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInteractor.swift; sourceTree = "<group>"; };
+		855D74B0207BB045000421DA /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		857ADD89204319FA00CA0D42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkRouter.swift; sourceTree = "<group>"; };
@@ -1034,6 +1048,7 @@
 				85F7410D204C8B21002AC5FE /* Menu */,
 				85841F362051BA43009C4BE0 /* Main */,
 				855D7483207B7702000421DA /* Profile */,
+				855D74A7207BB01E000421DA /* About */,
 				85841F232051B1F8009C4BE0 /* Location */,
 				85170239207167000081F611 /* CodeInput */,
 				851701F820711DD20081F611 /* QuestList */,
@@ -1163,6 +1178,60 @@
 				855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */,
 			);
 			path = Gestures;
+			sourceTree = "<group>";
+		};
+		855D74A7207BB01E000421DA /* About */ = {
+			isa = PBXGroup;
+			children = (
+				855D74AD207BB045000421DA /* AboutProtocols.swift */,
+				855D74B8207BB04D000421DA /* View */,
+				855D74BA207BB05A000421DA /* Presenter */,
+				855D74BC207BB066000421DA /* Interactor */,
+				855D74B9207BB054000421DA /* Router */,
+				855D74BB207BB060000421DA /* Assembly */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		855D74B8207BB04D000421DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				855D74B0207BB045000421DA /* AboutView.swift */,
+				855D74AC207BB045000421DA /* AboutViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		855D74B9207BB054000421DA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				855D74AB207BB045000421DA /* AboutRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		855D74BA207BB05A000421DA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				855D74AA207BB045000421DA /* AboutPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		855D74BB207BB060000421DA /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				855D74AE207BB045000421DA /* AboutAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		855D74BC207BB066000421DA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				855D74AF207BB045000421DA /* AboutInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		857ADD872043196D00CA0D42 /* Services */ = {
@@ -1823,6 +1892,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				853DD5072042CE1A00E82595 /* View.swift in Sources */,
+				855D74B5207BB045000421DA /* AboutAssembly.swift in Sources */,
+				855D74B1207BB045000421DA /* AboutPresenter.swift in Sources */,
 				851702422071671C0081F611 /* CodeInputRouter.swift in Sources */,
 				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
@@ -1836,6 +1907,7 @@
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
 				85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */,
+				855D74B4207BB045000421DA /* AboutProtocols.swift in Sources */,
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
@@ -1869,6 +1941,7 @@
 				851702432071671C0081F611 /* CodeInputViewController.swift in Sources */,
 				851702272071579E0081F611 /* QuestDetailsViewController.swift in Sources */,
 				853DD5202042FC6600E82595 /* LoginView.swift in Sources */,
+				855D74B3207BB045000421DA /* AboutViewController.swift in Sources */,
 				857ADD8A204319FA00CA0D42 /* User.swift in Sources */,
 				85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
@@ -1902,6 +1975,7 @@
 				855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
 				85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */,
+				855D74B6207BB045000421DA /* AboutInteractor.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
@@ -1973,6 +2047,8 @@
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				851A4C412078C24A008F488E /* CodeValidator.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
+				855D74B7207BB045000421DA /* AboutView.swift in Sources */,
+				855D74B2207BB045000421DA /* AboutRouter.swift in Sources */,
 				85170213207125800081F611 /* Quest.swift in Sources */,
 				85F74116204C8B31002AC5FE /* MenuViewController.swift in Sources */,
 				85841F2E2051B453009C4BE0 /* LocationInteractor.swift in Sources */,
