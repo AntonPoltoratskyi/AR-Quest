@@ -10,6 +10,13 @@ DEPENDENCIES:
   - LGSideMenuController
   - SnapKit (~> 4.0)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GuillotineMenu
+    - KeychainSwift
+    - LGSideMenuController
+    - SnapKit
+
 SPEC CHECKSUMS:
   GuillotineMenu: d186bcb1b827d9c2b8da564bc4535a0c4413acb1
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
@@ -18,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e8d591c6667caedf326ae0ddc474ca26f137d3a1
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
