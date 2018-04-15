@@ -1,5 +1,5 @@
 //
-//  QuestConstructorView.swift
+//  ConstructorFinishView.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 15.04.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class QuestConstructorView: UIView {
+final class ConstructorFinishView: UIView {
     
     // MARK: - Views
     
@@ -38,7 +38,7 @@ final class QuestConstructorView: UIView {
     private func setup() {
         backgroundColor = .white
         
-        label.text = "QuestConstructor"
+        label.text = "ConstructorFinish"
         
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true

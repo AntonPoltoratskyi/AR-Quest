@@ -1,5 +1,5 @@
 //
-//  QuestConstructorRouter.swift
+//  ConstructorFinishRouter.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 15.04.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class QuestConstructorRouter: Router, QuestConstructorRouterInput {
+final class ConstructorFinishRouter: Router, ConstructorFinishRouterInput {
     
     weak var viewController: UIViewController!
 }

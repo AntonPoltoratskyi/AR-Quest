@@ -1,5 +1,5 @@
 //
-//  QuestConstructorAssembly.swift
+//  ConstructorAssembly.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 15.04.2018.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-final class QuestConstructorAssembly: Assembly {
+final class ConstructorAssembly: Assembly {
     
-    typealias Input = Module<QuestConstructorModuleInput>
+    typealias Input = Module<ConstructorModuleInput>
     
     func build() -> Input {
-        let view = QuestConstructorViewController()
-        let presenter = QuestConstructorPresenter()
-        let interactor = QuestConstructorInteractor()
-        let router = QuestConstructorRouter()
+        let view = ConstructorViewController()
+        let presenter = ConstructorPresenter()
+        let interactor = ConstructorInteractor()
+        let router = ConstructorRouter()
         
         view.output = presenter
         

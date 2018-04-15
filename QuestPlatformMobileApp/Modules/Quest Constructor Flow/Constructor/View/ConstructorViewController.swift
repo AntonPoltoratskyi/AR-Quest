@@ -1,5 +1,5 @@
 //
-//  QuestConstructorViewController.swift
+//  ConstructorViewController.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 15.04.2018.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-final class QuestConstructorViewController: UIViewController, View {
+final class ConstructorViewController: UIViewController, View {
     
-    typealias Output = QuestConstructorViewOutput
+    typealias Output = ConstructorViewOutput
     var output: Output!
     
     
     // MARK: - Views
     
-    private lazy var contentView: QuestConstructorView = {
-        let contentView = QuestConstructorView()
+    private lazy var contentView: ConstructorView = {
+        let contentView = ConstructorView()
         return contentView
     }()
     
@@ -34,7 +34,7 @@ final class QuestConstructorViewController: UIViewController, View {
     }
 }
 
-// MARK: - QuestConstructorViewInput
-extension QuestConstructorViewController: QuestConstructorViewInput {
+// MARK: - ConstructorViewInput
+extension ConstructorViewController: ConstructorViewInput {
     
 }
