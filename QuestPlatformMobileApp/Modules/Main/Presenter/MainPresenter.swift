@@ -43,6 +43,10 @@ extension MainPresenter: MainViewOutput {
         router.showQuestList()
     }
     
+    func didClickMenu() {
+        router.showMenu()
+    }
+    
     func didClickSearch() {
         
     }

@@ -12,11 +12,10 @@ final class MenuView: UIView {
     
     // MARK: - Views
     
-    private(set) lazy var label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
-        return label
+    private(set) lazy var navigationView: QuestNavigationView = {
+        let navigationView = QuestNavigationView()
+        addSubview(navigationView)
+        return navigationView
     }()
     
     
@@ -38,9 +37,8 @@ final class MenuView: UIView {
     private func setup() {
         backgroundColor = .white
         
-        label.text = "Menu"
-        
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        navigationView.snp.makeConstraints { maker in
+            maker.left.right.top.equalToSuperview()
+        }
     }
 }

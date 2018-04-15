@@ -16,4 +16,9 @@ final class MainRouter: Router, MainRouterInput {
         let questList = QuestListAssembly().build()
         viewController.navigationController?.pushViewController(questList.view, animated: true)
     }
+    
+    func showMenu() {
+        let menu = MenuAssembly().build()
+        viewController.present(menu.view, animated: true, completion: nil)
+    }
 }

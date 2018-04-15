@@ -12,21 +12,26 @@ extension ConstraintMaker {
     
     @discardableResult
     func buttonHeight() -> ConstraintMakerEditable {
-        return self.height.equalTo(52)
+        return height.equalTo(52)
     }
     
     @discardableResult
     func textFieldHeight() -> ConstraintMakerEditable {
-        return self.height.equalTo(52)
+        return height.equalTo(52)
     }
     
     @discardableResult
     func segmentedControlActionHeight() -> ConstraintMakerEditable {
-        return self.height.equalTo(32)
+        return height.equalTo(32)
+    }
+    
+    @discardableResult
+    func navigationViewHeight() -> ConstraintMakerEditable {
+        return height.equalTo(44)
     }
     
     func horizontalInset(_ inset: CGFloat) {
-        self.left.equalToSuperview().offset(inset)
-        self.right.equalToSuperview().inset(inset)
+        left.equalToSuperview().offset(inset)
+        right.equalToSuperview().inset(inset)
     }
 }

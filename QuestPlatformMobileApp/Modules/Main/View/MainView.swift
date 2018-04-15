@@ -25,6 +25,12 @@ final class MainView: UIView {
         return backgroundView
     }()
     
+    private(set) lazy var navigationView: QuestNavigationView = {
+        let navigationView = QuestNavigationView()
+        contentView.addSubview(navigationView)
+        return navigationView
+    }()
+    
     private(set) lazy var textContainerView: UIView = {
         let containerView = UIView()
         contentView.addSubview(containerView)
@@ -82,6 +88,10 @@ final class MainView: UIView {
         
         backgroundView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
+        }
+        
+        navigationView.snp.makeConstraints { maker in
+            maker.top.left.right.equalToSuperview()
         }
         
         let horizontalInset = 16

@@ -155,6 +155,7 @@
 		85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21420837692009AEF58 /* MenuAssembly.swift */; };
 		85C3C21C20837692009AEF58 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21520837692009AEF58 /* MenuInteractor.swift */; };
 		85C3C21D20837692009AEF58 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21620837692009AEF58 /* MenuView.swift */; };
+		85C3C226208378F1009AEF58 /* QuestNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C225208378F1009AEF58 /* QuestNavigationView.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
@@ -347,6 +348,7 @@
 		85C3C21420837692009AEF58 /* MenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
 		85C3C21520837692009AEF58 /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
 		85C3C21620837692009AEF58 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		85C3C225208378F1009AEF58 /* QuestNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestNavigationView.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
@@ -1545,13 +1547,14 @@
 		85F740DC204C469F002AC5FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				851701F620710D100081F611 /* QuestBackgroundView.swift */,
+				85C3C225208378F1009AEF58 /* QuestNavigationView.swift */,
 				857ADD9620432A8D00CA0D42 /* QuestButton.swift */,
 				857ADD9F20432E6300CA0D42 /* QuestTextField.swift */,
 				85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */,
+				8517021920714EF40081F611 /* QuestCardView.swift */,
 				85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */,
 				85F740E5204C605B002AC5FE /* QuestCircleView.swift */,
-				851701F620710D100081F611 /* QuestBackgroundView.swift */,
-				8517021920714EF40081F611 /* QuestCardView.swift */,
 				855D74A5207BACE1000421DA /* QuestRoundImageView.swift */,
 			);
 			path = Views;
@@ -1850,6 +1853,7 @@
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
 				85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */,
+				85C3C226208378F1009AEF58 /* QuestNavigationView.swift in Sources */,
 				855D74B4207BB045000421DA /* AboutProtocols.swift in Sources */,
 				85C3C209208373DE009AEF58 /* MainView.swift in Sources */,
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,

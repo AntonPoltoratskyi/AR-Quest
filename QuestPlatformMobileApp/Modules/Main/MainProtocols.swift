@@ -23,6 +23,7 @@ protocol MainViewInput: class {
 protocol MainViewOutput: class {
     func viewDidLoad()
     func didClickJoin()
+    func didClickMenu()
     func didClickSearch()
     func didClickProfile()
 }
@@ -42,4 +43,5 @@ protocol MainInteractorOutput: class {
 
 protocol MainRouterInput: class {
     func showQuestList()
+    func showMenu()
 }

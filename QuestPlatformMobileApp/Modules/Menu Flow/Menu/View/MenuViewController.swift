@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import GuillotineMenu
 
-final class MenuViewController: UIViewController, View {
+final class MenuViewController: UIViewController, View, GuillotineMenu {
     
     typealias Output = MenuViewOutput
     var output: Output!
+    
+    
+    // MARK: - GuillotineMenu
+    
+    var dismissButton: UIButton? {
+        return contentView.navigationView.leftBarButton
+    }
+    
+    var titleLabel: UILabel? {
+        return contentView.navigationView.titleLabel
+    }
     
     
     // MARK: - Views
     
     private lazy var contentView: MenuView = {
         let contentView = MenuView()
+        contentView.navigationView.setupLeftButton(title: "Q") { [weak self] sender in
+            self?.dismiss(animated: true, completion: nil)
+        }
         return contentView
     }()
     
