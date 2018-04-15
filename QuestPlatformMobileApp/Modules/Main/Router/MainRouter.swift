@@ -2,15 +2,11 @@
 //  MainRouter.swift
 //  QuestPlatformMobileApp
 //
-//  Created by Anton Poltoratskyi on 08.03.2018.
+//  Created by Anton Poltoratskyi on 15.04.2018.
 //  Copyright © 2018 Anton Poltoratskyi. All rights reserved.
 //
 
 import UIKit
-
-protocol MainRouterInput: class {
-    func showQuestList()
-}
 
 final class MainRouter: Router, MainRouterInput {
     

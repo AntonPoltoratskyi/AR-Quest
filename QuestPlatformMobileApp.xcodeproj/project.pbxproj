@@ -147,12 +147,13 @@
 		85841F2D2051B453009C4BE0 /* LocationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F272051B453009C4BE0 /* LocationAssembly.swift */; };
 		85841F2E2051B453009C4BE0 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F282051B453009C4BE0 /* LocationInteractor.swift */; };
 		85841F2F2051B453009C4BE0 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F292051B453009C4BE0 /* LocationView.swift */; };
-		85841F3D2051BA5B009C4BE0 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F372051BA5B009C4BE0 /* MainPresenter.swift */; };
-		85841F3E2051BA5B009C4BE0 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F382051BA5B009C4BE0 /* MainRouter.swift */; };
-		85841F3F2051BA5B009C4BE0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F392051BA5B009C4BE0 /* MainViewController.swift */; };
-		85841F402051BA5B009C4BE0 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F3A2051BA5B009C4BE0 /* MainAssembly.swift */; };
-		85841F412051BA5B009C4BE0 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F3B2051BA5B009C4BE0 /* MainInteractor.swift */; };
-		85841F422051BA5B009C4BE0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85841F3C2051BA5B009C4BE0 /* MainView.swift */; };
+		85C3C203208373DE009AEF58 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C1FC208373DE009AEF58 /* MainPresenter.swift */; };
+		85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C1FD208373DE009AEF58 /* MainRouter.swift */; };
+		85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C1FE208373DE009AEF58 /* MainViewController.swift */; };
+		85C3C206208373DE009AEF58 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C1FF208373DE009AEF58 /* MainProtocols.swift */; };
+		85C3C207208373DE009AEF58 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C200208373DE009AEF58 /* MainAssembly.swift */; };
+		85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C201208373DE009AEF58 /* MainInteractor.swift */; };
+		85C3C209208373DE009AEF58 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C202208373DE009AEF58 /* MainView.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
@@ -343,12 +344,13 @@
 		85841F272051B453009C4BE0 /* LocationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAssembly.swift; sourceTree = "<group>"; };
 		85841F282051B453009C4BE0 /* LocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
 		85841F292051B453009C4BE0 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
-		85841F372051BA5B009C4BE0 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		85841F382051BA5B009C4BE0 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		85841F392051BA5B009C4BE0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		85841F3A2051BA5B009C4BE0 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
-		85841F3B2051BA5B009C4BE0 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
-		85841F3C2051BA5B009C4BE0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		85C3C1FC208373DE009AEF58 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		85C3C1FD208373DE009AEF58 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		85C3C1FE208373DE009AEF58 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		85C3C1FF208373DE009AEF58 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		85C3C200208373DE009AEF58 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		85C3C201208373DE009AEF58 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		85C3C202208373DE009AEF58 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
@@ -1046,10 +1048,10 @@
 				85F740E8204C85DC002AC5FE /* Containers */,
 				855D7497207B7A5A000421DA /* Auth */,
 				85F7410D204C8B21002AC5FE /* Menu */,
-				85841F362051BA43009C4BE0 /* Main */,
+				85C3C1FB208373CF009AEF58 /* Main */,
+				85841F232051B1F8009C4BE0 /* Location */,
 				855D7483207B7702000421DA /* Profile */,
 				855D74A7207BB01E000421DA /* About */,
-				85841F232051B1F8009C4BE0 /* Location */,
 				85170239207167000081F611 /* CodeInput */,
 				851701F820711DD20081F611 /* QuestList */,
 				8517021D2071576E0081F611 /* QuestDetails */,
@@ -1337,57 +1339,58 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		85841F362051BA43009C4BE0 /* Main */ = {
+		85C3C1FB208373CF009AEF58 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				85841F432051BA66009C4BE0 /* View */,
-				85841F442051BA6C009C4BE0 /* Presenter */,
-				85841F472051BA7F009C4BE0 /* Interactor */,
-				85841F452051BA73009C4BE0 /* Router */,
-				85841F462051BA78009C4BE0 /* Assembly */,
+				85C3C1FF208373DE009AEF58 /* MainProtocols.swift */,
+				85C3C20A208373E4009AEF58 /* View */,
+				85C3C20D208373F8009AEF58 /* Presenter */,
+				85C3C20C208373F2009AEF58 /* Interactor */,
+				85C3C20E20837407009AEF58 /* Router */,
+				85C3C20B208373EA009AEF58 /* Assembly */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		85841F432051BA66009C4BE0 /* View */ = {
+		85C3C20A208373E4009AEF58 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85841F3C2051BA5B009C4BE0 /* MainView.swift */,
-				85841F392051BA5B009C4BE0 /* MainViewController.swift */,
+				85C3C202208373DE009AEF58 /* MainView.swift */,
+				85C3C1FE208373DE009AEF58 /* MainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		85841F442051BA6C009C4BE0 /* Presenter */ = {
+		85C3C20B208373EA009AEF58 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				85841F372051BA5B009C4BE0 /* MainPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		85841F452051BA73009C4BE0 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				85841F382051BA5B009C4BE0 /* MainRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		85841F462051BA78009C4BE0 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				85841F3A2051BA5B009C4BE0 /* MainAssembly.swift */,
+				85C3C200208373DE009AEF58 /* MainAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		85841F472051BA7F009C4BE0 /* Interactor */ = {
+		85C3C20C208373F2009AEF58 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				85841F3B2051BA5B009C4BE0 /* MainInteractor.swift */,
+				85C3C201208373DE009AEF58 /* MainInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85C3C20D208373F8009AEF58 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C1FC208373DE009AEF58 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85C3C20E20837407009AEF58 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C1FD208373DE009AEF58 /* MainRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		85D8A56A205ECA9E00C6F547 /* SceneKit */ = {
@@ -1894,6 +1897,7 @@
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
 				85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */,
 				855D74B4207BB045000421DA /* AboutProtocols.swift in Sources */,
+				85C3C209208373DE009AEF58 /* MainView.swift in Sources */,
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
@@ -1907,13 +1911,11 @@
 				85841F2B2051B453009C4BE0 /* LocationRouter.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
-				85841F3D2051BA5B009C4BE0 /* MainPresenter.swift in Sources */,
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				85841F2D2051B453009C4BE0 /* LocationAssembly.swift in Sources */,
 				8517023220715AF40081F611 /* Task.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
-				85841F3E2051BA5B009C4BE0 /* MainRouter.swift in Sources */,
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				8517020320711E370081F611 /* QuestListProtocols.swift in Sources */,
@@ -1965,16 +1967,17 @@
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
+				85C3C206208373DE009AEF58 /* MainProtocols.swift in Sources */,
 				8517020220711E370081F611 /* QuestListViewController.swift in Sources */,
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				8517020620711E370081F611 /* QuestListView.swift in Sources */,
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
 				85F74114204C8B31002AC5FE /* MenuPresenter.swift in Sources */,
-				85841F412051BA5B009C4BE0 /* MainInteractor.swift in Sources */,
 				85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */,
 				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
+				85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
@@ -1982,7 +1985,6 @@
 				85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */,
 				85F74119204C8B31002AC5FE /* MenuView.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
-				85841F422051BA5B009C4BE0 /* MainView.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
@@ -1991,6 +1993,7 @@
 				85170216207127950081F611 /* QuestNetworkService.swift in Sources */,
 				85841F2A2051B453009C4BE0 /* LocationPresenter.swift in Sources */,
 				851702252071579E0081F611 /* QuestDetailsPresenter.swift in Sources */,
+				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */,
 				851702282071579E0081F611 /* QuestDetailsProtocols.swift in Sources */,
@@ -1998,8 +2001,8 @@
 				853DD4F62042CA1800E82595 /* ResponseRepresentable.swift in Sources */,
 				853DD51B2042FC6600E82595 /* LoginPresenter.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
-				85841F3F2051BA5B009C4BE0 /* MainViewController.swift in Sources */,
 				8517020420711E370081F611 /* QuestListAssembly.swift in Sources */,
+				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				851702292071579E0081F611 /* QuestDetailsAssembly.swift in Sources */,
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
@@ -2009,11 +2012,13 @@
 				857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */,
 				85170218207127A80081F611 /* QuestNetworkRouter.swift in Sources */,
 				85170238207165100081F611 /* QuestTaskCellModel.swift in Sources */,
+				85C3C203208373DE009AEF58 /* MainPresenter.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
 				851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */,
 				855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */,
+				85C3C207208373DE009AEF58 /* MainAssembly.swift in Sources */,
 				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
 				8517021A20714EF40081F611 /* QuestCardView.swift in Sources */,
 				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
@@ -2029,7 +2034,6 @@
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
 				85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */,
 				85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */,
-				85841F402051BA5B009C4BE0 /* MainAssembly.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				851A4C412078C24A008F488E /* CodeValidator.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,

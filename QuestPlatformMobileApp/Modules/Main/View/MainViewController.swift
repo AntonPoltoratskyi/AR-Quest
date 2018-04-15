@@ -8,17 +8,6 @@
 
 import UIKit
 
-protocol MainViewInput: class {
-    func setup(_ viewModel: MainViewModel)
-}
-
-protocol MainViewOutput: class {
-    func viewDidLoad()
-    func didClickJoin()
-    func didClickSearch()
-    func didClickProfile()
-}
-
 struct MainViewModel {
     static let initial = MainViewModel(state: .loading)
     
@@ -33,7 +22,7 @@ final class MainViewController: UIViewController, View {
     
     typealias Output = MainViewOutput
     var output: Output!
-
+    
     private var viewModel: MainViewModel = .initial {
         didSet {
             setupState(viewModel.state)
