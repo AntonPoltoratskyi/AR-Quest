@@ -26,7 +26,7 @@ final class QuestNavigationView: UIView {
     /// Attached to the superview.
     private(set) lazy var contentView: UIView = {
         let contentView = UIView()
-        contentView.backgroundColor = .blue
+        contentView.backgroundColor = Theme.NavigationView.Color.backgroundColor
         addSubview(contentView)
         return contentView
     }()
@@ -34,7 +34,7 @@ final class QuestNavigationView: UIView {
     /// Attached to the safe area.
     private(set) lazy var navigationView: UIView = {
         let navigationView = UIView()
-        navigationView.backgroundColor = Theme.NavigationView.Color.backgroundColor
+        navigationView.backgroundColor = .clear
         contentView.addSubview(navigationView)
         return navigationView
     }()
@@ -52,6 +52,7 @@ final class QuestNavigationView: UIView {
         let button = UIButton()
         button.isHidden = true
         button.addTarget(self, action: #selector(actionLeftButtonTapped(sender:)), for: .touchUpInside)
+        button.contentEdgeInsets = Layout.buttons.contentInset
         navigationView.addSubview(button)
         return button
     }()
@@ -60,6 +61,7 @@ final class QuestNavigationView: UIView {
         let button = UIButton()
         button.isHidden = true
         button.addTarget(self, action: #selector(actionRightButtonTapped(sender:)), for: .touchUpInside)
+        button.contentEdgeInsets = Layout.buttons.contentInset
         navigationView.addSubview(button)
         return button
     }()
@@ -101,17 +103,14 @@ final class QuestNavigationView: UIView {
         }
         
         let buttonInset = QuestNavigationView.Layout.buttons.inset
-        let buttonSize = QuestNavigationView.Layout.buttons.size
         
         leftBarButton.snp.makeConstraints { maker in
             maker.left.equalToSuperview().offset(buttonInset)
             maker.centerY.equalToSuperview()
-            maker.width.height.equalTo(buttonSize)
         }
         rightBarButton.snp.makeConstraints { maker in
             maker.right.equalToSuperview().inset(buttonInset)
             maker.centerY.equalToSuperview()
-            maker.width.height.equalTo(buttonSize)
         }
     }
     
@@ -165,8 +164,8 @@ extension QuestNavigationView {
         }
         
         enum buttons {
-            static let size: CGFloat = 44
             static let inset: CGFloat = 8
+            static let contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         }
     }
 }

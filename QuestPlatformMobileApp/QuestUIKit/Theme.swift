@@ -59,11 +59,11 @@ enum Theme {
     }
     enum NavigationView {
         enum Color {
-            static let backgroundColor = UIColor.green
-            static let titleColor = UIColor.darkText
+            static let backgroundColor = UIColor(r: 42, g: 46, b: 67)
+            static let titleColor = UIColor.white
         }
         enum Font {
-            static let titleFont = UIFont.appFont(ofSize: 17, weight: .regular)
+            static let titleFont = UIFont.appFont(ofSize: 18, weight: .medium)
         }
     }
     enum Background {

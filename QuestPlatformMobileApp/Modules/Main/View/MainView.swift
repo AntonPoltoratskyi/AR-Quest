@@ -15,6 +15,7 @@ final class MainView: UIView {
     
     private(set) lazy var navigationView: QuestNavigationView = {
         let navigationView = QuestNavigationView()
+        navigationView.title = "Quest"
         addSubview(navigationView)
         return navigationView
     }()

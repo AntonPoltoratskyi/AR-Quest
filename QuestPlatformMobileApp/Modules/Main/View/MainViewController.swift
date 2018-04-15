@@ -43,7 +43,7 @@ final class MainViewController: UIViewController, View {
     private lazy var contentView: MainView = {
         let contentView = MainView()
         contentView.joinButton.addTarget(self, action: #selector(actionJoin(sender:)), for: .touchUpInside)
-        contentView.navigationView.setupLeftButton(title: "Q") { [weak self] sender in
+        contentView.navigationView.setupLeftButton(title: "Menu") { [weak self] sender in
             self?.menuAnimator.presentButton = sender
             self?.output?.didClickMenu()
         }
