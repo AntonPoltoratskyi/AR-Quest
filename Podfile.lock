@@ -1,18 +1,21 @@
 PODS:
-  - KeychainSwift (10.0.0)
+  - GuillotineMenu (3.0.1)
+  - KeychainSwift (11.0.0)
   - LGSideMenuController (2.1.1)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
-  - KeychainSwift (~> 10.0)
+  - GuillotineMenu (~> 3.0)
+  - KeychainSwift (~> 11.0)
   - LGSideMenuController
   - SnapKit (~> 4.0)
 
 SPEC CHECKSUMS:
-  KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
+  GuillotineMenu: d186bcb1b827d9c2b8da564bc4535a0c4413acb1
+  KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
   LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: c72baddba418801a5580c8cafe436dd81ebbfcc9
+PODFILE CHECKSUM: e8d591c6667caedf326ae0ddc474ca26f137d3a1
 
 COCOAPODS: 1.4.0
