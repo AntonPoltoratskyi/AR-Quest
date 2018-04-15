@@ -165,6 +165,13 @@
 		85C3C23B2083BACB009AEF58 /* LocationPickerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2342083BACB009AEF58 /* LocationPickerAssembly.swift */; };
 		85C3C23C2083BACB009AEF58 /* LocationPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2352083BACB009AEF58 /* LocationPickerInteractor.swift */; };
 		85C3C23D2083BACB009AEF58 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2362083BACB009AEF58 /* LocationPickerView.swift */; };
+		85C3C24C2083C36F009AEF58 /* QuestConstructorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2452083C36F009AEF58 /* QuestConstructorPresenter.swift */; };
+		85C3C24D2083C36F009AEF58 /* QuestConstructorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2462083C36F009AEF58 /* QuestConstructorRouter.swift */; };
+		85C3C24E2083C36F009AEF58 /* QuestConstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2472083C36F009AEF58 /* QuestConstructorViewController.swift */; };
+		85C3C24F2083C36F009AEF58 /* QuestConstructorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2482083C36F009AEF58 /* QuestConstructorProtocols.swift */; };
+		85C3C2502083C36F009AEF58 /* QuestConstructorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2492083C36F009AEF58 /* QuestConstructorAssembly.swift */; };
+		85C3C2512083C36F009AEF58 /* QuestConstructorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C24A2083C36F009AEF58 /* QuestConstructorInteractor.swift */; };
+		85C3C2522083C36F009AEF58 /* QuestConstructorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C24B2083C36F009AEF58 /* QuestConstructorView.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
@@ -367,6 +374,13 @@
 		85C3C2342083BACB009AEF58 /* LocationPickerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerAssembly.swift; sourceTree = "<group>"; };
 		85C3C2352083BACB009AEF58 /* LocationPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerInteractor.swift; sourceTree = "<group>"; };
 		85C3C2362083BACB009AEF58 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		85C3C2452083C36F009AEF58 /* QuestConstructorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestConstructorPresenter.swift; sourceTree = "<group>"; };
+		85C3C2462083C36F009AEF58 /* QuestConstructorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestConstructorRouter.swift; sourceTree = "<group>"; };
+		85C3C2472083C36F009AEF58 /* QuestConstructorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestConstructorViewController.swift; sourceTree = "<group>"; };
+		85C3C2482083C36F009AEF58 /* QuestConstructorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestConstructorProtocols.swift; sourceTree = "<group>"; };
+		85C3C2492083C36F009AEF58 /* QuestConstructorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestConstructorAssembly.swift; sourceTree = "<group>"; };
+		85C3C24A2083C36F009AEF58 /* QuestConstructorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestConstructorInteractor.swift; sourceTree = "<group>"; };
+		85C3C24B2083C36F009AEF58 /* QuestConstructorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestConstructorView.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
@@ -1060,6 +1074,7 @@
 				85C3C1FB208373CF009AEF58 /* Main */,
 				85C3C2232083772D009AEF58 /* Menu Flow */,
 				85C3C2242083774D009AEF58 /* Quest Master-Detail Flow */,
+				85C3C2432083C332009AEF58 /* Quest Constructor Flow */,
 				85170239207167000081F611 /* CodeInput */,
 				85C3C22D2083BAA4009AEF58 /* LocationPicker */,
 			);
@@ -1488,6 +1503,68 @@
 			isa = PBXGroup;
 			children = (
 				85C3C2342083BACB009AEF58 /* LocationPickerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85C3C2432083C332009AEF58 /* Quest Constructor Flow */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2442083C349009AEF58 /* QuestConstructor */,
+			);
+			path = "Quest Constructor Flow";
+			sourceTree = "<group>";
+		};
+		85C3C2442083C349009AEF58 /* QuestConstructor */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2482083C36F009AEF58 /* QuestConstructorProtocols.swift */,
+				85C3C2532083C376009AEF58 /* View */,
+				85C3C2542083C381009AEF58 /* Presenter */,
+				85C3C2552083C38F009AEF58 /* Interactor */,
+				85C3C2562083C398009AEF58 /* Router */,
+				85C3C2572083C39D009AEF58 /* Assembly */,
+			);
+			path = QuestConstructor;
+			sourceTree = "<group>";
+		};
+		85C3C2532083C376009AEF58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2472083C36F009AEF58 /* QuestConstructorViewController.swift */,
+				85C3C24B2083C36F009AEF58 /* QuestConstructorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85C3C2542083C381009AEF58 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2452083C36F009AEF58 /* QuestConstructorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85C3C2552083C38F009AEF58 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C24A2083C36F009AEF58 /* QuestConstructorInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85C3C2562083C398009AEF58 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2462083C36F009AEF58 /* QuestConstructorRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85C3C2572083C39D009AEF58 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2492083C36F009AEF58 /* QuestConstructorAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -1937,6 +2014,7 @@
 				855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */,
 				85C3C21720837692009AEF58 /* MenuPresenter.swift in Sources */,
 				85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */,
+				85C3C24E2083C36F009AEF58 /* QuestConstructorViewController.swift in Sources */,
 				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
 				85125719204AF04700995543 /* EmailValidator.swift in Sources */,
 				855D748E207B77ED000421DA /* ProfileProtocols.swift in Sources */,
@@ -1950,12 +2028,14 @@
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
+				85C3C24D2083C36F009AEF58 /* QuestConstructorRouter.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
 				853DD4FE2042CCE100E82595 /* SplashInteractor.swift in Sources */,
 				857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */,
 				853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */,
 				851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */,
+				85C3C2512083C36F009AEF58 /* QuestConstructorInteractor.swift in Sources */,
 				855D74A4207BA629000421DA /* SlideAnimatedTransitioning.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
@@ -2028,8 +2108,10 @@
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
 				85C3C23B2083BACB009AEF58 /* LocationPickerAssembly.swift in Sources */,
+				85C3C2522083C36F009AEF58 /* QuestConstructorView.swift in Sources */,
 				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
+				85C3C2502083C36F009AEF58 /* QuestConstructorAssembly.swift in Sources */,
 				85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
@@ -2053,6 +2135,7 @@
 				853DD51B2042FC6600E82595 /* LoginPresenter.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				8517020420711E370081F611 /* QuestListAssembly.swift in Sources */,
+				85C3C24F2083C36F009AEF58 /* QuestConstructorProtocols.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				851702292071579E0081F611 /* QuestDetailsAssembly.swift in Sources */,
@@ -2073,6 +2156,7 @@
 				855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */,
 				85C3C21920837692009AEF58 /* MenuViewController.swift in Sources */,
 				85C3C207208373DE009AEF58 /* MainAssembly.swift in Sources */,
+				85C3C24C2083C36F009AEF58 /* QuestConstructorPresenter.swift in Sources */,
 				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
 				8517021A20714EF40081F611 /* QuestCardView.swift in Sources */,
 				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
