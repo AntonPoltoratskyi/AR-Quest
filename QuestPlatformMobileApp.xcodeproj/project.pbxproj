@@ -1036,14 +1036,11 @@
 			isa = PBXGroup;
 			children = (
 				85F740E8204C85DC002AC5FE /* Containers */,
-				855D7497207B7A5A000421DA /* Auth */,
-				85C3C20F20837670009AEF58 /* Menu */,
+				855D7497207B7A5A000421DA /* Auth Flow */,
 				85C3C1FB208373CF009AEF58 /* Main */,
-				855D7483207B7702000421DA /* Profile */,
-				855D74A7207BB01E000421DA /* About */,
+				85C3C2232083772D009AEF58 /* Menu Flow */,
+				85C3C2242083774D009AEF58 /* Quest Master-Detail Flow */,
 				85170239207167000081F611 /* CodeInput */,
-				851701F820711DD20081F611 /* QuestList */,
-				8517021D2071576E0081F611 /* QuestDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1152,13 +1149,13 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		855D7497207B7A5A000421DA /* Auth */ = {
+		855D7497207B7A5A000421DA /* Auth Flow */ = {
 			isa = PBXGroup;
 			children = (
 				853DD4F82042CB4500E82595 /* Splash */,
 				853DD5142042FC5600E82595 /* Login */,
 			);
-			path = Auth;
+			path = "Auth Flow";
 			sourceTree = "<group>";
 		};
 		855D749E207BA359000421DA /* Gestures */ = {
@@ -1381,6 +1378,25 @@
 				85C3C21520837692009AEF58 /* MenuInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85C3C2232083772D009AEF58 /* Menu Flow */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C20F20837670009AEF58 /* Menu */,
+				855D7483207B7702000421DA /* Profile */,
+				855D74A7207BB01E000421DA /* About */,
+			);
+			path = "Menu Flow";
+			sourceTree = "<group>";
+		};
+		85C3C2242083774D009AEF58 /* Quest Master-Detail Flow */ = {
+			isa = PBXGroup;
+			children = (
+				851701F820711DD20081F611 /* QuestList */,
+				8517021D2071576E0081F611 /* QuestDetails */,
+			);
+			path = "Quest Master-Detail Flow";
 			sourceTree = "<group>";
 		};
 		85D8A56A205ECA9E00C6F547 /* SceneKit */ = {
