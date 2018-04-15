@@ -26,6 +26,7 @@ final class QuestNavigationView: UIView {
     /// Attached to the superview.
     private(set) lazy var contentView: UIView = {
         let contentView = UIView()
+        contentView.backgroundColor = .blue
         addSubview(contentView)
         return contentView
     }()

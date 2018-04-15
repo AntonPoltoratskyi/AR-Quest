@@ -16,13 +16,16 @@ final class MenuViewController: UIViewController, View, GuillotineMenu {
     
     
     // MARK: - GuillotineMenu
-    
+
     var dismissButton: UIButton? {
-        return contentView.navigationView.leftBarButton
+        let button = UIButton()
+        button.setTitle("Q", for: .normal)
+        button.addTarget(self, action: #selector(actionDismiss(sender:)), for: .touchUpInside)
+        return button
     }
-    
+
     var titleLabel: UILabel? {
-        return contentView.navigationView.titleLabel
+        return nil
     }
     
     
@@ -30,9 +33,7 @@ final class MenuViewController: UIViewController, View, GuillotineMenu {
     
     private lazy var contentView: MenuView = {
         let contentView = MenuView()
-        contentView.navigationView.setupLeftButton(title: "Q") { [weak self] sender in
-            self?.dismiss(animated: true, completion: nil)
-        }
+        contentView.delegate = self
         return contentView
     }()
     
@@ -46,6 +47,37 @@ final class MenuViewController: UIViewController, View, GuillotineMenu {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionDismiss(sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - MenuViewDelegate
+extension MenuViewController: MenuViewDelegate {
+    
+    func menuViewDidSelectProfile(_ menuView: MenuView) {
+        
+    }
+    
+    func menuViewDidSelectMyQuests(_ menuView: MenuView) {
+        
+    }
+    
+    func menuViewDidSelectStartNewQuest(_ menuView: MenuView) {
+        
+    }
+    
+    func menuViewDidSelectAbout(_ menuView: MenuView) {
+        
+    }
+    
+    func menuViewDidSelectLogout(_ menuView: MenuView) {
+        
     }
 }
 

@@ -156,6 +156,8 @@
 		85C3C21C20837692009AEF58 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21520837692009AEF58 /* MenuInteractor.swift */; };
 		85C3C21D20837692009AEF58 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21620837692009AEF58 /* MenuView.swift */; };
 		85C3C226208378F1009AEF58 /* QuestNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C225208378F1009AEF58 /* QuestNavigationView.swift */; };
+		85C3C2282083B05E009AEF58 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2272083B05E009AEF58 /* MenuItemView.swift */; };
+		85C3C22A2083BA0F009AEF58 /* MenuItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2292083BA0F009AEF58 /* MenuItemAction.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
@@ -349,6 +351,8 @@
 		85C3C21520837692009AEF58 /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
 		85C3C21620837692009AEF58 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		85C3C225208378F1009AEF58 /* QuestNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestNavigationView.swift; sourceTree = "<group>"; };
+		85C3C2272083B05E009AEF58 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		85C3C2292083BA0F009AEF58 /* MenuItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemAction.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
@@ -1344,8 +1348,8 @@
 		85C3C21E20837697009AEF58 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85C3C21620837692009AEF58 /* MenuView.swift */,
-				85C3C21220837692009AEF58 /* MenuViewController.swift */,
+				85C3C22B2083BA1B009AEF58 /* MenuItems */,
+				85C3C22C2083BA67009AEF58 /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1399,6 +1403,24 @@
 				8517021D2071576E0081F611 /* QuestDetails */,
 			);
 			path = "Quest Master-Detail Flow";
+			sourceTree = "<group>";
+		};
+		85C3C22B2083BA1B009AEF58 /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2292083BA0F009AEF58 /* MenuItemAction.swift */,
+				85C3C2272083B05E009AEF58 /* MenuItemView.swift */,
+			);
+			path = MenuItems;
+			sourceTree = "<group>";
+		};
+		85C3C22C2083BA67009AEF58 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C21620837692009AEF58 /* MenuView.swift */,
+				85C3C21220837692009AEF58 /* MenuViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		85D8A56A205ECA9E00C6F547 /* SceneKit */ = {
@@ -1869,6 +1891,7 @@
 				14FE2F881FC96382001EDEAB /* Geometry.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
+				85C3C22A2083BA0F009AEF58 /* MenuItemAction.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				8517023220715AF40081F611 /* Task.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
@@ -1966,6 +1989,7 @@
 				857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */,
 				85170218207127A80081F611 /* QuestNetworkRouter.swift in Sources */,
 				85170238207165100081F611 /* QuestTaskCellModel.swift in Sources */,
+				85C3C2282083B05E009AEF58 /* MenuItemView.swift in Sources */,
 				85C3C203208373DE009AEF58 /* MainPresenter.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,

@@ -13,6 +13,12 @@ final class MainView: UIView {
     
     // MARK: - Views
     
+    private(set) lazy var navigationView: QuestNavigationView = {
+        let navigationView = QuestNavigationView()
+        addSubview(navigationView)
+        return navigationView
+    }()
+    
     private(set) lazy var contentView: UIView = {
         let contentView = UIView()
         addSubview(contentView)
@@ -23,12 +29,6 @@ final class MainView: UIView {
         let backgroundView = QuestBackgroundView()
         contentView.addSubview(backgroundView)
         return backgroundView
-    }()
-    
-    private(set) lazy var navigationView: QuestNavigationView = {
-        let navigationView = QuestNavigationView()
-        contentView.addSubview(navigationView)
-        return navigationView
     }()
     
     private(set) lazy var textContainerView: UIView = {
@@ -82,16 +82,18 @@ final class MainView: UIView {
     private func setupSubviews() {
         backgroundColor = .white
         
+        navigationView.snp.makeConstraints { maker in
+            maker.top.left.right.equalToSuperview()
+        }
+        
         contentView.snp.makeConstraints { maker in
-            maker.edges.equalTo(self.safeAreaLayoutGuide.snp.edges)
+            maker.left.right.equalToSuperview()
+            maker.top.equalTo(navigationView.snp.bottom)
+            maker.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         }
         
         backgroundView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
-        }
-        
-        navigationView.snp.makeConstraints { maker in
-            maker.top.left.right.equalToSuperview()
         }
         
         let horizontalInset = 16

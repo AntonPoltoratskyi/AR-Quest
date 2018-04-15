@@ -33,7 +33,7 @@ final class MainViewController: UIViewController, View {
     private(set) lazy var menuAnimator: GuillotineTransitionAnimation = {
         let animator = GuillotineTransitionAnimation()
         animator.animationDuration = 0.2
-        animator.supportView = contentView.navigationView
+        animator.supportView = contentView.navigationView.navigationView
         return animator
     }()
     
