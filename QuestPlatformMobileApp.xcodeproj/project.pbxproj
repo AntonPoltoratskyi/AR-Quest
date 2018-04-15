@@ -158,6 +158,13 @@
 		85C3C226208378F1009AEF58 /* QuestNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C225208378F1009AEF58 /* QuestNavigationView.swift */; };
 		85C3C2282083B05E009AEF58 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2272083B05E009AEF58 /* MenuItemView.swift */; };
 		85C3C22A2083BA0F009AEF58 /* MenuItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2292083BA0F009AEF58 /* MenuItemAction.swift */; };
+		85C3C2372083BACB009AEF58 /* LocationPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2302083BACB009AEF58 /* LocationPickerPresenter.swift */; };
+		85C3C2382083BACB009AEF58 /* LocationPickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2312083BACB009AEF58 /* LocationPickerRouter.swift */; };
+		85C3C2392083BACB009AEF58 /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2322083BACB009AEF58 /* LocationPickerViewController.swift */; };
+		85C3C23A2083BACB009AEF58 /* LocationPickerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2332083BACB009AEF58 /* LocationPickerProtocols.swift */; };
+		85C3C23B2083BACB009AEF58 /* LocationPickerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2342083BACB009AEF58 /* LocationPickerAssembly.swift */; };
+		85C3C23C2083BACB009AEF58 /* LocationPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2352083BACB009AEF58 /* LocationPickerInteractor.swift */; };
+		85C3C23D2083BACB009AEF58 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2362083BACB009AEF58 /* LocationPickerView.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
@@ -353,6 +360,13 @@
 		85C3C225208378F1009AEF58 /* QuestNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestNavigationView.swift; sourceTree = "<group>"; };
 		85C3C2272083B05E009AEF58 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		85C3C2292083BA0F009AEF58 /* MenuItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemAction.swift; sourceTree = "<group>"; };
+		85C3C2302083BACB009AEF58 /* LocationPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerPresenter.swift; sourceTree = "<group>"; };
+		85C3C2312083BACB009AEF58 /* LocationPickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerRouter.swift; sourceTree = "<group>"; };
+		85C3C2322083BACB009AEF58 /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		85C3C2332083BACB009AEF58 /* LocationPickerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerProtocols.swift; sourceTree = "<group>"; };
+		85C3C2342083BACB009AEF58 /* LocationPickerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerAssembly.swift; sourceTree = "<group>"; };
+		85C3C2352083BACB009AEF58 /* LocationPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerInteractor.swift; sourceTree = "<group>"; };
+		85C3C2362083BACB009AEF58 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
@@ -1047,6 +1061,7 @@
 				85C3C2232083772D009AEF58 /* Menu Flow */,
 				85C3C2242083774D009AEF58 /* Quest Master-Detail Flow */,
 				85170239207167000081F611 /* CodeInput */,
+				85C3C22D2083BAA4009AEF58 /* LocationPicker */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1421,6 +1436,60 @@
 				85C3C21220837692009AEF58 /* MenuViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		85C3C22D2083BAA4009AEF58 /* LocationPicker */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2332083BACB009AEF58 /* LocationPickerProtocols.swift */,
+				85C3C23E2083BAD2009AEF58 /* View */,
+				85C3C23F2083BAD9009AEF58 /* Presenter */,
+				85C3C2402083BADF009AEF58 /* Interactor */,
+				85C3C2412083BAE6009AEF58 /* Router */,
+				85C3C2422083BAEB009AEF58 /* Assembly */,
+			);
+			path = LocationPicker;
+			sourceTree = "<group>";
+		};
+		85C3C23E2083BAD2009AEF58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2362083BACB009AEF58 /* LocationPickerView.swift */,
+				85C3C2322083BACB009AEF58 /* LocationPickerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85C3C23F2083BAD9009AEF58 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2302083BACB009AEF58 /* LocationPickerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85C3C2402083BADF009AEF58 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2352083BACB009AEF58 /* LocationPickerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85C3C2412083BAE6009AEF58 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2312083BACB009AEF58 /* LocationPickerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85C3C2422083BAEB009AEF58 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2342083BACB009AEF58 /* LocationPickerAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		85D8A56A205ECA9E00C6F547 /* SceneKit */ = {
@@ -1893,6 +1962,7 @@
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
 				85C3C22A2083BA0F009AEF58 /* MenuItemAction.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
+				85C3C23C2083BACB009AEF58 /* LocationPickerInteractor.swift in Sources */,
 				8517023220715AF40081F611 /* Task.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,
@@ -1910,6 +1980,7 @@
 				853DD5202042FC6600E82595 /* LoginView.swift in Sources */,
 				855D74B3207BB045000421DA /* AboutViewController.swift in Sources */,
 				857ADD8A204319FA00CA0D42 /* User.swift in Sources */,
+				85C3C23A2083BACB009AEF58 /* LocationPickerProtocols.swift in Sources */,
 				85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				853DD51C2042FC6600E82595 /* LoginRouter.swift in Sources */,
@@ -1951,16 +2022,19 @@
 				85C3C21820837692009AEF58 /* MenuRouter.swift in Sources */,
 				85C3C206208373DE009AEF58 /* MainProtocols.swift in Sources */,
 				8517020220711E370081F611 /* QuestListViewController.swift in Sources */,
+				85C3C2382083BACB009AEF58 /* LocationPickerRouter.swift in Sources */,
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				8517020620711E370081F611 /* QuestListView.swift in Sources */,
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
+				85C3C23B2083BACB009AEF58 /* LocationPickerAssembly.swift in Sources */,
 				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
 				85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
+				85C3C2372083BACB009AEF58 /* LocationPickerPresenter.swift in Sources */,
 				85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
@@ -1991,6 +2065,7 @@
 				85170238207165100081F611 /* QuestTaskCellModel.swift in Sources */,
 				85C3C2282083B05E009AEF58 /* MenuItemView.swift in Sources */,
 				85C3C203208373DE009AEF58 /* MainPresenter.swift in Sources */,
+				85C3C23D2083BACB009AEF58 /* LocationPickerView.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
@@ -2004,6 +2079,7 @@
 				853DD4C12042BF8B00E82595 /* UIViewController+KeyboardHandling.swift in Sources */,
 				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
 				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
+				85C3C2392083BACB009AEF58 /* LocationPickerViewController.swift in Sources */,
 				14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */,
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
 				8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */,
