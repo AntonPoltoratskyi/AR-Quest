@@ -148,6 +148,13 @@
 		85C3C207208373DE009AEF58 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C200208373DE009AEF58 /* MainAssembly.swift */; };
 		85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C201208373DE009AEF58 /* MainInteractor.swift */; };
 		85C3C209208373DE009AEF58 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C202208373DE009AEF58 /* MainView.swift */; };
+		85C3C21720837692009AEF58 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21020837692009AEF58 /* MenuPresenter.swift */; };
+		85C3C21820837692009AEF58 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21120837692009AEF58 /* MenuRouter.swift */; };
+		85C3C21920837692009AEF58 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21220837692009AEF58 /* MenuViewController.swift */; };
+		85C3C21A20837692009AEF58 /* MenuProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21320837692009AEF58 /* MenuProtocols.swift */; };
+		85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21420837692009AEF58 /* MenuAssembly.swift */; };
+		85C3C21C20837692009AEF58 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21520837692009AEF58 /* MenuInteractor.swift */; };
+		85C3C21D20837692009AEF58 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C21620837692009AEF58 /* MenuView.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
@@ -164,12 +171,6 @@
 		85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740FE204C8A25002AC5FE /* SideMenuContainerViewController.swift */; };
 		85F74105204C8A25002AC5FE /* SideMenuContainerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740FF204C8A25002AC5FE /* SideMenuContainerAssembly.swift */; };
 		85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74100204C8A25002AC5FE /* SideMenuContainerInteractor.swift */; };
-		85F74114204C8B31002AC5FE /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7410E204C8B31002AC5FE /* MenuPresenter.swift */; };
-		85F74115204C8B31002AC5FE /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7410F204C8B31002AC5FE /* MenuRouter.swift */; };
-		85F74116204C8B31002AC5FE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74110204C8B31002AC5FE /* MenuViewController.swift */; };
-		85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74111204C8B31002AC5FE /* MenuAssembly.swift */; };
-		85F74118204C8B31002AC5FE /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74112204C8B31002AC5FE /* MenuInteractor.swift */; };
-		85F74119204C8B31002AC5FE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F74113204C8B31002AC5FE /* MenuView.swift */; };
 		9F0351531E5DAEB021F7B79B /* Pods_QuestPlatformMobileApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -339,6 +340,13 @@
 		85C3C200208373DE009AEF58 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		85C3C201208373DE009AEF58 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		85C3C202208373DE009AEF58 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		85C3C21020837692009AEF58 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		85C3C21120837692009AEF58 /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		85C3C21220837692009AEF58 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		85C3C21320837692009AEF58 /* MenuProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProtocols.swift; sourceTree = "<group>"; };
+		85C3C21420837692009AEF58 /* MenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
+		85C3C21520837692009AEF58 /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		85C3C21620837692009AEF58 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
@@ -355,12 +363,6 @@
 		85F740FE204C8A25002AC5FE /* SideMenuContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerViewController.swift; sourceTree = "<group>"; };
 		85F740FF204C8A25002AC5FE /* SideMenuContainerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerAssembly.swift; sourceTree = "<group>"; };
 		85F74100204C8A25002AC5FE /* SideMenuContainerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuContainerInteractor.swift; sourceTree = "<group>"; };
-		85F7410E204C8B31002AC5FE /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
-		85F7410F204C8B31002AC5FE /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
-		85F74110204C8B31002AC5FE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		85F74111204C8B31002AC5FE /* MenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAssembly.swift; sourceTree = "<group>"; };
-		85F74112204C8B31002AC5FE /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
-		85F74113204C8B31002AC5FE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B54614025E78139B9DADDA9C /* Pods_QuestPlatformMobileApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestPlatformMobileApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61E9F60D8361C326C428F89 /* Pods-QuestPlatformMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1035,7 +1037,7 @@
 			children = (
 				85F740E8204C85DC002AC5FE /* Containers */,
 				855D7497207B7A5A000421DA /* Auth */,
-				85F7410D204C8B21002AC5FE /* Menu */,
+				85C3C20F20837670009AEF58 /* Menu */,
 				85C3C1FB208373CF009AEF58 /* Main */,
 				855D7483207B7702000421DA /* Profile */,
 				855D74A7207BB01E000421DA /* About */,
@@ -1327,6 +1329,60 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		85C3C20F20837670009AEF58 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C21320837692009AEF58 /* MenuProtocols.swift */,
+				85C3C21E20837697009AEF58 /* View */,
+				85C3C21F208376A1009AEF58 /* Presenter */,
+				85C3C222208376B4009AEF58 /* Interactor */,
+				85C3C220208376A6009AEF58 /* Router */,
+				85C3C221208376AE009AEF58 /* Assembly */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		85C3C21E20837697009AEF58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C21620837692009AEF58 /* MenuView.swift */,
+				85C3C21220837692009AEF58 /* MenuViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85C3C21F208376A1009AEF58 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C21020837692009AEF58 /* MenuPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85C3C220208376A6009AEF58 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C21120837692009AEF58 /* MenuRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85C3C221208376AE009AEF58 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C21420837692009AEF58 /* MenuAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85C3C222208376B4009AEF58 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C21520837692009AEF58 /* MenuInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		85D8A56A205ECA9E00C6F547 /* SceneKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1563,59 +1619,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		85F7410D204C8B21002AC5FE /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				85F7411A204C8B3C002AC5FE /* View */,
-				85F7411B204C8B41002AC5FE /* Presenter */,
-				85F7411C204C8B48002AC5FE /* Interactor */,
-				85F7411D204C8B4F002AC5FE /* Router */,
-				85F7411E204C8B56002AC5FE /* Assembly */,
-			);
-			path = Menu;
-			sourceTree = "<group>";
-		};
-		85F7411A204C8B3C002AC5FE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				85F74110204C8B31002AC5FE /* MenuViewController.swift */,
-				85F74113204C8B31002AC5FE /* MenuView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		85F7411B204C8B41002AC5FE /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				85F7410E204C8B31002AC5FE /* MenuPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		85F7411C204C8B48002AC5FE /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				85F74112204C8B31002AC5FE /* MenuInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		85F7411D204C8B4F002AC5FE /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				85F7410F204C8B31002AC5FE /* MenuRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		85F7411E204C8B56002AC5FE /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				85F74111204C8B31002AC5FE /* MenuAssembly.swift */,
-			);
-			path = Assembly;
-			sourceTree = "<group>";
-		};
 		8EEECCC7E04F44808B03638D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1822,6 +1825,7 @@
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
 				855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */,
+				85C3C21720837692009AEF58 /* MenuPresenter.swift in Sources */,
 				85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */,
 				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
 				85125719204AF04700995543 /* EmailValidator.swift in Sources */,
@@ -1873,6 +1877,8 @@
 				855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */,
 				855D74A0207BA375000421DA /* BackSwipable.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
+				85C3C21A20837692009AEF58 /* MenuProtocols.swift in Sources */,
+				85C3C21D20837692009AEF58 /* MenuView.swift in Sources */,
 				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
 				857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */,
 				14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */,
@@ -1881,6 +1887,7 @@
 				14FE2F861FC96382001EDEAB /* Dictionary.swift in Sources */,
 				853DD4DE2042C4E900E82595 /* UICollectionView+ViewModel.swift in Sources */,
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
+				85C3C21C20837692009AEF58 /* MenuInteractor.swift in Sources */,
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
 				855D74A6207BACE1000421DA /* QuestRoundImageView.swift in Sources */,
 				851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */,
@@ -1898,33 +1905,30 @@
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
+				85C3C21820837692009AEF58 /* MenuRouter.swift in Sources */,
 				85C3C206208373DE009AEF58 /* MainProtocols.swift in Sources */,
 				8517020220711E370081F611 /* QuestListViewController.swift in Sources */,
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				8517020620711E370081F611 /* QuestListView.swift in Sources */,
 				853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */,
 				853DD4F12042C79800E82595 /* APIError.swift in Sources */,
-				85F74114204C8B31002AC5FE /* MenuPresenter.swift in Sources */,
-				85F74117204C8B31002AC5FE /* MenuAssembly.swift in Sources */,
 				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
 				85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
-				85F74115204C8B31002AC5FE /* MenuRouter.swift in Sources */,
 				85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */,
-				85F74119204C8B31002AC5FE /* MenuView.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
-				85F74118204C8B31002AC5FE /* MenuInteractor.swift in Sources */,
 				85170216207127950081F611 /* QuestNetworkService.swift in Sources */,
 				851702252071579E0081F611 /* QuestDetailsPresenter.swift in Sources */,
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
+				85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */,
 				857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */,
 				851702282071579E0081F611 /* QuestDetailsProtocols.swift in Sources */,
 				85F740E6204C605B002AC5FE /* QuestCircleView.swift in Sources */,
@@ -1948,6 +1952,7 @@
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
 				851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */,
 				855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */,
+				85C3C21920837692009AEF58 /* MenuViewController.swift in Sources */,
 				85C3C207208373DE009AEF58 /* MainAssembly.swift in Sources */,
 				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
 				8517021A20714EF40081F611 /* QuestCardView.swift in Sources */,
@@ -1969,7 +1974,6 @@
 				855D74B7207BB045000421DA /* AboutView.swift in Sources */,
 				855D74B2207BB045000421DA /* AboutRouter.swift in Sources */,
 				85170213207125800081F611 /* Quest.swift in Sources */,
-				85F74116204C8B31002AC5FE /* MenuViewController.swift in Sources */,
 				8517022A2071579E0081F611 /* QuestDetailsInteractor.swift in Sources */,
 				8517020520711E370081F611 /* QuestListInteractor.swift in Sources */,
 			);

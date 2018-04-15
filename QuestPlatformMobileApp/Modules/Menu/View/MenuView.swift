@@ -2,13 +2,15 @@
 //  MenuView.swift
 //  QuestPlatformMobileApp
 //
-//  Created by Anton Poltoratskyi on 04.03.2018.
+//  Created by Anton Poltoratskyi on 15.04.2018.
 //  Copyright © 2018 Anton Poltoratskyi. All rights reserved.
 //
 
 import UIKit
 
 final class MenuView: UIView {
+    
+    // MARK: - Views
     
     private(set) lazy var label: UILabel = {
         let label = UILabel()
@@ -22,18 +24,18 @@ final class MenuView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupSubviews()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupSubviews()
+        setup()
     }
     
     
-    // MARK: - UI Setup
+    // MARK: - Setup
     
-    private func setupSubviews() {
+    private func setup() {
         backgroundColor = .white
         
         label.text = "Menu"

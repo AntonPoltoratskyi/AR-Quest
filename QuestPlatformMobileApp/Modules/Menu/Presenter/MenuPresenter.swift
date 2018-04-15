@@ -2,18 +2,11 @@
 //  MenuPresenter.swift
 //  QuestPlatformMobileApp
 //
-//  Created by Anton Poltoratskyi on 04.03.2018.
+//  Created by Anton Poltoratskyi on 15.04.2018.
 //  Copyright © 2018 Anton Poltoratskyi. All rights reserved.
 //
 
 import UIKit
-
-// MARK: - Module Input
-
-protocol MenuModuleInput: ModuleInput {
-}
-
-// MARK: - Presenter
 
 final class MenuPresenter: Presenter, MenuModuleInput {
     
@@ -26,7 +19,6 @@ final class MenuPresenter: Presenter, MenuModuleInput {
     var router: Router!
     
 }
-
 
 // MARK: - MenuViewOutput
 extension MenuPresenter: MenuViewOutput {
