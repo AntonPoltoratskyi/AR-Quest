@@ -7,16 +7,38 @@
 //
 
 import UIKit
+import SnapKit
+import MapKit
+
+protocol LocationPickerViewDelegate: class {
+    func locationPickerViewDidCancel(_ locationPickerView: LocationPickerView)
+    func locationPickerViewDidSelectLocation(_ locationPickerView: LocationPickerView)
+}
 
 final class LocationPickerView: UIView {
     
+    weak var delegate: LocationPickerViewDelegate?
+    
+    
     // MARK: - Views
     
-    private(set) lazy var label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
-        return label
+    private(set) lazy var navigationView: QuestNavigationView = {
+        let navigationView = QuestNavigationView()
+        navigationView.title = "Location"
+        navigationView.setupLeftButton(title: "Cancel") { [unowned self] _ in
+            self.delegate?.locationPickerViewDidCancel(self)
+        }
+        navigationView.setupRightButton(title: "Done") { [unowned self] _ in
+            self.delegate?.locationPickerViewDidSelectLocation(self)
+        }
+        addSubview(navigationView)
+        return navigationView
+    }()
+    
+    private(set) lazy var mapView: MKMapView = {
+        let mapView = MKMapView()
+        addSubview(mapView)
+        return mapView
     }()
     
     
@@ -38,9 +60,13 @@ final class LocationPickerView: UIView {
     private func setup() {
         backgroundColor = .white
         
-        label.text = "LocationPicker"
+        navigationView.snp.makeConstraints { maker in
+            maker.top.left.right.equalToSuperview()
+        }
         
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        mapView.snp.makeConstraints { maker in
+            maker.left.right.bottom.equalToSuperview()
+            maker.top.equalTo(navigationView.snp.bottom)
+        }
     }
 }
