@@ -8,57 +8,58 @@
 
 import UIKit
 
-final class AboutView: UIView {
+final class AboutView: BaseView {
+    
+    override var title: String? {
+        return "About"
+    }
+   
+    override var backgroundView: UIView {
+        return QuestBackgroundView()
+    }
+    
     
     // MARK: - Views
-   
-    private(set) lazy var backgroundView: QuestBackgroundView = {
-        let backgroundView = QuestBackgroundView()
-        addSubview(backgroundView)
-        return backgroundView
-    }()
     
     private(set) lazy var appIconImageView: UIImageView = {
         let imageView = UIImageView()
         // TODO: set app icon image
-        addSubview(imageView)
+        imageView.backgroundColor = .lightGray
+        contentView.addSubview(imageView)
         return imageView
     }()
     
     private(set) lazy var appNameLabel: UILabel = {
         let label = UILabel()
+        // TODO: set app name
         label.text = "QUEST App"
-        addSubview(label)
+        contentView.addSubview(label)
+        return label
+    }()
+    
+    private(set) lazy var appDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "App description will be here ..."
+        label.contentMode = .left
+        contentView.addSubview(label)
         return label
     }()
     
     private(set) lazy var copyrightLabel: UILabel = {
         let label = UILabel()
         label.text = "(c) \(Calendar.current.component(.year, from: Date()))"
-        addSubview(label)
+        label.textAlignment = .center
+        label.setContentHuggingPriority(.required, for: .vertical)
+        contentView.addSubview(label)
         return label
     }()
-    
-    
-    // MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
+
     
     // MARK: - Setup
     
-    private func setup() {
-        backgroundView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
-        }
+    override func setup() {
+        super.setup()
+        
         appIconImageView.snp.makeConstraints { maker in
             maker.top.equalToSuperview().offset(Layout.appIcon.top)
             maker.left.equalToSuperview().offset(Layout.appIcon.left)
@@ -66,8 +67,13 @@ final class AboutView: UIView {
         }
         appNameLabel.snp.makeConstraints { maker in
             maker.left.equalTo(appIconImageView.snp.right).offset(Layout.appName.horizontalInset)
-            maker.left.equalToSuperview().inset(Layout.appName.horizontalInset)
+            maker.right.equalToSuperview().inset(Layout.appName.horizontalInset)
             maker.centerY.equalTo(appIconImageView)
+        }
+        appDescriptionLabel.snp.makeConstraints { maker in
+            maker.top.equalTo(appIconImageView.snp.bottom).offset(Layout.appDescription.top)
+            maker.horizontalInset(Layout.appDescription.horizontalInset)
+            maker.bottom.lessThanOrEqualTo(copyrightLabel.snp.top).offset(-Layout.appDescription.bottom)
         }
         copyrightLabel.snp.makeConstraints { maker in
             maker.horizontalInset(Layout.copyright.horizontalInset)
@@ -91,6 +97,12 @@ extension AboutView {
         
         enum appName {
             static let horizontalInset: CGFloat = 16
+        }
+        
+        enum appDescription {
+            static let horizontalInset: CGFloat = 16
+            static let top: CGFloat = 16
+            static let bottom: CGFloat = 16
         }
         
         enum copyright {
