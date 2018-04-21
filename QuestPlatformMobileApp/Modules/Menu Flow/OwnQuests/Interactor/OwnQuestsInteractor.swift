@@ -27,7 +27,7 @@ final class OwnQuestsInteractor: Interactor, OwnQuestsInteractorInput {
     // MARK: - Actions
     
     func loadQuests() {
-        questNetworkService.loadQuests { [weak self] result in
+        questNetworkService.loadOwnQuests { [weak self] result in
             switch result {
             case let .success(quests):
                 self?.output?.didLoadQuests(quests)
