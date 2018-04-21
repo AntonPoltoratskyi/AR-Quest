@@ -8,39 +8,22 @@
 
 import UIKit
 
-final class ConstructorView: UIView {
+final class ConstructorView: BaseView {
     
     // MARK: - Views
     
-    private(set) lazy var label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
-        return label
-    }()
-    
-    
-    // MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
+    override var title: String? {
+        return "Constructor"
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
+    override var backgroundView: UIView? {
+        return QuestBackgroundView()
     }
-    
+
     
     // MARK: - Setup
     
-    private func setup() {
-        backgroundColor = .white
-        
-        label.text = "Constructor"
-        
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    override func setup() {
+        super.setup()
     }
 }
