@@ -31,40 +31,35 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     }
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
-        // TODO: set token
-        let target = QuestNetworkRouter.list(token: nil)
+        let target = QuestNetworkRouter.list(token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
             completion(result.process())
         }
     }
     
     func loadOwnQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
-        // TODO: set token
-        let target = QuestNetworkRouter.ownList(token: nil)
+        let target = QuestNetworkRouter.ownList(token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
             completion(result.process())
         }
     }
     
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void) {
-        // TODO: set token
-        let target = QuestNetworkRouter.tasks(quest: quest, token: nil)
+        let target = QuestNetworkRouter.tasks(quest: quest, token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<[Task]>>) in
             completion(result.process())
         }
     }
     
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
-        // TODO: set token
-        let target = QuestNetworkRouter.joinBy(code: code, token: nil)
+        let target = QuestNetworkRouter.joinBy(code: code, token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
             completion(result.process())
         }
     }
     
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
-        // TODO: set token
-        let target = QuestNetworkRouter.joinTo(quest: quest, token: nil)
+        let target = QuestNetworkRouter.joinTo(quest: quest, token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
             completion(result.process())
         }

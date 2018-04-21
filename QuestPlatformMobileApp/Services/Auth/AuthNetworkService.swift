@@ -43,8 +43,7 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
     }
     
     func logout(completion: @escaping (ResponseResult<Bool>) -> Void) {
-        // TODO: set token
-        let target = AuthNetworkRouter.logout(token: nil)
+        let target = AuthNetworkRouter.logout(token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Bool>>) in
             completion(result.process())
         }
