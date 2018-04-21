@@ -11,7 +11,6 @@ import SnapKit
 
 class BaseView: UIView {
 
-    
     // MARK: - Views
     
     var backgroundView: UIView? {
@@ -22,8 +21,14 @@ class BaseView: UIView {
         return true
     }
     
+    var title: String? {
+        return nil
+    }
+    
     private(set) lazy var navigationView: QuestNavigationView = {
-        return QuestNavigationView()
+        let navigationView = QuestNavigationView()
+        navigationView.title = title
+        return navigationView
     }()
     
     private(set) lazy var contentView: UIView = {
@@ -49,14 +54,19 @@ class BaseView: UIView {
     // MARK: - Setup
     
     func setup() {
-        backgroundView?.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
-        }
+        backgroundColor = .white
         
+        if let backgroundView = backgroundView {
+            addSubview(backgroundView)
+            backgroundView.snp.makeConstraints { maker in
+                maker.edges.equalToSuperview()
+            }
+        }
+
         if isNavigationViewVisible {
             addSubview(navigationView)
             navigationView.snp.makeConstraints { maker in
-                
+                maker.top.left.right.equalToSuperview()
             }
             contentView.snp.makeConstraints { maker in
                 maker.bottom.left.right.equalToSuperview()

@@ -36,7 +36,7 @@ final class MainViewController: UIViewController, View {
         let contentView = MainView()
         contentView.joinButton.addTarget(self, action: #selector(actionJoin(sender:)), for: .touchUpInside)
         contentView.navigationView.setupLeftButton(title: "Menu") { [weak self] sender in
-            self?.output?.didClickMenu()
+            self?.output?.toggleMenu()
         }
         return contentView
     }()

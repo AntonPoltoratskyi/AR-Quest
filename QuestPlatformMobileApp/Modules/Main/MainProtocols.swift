@@ -20,10 +20,9 @@ protocol MainViewInput: class {
 }
 
 // MARK: -
-protocol MainViewOutput: class {
+protocol MainViewOutput: MenuInteractive {
     func viewDidLoad()
     func didClickJoin()
-    func didClickMenu()
     func didClickSearch()
     func didClickProfile()
 }
@@ -43,5 +42,4 @@ protocol MainInteractorOutput: class {
 
 protocol MainRouterInput: MenuInteractive {
     func showQuestList()
-    func showMenu()
 }

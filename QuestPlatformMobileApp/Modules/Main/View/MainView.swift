@@ -9,28 +9,17 @@
 import UIKit
 import SnapKit
 
-final class MainView: UIView {
+final class MainView: BaseView {
     
     // MARK: - Views
     
-    private(set) lazy var navigationView: QuestNavigationView = {
-        let navigationView = QuestNavigationView()
-        navigationView.title = "Quest"
-        addSubview(navigationView)
-        return navigationView
-    }()
+    override var title: String? {
+        return "Quest"
+    }
     
-    private(set) lazy var contentView: UIView = {
-        let contentView = UIView()
-        addSubview(contentView)
-        return contentView
-    }()
-    
-    private(set) lazy var backgroundView: QuestBackgroundView = {
-        let backgroundView = QuestBackgroundView()
-        contentView.addSubview(backgroundView)
-        return backgroundView
-    }()
+    override var backgroundView: UIView? {
+        return QuestBackgroundView()
+    }
     
     private(set) lazy var textContainerView: UIView = {
         let containerView = UIView()
@@ -64,44 +53,15 @@ final class MainView: UIView {
         return button
     }()
     
-    
-    // MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupSubviews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupSubviews()
-    }
-    
-    
+
     // MARK: - Setup
     
-    private func setupSubviews() {
-        backgroundColor = .white
+    override func setup() {
+        super.setup()
         
-        navigationView.snp.makeConstraints { maker in
-            maker.top.left.right.equalToSuperview()
-        }
-        
-        contentView.snp.makeConstraints { maker in
-            maker.left.right.equalToSuperview()
-            maker.top.equalTo(navigationView.snp.bottom)
-            maker.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
-        }
-        
-        backgroundView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
-        }
-        
-        let horizontalInset = 16
         textContainerView.snp.makeConstraints { maker in
             maker.centerY.equalToSuperview()
-            maker.left.equalToSuperview().offset(horizontalInset)
-            maker.right.equalToSuperview().inset(horizontalInset)
+            maker.horizontalInset(16)
         }
         
         countLabel.snp.makeConstraints { maker in
