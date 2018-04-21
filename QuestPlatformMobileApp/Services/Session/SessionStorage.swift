@@ -105,6 +105,9 @@ final class SessionStorage {
             }
         }
     }
+    
+    
+    // MARK: User Info
 
     private func save(user: User) throws {
         let userData = try JSONEncoder().encode(user)

@@ -21,7 +21,7 @@ final class QuestListAssembly: Assembly {
         view.output = presenter
         
         interactor.output = presenter
-        interactor.questNetworkService = QuestNetworkServiceStub(networkClient: URLSessionNetworkClient())
+        interactor.questNetworkService = QuestNetworkServiceStub(client: URLSessionNetworkClient())
         
         router.viewController = view
         

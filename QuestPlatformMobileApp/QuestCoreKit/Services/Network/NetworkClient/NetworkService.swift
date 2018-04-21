@@ -9,6 +9,6 @@
 import Foundation
 
 protocol NetworkService: class {
-    var networkClient: NetworkClient { get }
-    init(networkClient: NetworkClient)
+    var client: NetworkClient { get }
+    init(client: NetworkClient)
 }

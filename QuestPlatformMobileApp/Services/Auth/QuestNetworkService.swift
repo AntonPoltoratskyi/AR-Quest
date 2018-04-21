@@ -22,16 +22,16 @@ protocol QuestNetworkService: NetworkService {
 
 final class QuestNetworkServiceImpl: QuestNetworkService {
     
-    let networkClient: NetworkClient
+    let client: NetworkClient
     
-    init(networkClient: NetworkClient) {
-        self.networkClient = networkClient
+    init(client: NetworkClient) {
+        self.client = client
     }
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
         // TODO: set token
         let target = QuestNetworkRouter.list(token: nil)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
             completion(result.process())
         }
     }
@@ -39,7 +39,7 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     func loadOwnQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
         // TODO: set token
         let target = QuestNetworkRouter.ownList(token: nil)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
             completion(result.process())
         }
     }
@@ -47,7 +47,7 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void) {
         // TODO: set token
         let target = QuestNetworkRouter.tasks(quest: quest, token: nil)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<[Task]>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<[Task]>>) in
             completion(result.process())
         }
     }
@@ -55,7 +55,7 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
         // TODO: set token
         let target = QuestNetworkRouter.joinBy(code: code, token: nil)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
             completion(result.process())
         }
     }
@@ -63,7 +63,7 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
         // TODO: set token
         let target = QuestNetworkRouter.joinTo(quest: quest, token: nil)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
             completion(result.process())
         }
     }
@@ -73,10 +73,10 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
 
 final class QuestNetworkServiceStub: QuestNetworkService {
     
-    let networkClient: NetworkClient
+    let client: NetworkClient
     
-    init(networkClient: NetworkClient) {
-        self.networkClient = networkClient
+    init(client: NetworkClient) {
+        self.client = client
     }
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {

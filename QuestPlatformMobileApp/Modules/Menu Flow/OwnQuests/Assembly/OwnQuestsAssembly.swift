@@ -15,7 +15,7 @@ final class OwnQuestsAssembly: Assembly {
     func build() -> Input {
         // Dependencies
         let client = URLSessionNetworkClient()
-        let questService = QuestNetworkServiceStub(networkClient: client)
+        let questService = QuestNetworkServiceStub(client: client)
         
         // Module
         let view = OwnQuestsViewController()

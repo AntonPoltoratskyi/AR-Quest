@@ -20,22 +20,22 @@ protocol AuthNetworkService: NetworkService {
 
 final class AuthNetworkServiceImpl: AuthNetworkService {
     
-    let networkClient: NetworkClient
+    let client: NetworkClient
     
-    init(networkClient: NetworkClient) {
-        self.networkClient = networkClient
+    init(client: NetworkClient) {
+        self.client = client
     }
     
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
         let target = AuthNetworkRouter.login(credentials: credentials)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
             completion(result.process())
         }
     }
     
     func register(with credentials: SignUpCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
         let target = AuthNetworkRouter.register(credentials: credentials)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
             completion(result.process())
         }
     }
@@ -43,7 +43,7 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
     func logout(completion: @escaping (ResponseResult<Bool>) -> Void) {
         // TODO: set token
         let target = AuthNetworkRouter.logout(token: nil)
-        networkClient.request(to: target) { (result: ResponseResult<WebResponse<Bool>>) in
+        client.request(to: target) { (result: ResponseResult<WebResponse<Bool>>) in
             completion(result.process())
         }
     }
@@ -53,10 +53,10 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
 
 final class AuthNetworkServiceStub: AuthNetworkService {
     
-    let networkClient: NetworkClient
+    let client: NetworkClient
     
-    init(networkClient: NetworkClient) {
-        self.networkClient = networkClient
+    init(client: NetworkClient) {
+        self.client = client
     }
     
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {

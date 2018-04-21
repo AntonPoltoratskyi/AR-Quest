@@ -15,7 +15,7 @@ final class MenuAssembly: Assembly {
     func build() -> Input {
         // Dependencies
         let client = URLSessionNetworkClient()
-        let authService = AuthNetworkServiceStub(networkClient: client)
+        let authService = AuthNetworkServiceStub(client: client)
         
         // Module
         let view = MenuViewController()

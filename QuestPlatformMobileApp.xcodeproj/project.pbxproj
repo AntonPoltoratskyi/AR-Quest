@@ -120,7 +120,6 @@
 		855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7488207B77ED000421DA /* ProfileAssembly.swift */; };
 		855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7489207B77ED000421DA /* ProfileInteractor.swift */; };
 		855D7491207B77ED000421DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D748A207B77ED000421DA /* ProfileView.swift */; };
-		855D749A207B8764000421DA /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855D7498207B8764000421DA /* Test.storyboard */; };
 		855D74A0207BA375000421DA /* BackSwipable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D749F207BA375000421DA /* BackSwipable.swift */; };
 		855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */; };
 		855D74A4207BA629000421DA /* SlideAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */; };
@@ -345,7 +344,6 @@
 		855D7488207B77ED000421DA /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 		855D7489207B77ED000421DA /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		855D748A207B77ED000421DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		855D7499207B8764000421DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Test.storyboard; sourceTree = "<group>"; };
 		855D749F207BA375000421DA /* BackSwipable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackSwipable.swift; sourceTree = "<group>"; };
 		855D74A1207BA472000421DA /* ClosurePanRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePanRecognizer.swift; sourceTree = "<group>"; };
 		855D74A3207BA629000421DA /* SlideAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimatedTransitioning.swift; sourceTree = "<group>"; };
@@ -537,7 +535,6 @@
 			isa = PBXGroup;
 			children = (
 				141AC40B1FC764D000200877 /* LaunchScreen.storyboard */,
-				855D7498207B8764000421DA /* Test.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -2084,7 +2081,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				855D749A207B8764000421DA /* Test.storyboard in Resources */,
 				141AC40D1FC764D000200877 /* LaunchScreen.storyboard in Resources */,
 				141AC40A1FC764D000200877 /* Assets.xcassets in Resources */,
 			);
@@ -2387,14 +2383,6 @@
 				141AC40C1FC764D000200877 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		855D7498207B8764000421DA /* Test.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				855D7499207B8764000421DA /* Base */,
-			);
-			name = Test.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

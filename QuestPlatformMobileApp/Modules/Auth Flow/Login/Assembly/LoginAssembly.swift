@@ -21,7 +21,7 @@ final class LoginAssembly: Assembly {
         view.output = presenter
         
         interactor.output = presenter
-        interactor.authService = AuthNetworkServiceStub(networkClient: URLSessionNetworkClient())
+        interactor.authService = AuthNetworkServiceStub(client: URLSessionNetworkClient())
         
         router.viewController = view
         
