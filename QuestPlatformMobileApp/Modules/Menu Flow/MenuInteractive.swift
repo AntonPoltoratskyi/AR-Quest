@@ -15,6 +15,39 @@ protocol MenuInteractive: class {
     func toggleMenu()
 }
 
+// MARK: - View
+extension MenuInteractive where Self: View, Self.Output: MenuInteractive {
+    
+    func showMenu() {
+        output.showMenu()
+    }
+    
+    func hideMenu() {
+        output.hideMenu()
+    }
+    
+    func toggleMenu() {
+        output.toggleMenu()
+    }
+}
+
+// MARK: - Presenter
+extension MenuInteractive where Self: Presenter, Self.Router: MenuInteractive {
+    
+    func showMenu() {
+        router.showMenu()
+    }
+    
+    func hideMenu() {
+        router.hideMenu()
+    }
+    
+    func toggleMenu() {
+        router.toggleMenu()
+    }
+}
+
+// MARK: - Router
 extension MenuInteractive where Self: Router {
     
     func showMenu() {
