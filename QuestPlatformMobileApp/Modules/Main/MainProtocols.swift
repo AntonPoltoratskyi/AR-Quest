@@ -41,7 +41,7 @@ protocol MainInteractorOutput: class {
 
 // MARK: - Router
 
-protocol MainRouterInput: class {
+protocol MainRouterInput: MenuInteractive {
     func showQuestList()
     func showMenu()
 }

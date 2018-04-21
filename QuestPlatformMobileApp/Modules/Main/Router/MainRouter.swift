@@ -17,8 +17,4 @@ final class MainRouter: Router, MainRouterInput {
         let questList = QuestListAssembly().build()
         viewController.navigationController?.pushViewController(questList.view, animated: true)
     }
-    
-    func showMenu() {
-        viewController.toggleLeftViewAnimated(nil)
-    }
 }

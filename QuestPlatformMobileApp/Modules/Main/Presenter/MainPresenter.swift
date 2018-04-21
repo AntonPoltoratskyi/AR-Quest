@@ -44,7 +44,7 @@ extension MainPresenter: MainViewOutput {
     }
     
     func didClickMenu() {
-        router.showMenu()
+        router.toggleMenu()
     }
     
     func didClickSearch() {

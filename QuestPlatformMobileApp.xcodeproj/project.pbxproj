@@ -183,6 +183,7 @@
 		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
 		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
 		85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A58F205EF4A000C6F547 /* SCNNode.swift */; };
+		85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCB208B43AA004950B9 /* MenuInteractive.swift */; };
 		85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */; };
 		85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */; };
 		85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */; };
@@ -399,6 +400,7 @@
 		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
 		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
 		85D8A58F205EF4A000C6F547 /* SCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
+		85F07DCB208B43AA004950B9 /* MenuInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractive.swift; sourceTree = "<group>"; };
 		85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestErrorLabel.swift; sourceTree = "<group>"; };
 		85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
 		85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestSegmentedControl.swift; sourceTree = "<group>"; };
@@ -1649,6 +1651,15 @@
 			path = SceneKit;
 			sourceTree = "<group>";
 		};
+		85F07DCA208B4389004950B9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				85F07DCB208B43AA004950B9 /* MenuInteractive.swift */,
+				85F740FB204C8A13002AC5FE /* SideMenuContainer */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		85F740CA204C44E9002AC5FE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1817,7 +1828,7 @@
 		85F740E8204C85DC002AC5FE /* Containers */ = {
 			isa = PBXGroup;
 			children = (
-				85F740FB204C8A13002AC5FE /* SideMenuContainer */,
+				85F07DCA208B4389004950B9 /* Menu */,
 				853DD5212042FE5E00E82595 /* Navigation */,
 			);
 			path = Containers;
@@ -2154,6 +2165,7 @@
 				851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */,
 				85C3C2682083C569009AEF58 /* ConstructorView.swift in Sources */,
 				855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */,
+				85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */,
 				85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */,
 				85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */,
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
