@@ -19,9 +19,14 @@ final class QuestDetailsAssembly: Assembly {
     }
     
     func build() -> Input {
+        // Dependencies
+        let client = URLSessionNetworkClient()
+        let questService = QuestNetworkServiceStub(client: client, session: .shared)
+        
+        // Module
         let view = QuestDetailsViewController()
         let presenter = QuestDetailsPresenter()
-        let interactor = QuestDetailsInteractor()
+        let interactor = QuestDetailsInteractor(questNetworkService: questService)
         let router = QuestDetailsRouter()
         
         view.output = presenter
@@ -35,7 +40,6 @@ final class QuestDetailsAssembly: Assembly {
         presenter.router = router
         
         presenter.quest = quest
-        interactor.questNetworkService = QuestNetworkServiceStub(client: URLSessionNetworkClient())
         
         return Module(input: presenter, view: view)
     }

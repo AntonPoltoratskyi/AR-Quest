@@ -13,15 +13,19 @@ final class LoginAssembly: Assembly {
     typealias Input = Module<LoginModuleInput>
     
     func build() -> Input {
+        // Dependency
+        let client = URLSessionNetworkClient()
+        let authService = AuthNetworkServiceStub(client: client, session: .shared)
+        
+        // Module
         let view = LoginViewController()
         let presenter = LoginPresenter()
-        let interactor = LoginInteractor()
+        let interactor = LoginInteractor(authService: authService)
         let router = LoginRouter()
         
         view.output = presenter
         
         interactor.output = presenter
-        interactor.authService = AuthNetworkServiceStub(client: URLSessionNetworkClient())
         
         router.viewController = view
         

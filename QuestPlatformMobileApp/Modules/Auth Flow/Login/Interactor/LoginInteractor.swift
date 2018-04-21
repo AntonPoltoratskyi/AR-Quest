@@ -23,7 +23,19 @@ final class LoginInteractor: Interactor, LoginInteractorInput {
     typealias Output = LoginInteractorOutput
     weak var output: LoginInteractorOutput!
     
-    var authService: AuthNetworkService!
+    // MARK: - Dependencies
+    
+    private let authService: AuthNetworkService
+    
+    
+    // MARK: - Init
+    
+    init(authService: AuthNetworkService) {
+        self.authService = authService
+    }
+    
+    
+    // MARK: - Actions
     
     func login(with credentials: LoginCredentials) {
         authService.login(with: credentials) { [weak self] result in

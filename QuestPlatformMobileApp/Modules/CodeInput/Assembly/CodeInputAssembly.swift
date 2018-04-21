@@ -13,9 +13,14 @@ final class CodeInputAssembly: Assembly {
     typealias Input = Module<CodeInputModuleInput>
     
     func build() -> Input {
+        // Dependencies
+        let client = URLSessionNetworkClient()
+        let questService = QuestNetworkServiceStub(client: client, session: .shared)
+        
+        // Module
         let view = CodeInputViewController()
         let presenter = CodeInputPresenter()
-        let interactor = CodeInputInteractor()
+        let interactor = CodeInputInteractor(questNetworkService: questService)
         let router = CodeInputRouter()
         
         view.output = presenter
@@ -27,8 +32,6 @@ final class CodeInputAssembly: Assembly {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        
-        interactor.questNetworkService = QuestNetworkServiceStub(client: URLSessionNetworkClient())
         
         return Module(input: presenter, view: view)
     }

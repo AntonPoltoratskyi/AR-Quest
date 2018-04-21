@@ -13,15 +13,19 @@ final class QuestListAssembly: Assembly {
     typealias Input = Module<QuestListModuleInput>
     
     func build() -> Input {
+        // Dependencies
+        let client = URLSessionNetworkClient()
+        let questService = QuestNetworkServiceStub(client: client, session: .shared)
+        
+        // Module
         let view = QuestListViewController()
         let presenter = QuestListPresenter()
-        let interactor = QuestListInteractor()
+        let interactor = QuestListInteractor(questNetworkService: questService)
         let router = QuestListRouter()
         
         view.output = presenter
         
         interactor.output = presenter
-        interactor.questNetworkService = QuestNetworkServiceStub(client: URLSessionNetworkClient())
         
         router.viewController = view
         

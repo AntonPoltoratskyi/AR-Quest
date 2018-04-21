@@ -12,7 +12,19 @@ final class CodeInputInteractor: Interactor, CodeInputInteractorInput {
     typealias Output = CodeInputInteractorOutput
     weak var output: CodeInputInteractorOutput!
     
-    var questNetworkService: QuestNetworkService!
+    // MARK: - Dependencies
+    
+    private let questNetworkService: QuestNetworkService
+    
+    
+    // MARK: - Init
+    
+    init(questNetworkService: QuestNetworkService) {
+        self.questNetworkService = questNetworkService
+    }
+    
+    
+    // MARK: - Actions
     
     func join(to questCode: String) {
         questNetworkService.joinToQuest(with: questCode) { [weak self] result in

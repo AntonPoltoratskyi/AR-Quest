@@ -13,7 +13,19 @@ final class QuestListInteractor: Interactor, QuestListInteractorInput {
     typealias Output = QuestListInteractorOutput
     weak var output: QuestListInteractorOutput!
     
-    var questNetworkService: QuestNetworkService!
+    // MARK: - Dependencies
+    
+    private let questNetworkService: QuestNetworkService
+    
+    
+    // MARK: - Init
+    
+    init(questNetworkService: QuestNetworkService) {
+        self.questNetworkService = questNetworkService
+    }
+    
+    
+    // MARK: - Actions
     
     func loadQuests() {
         questNetworkService.loadQuests { [weak self] result in

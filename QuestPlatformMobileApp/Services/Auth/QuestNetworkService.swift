@@ -23,9 +23,11 @@ protocol QuestNetworkService: NetworkService {
 final class QuestNetworkServiceImpl: QuestNetworkService {
     
     let client: NetworkClient
+    let session: SessionStorage
     
-    init(client: NetworkClient) {
+    init(client: NetworkClient, session: SessionStorage) {
         self.client = client
+        self.session = session
     }
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
@@ -74,9 +76,11 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
 final class QuestNetworkServiceStub: QuestNetworkService {
     
     let client: NetworkClient
+    let session: SessionStorage
     
-    init(client: NetworkClient) {
+    init(client: NetworkClient, session: SessionStorage) {
         self.client = client
+        self.session = session
     }
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {

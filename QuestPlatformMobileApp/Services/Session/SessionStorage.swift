@@ -66,6 +66,8 @@ final class SessionStorage {
     
     // MARK: - Init
     
+    static let shared = SessionStorage()
+    
     init() {
         self.keychainStorage = KeychainStorage()
         self.userDefaults = UserDefaults.standard

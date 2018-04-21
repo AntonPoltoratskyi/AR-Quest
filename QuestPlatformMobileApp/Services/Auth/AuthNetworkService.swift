@@ -21,9 +21,11 @@ protocol AuthNetworkService: NetworkService {
 final class AuthNetworkServiceImpl: AuthNetworkService {
     
     let client: NetworkClient
+    let session: SessionStorage
     
-    init(client: NetworkClient) {
+    init(client: NetworkClient, session: SessionStorage) {
         self.client = client
+        self.session = session
     }
     
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
@@ -54,9 +56,11 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
 final class AuthNetworkServiceStub: AuthNetworkService {
     
     let client: NetworkClient
+    let session: SessionStorage
     
-    init(client: NetworkClient) {
+    init(client: NetworkClient, session: SessionStorage) {
         self.client = client
+        self.session = session
     }
     
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {

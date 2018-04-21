@@ -10,5 +10,6 @@ import Foundation
 
 protocol NetworkService: class {
     var client: NetworkClient { get }
-    init(client: NetworkClient)
+    var session: SessionStorage { get }
+    init(client: NetworkClient, session: SessionStorage)
 }
