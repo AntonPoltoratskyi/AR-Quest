@@ -7,27 +7,11 @@
 //
 
 import UIKit
-import GuillotineMenu
 
-final class MenuViewController: UIViewController, View, GuillotineMenu {
+final class MenuViewController: UIViewController, View {
     
     typealias Output = MenuViewOutput
     var output: Output!
-    
-    
-    // MARK: - GuillotineMenu
-
-    var dismissButton: UIButton? {
-        let button = UIButton()
-        button.setTitle("Q", for: .normal)
-        button.addTarget(self, action: #selector(actionDismiss(sender:)), for: .touchUpInside)
-        return button
-    }
-
-    var titleLabel: UILabel? {
-        return nil
-    }
-    
     
     // MARK: - Views
     

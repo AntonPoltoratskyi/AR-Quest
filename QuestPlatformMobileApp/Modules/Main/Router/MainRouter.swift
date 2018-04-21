@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LGSideMenuController
 
 final class MainRouter: Router, MainRouterInput {
     
@@ -18,7 +19,6 @@ final class MainRouter: Router, MainRouterInput {
     }
     
     func showMenu() {
-        let menu = MenuAssembly().build()
-        viewController.present(menu.view, animated: true, completion: nil)
+        viewController.toggleLeftViewAnimated(nil)
     }
 }
