@@ -32,13 +32,6 @@ final class MenuViewController: UIViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
-    // MARK: - Actions
-    
-    @objc private func actionDismiss(sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
 }
 
 // MARK: - MenuViewDelegate
