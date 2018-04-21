@@ -185,6 +185,13 @@
 		85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A58F205EF4A000C6F547 /* SCNNode.swift */; };
 		85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCB208B43AA004950B9 /* MenuInteractive.swift */; };
 		85F07DCE208B44E6004950B9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCD208B44E6004950B9 /* BaseView.swift */; };
+		85F07DDB208B5B77004950B9 /* OwnQuestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DD4208B5B77004950B9 /* OwnQuestsPresenter.swift */; };
+		85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DD5208B5B77004950B9 /* OwnQuestsRouter.swift */; };
+		85F07DDD208B5B77004950B9 /* OwnQuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DD6208B5B77004950B9 /* OwnQuestsViewController.swift */; };
+		85F07DDE208B5B77004950B9 /* OwnQuestsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DD7208B5B77004950B9 /* OwnQuestsProtocols.swift */; };
+		85F07DDF208B5B77004950B9 /* OwnQuestsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DD8208B5B77004950B9 /* OwnQuestsAssembly.swift */; };
+		85F07DE0208B5B77004950B9 /* OwnQuestsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DD9208B5B77004950B9 /* OwnQuestsInteractor.swift */; };
+		85F07DE1208B5B77004950B9 /* OwnQuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DDA208B5B77004950B9 /* OwnQuestsView.swift */; };
 		85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */; };
 		85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */; };
 		85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */; };
@@ -403,6 +410,13 @@
 		85D8A58F205EF4A000C6F547 /* SCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
 		85F07DCB208B43AA004950B9 /* MenuInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractive.swift; sourceTree = "<group>"; };
 		85F07DCD208B44E6004950B9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		85F07DD4208B5B77004950B9 /* OwnQuestsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnQuestsPresenter.swift; sourceTree = "<group>"; };
+		85F07DD5208B5B77004950B9 /* OwnQuestsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnQuestsRouter.swift; sourceTree = "<group>"; };
+		85F07DD6208B5B77004950B9 /* OwnQuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnQuestsViewController.swift; sourceTree = "<group>"; };
+		85F07DD7208B5B77004950B9 /* OwnQuestsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnQuestsProtocols.swift; sourceTree = "<group>"; };
+		85F07DD8208B5B77004950B9 /* OwnQuestsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnQuestsAssembly.swift; sourceTree = "<group>"; };
+		85F07DD9208B5B77004950B9 /* OwnQuestsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnQuestsInteractor.swift; sourceTree = "<group>"; };
+		85F07DDA208B5B77004950B9 /* OwnQuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnQuestsView.swift; sourceTree = "<group>"; };
 		85F740C2204C1DDA002AC5FE /* QuestErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestErrorLabel.swift; sourceTree = "<group>"; };
 		85F740C4204C24D8002AC5FE /* ConstraintMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
 		85F740DA204C4696002AC5FE /* QuestSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestSegmentedControl.swift; sourceTree = "<group>"; };
@@ -1439,6 +1453,7 @@
 			children = (
 				85F07DCB208B43AA004950B9 /* MenuInteractive.swift */,
 				85C3C20F20837670009AEF58 /* Menu */,
+				85F07DD3208B5B2E004950B9 /* OwnQuests */,
 				855D7483207B7702000421DA /* Profile */,
 				855D74A7207BB01E000421DA /* About */,
 			);
@@ -1660,6 +1675,60 @@
 				85F740FB204C8A13002AC5FE /* SideMenuContainer */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		85F07DD3208B5B2E004950B9 /* OwnQuests */ = {
+			isa = PBXGroup;
+			children = (
+				85F07DD7208B5B77004950B9 /* OwnQuestsProtocols.swift */,
+				85F07DE2208B5B89004950B9 /* View */,
+				85F07DE5208B5B99004950B9 /* Presenter */,
+				85F07DE3208B5B8E004950B9 /* Interactor */,
+				85F07DE7208B5BAA004950B9 /* Router */,
+				85F07DE4208B5B93004950B9 /* Assembly */,
+			);
+			path = OwnQuests;
+			sourceTree = "<group>";
+		};
+		85F07DE2208B5B89004950B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85F07DDA208B5B77004950B9 /* OwnQuestsView.swift */,
+				85F07DD6208B5B77004950B9 /* OwnQuestsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85F07DE3208B5B8E004950B9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85F07DD9208B5B77004950B9 /* OwnQuestsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		85F07DE4208B5B93004950B9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85F07DD8208B5B77004950B9 /* OwnQuestsAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85F07DE5208B5B99004950B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85F07DD4208B5B77004950B9 /* OwnQuestsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85F07DE7208B5BAA004950B9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85F07DD5208B5B77004950B9 /* OwnQuestsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		85F740CA204C44E9002AC5FE /* View */ = {
@@ -2086,6 +2155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				853DD5072042CE1A00E82595 /* View.swift in Sources */,
+				85F07DE0208B5B77004950B9 /* OwnQuestsInteractor.swift in Sources */,
+				85F07DE1208B5B77004950B9 /* OwnQuestsView.swift in Sources */,
 				855D74B5207BB045000421DA /* AboutAssembly.swift in Sources */,
 				855D74B1207BB045000421DA /* AboutPresenter.swift in Sources */,
 				851702422071671C0081F611 /* CodeInputRouter.swift in Sources */,
@@ -2150,6 +2221,7 @@
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
 				85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */,
 				855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */,
+				85F07DDF208B5B77004950B9 /* OwnQuestsAssembly.swift in Sources */,
 				855D74A0207BA375000421DA /* BackSwipable.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
 				85C3C21A20837692009AEF58 /* MenuProtocols.swift in Sources */,
@@ -2173,6 +2245,7 @@
 				85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */,
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
 				85F07DCE208B44E6004950B9 /* BaseView.swift in Sources */,
+				85F07DDD208B5B77004950B9 /* OwnQuestsViewController.swift in Sources */,
 				8517020120711E370081F611 /* QuestListRouter.swift in Sources */,
 				851702412071671C0081F611 /* CodeInputPresenter.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
@@ -2215,6 +2288,7 @@
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */,
+				85F07DDB208B5B77004950B9 /* OwnQuestsPresenter.swift in Sources */,
 				857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */,
 				851702282071579E0081F611 /* QuestDetailsProtocols.swift in Sources */,
 				85F740E6204C605B002AC5FE /* QuestCircleView.swift in Sources */,
@@ -2222,6 +2296,7 @@
 				853DD51B2042FC6600E82595 /* LoginPresenter.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				8517020420711E370081F611 /* QuestListAssembly.swift in Sources */,
+				85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				851702292071579E0081F611 /* QuestDetailsAssembly.swift in Sources */,
@@ -2236,6 +2311,7 @@
 				85C3C2282083B05E009AEF58 /* MenuItemView.swift in Sources */,
 				85C3C203208373DE009AEF58 /* MainPresenter.swift in Sources */,
 				85C3C23D2083BACB009AEF58 /* LocationPickerView.swift in Sources */,
+				85F07DDE208B5B77004950B9 /* OwnQuestsProtocols.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,

@@ -12,6 +12,7 @@ import Foundation
 
 protocol QuestNetworkService: NetworkService {
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void)
+    func loadOwnQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void)
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void)
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void)
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void)
@@ -30,6 +31,14 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
         // TODO: set token
         let target = QuestNetworkRouter.list(token: nil)
+        networkClient.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
+            completion(result.process())
+        }
+    }
+    
+    func loadOwnQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
+        // TODO: set token
+        let target = QuestNetworkRouter.ownList(token: nil)
         networkClient.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
             completion(result.process())
         }
@@ -72,6 +81,11 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
         let quests: [Quest] = (1...20).map { i in Quest(name: "Quest #\(i)") }
+        completion(.success(quests))
+    }
+    
+    func loadOwnQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
+        let quests: [Quest] = (1...10).map { i in Quest(name: "Quest #\(i)") }
         completion(.success(quests))
     }
     

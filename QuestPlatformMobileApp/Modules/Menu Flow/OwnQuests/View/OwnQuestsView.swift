@@ -1,18 +1,17 @@
 //
-//  QuestListView.swift
+//  OwnQuestsView.swift
 //  QuestPlatformMobileApp
 //
-//  Created by Anton Poltoratskyi on 01.04.2018.
+//  Created by Anton Poltoratskyi on 21.04.2018.
 //  Copyright © 2018 Anton Poltoratskyi. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-final class QuestListView: BaseView {
-    
+final class OwnQuestsView: BaseView {
+
     override var title: String? {
-        return "Available"
+        return "My Quests"
     }
     
     override var backgroundView: UIView? {
