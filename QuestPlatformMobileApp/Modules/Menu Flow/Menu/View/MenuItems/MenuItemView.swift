@@ -22,10 +22,11 @@ final class MenuItemView: UIView {
     
     // MARK: - Views
     
-    private(set) lazy var button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton()
         button.titleLabel?.font = UIFont.appFont(ofSize: 17, weight: .regular)
         button.setTitleColor(UIColor.darkText, for: .normal)
+        button.addTarget(self, action: #selector(actionButtonTapped(sender:)), for: .touchUpInside)
         addSubview(button)
         return button
     }()
@@ -55,7 +56,7 @@ final class MenuItemView: UIView {
     
     // MARK: - Actions
     
-    private func actionButtonTapped(sender: UIButton) {
+    @objc private func actionButtonTapped(sender: UIButton) {
         selectionHandler?(self)
     }
 }

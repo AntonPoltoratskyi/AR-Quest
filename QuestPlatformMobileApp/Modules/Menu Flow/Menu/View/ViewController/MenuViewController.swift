@@ -45,23 +45,23 @@ final class MenuViewController: UIViewController, View {
 extension MenuViewController: MenuViewDelegate {
     
     func menuViewDidSelectProfile(_ menuView: MenuView) {
-        
+        output.showProfile()
     }
     
     func menuViewDidSelectMyQuests(_ menuView: MenuView) {
-        
+        output.showMyQuests()
     }
     
     func menuViewDidSelectStartNewQuest(_ menuView: MenuView) {
-        
+        output.startNewQuest()
     }
     
     func menuViewDidSelectAbout(_ menuView: MenuView) {
-        
+        output.showAbout()
     }
     
     func menuViewDidSelectLogout(_ menuView: MenuView) {
-        
+        output.logout()
     }
 }
 

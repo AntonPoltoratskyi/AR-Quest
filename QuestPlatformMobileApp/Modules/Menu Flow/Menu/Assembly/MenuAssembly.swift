@@ -13,9 +13,14 @@ final class MenuAssembly: Assembly {
     typealias Input = Module<MenuModuleInput>
     
     func build() -> Input {
+        // Dependencies
+        let client = URLSessionNetworkClient()
+        let authService = AuthNetworkServiceStub(networkClient: client)
+        
+        // Module
         let view = MenuViewController()
         let presenter = MenuPresenter()
-        let interactor = MenuInteractor()
+        let interactor = MenuInteractor(authService: authService)
         let router = MenuRouter()
         
         view.output = presenter

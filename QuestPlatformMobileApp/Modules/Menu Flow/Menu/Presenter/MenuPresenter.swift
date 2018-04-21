@@ -23,9 +23,35 @@ final class MenuPresenter: Presenter, MenuModuleInput {
 // MARK: - MenuViewOutput
 extension MenuPresenter: MenuViewOutput {
     
+    func showProfile() {
+        router.showProfile()
+    }
+    
+    func showMyQuests() {
+        router.showMyQuests()
+    }
+    
+    func startNewQuest() {
+        router.startNewQuest()
+    }
+    
+    func showAbout() {
+        router.showAbout()
+    }
+    
+    func logout() {
+        interactor.logout()
+    }
 }
 
 // MARK: - MenuInteractorOutput
 extension MenuPresenter: MenuInteractorOutput {
     
+    func didLogout() {
+        router.performLogout()
+    }
+    
+    func didReceiveError(_ error: Error) {
+        
+    }
 }

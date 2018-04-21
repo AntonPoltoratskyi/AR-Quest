@@ -13,6 +13,7 @@ import Foundation
 protocol AuthNetworkService: NetworkService {
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void)
     func register(with credentials: SignUpCredentials, completion: @escaping (ResponseResult<User>) -> Void)
+    func logout(completion: @escaping (ResponseResult<Bool>) -> Void)
 }
 
 // MARK: - Service
@@ -38,6 +39,14 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
             completion(result.process())
         }
     }
+    
+    func logout(completion: @escaping (ResponseResult<Bool>) -> Void) {
+        // TODO: set token
+        let target = AuthNetworkRouter.logout(token: nil)
+        networkClient.request(to: target) { (result: ResponseResult<WebResponse<Bool>>) in
+            completion(result.process())
+        }
+    }
 }
 
 // MARK: - Stub
@@ -58,6 +67,10 @@ final class AuthNetworkServiceStub: AuthNetworkService {
     func register(with credentials: SignUpCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
         let user = User(name: credentials.email, email: credentials.email)
         completion(.success(user))
+    }
+    
+    func logout(completion: @escaping (ResponseResult<Bool>) -> Void) {
+        completion(.success(true))
     }
 }
 

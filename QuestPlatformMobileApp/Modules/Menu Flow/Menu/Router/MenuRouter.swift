@@ -11,4 +11,26 @@ import UIKit
 final class MenuRouter: Router, MenuRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func showProfile() {
+        
+    }
+    
+    func showMyQuests() {
+        
+    }
+    
+    func startNewQuest() {
+        
+    }
+    
+    func showAbout() {
+        
+    }
+    
+    func performLogout() {
+        viewController.sideMenuController?.hideLeftView(animated: true) {
+            self.viewController.dismiss(animated: true, completion: nil)
+        }
+    }
 }

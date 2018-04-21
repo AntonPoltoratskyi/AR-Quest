@@ -20,18 +20,31 @@ protocol MenuViewInput: class {
 
 // MARK: -
 protocol MenuViewOutput: class {
+    func showProfile()
+    func showMyQuests()
+    func startNewQuest()
+    func showAbout()
+    func logout()
 }
 
 // MARK: - Interactor
 
 protocol MenuInteractorInput: class {
+    func logout()
 }
 
 // MARK: -
 protocol MenuInteractorOutput: class {
+    func didLogout()
+    func didReceiveError(_ error: Error)
 }
 
 // MARK: - Router
 
 protocol MenuRouterInput: class {
+    func showProfile()
+    func showMyQuests()
+    func startNewQuest()
+    func showAbout()
+    func performLogout()
 }

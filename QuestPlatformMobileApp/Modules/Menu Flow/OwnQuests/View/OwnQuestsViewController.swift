@@ -27,9 +27,6 @@ final class OwnQuestsViewController: UIViewController, View {
         
         let tableView = contentView.tableView
         
-        tableView.register(headerFooter: CodeInputHeaderView.self)
-        tableView.sectionHeaderHeight = CodeInputHeaderView.Layout.height
-        
         tableView.register(viewModel: QuestCellModel.self)
         tableView.rowHeight = QuestCellModel.Cell.Layout.height
         tableView.dataSource = self

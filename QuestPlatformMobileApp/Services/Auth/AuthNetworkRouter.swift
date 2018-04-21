@@ -11,6 +11,7 @@ import Foundation
 enum AuthNetworkRouter: URLRequestConvertible {
     case login(credentials: LoginCredentials)
     case register(credentials: SignUpCredentials)
+    case logout(token: String?)
     
     var path: String {
         switch self {
@@ -18,6 +19,8 @@ enum AuthNetworkRouter: URLRequestConvertible {
             return "login"
         case .register:
             return "register"
+        case .logout:
+            return "logout"
         }
     }
     
