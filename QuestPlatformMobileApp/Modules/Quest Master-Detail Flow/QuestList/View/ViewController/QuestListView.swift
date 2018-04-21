@@ -9,47 +9,32 @@
 import UIKit
 import SnapKit
 
-final class QuestListView: UIView {
+final class QuestListView: BaseView {
     
     // MARK: - Views
     
-    private(set) lazy var backgroundView: QuestBackgroundView = {
-        let backgroundView = QuestBackgroundView()
-        addSubview(backgroundView)
-        return backgroundView
-    }()
+    override var title: String? {
+        return "Available"
+    }
+    
+    override var backgroundView: UIView? {
+        return QuestBackgroundView()
+    }
     
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
         tableView.tableFooterView = UIView()
-        addSubview(tableView)
+        contentView.addSubview(tableView)
         return tableView
     }()
     
     
-    // MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    
     // MARK: - Setup
     
-    private func setup() {
-        backgroundColor = .white
-        
-        backgroundView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
-        }
+    override func setup() {
+        super.setup()
         
         tableView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
