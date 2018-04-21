@@ -69,6 +69,9 @@ enum Theme {
     enum Background {
         static let blueBackground = UIColor(r: 102, g: 94, b: 255)
     }
+    enum Avatar {
+        static let placeholder = UIColor.lightGray
+    }
     
     enum Header {
         enum Font {
