@@ -76,4 +76,3 @@ final class AuthNetworkServiceStub: AuthNetworkService {
         completion(.success(true))
     }
 }
-

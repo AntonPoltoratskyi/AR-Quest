@@ -11,4 +11,9 @@ import UIKit
 final class ProfileRouter: Router, ProfileRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func showConstructor() {
+        let constructor = ConstructorAssembly().build()
+        viewController.navigationController?.pushViewController(constructor.view, animated: true)
+    }
 }

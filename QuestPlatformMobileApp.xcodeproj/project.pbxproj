@@ -29,6 +29,8 @@
 		14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */; };
 		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
 		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
+		8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */; };
+		8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53F208C612F006DFCFE /* UserNetworkService.swift */; };
 		85125717204AEFEA00995543 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125716204AEFEA00995543 /* Validator.swift */; };
 		85125719204AF04700995543 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125718204AF04700995543 /* EmailValidator.swift */; };
 		8512571B204AF72200995543 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512571A204AF72200995543 /* PasswordValidator.swift */; };
@@ -253,6 +255,8 @@
 		14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		14FE2FB01FC96636001EDEAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
+		8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkRouter.swift; sourceTree = "<group>"; };
+		8511E53F208C612F006DFCFE /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
 		85125716204AEFEA00995543 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		85125718204AF04700995543 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		8512571A204AF72200995543 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
@@ -725,6 +729,15 @@
 				14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		8511E53C208C6110006DFCFE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */,
+				8511E53F208C612F006DFCFE /* UserNetworkService.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		85125715204AEFCC00995543 /* Validation */ = {
@@ -1293,6 +1306,7 @@
 				85125715204AEFCC00995543 /* Validation */,
 				14FE2FAA1FC9661E001EDEAB /* Session */,
 				857ADD8B2043203800CA0D42 /* Auth */,
+				8511E53C208C6110006DFCFE /* User */,
 				85170214207127710081F611 /* Quests */,
 			);
 			path = Services;
@@ -2150,6 +2164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */,
 				853DD5072042CE1A00E82595 /* View.swift in Sources */,
 				85F07DE0208B5B77004950B9 /* OwnQuestsInteractor.swift in Sources */,
 				85F07DE1208B5B77004950B9 /* OwnQuestsView.swift in Sources */,
@@ -2316,6 +2331,7 @@
 				85C3C21920837692009AEF58 /* MenuViewController.swift in Sources */,
 				85C3C207208373DE009AEF58 /* MainAssembly.swift in Sources */,
 				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
+				8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */,
 				8517021A20714EF40081F611 /* QuestCardView.swift in Sources */,
 				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
 				853DD4C12042BF8B00E82595 /* UIViewController+KeyboardHandling.swift in Sources */,

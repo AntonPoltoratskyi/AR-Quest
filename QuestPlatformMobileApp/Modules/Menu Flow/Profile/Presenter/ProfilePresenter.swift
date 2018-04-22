@@ -17,15 +17,41 @@ final class ProfilePresenter: Presenter, ProfileModuleInput {
     weak var view: View!
     var interactor: Interactor!
     var router: Router!
-    
+ 
+    private var user: User!
 }
 
 // MARK: - ProfileViewOutput
 extension ProfilePresenter: ProfileViewOutput {
     
+    func viewDidLoad() {
+        interactor.fetchUserInfo()
+    }
+    
+    func didClickCreate() {
+        router.showConstructor()
+    }
+    
+    func didClickEdit() {
+        guard let user = user else { return }
+        interactor.editUser(user)
+    }
 }
 
 // MARK: - ProfileInteractorOutput
 extension ProfilePresenter: ProfileInteractorOutput {
     
+    func didFetchUser(_ user: User) {
+        self.user = user
+        view.setupUser(user)
+    }
+    
+    func didEditUser(_ user: User) {
+        self.user = user
+        view.setupUser(user)
+    }
+    
+    func didReceiveFailure(_ error: Error) {
+        
+    }
 }

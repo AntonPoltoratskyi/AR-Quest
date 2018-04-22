@@ -13,9 +13,14 @@ final class ProfileAssembly: Assembly {
     typealias Input = Module<ProfileModuleInput>
     
     func build() -> Input {
+        // Dependencies
+        let client = URLSessionNetworkClient()
+        let userService = UserNetworkServiceStub(client: client, session: .shared)
+        
+        // Module
         let view = ProfileViewController()
         let presenter = ProfilePresenter()
-        let interactor = ProfileInteractor()
+        let interactor = ProfileInteractor(userService: userService)
         let router = ProfileRouter()
         
         view.output = presenter

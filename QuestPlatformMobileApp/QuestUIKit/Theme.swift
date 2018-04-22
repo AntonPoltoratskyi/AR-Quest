@@ -70,7 +70,8 @@ enum Theme {
         static let blueBackground = UIColor(r: 102, g: 94, b: 255)
     }
     enum Avatar {
-        static let placeholder = UIColor.lightGray
+        static let placeholderBackground = UIColor.white
+        static let placeholderBorder = UIColor.lightGray
     }
     
     enum Header {

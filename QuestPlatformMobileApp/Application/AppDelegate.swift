@@ -11,11 +11,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: AppDelegateProxy {
     
-    
+
     // MARK: - Events
     
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         let result = super.application(application, didFinishLaunchingWithOptions: launchOptions)
+        prepare()
         setupViewHierarchy()
         return result
     }
@@ -29,5 +30,13 @@ class AppDelegate: AppDelegateProxy {
     
         self.window?.rootViewController = navigation.build().view
         self.window?.makeKeyAndVisible()
+    }
+    
+    
+    // MARK: - Debug
+    
+    private func prepare() {
+        let user = User(name: "Antony", email: "test@gmail.com")
+        SessionStorage.shared.setSession("token", forUser: user)
     }
 }

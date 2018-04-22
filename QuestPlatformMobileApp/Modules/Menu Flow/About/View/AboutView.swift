@@ -41,6 +41,7 @@ final class AboutView: BaseView {
         let label = UILabel()
         label.text = "App description will be here ..."
         label.contentMode = .left
+        label.numberOfLines = 0
         contentView.addSubview(label)
         return label
     }()

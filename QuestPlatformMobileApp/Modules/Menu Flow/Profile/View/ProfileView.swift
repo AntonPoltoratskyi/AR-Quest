@@ -22,13 +22,18 @@ final class ProfileView: BaseView {
     
     private(set) lazy var avatarImageView: QuestRoundImageView = {
         let imageView = QuestRoundImageView()
-        imageView.backgroundColor = Theme.Avatar.placeholder
+        imageView.backgroundColor = Theme.Avatar.placeholderBackground
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = Theme.Avatar.placeholderBorder.cgColor
         contentView.addSubview(imageView)
         return imageView
     }()
     
     private(set) lazy var usernameLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.appFont(ofSize: 32, weight: .semibold)
+        label.numberOfLines = 2
         contentView.addSubview(label)
         return label
     }()
@@ -62,7 +67,7 @@ final class ProfileView: BaseView {
         
         usernameLabel.snp.makeConstraints { maker in
             maker.horizontalInset(Layout.username.horizontalInset)
-            maker.bottom.equalTo(createButton.snp.top).offset(-Layout.username.bottom)
+            maker.top.equalTo(avatarImageView.snp.bottom).offset(Layout.username.top)
         }
         
         createButton.snp.makeConstraints { maker in
@@ -84,12 +89,12 @@ extension ProfileView {
     
     enum Layout {
         enum avatar {
-            static let size: CGFloat = 200
+            static let size: CGFloat = 160
             static let top: CGFloat = 64
         }
         enum username {
             static let horizontalInset: CGFloat = 16
-            static let bottom: CGFloat = 16
+            static let top: CGFloat = 32
         }
         enum createButton {
             static let horizontalInset: CGFloat = 16
