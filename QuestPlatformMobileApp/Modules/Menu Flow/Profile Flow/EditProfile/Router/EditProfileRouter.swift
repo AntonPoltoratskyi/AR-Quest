@@ -11,4 +11,8 @@ import UIKit
 final class EditProfileRouter: Router, EditProfileRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func finish() {
+        viewController.navigationController?.popViewController(animated: true)
+    }
 }

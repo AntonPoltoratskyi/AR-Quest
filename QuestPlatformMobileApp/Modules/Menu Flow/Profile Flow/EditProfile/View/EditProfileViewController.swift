@@ -13,6 +13,10 @@ final class EditProfileViewController: UIViewController, View {
     typealias Output = EditProfileViewOutput
     var output: Output!
     
+    private lazy var swipeController: SwipeController = {
+        return SwipeController(target: self)
+    }()
+    
     
     // MARK: - Views
     
@@ -31,10 +35,15 @@ final class EditProfileViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeController.addGesture()
+        output.viewDidLoad()
     }
 }
 
 // MARK: - EditProfileViewInput
 extension EditProfileViewController: EditProfileViewInput {
     
+    func setup(with user: User) {
+        
+    }
 }

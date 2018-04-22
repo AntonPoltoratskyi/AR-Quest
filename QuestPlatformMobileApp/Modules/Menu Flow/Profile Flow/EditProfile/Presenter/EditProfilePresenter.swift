@@ -18,14 +18,37 @@ final class EditProfilePresenter: Presenter, EditProfileModuleInput {
     var interactor: Interactor!
     var router: Router!
     
+    private var user: User?
 }
 
 // MARK: - EditProfileViewOutput
 extension EditProfilePresenter: EditProfileViewOutput {
     
+    func didClickEdit() {
+        guard let user = user else { return }
+        interactor.editUser(user)
+    }
 }
 
 // MARK: - EditProfileInteractorOutput
 extension EditProfilePresenter: EditProfileInteractorOutput {
     
+    func viewDidLoad() {
+        interactor.fetchUserInfo()
+    }
+    
+    func didFetchUser(_ user: User) {
+        self.user = user
+        view.setup(with: user)
+    }
+    
+    func didEditUser(_ user: User) {
+        self.user = user
+        view.setup(with: user)
+        router.finish()
+    }
+    
+    func didReceiveFailure(_ error: Error) {
+        
+    }
 }

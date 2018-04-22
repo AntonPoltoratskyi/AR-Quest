@@ -33,8 +33,7 @@ extension ProfilePresenter: ProfileViewOutput {
     }
     
     func didClickEdit() {
-        guard let user = user else { return }
-        interactor.editUser(user)
+        router.showEditProfile()
     }
 }
 
@@ -42,11 +41,6 @@ extension ProfilePresenter: ProfileViewOutput {
 extension ProfilePresenter: ProfileInteractorOutput {
     
     func didFetchUser(_ user: User) {
-        self.user = user
-        view.setupUser(user)
-    }
-    
-    func didEditUser(_ user: User) {
         self.user = user
         view.setupUser(user)
     }

@@ -32,15 +32,4 @@ final class ProfileInteractor: Interactor, ProfileInteractorInput {
         }
         output.didFetchUser(user)
     }
-    
-    func editUser(_ user: User) {
-        userService.editUser(user) { [weak self] result in
-            switch result {
-            case let .success(user):
-                self?.output?.didEditUser(user)
-            case let .failure(error):
-                self?.output?.didReceiveFailure(error)
-            }
-        }
-    }
 }

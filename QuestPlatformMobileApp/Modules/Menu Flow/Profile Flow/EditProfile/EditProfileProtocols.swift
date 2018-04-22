@@ -16,22 +16,31 @@ protocol EditProfileModuleInput: ModuleInput {
 // MARK: - View
 
 protocol EditProfileViewInput: class {
+    func setup(with user: User)
 }
 
 // MARK: -
 protocol EditProfileViewOutput: class {
+    func viewDidLoad()
+    func didClickEdit()
 }
 
 // MARK: - Interactor
 
 protocol EditProfileInteractorInput: class {
+    func fetchUserInfo()
+    func editUser(_ user: User)
 }
 
 // MARK: -
 protocol EditProfileInteractorOutput: class {
+    func didFetchUser(_ user: User)
+    func didEditUser(_ user: User)
+    func didReceiveFailure(_ error: Error)
 }
 
 // MARK: - Router
 
 protocol EditProfileRouterInput: class {
+    func finish()
 }

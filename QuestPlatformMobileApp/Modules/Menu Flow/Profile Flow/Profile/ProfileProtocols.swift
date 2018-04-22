@@ -30,13 +30,11 @@ protocol ProfileViewOutput: class {
 
 protocol ProfileInteractorInput: class {
     func fetchUserInfo()
-    func editUser(_ user: User)
 }
 
 // MARK: -
 protocol ProfileInteractorOutput: class {
     func didFetchUser(_ user: User)
-    func didEditUser(_ user: User)
     func didReceiveFailure(_ error: Error)
 }
 
@@ -44,4 +42,5 @@ protocol ProfileInteractorOutput: class {
 
 protocol ProfileRouterInput: class {
     func showConstructor()
+    func showEditProfile()
 }

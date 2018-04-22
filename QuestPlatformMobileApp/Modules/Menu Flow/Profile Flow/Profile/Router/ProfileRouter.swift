@@ -13,7 +13,12 @@ final class ProfileRouter: Router, ProfileRouterInput {
     weak var viewController: UIViewController!
     
     func showConstructor() {
-        let constructor = ConstructorAssembly().build()
-        viewController.navigationController?.pushViewController(constructor.view, animated: true)
+        let module = ConstructorAssembly().build()
+        viewController.navigationController?.pushViewController(module.view, animated: true)
+    }
+    
+    func showEditProfile() {
+        let module = EditProfileAssembly().build()
+        viewController.navigationController?.pushViewController(module.view, animated: true)
     }
 }
