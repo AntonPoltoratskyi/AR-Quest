@@ -31,6 +31,13 @@
 		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
 		8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */; };
 		8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53F208C612F006DFCFE /* UserNetworkService.swift */; };
+		8511E54A208C6DC4006DFCFE /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */; };
+		8511E54B208C6DC4006DFCFE /* EditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E544208C6DC4006DFCFE /* EditProfileRouter.swift */; };
+		8511E54C208C6DC4006DFCFE /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E545208C6DC4006DFCFE /* EditProfileViewController.swift */; };
+		8511E54D208C6DC4006DFCFE /* EditProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E546208C6DC4006DFCFE /* EditProfileProtocols.swift */; };
+		8511E54E208C6DC4006DFCFE /* EditProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E547208C6DC4006DFCFE /* EditProfileAssembly.swift */; };
+		8511E54F208C6DC4006DFCFE /* EditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E548208C6DC4006DFCFE /* EditProfileInteractor.swift */; };
+		8511E550208C6DC4006DFCFE /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E549208C6DC4006DFCFE /* EditProfileView.swift */; };
 		85125717204AEFEA00995543 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125716204AEFEA00995543 /* Validator.swift */; };
 		85125719204AF04700995543 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125718204AF04700995543 /* EmailValidator.swift */; };
 		8512571B204AF72200995543 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512571A204AF72200995543 /* PasswordValidator.swift */; };
@@ -257,6 +264,13 @@
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
 		8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkRouter.swift; sourceTree = "<group>"; };
 		8511E53F208C612F006DFCFE /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
+		8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		8511E544208C6DC4006DFCFE /* EditProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRouter.swift; sourceTree = "<group>"; };
+		8511E545208C6DC4006DFCFE /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		8511E546208C6DC4006DFCFE /* EditProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocols.swift; sourceTree = "<group>"; };
+		8511E547208C6DC4006DFCFE /* EditProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileAssembly.swift; sourceTree = "<group>"; };
+		8511E548208C6DC4006DFCFE /* EditProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractor.swift; sourceTree = "<group>"; };
+		8511E549208C6DC4006DFCFE /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		85125716204AEFEA00995543 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		85125718204AF04700995543 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		8512571A204AF72200995543 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
@@ -738,6 +752,69 @@
 				8511E53F208C612F006DFCFE /* UserNetworkService.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		8511E541208C6DA1006DFCFE /* Profile Flow */ = {
+			isa = PBXGroup;
+			children = (
+				855D7483207B7702000421DA /* Profile */,
+				8511E542208C6DAF006DFCFE /* EditProfile */,
+			);
+			path = "Profile Flow";
+			sourceTree = "<group>";
+		};
+		8511E542208C6DAF006DFCFE /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				8511E546208C6DC4006DFCFE /* EditProfileProtocols.swift */,
+				8511E551208C6DCB006DFCFE /* View */,
+				8511E552208C6DD1006DFCFE /* Presenter */,
+				8511E553208C6DD7006DFCFE /* Interactor */,
+				8511E555208C6DE4006DFCFE /* Router */,
+				8511E554208C6DDE006DFCFE /* Assembly */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		8511E551208C6DCB006DFCFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8511E549208C6DC4006DFCFE /* EditProfileView.swift */,
+				8511E545208C6DC4006DFCFE /* EditProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8511E552208C6DD1006DFCFE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8511E553208C6DD7006DFCFE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8511E548208C6DC4006DFCFE /* EditProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8511E554208C6DDE006DFCFE /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				8511E547208C6DC4006DFCFE /* EditProfileAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		8511E555208C6DE4006DFCFE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8511E544208C6DC4006DFCFE /* EditProfileRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		85125715204AEFCC00995543 /* Validation */ = {
@@ -1465,7 +1542,7 @@
 				85F07DCB208B43AA004950B9 /* MenuInteractive.swift */,
 				85C3C20F20837670009AEF58 /* Menu */,
 				85F07DD3208B5B2E004950B9 /* OwnQuests */,
-				855D7483207B7702000421DA /* Profile */,
+				8511E541208C6DA1006DFCFE /* Profile Flow */,
 				855D74A7207BB01E000421DA /* About */,
 			);
 			path = "Menu Flow";
@@ -2164,6 +2241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8511E54F208C6DC4006DFCFE /* EditProfileInteractor.swift in Sources */,
 				8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */,
 				853DD5072042CE1A00E82595 /* View.swift in Sources */,
 				85F07DE0208B5B77004950B9 /* OwnQuestsInteractor.swift in Sources */,
@@ -2179,6 +2257,7 @@
 				85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */,
 				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
 				85125719204AF04700995543 /* EmailValidator.swift in Sources */,
+				8511E54D208C6DC4006DFCFE /* EditProfileProtocols.swift in Sources */,
 				855D748E207B77ED000421DA /* ProfileProtocols.swift in Sources */,
 				853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */,
 				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
@@ -2210,6 +2289,7 @@
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				8517020320711E370081F611 /* QuestListProtocols.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
+				8511E54C208C6DC4006DFCFE /* EditProfileViewController.swift in Sources */,
 				855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */,
 				851702472071671C0081F611 /* CodeInputView.swift in Sources */,
 				8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */,
@@ -2259,6 +2339,7 @@
 				85F07DDD208B5B77004950B9 /* OwnQuestsViewController.swift in Sources */,
 				8517020120711E370081F611 /* QuestListRouter.swift in Sources */,
 				851702412071671C0081F611 /* CodeInputPresenter.swift in Sources */,
+				8511E54E208C6DC4006DFCFE /* EditProfileAssembly.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
@@ -2310,6 +2391,7 @@
 				85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
+				8511E54A208C6DC4006DFCFE /* EditProfilePresenter.swift in Sources */,
 				851702292071579E0081F611 /* QuestDetailsAssembly.swift in Sources */,
 				853DD4C22042BF8B00E82595 /* KeyboardInteracting.swift in Sources */,
 				85125717204AEFEA00995543 /* Validator.swift in Sources */,
@@ -2336,6 +2418,7 @@
 				853DD4FC2042CCD200E82595 /* SplashPresenter.swift in Sources */,
 				853DD4C12042BF8B00E82595 /* UIViewController+KeyboardHandling.swift in Sources */,
 				85C3C2732083C583009AEF58 /* ConstructorFinishViewController.swift in Sources */,
+				8511E550208C6DC4006DFCFE /* EditProfileView.swift in Sources */,
 				85C3C2632083C569009AEF58 /* ConstructorRouter.swift in Sources */,
 				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
 				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
@@ -2345,6 +2428,7 @@
 				8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */,
 				85C3C2742083C583009AEF58 /* ConstructorFinishProtocols.swift in Sources */,
 				85D8A570205ECB1300C6F547 /* Radians.swift in Sources */,
+				8511E54B208C6DC4006DFCFE /* EditProfileRouter.swift in Sources */,
 				857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */,
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
 				85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */,
