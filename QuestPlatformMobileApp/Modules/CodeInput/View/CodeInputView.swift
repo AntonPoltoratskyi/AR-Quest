@@ -8,28 +8,17 @@
 
 import UIKit
 
-final class CodeInputView: UIView {
+final class CodeInputView: BaseScrollableView {
     
     // MARK: - Views
     
-    private(set) lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.showsVerticalScrollIndicator = false
-        self.addSubview(scrollView)
-        return scrollView
-    }()
+    override var title: String? {
+        return "By Code"
+    }
     
-    private lazy var contentView: UIView = {
-        let contentView = UIView()
-        scrollView.addSubview(contentView)
-        return contentView
-    }()
-    
-    private(set) lazy var backgroundView: QuestBackgroundView = {
-        let backgroundView = QuestBackgroundView()
-        contentView.addSubview(backgroundView)
-        return backgroundView
-    }()
+    override var backgroundView: UIView? {
+        return QuestBackgroundView()
+    }
     
     private(set) lazy var inputTextField: QuestTextField = {
         let inputTextField = QuestTextField()
@@ -54,40 +43,13 @@ final class CodeInputView: UIView {
         contentView.addSubview(button)
         return button
     }()
-    
-    
-    // MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
+
     
     // MARK: - Setup
     
-    private func setup() {
-        backgroundColor = .white
-        
-        backgroundView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
-        }
-        
-        scrollView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
-        }
-        
-        contentView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
-            maker.width.equalToSuperview()
-            maker.height.equalToSuperview()
-        }
-        
+    override func setup() {
+        super.setup()
+
         inputTextField.snp.makeConstraints { maker in
             maker.centerY.equalToSuperview()
             maker.horizontalInset(Layout.inputTextField.horizontalInset)

@@ -1205,6 +1205,7 @@
 				855D7497207B7A5A000421DA /* Auth Flow */,
 				85C3C2232083772D009AEF58 /* Menu Flow */,
 				85C3C1FB208373CF009AEF58 /* Main */,
+				8511E541208C6DA1006DFCFE /* Profile Flow */,
 				85C3C2242083774D009AEF58 /* Quest Master-Detail Flow */,
 				85C3C2432083C332009AEF58 /* Quest Constructor Flow */,
 				85170239207167000081F611 /* CodeInput */,
@@ -1555,7 +1556,6 @@
 				85F07DCB208B43AA004950B9 /* MenuInteractive.swift */,
 				85C3C20F20837670009AEF58 /* Menu */,
 				85F07DD3208B5B2E004950B9 /* OwnQuests */,
-				8511E541208C6DA1006DFCFE /* Profile Flow */,
 				855D74A7207BB01E000421DA /* About */,
 			);
 			path = "Menu Flow";
