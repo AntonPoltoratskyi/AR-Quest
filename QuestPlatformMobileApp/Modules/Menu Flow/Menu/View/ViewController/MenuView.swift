@@ -21,15 +21,47 @@ final class MenuView: UIView {
     
     weak var delegate: MenuViewDelegate?
     
+    private lazy var menuItems: [MenuItemCellModel] = {
+        return [
+            MenuItemCellModel(title: "Profile") { [unowned self] in
+                self.delegate?.menuViewDidSelectProfile(self)
+            },
+            MenuItemCellModel(title: "My Quests") { [unowned self] in
+                self.delegate?.menuViewDidSelectMyQuests(self)
+            },
+            MenuItemCellModel(title: "Start New") { [unowned self] in
+                self.delegate?.menuViewDidSelectStartNewQuest(self)
+            },
+            MenuItemCellModel(title: "About") { [unowned self] in
+                self.delegate?.menuViewDidSelectAbout(self)
+            },
+            MenuItemCellModel(title: "Sign Out") { [unowned self] in
+                self.delegate?.menuViewDidSelectLogout(self)
+            }
+        ]
+    }()
+    
     
     // MARK: - Views
     
-    private(set) lazy var stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        addSubview(stackView)
-        return stackView
+    private(set) lazy var headerView: QuestSideMenuHeaderView = {
+        let headerView = QuestSideMenuHeaderView()
+        addSubview(headerView)
+        return headerView
+    }()
+    
+    private(set) lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        
+        tableView.register(viewModel: MenuItemCellModel.self)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 44
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.tableFooterView = UIView()
+        
+        addSubview(tableView)
+        return tableView
     }()
     
     
@@ -51,40 +83,34 @@ final class MenuView: UIView {
     private func setup() {
         backgroundColor = .white
         
-        stackView.snp.makeConstraints { maker in
-            maker.left.equalToSuperview().offset(16)
-            maker.right.equalToSuperview().inset(16)
-            maker.centerY.equalToSuperview()
+        headerView.snp.makeConstraints { maker in
+            maker.top.left.right.equalToSuperview()
+            maker.sideMenuHeaderHeight()
         }
-        
-        let actions: [MenuItemAction] = [
-            MenuItemAction(title: "Profile") { [unowned self] in
-                self.delegate?.menuViewDidSelectProfile(self)
-            },
-            MenuItemAction(title: "My Quests") { [unowned self] in
-                self.delegate?.menuViewDidSelectMyQuests(self)
-            },
-            MenuItemAction(title: "Start New") { [unowned self] in
-                self.delegate?.menuViewDidSelectStartNewQuest(self)
-            },
-            MenuItemAction(title: "About") { [unowned self] in
-                self.delegate?.menuViewDidSelectAbout(self)
-            },
-            MenuItemAction(title: "Sign Out") { [unowned self] in
-                self.delegate?.menuViewDidSelectLogout(self)
-            },
-        ]
-        
-        actions.forEach { action in
-            
-            let itemView = MenuItemView()
-            itemView.title = action.title
-            itemView.selectionHandler = { _ in action.handler() }
-            
-            stackView.addArrangedSubview(itemView)
-            itemView.snp.makeConstraints { maker in
-                maker.height.equalTo(44)
-            }
+        tableView.snp.makeConstraints { maker in
+            maker.top.equalTo(headerView.snp.bottom)
+            maker.left.right.bottom.equalToSuperview()
         }
+    }
+}
+
+// MARK: - Table View
+extension MenuView: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuItems.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withModel: menuItem(at: indexPath), for: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = menuItem(at: indexPath)
+        item.handler()
+    }
+    
+    private func menuItem(at indexPath: IndexPath) -> MenuItemCellModel {
+        return menuItems[indexPath.row]
     }
 }

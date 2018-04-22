@@ -30,6 +30,11 @@ extension ConstraintMaker {
         return height.equalTo(44)
     }
     
+    @discardableResult
+    func sideMenuHeaderHeight() -> ConstraintMakerEditable {
+        return height.equalTo(160)
+    }
+    
     func horizontalInset(_ inset: CGFloat) {
         left.equalToSuperview().offset(inset)
         right.equalToSuperview().inset(inset)

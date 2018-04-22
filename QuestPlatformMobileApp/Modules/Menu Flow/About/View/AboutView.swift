@@ -38,7 +38,7 @@ final class AboutView: BaseView {
     
     private(set) lazy var appDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "App description will be here ..."
+        label.text = "The best way to have fun and discover more emotions and places. Let's get started!"
         label.contentMode = .left
         label.numberOfLines = 0
         contentView.addSubview(label)
