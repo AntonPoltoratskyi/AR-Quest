@@ -11,4 +11,12 @@ import UIKit
 final class LocationPickerRouter: Router, LocationPickerRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func finish() {
+        if let navigation = viewController.navigationController {
+            navigation.popViewController(animated: true)
+        } else {
+            viewController.dismiss(animated: true, completion: nil)
+        }
+    }
 }

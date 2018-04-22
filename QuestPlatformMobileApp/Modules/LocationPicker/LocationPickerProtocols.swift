@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
 // MARK: - Module Input
 
 protocol LocationPickerModuleInput: ModuleInput {
+}
+
+protocol LocationPickerModuleOutput: ModuleInput {
+    func didSelectLocation(at coordinate: CLLocationCoordinate2D)
 }
 
 // MARK: - View
@@ -20,6 +25,9 @@ protocol LocationPickerViewInput: class {
 
 // MARK: -
 protocol LocationPickerViewOutput: class {
+    func didSelectCoordinate(_ coordinate: CLLocationCoordinate2D)
+    func didClickDone()
+    func didClickCancel()
 }
 
 // MARK: - Interactor
@@ -33,5 +41,6 @@ protocol LocationPickerInteractorOutput: class {
 
 // MARK: - Router
 
-protocol LocationPickerRouterInput: class {
+protocol LocationPickerRouterInput: Router {
+    func finish()
 }
