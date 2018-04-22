@@ -11,4 +11,8 @@ import UIKit
 final class ConstructorRouter: Router, ConstructorRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func showTaskCreator() {
+        
+    }
 }

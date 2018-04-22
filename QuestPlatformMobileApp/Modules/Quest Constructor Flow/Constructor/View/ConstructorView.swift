@@ -8,6 +8,11 @@
 
 import UIKit
 
+//protocol ConstructorViewDelegate: class {
+//    func numberOfTasks() -> Int
+//    func constructorView(_ constructorView: ConstructorView, taskAt indexPath: IndexPath) -> QuestTaskCellModel
+//}
+
 final class ConstructorView: BaseView {
     
     // MARK: - Views
@@ -19,11 +24,29 @@ final class ConstructorView: BaseView {
     override var backgroundView: UIView? {
         return QuestBackgroundView()
     }
-
+    
+    private(set) lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        contentView.addSubview(tableView)
+        return tableView
+    }()
+    
+    private(set) lazy var addTaskButton: QuestButton = {
+        let button = QuestButton()
+        button.setTitle("Add Task", for: .normal)
+        return button
+    }()
+    
     
     // MARK: - Setup
     
     override func setup() {
         super.setup()
+        
+        tableView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
     }
 }

@@ -23,6 +23,9 @@ final class ConstructorPresenter: Presenter, ConstructorModuleInput {
 // MARK: - ConstructorViewOutput
 extension ConstructorPresenter: ConstructorViewOutput {
     
+    func didClickAddTask() {
+        router.showTaskCreator()
+    }
 }
 
 // MARK: - ConstructorInteractorOutput

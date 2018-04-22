@@ -28,7 +28,7 @@ final class MenuRouter: Router, MenuRouterInput {
     }
     
     func showAbout() {
-        let module = LocationPickerAssembly().build()
+        let module = AboutAssembly().build()
         pushModule(module.view)
     }
     

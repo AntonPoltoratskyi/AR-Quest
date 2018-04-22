@@ -20,6 +20,7 @@ protocol ConstructorViewInput: class {
 
 // MARK: -
 protocol ConstructorViewOutput: class {
+    func didClickAddTask()
 }
 
 // MARK: - Interactor
@@ -34,4 +35,5 @@ protocol ConstructorInteractorOutput: class {
 // MARK: - Router
 
 protocol ConstructorRouterInput: class {
+    func showTaskCreator()
 }
