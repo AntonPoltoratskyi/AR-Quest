@@ -24,7 +24,7 @@ final class ProfilePresenter: Presenter, ProfileModuleInput {
 // MARK: - ProfileViewOutput
 extension ProfilePresenter: ProfileViewOutput {
     
-    func viewDidLoad() {
+    func viewWillAppear() {
         interactor.fetchUserInfo()
     }
     

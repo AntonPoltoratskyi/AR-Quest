@@ -24,15 +24,17 @@ final class EditProfilePresenter: Presenter, EditProfileModuleInput {
 // MARK: - EditProfileViewOutput
 extension EditProfilePresenter: EditProfileViewOutput {
     
-    func didClickEdit() {
+    func didClickSave(userInfo: EditUserInfo) {
         guard let user = user else { return }
+        // TODO: validate username
+        user.name = userInfo.username
         interactor.editUser(user)
     }
 }
 
 // MARK: - EditProfileInteractorOutput
 extension EditProfilePresenter: EditProfileInteractorOutput {
-    
+
     func viewDidLoad() {
         interactor.fetchUserInfo()
     }

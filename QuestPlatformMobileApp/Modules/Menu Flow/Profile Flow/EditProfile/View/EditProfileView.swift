@@ -7,40 +7,85 @@
 //
 
 import UIKit
+import SnapKit
 
-final class EditProfileView: UIView {
+final class EditProfileView: BaseView {
     
     // MARK: - Views
     
-    private(set) lazy var label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
-        return label
+    override var isNavigationViewVisible: Bool {
+        return false
+    }
+    
+    override var backgroundView: UIView? {
+        return QuestBackgroundView()
+    }
+    
+    private(set) lazy var avatarImageView: QuestRoundImageView = {
+        let imageView = QuestRoundImageView()
+        imageView.backgroundColor = Theme.Avatar.placeholderBackground
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = Theme.Avatar.placeholderBorder.cgColor
+        contentView.addSubview(imageView)
+        return imageView
     }()
     
+    private(set) lazy var usernameTextField: QuestTextField = {
+        let textField = QuestTextField()
+        textField.placeholder = "Enter username"
+        contentView.addSubview(textField)
+        return textField
+    }()
     
-    // MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
+    private(set) lazy var saveButton: QuestButton = {
+        let button = QuestButton()
+        button.setTitle("Save", for: .normal)
+        contentView.addSubview(button)
+        return button
+    }()
     
     
     // MARK: - Setup
     
-    private func setup() {
-        backgroundColor = .white
+    override func setup() {
+        super.setup()
         
-        label.text = "EditProfile"
+        avatarImageView.layer.cornerRadius = Layout.avatar.size / 2
+        avatarImageView.snp.makeConstraints { maker in
+            maker.top.equalToSuperview().offset(Layout.avatar.top)
+            maker.centerX.equalToSuperview()
+            maker.width.height.equalTo(Layout.avatar.size)
+        }
         
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        usernameTextField.snp.makeConstraints { maker in
+            maker.horizontalInset(Layout.usernameField.horizontalInset)
+            maker.bottom.equalTo(saveButton.snp.top).offset(-Layout.usernameField.bottom)
+            maker.textFieldHeight()
+        }
+        
+        saveButton.snp.makeConstraints { maker in
+            maker.horizontalInset(Layout.saveButton.horizontalInset)
+            maker.bottom.equalToSuperview().inset(Layout.saveButton.bottom)
+            maker.buttonHeight()
+        }
+    }
+}
+
+// MARK: - Layout
+extension EditProfileView {
+    
+    enum Layout {
+        enum avatar {
+            static let size: CGFloat = 160
+            static let top: CGFloat = 64
+        }
+        enum usernameField {
+            static let horizontalInset: CGFloat = 16
+            static let bottom: CGFloat = 57
+        }
+        enum saveButton {
+            static let horizontalInset: CGFloat = 16
+            static let bottom: CGFloat = 75
+        }
     }
 }

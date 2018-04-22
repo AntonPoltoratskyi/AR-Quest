@@ -36,8 +36,12 @@ final class UserNetworkServiceImpl: UserNetworkService {
     
     func editUser(_ user: User, completion: @escaping (ResponseResult<User>) -> Void) {
         let target = UserNetworkRouter.edit(user: user, token: session.token)
-        client.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
-            completion(result.process())
+        client.request(to: target) { [session] (result: ResponseResult<WebResponse<User>>) in
+            let result = result.process()
+            if case let .success(user) = result {
+                session.updateUser(user)
+            }
+            completion(result)
         }
     }
 }
@@ -55,11 +59,15 @@ final class UserNetworkServiceStub: UserNetworkService {
     }
     
     func getCurrentUser(completion: @escaping (ResponseResult<User>) -> Void) {
-        let user = User(name: "Antony", email: "test@gmail.com")
-        completion(.success(user))
+        if let user = session.user {
+            completion(.success(user))
+        } else {
+            completion(.failure(APIError.userNotFound))
+        }
     }
     
     func editUser(_ user: User, completion: @escaping (ResponseResult<User>) -> Void) {
+        session.updateUser(user)
         completion(.success(user))
     }
 }

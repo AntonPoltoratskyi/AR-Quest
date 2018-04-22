@@ -90,6 +90,11 @@ final class SessionStorage {
         state = .loggedIn(sessionIdentifier, user: user)
     }
     
+    func updateUser(_ user: User) {
+        guard case let .loggedIn(token, _) = state else { return }
+        state = .loggedIn(token, user: user)
+    }
+    
     func invalidateSession() {
         state = .empty
     }

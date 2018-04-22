@@ -22,6 +22,9 @@ final class EditProfileViewController: UIViewController, View {
     
     private lazy var contentView: EditProfileView = {
         let contentView = EditProfileView()
+        contentView.saveButton.addTarget(self,
+                                         action: #selector(actionSaveButtonTapped(sender:)),
+                                         for: .touchUpInside)
         return contentView
     }()
     
@@ -38,12 +41,21 @@ final class EditProfileViewController: UIViewController, View {
         swipeController.addGesture()
         output.viewDidLoad()
     }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionSaveButtonTapped(sender: UIButton) {
+        let username = contentView.usernameTextField.text ?? ""
+        let userInfo = EditUserInfo(username: username)
+        output.didClickSave(userInfo: userInfo)
+    }
 }
 
 // MARK: - EditProfileViewInput
 extension EditProfileViewController: EditProfileViewInput {
     
     func setup(with user: User) {
-        
+        contentView.usernameTextField.text = user.name
     }
 }

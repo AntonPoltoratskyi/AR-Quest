@@ -21,7 +21,7 @@ protocol ProfileViewInput: class {
 
 // MARK: -
 protocol ProfileViewOutput: class {
-    func viewDidLoad()
+    func viewWillAppear()
     func didClickCreate()
     func didClickEdit()
 }

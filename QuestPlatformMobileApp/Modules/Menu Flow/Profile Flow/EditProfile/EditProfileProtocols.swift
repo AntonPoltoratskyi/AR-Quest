@@ -22,7 +22,7 @@ protocol EditProfileViewInput: class {
 // MARK: -
 protocol EditProfileViewOutput: class {
     func viewDidLoad()
-    func didClickEdit()
+    func didClickSave(userInfo: EditUserInfo)
 }
 
 // MARK: - Interactor

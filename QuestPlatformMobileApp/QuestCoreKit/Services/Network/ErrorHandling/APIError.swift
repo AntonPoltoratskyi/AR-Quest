@@ -10,6 +10,7 @@ import Foundation
 
 enum APIError: Error {
     case invalidToken
+    case userNotFound
     case unknownError
     case jsonDecodingError(Error)
 }
