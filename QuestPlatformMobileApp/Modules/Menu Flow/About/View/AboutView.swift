@@ -31,8 +31,7 @@ final class AboutView: BaseView {
     
     private(set) lazy var appNameLabel: UILabel = {
         let label = UILabel()
-        // TODO: set app name
-        label.text = "QUEST App"
+        label.text = Bundle.main.displayName
         contentView.addSubview(label)
         return label
     }()
@@ -48,7 +47,7 @@ final class AboutView: BaseView {
     
     private(set) lazy var copyrightLabel: UILabel = {
         let label = UILabel()
-        label.text = "(c) \(Calendar.current.component(.year, from: Date()))"
+        label.text = "(c) \(Calendar.current.component(.year, from: Date())) \(Bundle.main.displayName)"
         label.textAlignment = .center
         label.setContentHuggingPriority(.required, for: .vertical)
         contentView.addSubview(label)
