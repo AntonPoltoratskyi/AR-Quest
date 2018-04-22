@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class EditProfileViewController: UIViewController, View {
+final class EditProfileViewController: UIViewController, View, KeyboardInteracting {
     
     typealias Output = EditProfileViewOutput
     var output: Output!
@@ -17,6 +17,13 @@ final class EditProfileViewController: UIViewController, View {
         return SwipeController(target: self)
     }()
     
+    var keyboardInputViews: [KeyboardInputView] {
+        return [contentView.usernameTextField]
+    }
+    
+    var scrollView: UIScrollView! {
+        return contentView.scrollView
+    }
     
     // MARK: - Views
     
@@ -39,7 +46,18 @@ final class EditProfileViewController: UIViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         swipeController.addGesture()
+        keyboardInputViews.compactMap { $0 as? UITextField }.forEach { $0.delegate = self }
         output.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        registerForKeyboardNotifications()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        unregisterForKeyboardNotifications()
     }
     
     
@@ -49,6 +67,15 @@ final class EditProfileViewController: UIViewController, View {
         let username = contentView.usernameTextField.text ?? ""
         let userInfo = EditUserInfo(username: username)
         output.didClickSave(userInfo: userInfo)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension EditProfileViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        handleNextInput(textField)
+        return true
     }
 }
 

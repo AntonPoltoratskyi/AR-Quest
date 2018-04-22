@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-final class EditProfileView: BaseView {
+final class EditProfileView: BaseScrollableView {
     
     // MARK: - Views
     
@@ -33,6 +33,7 @@ final class EditProfileView: BaseView {
     private(set) lazy var usernameTextField: QuestTextField = {
         let textField = QuestTextField()
         textField.placeholder = "Enter username"
+        textField.returnKeyType = .done
         contentView.addSubview(textField)
         return textField
     }()

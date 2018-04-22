@@ -55,6 +55,17 @@ extension KeyboardInteracting where Self: UIViewController {
         removeTapGesture()
     }
     
+    public func handleNextInput(_ inputView: KeyboardInputView) {
+        let inputViews = keyboardInputViews
+        if let index = inputViews.index(where: { $0 === inputView }) {
+            if index + 1 < inputViews.endIndex {
+                inputViews[index + 1].becomeFirstResponder()
+            } else {
+                inputView.resignFirstResponder()
+            }
+        }
+    }
+    
     private func setScrollInsets(_ insets: UIEdgeInsets) {
         scrollView?.contentInset = insets
         scrollView?.scrollIndicatorInsets = insets

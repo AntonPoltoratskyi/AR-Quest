@@ -118,14 +118,7 @@ extension LoginViewController: LoginViewDelegate {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let inputViews = keyboardInputViews
-        if let index = inputViews.index(where: { $0 === textField }) {
-            if index + 1 < inputViews.endIndex {
-                inputViews[index + 1].becomeFirstResponder()
-            } else {
-                textField.resignFirstResponder()
-            }
-        }
+        handleNextInput(textField)
         return true
     }
 }
