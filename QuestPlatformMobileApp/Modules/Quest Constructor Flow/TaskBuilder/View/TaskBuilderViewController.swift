@@ -13,6 +13,10 @@ final class TaskBuilderViewController: UIViewController, View {
     typealias Output = TaskBuilderViewOutput
     var output: Output!
     
+    private lazy var swipeController: SwipeController = {
+        return SwipeController(target: self)
+    }()
+    
     
     // MARK: - Views
     
@@ -31,6 +35,7 @@ final class TaskBuilderViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeController.addGesture()
     }
 }
 

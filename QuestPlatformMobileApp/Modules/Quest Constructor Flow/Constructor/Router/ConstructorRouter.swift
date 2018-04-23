@@ -13,6 +13,7 @@ final class ConstructorRouter: Router, ConstructorRouterInput {
     weak var viewController: UIViewController!
     
     func showTaskCreator() {
-        
+        let module = TaskBuilderAssembly().build()
+        viewController.navigationController?.pushViewController(module.view, animated: true)
     }
 }

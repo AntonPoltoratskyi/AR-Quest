@@ -17,6 +17,7 @@ final class TaskTableHeaderView: UITableViewHeaderFooterView, Reusable {
     private(set) lazy var taskButton: QuestButton = {
         let taskButton = QuestButton()
         taskButton.setTitle("Add Task", for: .normal)
+        taskButton.addTarget(self, action: #selector(actionTaskButtonTapped(sender:)), for: .touchUpInside)
         contentView.addSubview(taskButton)
         return taskButton
     }()
