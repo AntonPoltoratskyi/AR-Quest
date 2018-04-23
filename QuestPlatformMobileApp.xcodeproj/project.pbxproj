@@ -37,6 +37,8 @@
 		850751B8208DBE5900A1221C /* TaskBuilderAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B1208DBE5900A1221C /* TaskBuilderAssembly.swift */; };
 		850751B9208DBE5900A1221C /* TaskBuilderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */; };
 		850751BA208DBE5900A1221C /* TaskBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B3208DBE5900A1221C /* TaskBuilderView.swift */; };
+		850751C3208DC48200A1221C /* QuestionTaskFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751C2208DC48200A1221C /* QuestionTaskFormView.swift */; };
+		850751C5208DC4A900A1221C /* LocationTaskFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751C4208DC4A900A1221C /* LocationTaskFormView.swift */; };
 		8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */; };
 		8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53F208C612F006DFCFE /* UserNetworkService.swift */; };
 		8511E54A208C6DC4006DFCFE /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */; };
@@ -282,6 +284,8 @@
 		850751B1208DBE5900A1221C /* TaskBuilderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderAssembly.swift; sourceTree = "<group>"; };
 		850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderInteractor.swift; sourceTree = "<group>"; };
 		850751B3208DBE5900A1221C /* TaskBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderView.swift; sourceTree = "<group>"; };
+		850751C2208DC48200A1221C /* QuestionTaskFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTaskFormView.swift; sourceTree = "<group>"; };
+		850751C4208DC4A900A1221C /* LocationTaskFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTaskFormView.swift; sourceTree = "<group>"; };
 		8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkRouter.swift; sourceTree = "<group>"; };
 		8511E53F208C612F006DFCFE /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
 		8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
@@ -802,8 +806,8 @@
 		850751BB208DBE6100A1221C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				850751B3208DBE5900A1221C /* TaskBuilderView.swift */,
-				850751AF208DBE5900A1221C /* TaskBuilderViewController.swift */,
+				850751C1208DC46F00A1221C /* Forms */,
+				850751C0208DC46600A1221C /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -838,6 +842,24 @@
 				850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		850751C0208DC46600A1221C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				850751B3208DBE5900A1221C /* TaskBuilderView.swift */,
+				850751AF208DBE5900A1221C /* TaskBuilderViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		850751C1208DC46F00A1221C /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				850751C2208DC48200A1221C /* QuestionTaskFormView.swift */,
+				850751C4208DC4A900A1221C /* LocationTaskFormView.swift */,
+			);
+			path = Forms;
 			sourceTree = "<group>";
 		};
 		8511E53C208C6110006DFCFE /* User */ = {
@@ -2487,6 +2509,7 @@
 				85C3C2722083C583009AEF58 /* ConstructorFinishRouter.swift in Sources */,
 				850751B7208DBE5900A1221C /* TaskBuilderProtocols.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
+				850751C3208DC48200A1221C /* QuestionTaskFormView.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
 				850751B9208DBE5900A1221C /* TaskBuilderInteractor.swift in Sources */,
 				85C3C21820837692009AEF58 /* MenuRouter.swift in Sources */,
@@ -2579,6 +2602,7 @@
 				85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				85C3C2752083C583009AEF58 /* ConstructorFinishAssembly.swift in Sources */,
+				850751C5208DC4A900A1221C /* LocationTaskFormView.swift in Sources */,
 				851A4C412078C24A008F488E /* CodeValidator.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
 				855D74B7207BB045000421DA /* AboutView.swift in Sources */,
