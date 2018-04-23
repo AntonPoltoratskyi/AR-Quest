@@ -19,7 +19,7 @@ final class LocationPickerPresenter: Presenter, LocationPickerModuleInput {
     var interactor: Interactor!
     var router: Router!
     
-    var output: LocationPickerModuleOutput?
+    weak var output: LocationPickerModuleOutput?
  
     private var selectedCoordinate: CLLocationCoordinate2D?
 }

@@ -16,6 +16,7 @@ protocol ConstructorModuleInput: ModuleInput {
 // MARK: - View
 
 protocol ConstructorViewInput: class {
+    func addTask(_ task: Task)
 }
 
 // MARK: -
@@ -36,4 +37,8 @@ protocol ConstructorInteractorOutput: class {
 
 protocol ConstructorRouterInput: class {
     func showTaskCreator()
+}
+
+protocol ConstructorRouterOutput: class {
+    func didCreateTask(_ task: Task)
 }

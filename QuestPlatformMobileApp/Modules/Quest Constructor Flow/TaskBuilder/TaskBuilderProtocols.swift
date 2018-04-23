@@ -11,6 +11,11 @@ import UIKit
 // MARK: - Module Input
 
 protocol TaskBuilderModuleInput: ModuleInput {
+    var output: TaskBuilderModuleOutput? { get set }
+}
+
+protocol TaskBuilderModuleOutput: class {
+    func taskBuilderModule(_ moduleInput: TaskBuilderModuleInput, didCreateTask task: Task)
 }
 
 // MARK: - View

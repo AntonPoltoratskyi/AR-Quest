@@ -32,3 +32,11 @@ extension ConstructorPresenter: ConstructorViewOutput {
 extension ConstructorPresenter: ConstructorInteractorOutput {
     
 }
+
+// MARK: - ConstructorRouterOutput
+extension ConstructorPresenter: ConstructorRouterOutput {
+    
+    func didCreateTask(_ task: Task) {
+        view.addTask(task)
+    }
+}

@@ -18,6 +18,7 @@ final class TaskBuilderPresenter: Presenter, TaskBuilderModuleInput {
     var interactor: Interactor!
     var router: Router!
     
+    weak var output: TaskBuilderModuleOutput?
 }
 
 // MARK: - TaskBuilderViewOutput

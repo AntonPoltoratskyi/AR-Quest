@@ -68,8 +68,8 @@ final class ConstructorViewController: UIViewController, View {
 // MARK: - ConstructorViewInput
 extension ConstructorViewController: ConstructorViewInput {
     
-    func addTask(_ task: QuestTaskCellModel) {
-        tasks.append(task)
+    func addTask(_ task: Task) {
+        tasks.append(QuestTaskCellModel(task: task))
         contentView.tableView.reloadData()
     }
 }
