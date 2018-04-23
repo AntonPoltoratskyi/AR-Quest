@@ -8,11 +8,6 @@
 
 import UIKit
 
-//protocol ConstructorViewDelegate: class {
-//    func numberOfTasks() -> Int
-//    func constructorView(_ constructorView: ConstructorView, taskAt indexPath: IndexPath) -> QuestTaskCellModel
-//}
-
 final class ConstructorView: BaseView {
     
     // MARK: - Views
@@ -31,12 +26,6 @@ final class ConstructorView: BaseView {
         tableView.separatorStyle = .none
         contentView.addSubview(tableView)
         return tableView
-    }()
-    
-    private(set) lazy var addTaskButton: QuestButton = {
-        let button = QuestButton()
-        button.setTitle("Add Task", for: .normal)
-        return button
     }()
     
     

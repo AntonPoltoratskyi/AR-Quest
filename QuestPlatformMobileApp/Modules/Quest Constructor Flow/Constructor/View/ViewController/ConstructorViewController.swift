@@ -24,9 +24,14 @@ final class ConstructorViewController: UIViewController, View {
         let tableView = contentView.tableView
         tableView.dataSource = self
         tableView.delegate = self
+        
         tableView.register(viewModel: QuestTaskCellModel.self)
         tableView.rowHeight = QuestTaskCellModel.Cell.Layout.height
         tableView.estimatedRowHeight = tableView.rowHeight
+        
+        tableView.register(headerFooter: TaskTableHeaderView.self)
+        tableView.sectionHeaderHeight = TaskTableHeaderView.Layout.height
+        tableView.estimatedSectionHeaderHeight = tableView.sectionHeaderHeight
         
         contentView.navigationView.setupRightButton(title: "Edit") { [unowned tableView] sender in
             let isEditing = !tableView.isEditing
@@ -35,10 +40,6 @@ final class ConstructorViewController: UIViewController, View {
             tableView.setEditing(isEditing, animated: true)
             sender.setTitle(title, for: .normal)
         }
-        
-        contentView.addTaskButton.addTarget(self,
-                                            action: #selector(actionCreateTask(sender:)),
-                                            for: .touchUpInside)
         
         return contentView
     }()
@@ -60,7 +61,7 @@ final class ConstructorViewController: UIViewController, View {
     // MARK: - Actions
     
     @objc private func actionCreateTask(sender: Any) {
-        output.didClickAddTask()
+        
     }
 }
 
@@ -94,16 +95,26 @@ extension ConstructorViewController: UITableViewDataSource, UITableViewDelegate 
         tasks.swapAt(sourceIndexPath.row, destinationIndexPath.row)
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(ofType: TaskTableHeaderView.self)
+        headerView.handler = { [weak output] _ in
+            output?.didClickAddTask()
+        }
+        return headerView
+    }
+    
     private func setupBackgroundView(for tableView: UITableView) {
         let backgroundView = UIView()
-        backgroundView.addSubview(contentView.addTaskButton)
+        let label = UILabel()
+        label.font = UIFont.appFont(ofSize: 20, weight: .medium)
+        label.text = "Don't have tasks yet"
+        label.textAlignment = .center
+        backgroundView.addSubview(label)
         tableView.backgroundView = backgroundView
-        
-        contentView.addTaskButton.snp.removeConstraints()
-        contentView.addTaskButton.snp.makeConstraints { maker in
+
+        label.snp.makeConstraints { maker in
             maker.horizontalInset(32)
             maker.centerY.equalToSuperview()
-            maker.buttonHeight()
         }
     }
     

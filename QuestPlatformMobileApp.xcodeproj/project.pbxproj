@@ -29,6 +29,7 @@
 		14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */; };
 		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
 		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
+		850751AB208DB9F000A1221C /* TaskTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */; };
 		8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */; };
 		8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53F208C612F006DFCFE /* UserNetworkService.swift */; };
 		8511E54A208C6DC4006DFCFE /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */; };
@@ -266,6 +267,7 @@
 		14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		14FE2FB01FC96636001EDEAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
+		850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableHeaderView.swift; sourceTree = "<group>"; };
 		8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkRouter.swift; sourceTree = "<group>"; };
 		8511E53F208C612F006DFCFE /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
 		8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
@@ -751,6 +753,23 @@
 				14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		850751A8208DB9C000A1221C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				85C3C2612083C569009AEF58 /* ConstructorView.swift */,
+				85C3C25D2083C569009AEF58 /* ConstructorViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		850751A9208DB9CA00A1221C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		8511E53C208C6110006DFCFE /* User */ = {
@@ -1709,8 +1728,8 @@
 		85C3C2782083C589009AEF58 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85C3C2612083C569009AEF58 /* ConstructorView.swift */,
-				85C3C25D2083C569009AEF58 /* ConstructorViewController.swift */,
+				850751A9208DB9CA00A1221C /* TableView */,
+				850751A8208DB9C000A1221C /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2352,6 +2371,7 @@
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				85C3C2652083C569009AEF58 /* ConstructorProtocols.swift in Sources */,
 				853DD51C2042FC6600E82595 /* LoginRouter.swift in Sources */,
+				850751AB208DB9F000A1221C /* TaskTableHeaderView.swift in Sources */,
 				853DD51D2042FC6600E82595 /* LoginViewController.swift in Sources */,
 				853DD50D2042CE3200E82595 /* Router.swift in Sources */,
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
