@@ -56,13 +56,6 @@ final class ConstructorViewController: UIViewController, View {
         super.viewDidLoad()
         contentView.tableView.reloadData()
     }
-    
-    
-    // MARK: - Actions
-    
-    @objc private func actionCreateTask(sender: Any) {
-        
-    }
 }
 
 // MARK: - ConstructorViewInput

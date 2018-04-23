@@ -12,12 +12,12 @@ extension ConstraintMaker {
     
     @discardableResult
     func buttonHeight() -> ConstraintMakerEditable {
-        return height.equalTo(52)
+        return height.equalTo(48)
     }
     
     @discardableResult
     func textFieldHeight() -> ConstraintMakerEditable {
-        return height.equalTo(52)
+        return height.equalTo(48)
     }
     
     @discardableResult
