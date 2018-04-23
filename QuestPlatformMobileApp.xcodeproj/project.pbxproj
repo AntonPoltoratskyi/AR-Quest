@@ -30,6 +30,13 @@
 		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
 		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
 		850751AB208DB9F000A1221C /* TaskTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */; };
+		850751B4208DBE5900A1221C /* TaskBuilderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AD208DBE5900A1221C /* TaskBuilderPresenter.swift */; };
+		850751B5208DBE5900A1221C /* TaskBuilderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AE208DBE5900A1221C /* TaskBuilderRouter.swift */; };
+		850751B6208DBE5900A1221C /* TaskBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AF208DBE5900A1221C /* TaskBuilderViewController.swift */; };
+		850751B7208DBE5900A1221C /* TaskBuilderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B0208DBE5900A1221C /* TaskBuilderProtocols.swift */; };
+		850751B8208DBE5900A1221C /* TaskBuilderAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B1208DBE5900A1221C /* TaskBuilderAssembly.swift */; };
+		850751B9208DBE5900A1221C /* TaskBuilderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */; };
+		850751BA208DBE5900A1221C /* TaskBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B3208DBE5900A1221C /* TaskBuilderView.swift */; };
 		8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */; };
 		8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53F208C612F006DFCFE /* UserNetworkService.swift */; };
 		8511E54A208C6DC4006DFCFE /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */; };
@@ -268,6 +275,13 @@
 		14FE2FB01FC96636001EDEAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
 		850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableHeaderView.swift; sourceTree = "<group>"; };
+		850751AD208DBE5900A1221C /* TaskBuilderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderPresenter.swift; sourceTree = "<group>"; };
+		850751AE208DBE5900A1221C /* TaskBuilderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderRouter.swift; sourceTree = "<group>"; };
+		850751AF208DBE5900A1221C /* TaskBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderViewController.swift; sourceTree = "<group>"; };
+		850751B0208DBE5900A1221C /* TaskBuilderProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderProtocols.swift; sourceTree = "<group>"; };
+		850751B1208DBE5900A1221C /* TaskBuilderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderAssembly.swift; sourceTree = "<group>"; };
+		850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderInteractor.swift; sourceTree = "<group>"; };
+		850751B3208DBE5900A1221C /* TaskBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderView.swift; sourceTree = "<group>"; };
 		8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkRouter.swift; sourceTree = "<group>"; };
 		8511E53F208C612F006DFCFE /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
 		8511E543208C6DC4006DFCFE /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
@@ -770,6 +784,60 @@
 				850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		850751AC208DBE3E00A1221C /* TaskBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				850751B0208DBE5900A1221C /* TaskBuilderProtocols.swift */,
+				850751BB208DBE6100A1221C /* View */,
+				850751BC208DBE6B00A1221C /* Presenter */,
+				850751BD208DBE7200A1221C /* Router */,
+				850751BE208DBE7600A1221C /* Assembly */,
+				850751BF208DBE7B00A1221C /* Interactor */,
+			);
+			path = TaskBuilder;
+			sourceTree = "<group>";
+		};
+		850751BB208DBE6100A1221C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				850751B3208DBE5900A1221C /* TaskBuilderView.swift */,
+				850751AF208DBE5900A1221C /* TaskBuilderViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		850751BC208DBE6B00A1221C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				850751AD208DBE5900A1221C /* TaskBuilderPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		850751BD208DBE7200A1221C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				850751AE208DBE5900A1221C /* TaskBuilderRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		850751BE208DBE7600A1221C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				850751B1208DBE5900A1221C /* TaskBuilderAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		850751BF208DBE7B00A1221C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		8511E53C208C6110006DFCFE /* User */ = {
@@ -1694,6 +1762,7 @@
 			isa = PBXGroup;
 			children = (
 				85C3C25A2083C559009AEF58 /* Constructor */,
+				850751AC208DBE3E00A1221C /* TaskBuilder */,
 				85C3C2692083C56E009AEF58 /* ConstructorFinish */,
 			);
 			path = "Quest Constructor Flow";
@@ -2349,6 +2418,7 @@
 				8517023220715AF40081F611 /* Task.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,
+				850751B5208DBE5900A1221C /* TaskBuilderRouter.swift in Sources */,
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
 				8517020320711E370081F611 /* QuestListProtocols.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
@@ -2410,15 +2480,19 @@
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
+				850751B6208DBE5900A1221C /* TaskBuilderViewController.swift in Sources */,
 				85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */,
 				855D74B6207BB045000421DA /* AboutInteractor.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				85C3C2722083C583009AEF58 /* ConstructorFinishRouter.swift in Sources */,
+				850751B7208DBE5900A1221C /* TaskBuilderProtocols.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
+				850751B9208DBE5900A1221C /* TaskBuilderInteractor.swift in Sources */,
 				85C3C21820837692009AEF58 /* MenuRouter.swift in Sources */,
 				85C3C206208373DE009AEF58 /* MainProtocols.swift in Sources */,
 				8517020220711E370081F611 /* QuestListViewController.swift in Sources */,
+				850751B4208DBE5900A1221C /* TaskBuilderPresenter.swift in Sources */,
 				85C3C2382083BACB009AEF58 /* LocationPickerRouter.swift in Sources */,
 				85C3C2672083C569009AEF58 /* ConstructorInteractor.swift in Sources */,
 				85C3C2772083C583009AEF58 /* ConstructorFinishView.swift in Sources */,
@@ -2430,6 +2504,7 @@
 				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
 				85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */,
+				850751BA208DBE5900A1221C /* TaskBuilderView.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
@@ -2478,6 +2553,7 @@
 				851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */,
 				855D74A2207BA472000421DA /* ClosurePanRecognizer.swift in Sources */,
 				85C3C21920837692009AEF58 /* MenuViewController.swift in Sources */,
+				850751B8208DBE5900A1221C /* TaskBuilderAssembly.swift in Sources */,
 				85C3C207208373DE009AEF58 /* MainAssembly.swift in Sources */,
 				857ADD8D2043204D00CA0D42 /* AuthNetworkService.swift in Sources */,
 				8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */,
