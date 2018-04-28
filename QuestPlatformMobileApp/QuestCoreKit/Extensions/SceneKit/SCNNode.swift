@@ -19,4 +19,8 @@ extension SCNNode {
             min.z + (max.z - min.z)/2
         )
     }
+    
+    func setColor(_ color: UIColor) {
+        geometry?.firstMaterial?.diffuse.contents = color
+    }
 }

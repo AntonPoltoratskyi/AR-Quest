@@ -68,7 +68,6 @@
 		8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517020E207121650081F611 /* QuestTableViewCell.swift */; };
 		85170211207122C80081F611 /* QuestCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170210207122C80081F611 /* QuestCellModel.swift */; };
 		85170213207125800081F611 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170212207125800081F611 /* Quest.swift */; };
-		85170216207127950081F611 /* QuestNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170215207127950081F611 /* QuestNetworkService.swift */; };
 		85170218207127A80081F611 /* QuestNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170217207127A80081F611 /* QuestNetworkRouter.swift */; };
 		8517021A20714EF40081F611 /* QuestCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517021920714EF40081F611 /* QuestCardView.swift */; };
 		851702252071579E0081F611 /* QuestDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517021E2071579E0081F611 /* QuestDetailsPresenter.swift */; };
@@ -138,6 +137,24 @@
 		853DD52A2042FE7800E82595 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5242042FE7800E82595 /* NavigationViewController.swift */; };
 		853DD52B2042FE7800E82595 /* NavigationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5252042FE7800E82595 /* NavigationAssembly.swift */; };
 		853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD5262042FE7800E82595 /* NavigationInteractor.swift */; };
+		85477EB920947393002D26F9 /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB120947393002D26F9 /* CLLocationCoordinate2D+Extensions.swift */; };
+		85477EBC20947393002D26F9 /* SCNTransaction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB420947393002D26F9 /* SCNTransaction+Extensions.swift */; };
+		85477EBE20947393002D26F9 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB620947393002D26F9 /* Radians.swift */; };
+		85477EC020947393002D26F9 /* Matrix+Transformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB820947393002D26F9 /* Matrix+Transformations.swift */; };
+		85477EC5209473EA002D26F9 /* ARSceneViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */; };
+		85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC6209473F4002D26F9 /* NavigationService.swift */; };
+		85477ECB20947438002D26F9 /* QuestNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECA20947438002D26F9 /* QuestNetworkService.swift */; };
+		85477ECF209474E3002D26F9 /* Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECE209474E3002D26F9 /* Difference.swift */; };
+		85477EE820947535002D26F9 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EE720947535002D26F9 /* FloorNode.swift */; };
+		85477EEE209475B1002D26F9 /* SCNVector3+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */; };
+		85477EF02094790C002D26F9 /* SCNVector3+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */; };
+		85477EF220947939002D26F9 /* SCNVector3+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EF120947939002D26F9 /* SCNVector3+Location.swift */; };
+		85477EF720947CAE002D26F9 /* CLLocationCoordinate2D+Placemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EF620947CAE002D26F9 /* CLLocationCoordinate2D+Placemark.swift */; };
+		85477EF920947ED2002D26F9 /* ARTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EF820947ED2002D26F9 /* ARTrackingService.swift */; };
+		85477EFF209482D0002D26F9 /* NavigationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */; };
+		85477F0120948474002D26F9 /* ARSceneViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0020948474002D26F9 /* ARSceneViewState.swift */; };
+		85477F05209484C7002D26F9 /* ARSceneViewHandlerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */; };
+		85477F0720948708002D26F9 /* ARSceneViewHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */; };
 		855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7484207B77ED000421DA /* ProfilePresenter.swift */; };
 		855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7485207B77ED000421DA /* ProfileRouter.swift */; };
 		855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7486207B77ED000421DA /* ProfileViewController.swift */; };
@@ -201,9 +218,7 @@
 		85C3C2752083C583009AEF58 /* ConstructorFinishAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C26E2083C583009AEF58 /* ConstructorFinishAssembly.swift */; };
 		85C3C2762083C583009AEF58 /* ConstructorFinishInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C26F2083C583009AEF58 /* ConstructorFinishInteractor.swift */; };
 		85C3C2772083C583009AEF58 /* ConstructorFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C2702083C583009AEF58 /* ConstructorFinishView.swift */; };
-		85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */; };
-		85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56D205ECAF400C6F547 /* SCNVector3.swift */; };
-		85D8A570205ECB1300C6F547 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56F205ECB1300C6F547 /* Radians.swift */; };
+		85D8A56C205ECAB200C6F547 /* SCNMatrix4+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */; };
 		85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A58F205EF4A000C6F547 /* SCNNode.swift */; };
 		85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCB208B43AA004950B9 /* MenuInteractive.swift */; };
 		85F07DCE208B44E6004950B9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCD208B44E6004950B9 /* BaseView.swift */; };
@@ -315,7 +330,6 @@
 		8517020E207121650081F611 /* QuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTableViewCell.swift; sourceTree = "<group>"; };
 		85170210207122C80081F611 /* QuestCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCellModel.swift; sourceTree = "<group>"; };
 		85170212207125800081F611 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
-		85170215207127950081F611 /* QuestNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestNetworkService.swift; path = QuestPlatformMobileApp/Services/Auth/QuestNetworkService.swift; sourceTree = SOURCE_ROOT; };
 		85170217207127A80081F611 /* QuestNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestNetworkRouter.swift; sourceTree = "<group>"; };
 		8517021920714EF40081F611 /* QuestCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCardView.swift; sourceTree = "<group>"; };
 		8517021E2071579E0081F611 /* QuestDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -385,6 +399,24 @@
 		853DD5242042FE7800E82595 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		853DD5252042FE7800E82595 /* NavigationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAssembly.swift; sourceTree = "<group>"; };
 		853DD5262042FE7800E82595 /* NavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
+		85477EB120947393002D26F9 /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
+		85477EB420947393002D26F9 /* SCNTransaction+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNTransaction+Extensions.swift"; sourceTree = "<group>"; };
+		85477EB620947393002D26F9 /* Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
+		85477EB820947393002D26F9 /* Matrix+Transformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Matrix+Transformations.swift"; sourceTree = "<group>"; };
+		85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandler.swift; sourceTree = "<group>"; };
+		85477EC6209473F4002D26F9 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		85477ECA20947438002D26F9 /* QuestNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestNetworkService.swift; sourceTree = "<group>"; };
+		85477ECE209474E3002D26F9 /* Difference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difference.swift; sourceTree = "<group>"; };
+		85477EE720947535002D26F9 /* FloorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
+		85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Operators.swift"; sourceTree = "<group>"; };
+		85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Hashable.swift"; sourceTree = "<group>"; };
+		85477EF120947939002D26F9 /* SCNVector3+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Location.swift"; sourceTree = "<group>"; };
+		85477EF620947CAE002D26F9 /* CLLocationCoordinate2D+Placemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Placemark.swift"; sourceTree = "<group>"; };
+		85477EF820947ED2002D26F9 /* ARTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingService.swift; sourceTree = "<group>"; };
+		85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationServiceDelegate.swift; sourceTree = "<group>"; };
+		85477F0020948474002D26F9 /* ARSceneViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewState.swift; sourceTree = "<group>"; };
+		85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerInput.swift; sourceTree = "<group>"; };
+		85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerDelegate.swift; sourceTree = "<group>"; };
 		855D7484207B77ED000421DA /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		855D7485207B77ED000421DA /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		855D7486207B77ED000421DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -448,9 +480,7 @@
 		85C3C26E2083C583009AEF58 /* ConstructorFinishAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorFinishAssembly.swift; sourceTree = "<group>"; };
 		85C3C26F2083C583009AEF58 /* ConstructorFinishInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorFinishInteractor.swift; sourceTree = "<group>"; };
 		85C3C2702083C583009AEF58 /* ConstructorFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorFinishView.swift; sourceTree = "<group>"; };
-		85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMatrix4.swift; sourceTree = "<group>"; };
-		85D8A56D205ECAF400C6F547 /* SCNVector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3.swift; sourceTree = "<group>"; };
-		85D8A56F205ECB1300C6F547 /* Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
+		85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMatrix4+Orientation.swift"; sourceTree = "<group>"; };
 		85D8A58F205EF4A000C6F547 /* SCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
 		85F07DCB208B43AA004950B9 /* MenuInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractive.swift; sourceTree = "<group>"; };
 		85F07DCD208B44E6004950B9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -591,7 +621,8 @@
 				853DD4B92042BE5000E82595 /* Standart Library */,
 				853DD4BA2042BE8500E82595 /* Foundation */,
 				14FE2F761FC96382001EDEAB /* UIKit */,
-				85D8A56A205ECA9E00C6F547 /* SceneKit */,
+				14FE2F6E1FC96382001EDEAB /* Geometry */,
+				85477EB020947340002D26F9 /* SceneKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -632,6 +663,15 @@
 			isa = PBXGroup;
 			children = (
 				14FE2F6F1FC96382001EDEAB /* Geometry.swift */,
+				85477EB620947393002D26F9 /* Radians.swift */,
+				85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */,
+				85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */,
+				85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */,
+				85477EF120947939002D26F9 /* SCNVector3+Location.swift */,
+				85477EB120947393002D26F9 /* CLLocationCoordinate2D+Extensions.swift */,
+				85477EF620947CAE002D26F9 /* CLLocationCoordinate2D+Placemark.swift */,
+				85477ECE209474E3002D26F9 /* Difference.swift */,
+				85477EB820947393002D26F9 /* Matrix+Transformations.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -660,7 +700,6 @@
 				853DD4C72042C3F700E82595 /* Gestures */,
 				14FE2F821FC96382001EDEAB /* UIResources */,
 				857ADD9920432AF700CA0D42 /* Colors */,
-				14FE2F6E1FC96382001EDEAB /* Geometry */,
 				14FE2F801FC96382001EDEAB /* Navigation */,
 			);
 			path = UIKit;
@@ -1054,7 +1093,7 @@
 			isa = PBXGroup;
 			children = (
 				85170217207127A80081F611 /* QuestNetworkRouter.swift */,
-				85170215207127950081F611 /* QuestNetworkService.swift */,
+				85477ECA20947438002D26F9 /* QuestNetworkService.swift */,
 			);
 			path = Quests;
 			sourceTree = "<group>";
@@ -1401,6 +1440,55 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		85477EB020947340002D26F9 /* SceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				85D8A58F205EF4A000C6F547 /* SCNNode.swift */,
+				85477EB420947393002D26F9 /* SCNTransaction+Extensions.swift */,
+			);
+			path = SceneKit;
+			sourceTree = "<group>";
+		};
+		85477EC2209473C4002D26F9 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				85477EF820947ED2002D26F9 /* ARTrackingService.swift */,
+				85477F0020948474002D26F9 /* ARSceneViewState.swift */,
+				85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */,
+				85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */,
+				85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		85477EC3209473D0002D26F9 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				14FE2FAA1FC9661E001EDEAB /* Session */,
+				857ADD8B2043203800CA0D42 /* Auth */,
+				8511E53C208C6110006DFCFE /* User */,
+				85170214207127710081F611 /* Quests */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		85477EF320947BA8002D26F9 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				85477EE720947535002D26F9 /* FloorNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		85477EFC209482B8002D26F9 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				85477EC6209473F4002D26F9 /* NavigationService.swift */,
+				85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		855D7483207B7702000421DA /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1532,10 +1620,9 @@
 			isa = PBXGroup;
 			children = (
 				85125715204AEFCC00995543 /* Validation */,
-				14FE2FAA1FC9661E001EDEAB /* Session */,
-				857ADD8B2043203800CA0D42 /* Auth */,
-				8511E53C208C6110006DFCFE /* User */,
-				85170214207127710081F611 /* Quests */,
+				85477EC3209473D0002D26F9 /* REST */,
+				85477EFC209482B8002D26F9 /* Navigation */,
+				85477EC2209473C4002D26F9 /* AR */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1565,6 +1652,7 @@
 			children = (
 				857ADD9C20432BCA00CA0D42 /* Theme.swift */,
 				85F740DC204C469F002AC5FE /* Views */,
+				85477EF320947BA8002D26F9 /* Nodes */,
 				855D749E207BA359000421DA /* Gestures */,
 				85F740DD204C46A8002AC5FE /* Extensions */,
 			);
@@ -1896,17 +1984,6 @@
 				85C3C26F2083C583009AEF58 /* ConstructorFinishInteractor.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		85D8A56A205ECA9E00C6F547 /* SceneKit */ = {
-			isa = PBXGroup;
-			children = (
-				85D8A58F205EF4A000C6F547 /* SCNNode.swift */,
-				85D8A56B205ECAB200C6F547 /* SCNMatrix4.swift */,
-				85D8A56D205ECAF400C6F547 /* SCNVector3.swift */,
-				85D8A56F205ECB1300C6F547 /* Radians.swift */,
-			);
-			path = SceneKit;
 			sourceTree = "<group>";
 		};
 		85F07DCA208B4389004950B9 /* Menu */ = {
@@ -2403,6 +2480,7 @@
 				855D74B5207BB045000421DA /* AboutAssembly.swift in Sources */,
 				855D74B1207BB045000421DA /* AboutPresenter.swift in Sources */,
 				851702422071671C0081F611 /* CodeInputRouter.swift in Sources */,
+				85477EBE20947393002D26F9 /* Radians.swift in Sources */,
 				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
@@ -2423,6 +2501,7 @@
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
+				85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
 				8511E564208C9234006DFCFE /* QuestSideMenuHeaderView.swift in Sources */,
@@ -2442,16 +2521,20 @@
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,
 				850751B5208DBE5900A1221C /* TaskBuilderRouter.swift in Sources */,
 				8512571B204AF72200995543 /* PasswordValidator.swift in Sources */,
+				85477EEE209475B1002D26F9 /* SCNVector3+Operators.swift in Sources */,
 				8517020320711E370081F611 /* QuestListProtocols.swift in Sources */,
 				14FE2FA21FC9653B001EDEAB /* DebugOptions.swift in Sources */,
 				8511E54C208C6DC4006DFCFE /* EditProfileViewController.swift in Sources */,
 				855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */,
 				851702472071671C0081F611 /* CodeInputView.swift in Sources */,
 				8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */,
+				85477ECB20947438002D26F9 /* QuestNetworkService.swift in Sources */,
 				853DD4F02042C79800E82595 /* WebResponse.swift in Sources */,
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,
 				851702432071671C0081F611 /* CodeInputViewController.swift in Sources */,
+				85477EF220947939002D26F9 /* SCNVector3+Location.swift in Sources */,
+				85477EBC20947393002D26F9 /* SCNTransaction+Extensions.swift in Sources */,
 				851702272071579E0081F611 /* QuestDetailsViewController.swift in Sources */,
 				853DD5202042FC6600E82595 /* LoginView.swift in Sources */,
 				855D74B3207BB045000421DA /* AboutViewController.swift in Sources */,
@@ -2464,14 +2547,15 @@
 				85C3C2652083C569009AEF58 /* ConstructorProtocols.swift in Sources */,
 				853DD51C2042FC6600E82595 /* LoginRouter.swift in Sources */,
 				850751AB208DB9F000A1221C /* TaskTableHeaderView.swift in Sources */,
+				85477F0720948708002D26F9 /* ARSceneViewHandlerDelegate.swift in Sources */,
 				853DD51D2042FC6600E82595 /* LoginViewController.swift in Sources */,
 				853DD50D2042CE3200E82595 /* Router.swift in Sources */,
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
-				85D8A56E205ECAF400C6F547 /* SCNVector3.swift in Sources */,
 				855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */,
 				8511E55A208C7F04006DFCFE /* BaseScrollableView.swift in Sources */,
 				85F07DDF208B5B77004950B9 /* OwnQuestsAssembly.swift in Sources */,
 				855D74A0207BA375000421DA /* BackSwipable.swift in Sources */,
+				85477F0120948474002D26F9 /* ARSceneViewState.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
 				85C3C21A20837692009AEF58 /* MenuProtocols.swift in Sources */,
 				85C3C21D20837692009AEF58 /* MenuView.swift in Sources */,
@@ -2486,6 +2570,7 @@
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
 				85C3C21C20837692009AEF58 /* MenuInteractor.swift in Sources */,
 				14FE2FA41FC9653B001EDEAB /* ErrorHandling.swift in Sources */,
+				85477EB920947393002D26F9 /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 				855D74A6207BACE1000421DA /* QuestRoundImageView.swift in Sources */,
 				851702462071671C0081F611 /* CodeInputInteractor.swift in Sources */,
 				85C3C2682083C569009AEF58 /* ConstructorView.swift in Sources */,
@@ -2511,6 +2596,7 @@
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
 				850751C3208DC48200A1221C /* QuestionTaskFormView.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
+				85477EF720947CAE002D26F9 /* CLLocationCoordinate2D+Placemark.swift in Sources */,
 				850751B9208DBE5900A1221C /* TaskBuilderInteractor.swift in Sources */,
 				85C3C21820837692009AEF58 /* MenuRouter.swift in Sources */,
 				85C3C206208373DE009AEF58 /* MainProtocols.swift in Sources */,
@@ -2526,8 +2612,10 @@
 				85C3C23B2083BACB009AEF58 /* LocationPickerAssembly.swift in Sources */,
 				85170211207122C80081F611 /* QuestCellModel.swift in Sources */,
 				85F740E4204C5542002AC5FE /* RegistrationFormView.swift in Sources */,
+				85477EF02094790C002D26F9 /* SCNVector3+Hashable.swift in Sources */,
 				85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */,
 				850751BA208DBE5900A1221C /* TaskBuilderView.swift in Sources */,
+				85477EC5209473EA002D26F9 /* ARSceneViewHandler.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
@@ -2538,12 +2626,13 @@
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				85C3C2762083C583009AEF58 /* ConstructorFinishInteractor.swift in Sources */,
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
+				85477EC020947393002D26F9 /* Matrix+Transformations.swift in Sources */,
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
-				85170216207127950081F611 /* QuestNetworkService.swift in Sources */,
 				851702252071579E0081F611 /* QuestDetailsPresenter.swift in Sources */,
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
+				85477ECF209474E3002D26F9 /* Difference.swift in Sources */,
 				85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */,
 				85F07DDB208B5B77004950B9 /* OwnQuestsPresenter.swift in Sources */,
 				857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */,
@@ -2551,8 +2640,10 @@
 				85F740E6204C605B002AC5FE /* QuestCircleView.swift in Sources */,
 				853DD4F62042CA1800E82595 /* ResponseRepresentable.swift in Sources */,
 				853DD51B2042FC6600E82595 /* LoginPresenter.swift in Sources */,
+				85477EE820947535002D26F9 /* FloorNode.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				8517020420711E370081F611 /* QuestListAssembly.swift in Sources */,
+				85477EFF209482D0002D26F9 /* NavigationServiceDelegate.swift in Sources */,
 				85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
@@ -2594,11 +2685,10 @@
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
 				8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */,
 				85C3C2742083C583009AEF58 /* ConstructorFinishProtocols.swift in Sources */,
-				85D8A570205ECB1300C6F547 /* Radians.swift in Sources */,
 				8511E54B208C6DC4006DFCFE /* EditProfileRouter.swift in Sources */,
 				857ADD922043216B00CA0D42 /* AuthCredentials.swift in Sources */,
 				14FE2F851FC96382001EDEAB /* DispatchQueue.swift in Sources */,
-				85D8A56C205ECAB200C6F547 /* SCNMatrix4.swift in Sources */,
+				85D8A56C205ECAB200C6F547 /* SCNMatrix4+Orientation.swift in Sources */,
 				85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				85C3C2752083C583009AEF58 /* ConstructorFinishAssembly.swift in Sources */,
@@ -2609,7 +2699,9 @@
 				855D74B2207BB045000421DA /* AboutRouter.swift in Sources */,
 				85170213207125800081F611 /* Quest.swift in Sources */,
 				8517022A2071579E0081F611 /* QuestDetailsInteractor.swift in Sources */,
+				85477F05209484C7002D26F9 /* ARSceneViewHandlerInput.swift in Sources */,
 				8517020520711E370081F611 /* QuestListInteractor.swift in Sources */,
+				85477EF920947ED2002D26F9 /* ARTrackingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,3 +22,9 @@ extension CGRect {
         return CGRect(x: minX + edges.left, y: minY + edges.top, width: width - edges.horizontal, height: height - edges.vertical)
     }
 }
+
+extension CGPoint {
+    func translated(_ x: CGFloat, _ y: CGFloat) -> CGPoint {
+        return CGPoint(x: self.x + x, y: self.y + y)
+    }
+}
