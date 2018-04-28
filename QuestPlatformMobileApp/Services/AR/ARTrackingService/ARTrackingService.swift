@@ -9,25 +9,6 @@
 import CoreLocation
 import SceneKit
 
-// MARK: - Delegate
-
-protocol ARTrackingServiceDelegate: class {
-    func handleInitialPositioning()
-    func handlePositionUpdate(locationDiff: Difference<CLLocation>, cameraDiff: Difference<matrix_float4x4>)
-    func handleReset()
-}
-
-// MARK: - Input
-
-protocol ARTrackingServiceInput: class {
-    
-    var lastRecognizedLocation: CLLocation? { get set }
-    var lastRecognizedCameraTransform: matrix_float4x4? { get set }
-    
-    func requestPlaces(for coordinate: CLLocationCoordinate2D, callback: @escaping (CLPlacemark?) -> Void)
-    func handleLocationUpdate(newLocation: CLLocation, currentCameraTransform: matrix_float4x4)
-}
-
 // MARK: - Service
 
 final class ARTrackingService: ARTrackingServiceInput {

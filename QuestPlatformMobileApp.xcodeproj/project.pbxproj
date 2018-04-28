@@ -155,6 +155,8 @@
 		85477F0120948474002D26F9 /* ARSceneViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0020948474002D26F9 /* ARSceneViewState.swift */; };
 		85477F05209484C7002D26F9 /* ARSceneViewHandlerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */; };
 		85477F0720948708002D26F9 /* ARSceneViewHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */; };
+		85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */; };
+		85477F0C20948848002D26F9 /* ARTrackingServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */; };
 		855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7484207B77ED000421DA /* ProfilePresenter.swift */; };
 		855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7485207B77ED000421DA /* ProfileRouter.swift */; };
 		855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7486207B77ED000421DA /* ProfileViewController.swift */; };
@@ -417,6 +419,8 @@
 		85477F0020948474002D26F9 /* ARSceneViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewState.swift; sourceTree = "<group>"; };
 		85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerInput.swift; sourceTree = "<group>"; };
 		85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerDelegate.swift; sourceTree = "<group>"; };
+		85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceDelegate.swift; sourceTree = "<group>"; };
+		85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceInput.swift; sourceTree = "<group>"; };
 		855D7484207B77ED000421DA /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		855D7485207B77ED000421DA /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		855D7486207B77ED000421DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -1452,11 +1456,8 @@
 		85477EC2209473C4002D26F9 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				85477EF820947ED2002D26F9 /* ARTrackingService.swift */,
-				85477F0020948474002D26F9 /* ARSceneViewState.swift */,
-				85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */,
-				85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */,
-				85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */,
+				85477F0D20948865002D26F9 /* ARTrackingService */,
+				85477F0820948811002D26F9 /* ARSceneViewHandler */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -1487,6 +1488,27 @@
 				85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		85477F0820948811002D26F9 /* ARSceneViewHandler */ = {
+			isa = PBXGroup;
+			children = (
+				85477F0020948474002D26F9 /* ARSceneViewState.swift */,
+				85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */,
+				85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */,
+				85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */,
+			);
+			path = ARSceneViewHandler;
+			sourceTree = "<group>";
+		};
+		85477F0D20948865002D26F9 /* ARTrackingService */ = {
+			isa = PBXGroup;
+			children = (
+				85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */,
+				85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */,
+				85477EF820947ED2002D26F9 /* ARTrackingService.swift */,
+			);
+			path = ARTrackingService;
 			sourceTree = "<group>";
 		};
 		855D7483207B7702000421DA /* Profile */ = {
@@ -2485,6 +2507,7 @@
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
 				855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */,
+				85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */,
 				85C3C21720837692009AEF58 /* MenuPresenter.swift in Sources */,
 				85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */,
 				853DD5042042CD3600E82595 /* SplashView.swift in Sources */,
@@ -2621,6 +2644,7 @@
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
 				85C3C2372083BACB009AEF58 /* LocationPickerPresenter.swift in Sources */,
 				85F740E2204C541D002AC5FE /* LoginFormView.swift in Sources */,
+				85477F0C20948848002D26F9 /* ARTrackingServiceInput.swift in Sources */,
 				85C3C2712083C583009AEF58 /* ConstructorFinishPresenter.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
