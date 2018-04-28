@@ -157,6 +157,13 @@
 		85477F0720948708002D26F9 /* ARSceneViewHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */; };
 		85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */; };
 		85477F0C20948848002D26F9 /* ARTrackingServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */; };
+		85477F1620948A72002D26F9 /* QuestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0F20948A72002D26F9 /* QuestPresenter.swift */; };
+		85477F1720948A72002D26F9 /* QuestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1020948A72002D26F9 /* QuestRouter.swift */; };
+		85477F1820948A72002D26F9 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1120948A72002D26F9 /* QuestViewController.swift */; };
+		85477F1920948A72002D26F9 /* QuestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1220948A72002D26F9 /* QuestProtocols.swift */; };
+		85477F1A20948A72002D26F9 /* QuestAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1320948A72002D26F9 /* QuestAssembly.swift */; };
+		85477F1B20948A72002D26F9 /* QuestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1420948A72002D26F9 /* QuestInteractor.swift */; };
+		85477F1C20948A72002D26F9 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1520948A72002D26F9 /* QuestView.swift */; };
 		855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7484207B77ED000421DA /* ProfilePresenter.swift */; };
 		855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7485207B77ED000421DA /* ProfileRouter.swift */; };
 		855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7486207B77ED000421DA /* ProfileViewController.swift */; };
@@ -421,6 +428,13 @@
 		85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerDelegate.swift; sourceTree = "<group>"; };
 		85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceDelegate.swift; sourceTree = "<group>"; };
 		85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceInput.swift; sourceTree = "<group>"; };
+		85477F0F20948A72002D26F9 /* QuestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestPresenter.swift; sourceTree = "<group>"; };
+		85477F1020948A72002D26F9 /* QuestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestRouter.swift; sourceTree = "<group>"; };
+		85477F1120948A72002D26F9 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
+		85477F1220948A72002D26F9 /* QuestProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestProtocols.swift; sourceTree = "<group>"; };
+		85477F1320948A72002D26F9 /* QuestAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestAssembly.swift; sourceTree = "<group>"; };
+		85477F1420948A72002D26F9 /* QuestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInteractor.swift; sourceTree = "<group>"; };
+		85477F1520948A72002D26F9 /* QuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
 		855D7484207B77ED000421DA /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		855D7485207B77ED000421DA /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		855D7486207B77ED000421DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -1388,6 +1402,7 @@
 				8511E541208C6DA1006DFCFE /* Profile Flow */,
 				85C3C2242083774D009AEF58 /* Quest Master-Detail Flow */,
 				85C3C2432083C332009AEF58 /* Quest Constructor Flow */,
+				85477F0E20948A10002D26F9 /* LiveQuest */,
 				85170239207167000081F611 /* CodeInput */,
 				85C3C22D2083BAA4009AEF58 /* LocationPicker */,
 			);
@@ -1509,6 +1524,60 @@
 				85477EF820947ED2002D26F9 /* ARTrackingService.swift */,
 			);
 			path = ARTrackingService;
+			sourceTree = "<group>";
+		};
+		85477F0E20948A10002D26F9 /* LiveQuest */ = {
+			isa = PBXGroup;
+			children = (
+				85477F1220948A72002D26F9 /* QuestProtocols.swift */,
+				85477F1D20948A79002D26F9 /* View */,
+				85477F1E20948A85002D26F9 /* Presenter */,
+				85477F2120948A99002D26F9 /* Interactor */,
+				85477F1F20948A8E002D26F9 /* Router */,
+				85477F2020948A93002D26F9 /* Assembly */,
+			);
+			path = LiveQuest;
+			sourceTree = "<group>";
+		};
+		85477F1D20948A79002D26F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85477F1520948A72002D26F9 /* QuestView.swift */,
+				85477F1120948A72002D26F9 /* QuestViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85477F1E20948A85002D26F9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				85477F0F20948A72002D26F9 /* QuestPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		85477F1F20948A8E002D26F9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				85477F1020948A72002D26F9 /* QuestRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		85477F2020948A93002D26F9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				85477F1320948A72002D26F9 /* QuestAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		85477F2120948A99002D26F9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				85477F1420948A72002D26F9 /* QuestInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		855D7483207B7702000421DA /* Profile */ = {
@@ -2528,6 +2597,7 @@
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
 				8511E564208C9234006DFCFE /* QuestSideMenuHeaderView.swift in Sources */,
+				85477F1C20948A72002D26F9 /* QuestView.swift in Sources */,
 				853DD4FE2042CCE100E82595 /* SplashInteractor.swift in Sources */,
 				857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */,
 				853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */,
@@ -2565,6 +2635,7 @@
 				8511E560208C88CB006DFCFE /* MenuItemCellModel.swift in Sources */,
 				85C3C23A2083BACB009AEF58 /* LocationPickerProtocols.swift in Sources */,
 				85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */,
+				85477F1B20948A72002D26F9 /* QuestInteractor.swift in Sources */,
 				85C3C2662083C569009AEF58 /* ConstructorAssembly.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				85C3C2652083C569009AEF58 /* ConstructorProtocols.swift in Sources */,
@@ -2588,6 +2659,7 @@
 				853DD51E2042FC6600E82595 /* LoginAssembly.swift in Sources */,
 				8511E55F208C88CB006DFCFE /* MenuItemTableViewCell.swift in Sources */,
 				851702262071579E0081F611 /* QuestDetailsRouter.swift in Sources */,
+				85477F1A20948A72002D26F9 /* QuestAssembly.swift in Sources */,
 				14FE2F861FC96382001EDEAB /* Dictionary.swift in Sources */,
 				853DD4DE2042C4E900E82595 /* UICollectionView+ViewModel.swift in Sources */,
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
@@ -2652,9 +2724,11 @@
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
 				85477EC020947393002D26F9 /* Matrix+Transformations.swift in Sources */,
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
+				85477F1620948A72002D26F9 /* QuestPresenter.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
 				851702252071579E0081F611 /* QuestDetailsPresenter.swift in Sources */,
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
+				85477F1820948A72002D26F9 /* QuestViewController.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				85477ECF209474E3002D26F9 /* Difference.swift in Sources */,
 				85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */,
@@ -2670,6 +2744,7 @@
 				85477EFF209482D0002D26F9 /* NavigationServiceDelegate.swift in Sources */,
 				85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
+				85477F1720948A72002D26F9 /* QuestRouter.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				8511E54A208C6DC4006DFCFE /* EditProfilePresenter.swift in Sources */,
 				851702292071579E0081F611 /* QuestDetailsAssembly.swift in Sources */,
@@ -2705,6 +2780,7 @@
 				8511E558208C7593006DFCFE /* UserInfo.swift in Sources */,
 				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
 				85C3C2392083BACB009AEF58 /* LocationPickerViewController.swift in Sources */,
+				85477F1920948A72002D26F9 /* QuestProtocols.swift in Sources */,
 				14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */,
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
 				8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */,
