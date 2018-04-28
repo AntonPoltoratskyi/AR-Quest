@@ -9,8 +9,6 @@
 import CoreLocation
 import SceneKit
 
-// MARK: - Service
-
 final class ARTrackingService: ARTrackingServiceInput {
     
     weak var delegate: ARTrackingServiceDelegate?

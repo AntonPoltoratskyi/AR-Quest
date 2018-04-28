@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARKit
 
 final class QuestViewController: UIViewController, View {
     
@@ -31,10 +32,28 @@ final class QuestViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        output.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        output.viewDidAppear()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        output.viewDidDisappear()
     }
 }
 
 // MARK: - QuestViewInput
 extension QuestViewController: QuestViewInput {
     
+    var sceneView: ARSCNView {
+        return contentView.sceneView
+    }
+    
+    func showMessage(_ message: String) {
+        contentView.debugLabel.text = message
+    }
 }

@@ -7,40 +7,42 @@
 //
 
 import UIKit
+import ARKit
+import SnapKit
 
-final class QuestView: UIView {
+final class QuestView: BaseView {
     
     // MARK: - Views
     
-    private(set) lazy var label: UILabel = {
+    override var isNavigationViewVisible: Bool {
+        return false
+    }
+    
+    private(set) lazy var sceneView: ARSCNView = {
+        let sceneView = ARSCNView()
+        contentView.addSubview(sceneView)
+        return sceneView
+    }()
+    
+    private(set) lazy var debugLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
+        contentView.addSubview(label)
         return label
     }()
     
-    
-    // MARK: - Init
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    
+
     // MARK: - Setup
     
-    private func setup() {
-        backgroundColor = .white
+    override func setup() {
+        super.setup()
         
-        label.text = "Quest"
+        sceneView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
         
-        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        debugLabel.snp.makeConstraints { maker in
+            maker.top.equalToSuperview().offset(16)
+            maker.horizontalInset(16)
+        }
     }
 }

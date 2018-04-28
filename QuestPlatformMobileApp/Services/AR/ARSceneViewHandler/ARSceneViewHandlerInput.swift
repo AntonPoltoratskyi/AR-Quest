@@ -7,6 +7,7 @@
 //
 
 import SceneKit
+import ARKit
 
 public protocol ARSceneViewHandlerInput {
     var state: ARSceneViewState { get }

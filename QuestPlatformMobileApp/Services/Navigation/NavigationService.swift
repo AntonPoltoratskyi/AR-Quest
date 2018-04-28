@@ -20,6 +20,8 @@ final class NavigationService: NSObject {
     
     private var coordinateRequestCache: [CLLocationCoordinate2D: CLPlacemark] = [:]
     
+    private var shouldStartUpdating = false
+    
     
     // MARK: - Init
     
@@ -35,6 +37,7 @@ final class NavigationService: NSObject {
     // MARK: - Actions
     
     func launchUpdating() {
+        shouldStartUpdating = true
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingHeading()
@@ -131,6 +134,9 @@ extension NavigationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
+            guard shouldStartUpdating else {
+                return
+            }
             locationManager.startUpdatingHeading()
             locationManager.startUpdatingLocation()
         default:

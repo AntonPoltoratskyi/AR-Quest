@@ -13,9 +13,13 @@ final class QuestAssembly: Assembly {
     typealias Input = Module<QuestModuleInput>
     
     func build() -> Input {
+        // Dependencies
+        let navigationService = NavigationService()
+        
+        // Module
         let view = QuestViewController()
-        let presenter = QuestPresenter()
-        let interactor = QuestInteractor()
+        let presenter = LiveQuestPresenter()
+        let interactor = QuestInteractor(navigationService: navigationService)
         let router = QuestRouter()
         
         view.output = presenter
