@@ -240,6 +240,7 @@
 		85D4F16C20975BAB00C56930 /* TrackingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F16B20975BAB00C56930 /* TrackingInfo.swift */; };
 		85D4F16F209760B000C56930 /* ARQuestNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F16E209760B000C56930 /* ARQuestNode.swift */; };
 		85D4F1712097611F00C56930 /* DestinationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F1702097611F00C56930 /* DestinationNode.swift */; };
+		85D4F17320977EFF00C56930 /* EntityFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F17220977EFF00C56930 /* EntityFields.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */; };
 		85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A58F205EF4A000C6F547 /* SCNNode.swift */; };
 		85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCB208B43AA004950B9 /* MenuInteractive.swift */; };
@@ -524,6 +525,7 @@
 		85D4F16B20975BAB00C56930 /* TrackingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInfo.swift; sourceTree = "<group>"; };
 		85D4F16E209760B000C56930 /* ARQuestNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestNode.swift; sourceTree = "<group>"; };
 		85D4F1702097611F00C56930 /* DestinationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationNode.swift; sourceTree = "<group>"; };
+		85D4F17220977EFF00C56930 /* EntityFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFields.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMatrix4+Orientation.swift"; sourceTree = "<group>"; };
 		85D8A58F205EF4A000C6F547 /* SCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
 		85F07DCB208B43AA004950B9 /* MenuInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractive.swift; sourceTree = "<group>"; };
@@ -1769,6 +1771,7 @@
 		857ADD88204319D100CA0D42 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				85D4F17220977EFF00C56930 /* EntityFields.swift */,
 				857ADD89204319FA00CA0D42 /* User.swift */,
 				85170212207125800081F611 /* Quest.swift */,
 				8517023120715AF40081F611 /* Task.swift */,
@@ -2756,6 +2759,7 @@
 				850751B4208DBE5900A1221C /* TaskBuilderPresenter.swift in Sources */,
 				85C3C2382083BACB009AEF58 /* LocationPickerRouter.swift in Sources */,
 				85C3C2672083C569009AEF58 /* ConstructorInteractor.swift in Sources */,
+				85D4F17320977EFF00C56930 /* EntityFields.swift in Sources */,
 				85C3C2772083C583009AEF58 /* ConstructorFinishView.swift in Sources */,
 				853DD5112042D12A00E82595 /* ModuleInput.swift in Sources */,
 				8517020620711E370081F611 /* QuestListView.swift in Sources */,

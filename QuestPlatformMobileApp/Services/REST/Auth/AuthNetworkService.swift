@@ -31,6 +31,7 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
         let target = AuthNetworkRouter.login(credentials: credentials)
         client.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
+            // TODO: store session
             completion(result.process())
         }
     }
@@ -38,6 +39,7 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
     func register(with credentials: SignUpCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
         let target = AuthNetworkRouter.register(credentials: credentials)
         client.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
+            // TODO: store session
             completion(result.process())
         }
     }
@@ -63,12 +65,12 @@ final class AuthNetworkServiceStub: AuthNetworkService {
     }
     
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
-        let user = User(name: credentials.email, email: credentials.email)
+        let user = User(id: 1, name: nil, email: credentials.email)
         completion(.success(user))
     }
     
     func register(with credentials: SignUpCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
-        let user = User(name: credentials.email, email: credentials.email)
+        let user = User(id: 1, name: credentials.name, email: credentials.email)
         completion(.success(user))
     }
     

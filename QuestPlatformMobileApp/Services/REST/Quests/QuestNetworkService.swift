@@ -79,26 +79,36 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     }
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
-        let quests: [Quest] = (1...20).map { i in Quest(name: "Quest #\(i)") }
+        let quests: [Quest] = (1...20).map { questStub(for: $0) }
         completion(.success(quests))
     }
     
     func loadOwnQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
-        let quests: [Quest] = (1...10).map { i in Quest(name: "Quest #\(i)") }
+        let quests: [Quest] = (1...10).map { questStub(for: $0) }
         completion(.success(quests))
     }
     
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void) {
-        let tasks: [Task] = (1...20).map { i in Task(name: "Task #\(i)") }
+        let tasks: [Task] = (1...20).map { taskStub(for: $0) }
         completion(.success(tasks))
     }
     
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
-        let quest = Quest(name: "Quest #1")
+        let quest = questStub(for: 1)
         completion(.success(quest))
     }
     
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
         completion(.success(quest))
+    }
+    
+    private func questStub(for number: Int) -> Quest {
+        let owner = User(id: number, name: "User \(number)", email: "a@a.com")
+        return Quest(id: number, name: "Quest #\(number)", status: .active, accessLevel: .public, owner: owner)
+    }
+    
+    private func taskStub(for number: Int) -> Task {
+        let task = Task(id: number, name: "Task #\(number)", goal: .location(.debugCoordinate))
+        return task
     }
 }

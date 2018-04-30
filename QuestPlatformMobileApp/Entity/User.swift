@@ -9,11 +9,15 @@
 import Foundation
 
 final class User: Codable {
-    var name: String
+    var id: EntityIdentifier?
+    var name: String?
     var email: String
+    var avatar: String?
     
-    init(name: String, email: String) {
+    init(id: EntityIdentifier? = nil, name: String?, email: String, avatar: String? = nil) {
+        self.id = id
         self.name = name
         self.email = email
+        self.avatar = avatar
     }
 }

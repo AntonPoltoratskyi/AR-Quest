@@ -36,7 +36,8 @@ class AppDelegate: AppDelegateProxy {
     // MARK: - Debug
     
     private func prepare() {
-        let user = User(name: "Antony", email: "test@gmail.com")
+        // TODO: remove this stub
+        let user = User(id: 1, name: "Antony", email: "test@gmail.com")
         SessionStorage.shared.setSession("token", forUser: user)
     }
 }

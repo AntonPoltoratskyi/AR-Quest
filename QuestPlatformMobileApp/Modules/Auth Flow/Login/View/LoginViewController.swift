@@ -14,7 +14,7 @@ protocol LoginViewInput: class {
 
 protocol LoginViewOutput: class {
     func didClickSignIn(email: String?, password: String?)
-    func didClickSignUp(email: String?, password: String?, confirmationPassword: String?)
+    func didClickSignUp(name: String?, email: String?, password: String?, confirmationPassword: String?)
 }
 
 final class LoginViewController: UIViewController, View, KeyboardInteracting {
@@ -51,7 +51,7 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
         case .signIn:
             return [contentView.loginForm.emailTextField, contentView.loginForm.passwordTextField]
         case .signUp:
-            return [contentView.registrationForm.emailTextField, contentView.registrationForm.passwordTextField, contentView.registrationForm.confirmPasswordTextField]
+            return [contentView.registrationForm.nameTextField, contentView.registrationForm.emailTextField, contentView.registrationForm.passwordTextField, contentView.registrationForm.confirmPasswordTextField]
         }
     }
     
@@ -92,10 +92,11 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
             let password = contentView.loginForm.passwordTextField.text
             output.didClickSignIn(email: email, password: password)
         case .signUp:
+            let name = contentView.registrationForm.nameTextField.text
             let email = contentView.registrationForm.emailTextField.text
             let password = contentView.registrationForm.passwordTextField.text
             let confirmationPassword = contentView.registrationForm.confirmPasswordTextField.text
-            output.didClickSignUp(email: email, password: password, confirmationPassword: confirmationPassword)
+            output.didClickSignUp(name: name, email: email, password: password, confirmationPassword: confirmationPassword)
         }
     }
 }

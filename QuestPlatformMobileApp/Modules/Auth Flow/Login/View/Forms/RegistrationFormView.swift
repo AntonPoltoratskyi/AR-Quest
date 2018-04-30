@@ -13,6 +13,15 @@ class RegistrationFormView: UIView {
     
     // MARK: - Views
     
+    private(set) lazy var nameTextField: QuestTextField = {
+        let textField = QuestTextField()
+        textField.placeholder = "Name"
+        textField.returnKeyType = .next
+        textField.keyboardType = .default
+        addSubview(textField)
+        return textField
+    }()
+    
     private(set) lazy var emailTextField: QuestTextField = {
         let textField = QuestTextField()
         textField.placeholder = "Email"
@@ -87,8 +96,14 @@ class RegistrationFormView: UIView {
         }
     
         emailTextField.snp.makeConstraints { maker in
-            maker.leading.trailing.top.equalToSuperview()
+            maker.leading.trailing.equalToSuperview()
             maker.bottom.equalTo(passwordTextField.snp.top).offset(-verticalPadding)
+            maker.textFieldHeight()
+        }
+        
+        nameTextField.snp.makeConstraints { maker in
+            maker.leading.trailing.top.equalToSuperview()
+            maker.bottom.equalTo(emailTextField.snp.top).offset(-verticalPadding)
             maker.textFieldHeight()
         }
     }

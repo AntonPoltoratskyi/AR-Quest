@@ -17,6 +17,6 @@ final class QuestTaskCellModel: CellViewModel {
     }
     
     func setup(cell: QuestTaskTableViewCell) {
-        cell.titleLabel.text = task.name
+        cell.titleLabel.text = task.title
     }
 }

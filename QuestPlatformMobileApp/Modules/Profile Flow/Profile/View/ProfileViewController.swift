@@ -65,6 +65,6 @@ final class ProfileViewController: UIViewController, View {
 extension ProfileViewController: ProfileViewInput {
     
     func setupUser(_ user: User) {
-        contentView.usernameLabel.text = user.name
+        contentView.usernameLabel.text = user.name ?? user.email
     }
 }
