@@ -156,7 +156,6 @@
 		85477F0720948708002D26F9 /* ARSceneViewHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */; };
 		85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */; };
 		85477F0C20948848002D26F9 /* ARTrackingServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */; };
-		85477F1620948A72002D26F9 /* QuestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0F20948A72002D26F9 /* QuestPresenter.swift */; };
 		85477F1720948A72002D26F9 /* QuestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1020948A72002D26F9 /* QuestRouter.swift */; };
 		85477F1820948A72002D26F9 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1120948A72002D26F9 /* QuestViewController.swift */; };
 		85477F1920948A72002D26F9 /* QuestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1220948A72002D26F9 /* QuestProtocols.swift */; };
@@ -434,7 +433,6 @@
 		85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerDelegate.swift; sourceTree = "<group>"; };
 		85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceDelegate.swift; sourceTree = "<group>"; };
 		85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceInput.swift; sourceTree = "<group>"; };
-		85477F0F20948A72002D26F9 /* QuestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestPresenter.swift; sourceTree = "<group>"; };
 		85477F1020948A72002D26F9 /* QuestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestRouter.swift; sourceTree = "<group>"; };
 		85477F1120948A72002D26F9 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 		85477F1220948A72002D26F9 /* QuestProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestProtocols.swift; sourceTree = "<group>"; };
@@ -654,6 +652,7 @@
 				853DD4B92042BE5000E82595 /* Standart Library */,
 				853DD4BA2042BE8500E82595 /* Foundation */,
 				14FE2F761FC96382001EDEAB /* UIKit */,
+				85F740DE204C46BB002AC5FE /* SnapKit */,
 				14FE2F6E1FC96382001EDEAB /* Geometry */,
 				85477EB020947340002D26F9 /* SceneKit */,
 			);
@@ -1560,7 +1559,6 @@
 			isa = PBXGroup;
 			children = (
 				85477F432094B53E002D26F9 /* LiveQuestPresenter.swift */,
-				85477F0F20948A72002D26F9 /* QuestPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1774,7 +1772,6 @@
 				857ADD9C20432BCA00CA0D42 /* Theme.swift */,
 				85F740DC204C469F002AC5FE /* Views */,
 				855D749E207BA359000421DA /* Gestures */,
-				85F740DD204C46A8002AC5FE /* Extensions */,
 			);
 			path = QuestUIKit;
 			sourceTree = "<group>";
@@ -2319,14 +2316,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		85F740DD204C46A8002AC5FE /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				85F740DE204C46BB002AC5FE /* SnapKit */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		85F740DE204C46BB002AC5FE /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -2768,7 +2757,6 @@
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,
 				85477EC020947393002D26F9 /* Matrix+Transformations.swift in Sources */,
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
-				85477F1620948A72002D26F9 /* QuestPresenter.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
 				851702252071579E0081F611 /* QuestDetailsPresenter.swift in Sources */,
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,

@@ -11,7 +11,6 @@ import UIKit
 public typealias AnyViewCell = UIView
 
 public protocol AnyCellViewModel: Reusable {
-    static var cellType: AnyViewCell.Type { get }
     func setup(cell: AnyViewCell)
 }
 
@@ -21,9 +20,6 @@ public protocol CellViewModel: AnyCellViewModel {
 }
 
 extension CellViewModel {
-    public static var cellType: AnyViewCell.Type {
-        return Cell.self
-    }
     public func setup(cell: AnyViewCell) {
         self.setup(cell: cell as! Cell)
     }
