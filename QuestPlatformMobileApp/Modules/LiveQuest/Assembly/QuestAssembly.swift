@@ -15,7 +15,7 @@ final class QuestAssembly: Assembly {
     func build() -> Input {
         // Module
         let view = QuestViewController()
-        let presenter = LiveQuestPresenter()
+        let presenter = LiveQuestPresenter(destination: .debugCoordinate)
         let interactor = QuestInteractor(locationService: .shared)
         let router = QuestRouter()
         
