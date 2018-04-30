@@ -28,7 +28,7 @@ public final class ARSceneViewHandler: NSObject {
     
     private var displayFloor = true
     private var recognizedHeights: [ARAnchor: Float] = [:]
-    private var floorNodes: [ARAnchor: FloorNode] = [:]
+    private var floorNodes: [ARAnchor: FloorAnchorNode] = [:]
     
     
     // MARK: - Init
@@ -133,7 +133,7 @@ extension ARSceneViewHandler: ARSCNViewDelegate {
         guard let anchor = anchor as? ARPlaneAnchor else { return }
         recognizedHeights[anchor] = node.position.y
         
-        let floorNode = FloorNode(anchor: anchor)
+        let floorNode = FloorAnchorNode(anchor: anchor)
         floorNode.setColor(UIColor.white.withAlphaComponent(0.2))
         node.addChildNode(floorNode)
         floorNodes[anchor] = floorNode

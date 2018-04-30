@@ -164,15 +164,10 @@
 		85477F1B20948A72002D26F9 /* QuestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1420948A72002D26F9 /* QuestInteractor.swift */; };
 		85477F1C20948A72002D26F9 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1520948A72002D26F9 /* QuestView.swift */; };
 		85477F2520949419002D26F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85477F2420949419002D26F9 /* MapKit.framework */; };
-		85477F352094A7F9002D26F9 /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F2C2094A7F8002D26F9 /* PathNode.swift */; };
-		85477F362094A7F9002D26F9 /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F2D2094A7F8002D26F9 /* TextNode.swift */; };
-		85477F372094A7F9002D26F9 /* GlobalNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F2E2094A7F8002D26F9 /* GlobalNode.swift */; };
-		85477F382094A7F9002D26F9 /* RouteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F2F2094A7F8002D26F9 /* RouteNode.swift */; };
-		85477F392094A7F9002D26F9 /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F302094A7F8002D26F9 /* SphereNode.swift */; };
-		85477F3A2094A7F9002D26F9 /* FloorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F312094A7F8002D26F9 /* FloorNode.swift */; };
-		85477F3B2094A7F9002D26F9 /* PlacemarkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F322094A7F8002D26F9 /* PlacemarkNode.swift */; };
+		85477F372094A7F9002D26F9 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F2E2094A7F8002D26F9 /* BaseNode.swift */; };
+		85477F3A2094A7F9002D26F9 /* FloorAnchorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F312094A7F8002D26F9 /* FloorAnchorNode.swift */; };
+		85477F3B2094A7F9002D26F9 /* PlaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F322094A7F8002D26F9 /* PlaceNode.swift */; };
 		85477F3C2094A7F9002D26F9 /* BannerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F332094A7F8002D26F9 /* BannerNode.swift */; };
-		85477F3D2094A7F9002D26F9 /* StepNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F342094A7F8002D26F9 /* StepNode.swift */; };
 		85477F3F2094A879002D26F9 /* DeveloperSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F3E2094A879002D26F9 /* DeveloperSettings.swift */; };
 		85477F412094A99B002D26F9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F402094A99B002D26F9 /* Container.swift */; };
 		85477F442094B53F002D26F9 /* LiveQuestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F432094B53E002D26F9 /* LiveQuestPresenter.swift */; };
@@ -447,15 +442,10 @@
 		85477F1420948A72002D26F9 /* QuestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInteractor.swift; sourceTree = "<group>"; };
 		85477F1520948A72002D26F9 /* QuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
 		85477F2420949419002D26F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		85477F2C2094A7F8002D26F9 /* PathNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathNode.swift; sourceTree = "<group>"; };
-		85477F2D2094A7F8002D26F9 /* TextNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
-		85477F2E2094A7F8002D26F9 /* GlobalNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNode.swift; sourceTree = "<group>"; };
-		85477F2F2094A7F8002D26F9 /* RouteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteNode.swift; sourceTree = "<group>"; };
-		85477F302094A7F8002D26F9 /* SphereNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
-		85477F312094A7F8002D26F9 /* FloorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorNode.swift; sourceTree = "<group>"; };
-		85477F322094A7F8002D26F9 /* PlacemarkNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacemarkNode.swift; sourceTree = "<group>"; };
+		85477F2E2094A7F8002D26F9 /* BaseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
+		85477F312094A7F8002D26F9 /* FloorAnchorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorAnchorNode.swift; sourceTree = "<group>"; };
+		85477F322094A7F8002D26F9 /* PlaceNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceNode.swift; sourceTree = "<group>"; };
 		85477F332094A7F8002D26F9 /* BannerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerNode.swift; sourceTree = "<group>"; };
-		85477F342094A7F8002D26F9 /* StepNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepNode.swift; sourceTree = "<group>"; };
 		85477F3E2094A879002D26F9 /* DeveloperSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperSettings.swift; sourceTree = "<group>"; };
 		85477F402094A99B002D26F9 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		85477F432094B53E002D26F9 /* LiveQuestPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveQuestPresenter.swift; sourceTree = "<group>"; };
@@ -1612,15 +1602,10 @@
 		85477F2B2094A7F8002D26F9 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				85477F2C2094A7F8002D26F9 /* PathNode.swift */,
-				85477F2D2094A7F8002D26F9 /* TextNode.swift */,
-				85477F2E2094A7F8002D26F9 /* GlobalNode.swift */,
-				85477F2F2094A7F8002D26F9 /* RouteNode.swift */,
-				85477F302094A7F8002D26F9 /* SphereNode.swift */,
-				85477F312094A7F8002D26F9 /* FloorNode.swift */,
-				85477F322094A7F8002D26F9 /* PlacemarkNode.swift */,
+				85477F2E2094A7F8002D26F9 /* BaseNode.swift */,
+				85477F312094A7F8002D26F9 /* FloorAnchorNode.swift */,
+				85477F322094A7F8002D26F9 /* PlaceNode.swift */,
 				85477F332094A7F8002D26F9 /* BannerNode.swift */,
-				85477F342094A7F8002D26F9 /* StepNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -2627,7 +2612,6 @@
 				85477EBE20947393002D26F9 /* Radians.swift in Sources */,
 				853DD4E02042C4E900E82595 /* Reusable.swift in Sources */,
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
-				85477F3D2094A7F9002D26F9 /* StepNode.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
 				855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */,
 				85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */,
@@ -2650,7 +2634,6 @@
 				85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				85477F442094B53F002D26F9 /* LiveQuestPresenter.swift in Sources */,
-				85477F362094A7F9002D26F9 /* TextNode.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
 				8511E564208C9234006DFCFE /* QuestSideMenuHeaderView.swift in Sources */,
 				85477F1C20948A72002D26F9 /* QuestView.swift in Sources */,
@@ -2665,7 +2648,7 @@
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				85C3C23C2083BACB009AEF58 /* LocationPickerInteractor.swift in Sources */,
-				85477F3A2094A7F9002D26F9 /* FloorNode.swift in Sources */,
+				85477F3A2094A7F9002D26F9 /* FloorAnchorNode.swift in Sources */,
 				8517023220715AF40081F611 /* Task.swift in Sources */,
 				853DD50F2042CE3A00E82595 /* Assembly.swift in Sources */,
 				853DD51F2042FC6600E82595 /* LoginInteractor.swift in Sources */,
@@ -2685,7 +2668,7 @@
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,
 				851702432071671C0081F611 /* CodeInputViewController.swift in Sources */,
 				85477EF220947939002D26F9 /* SCNVector3+Location.swift in Sources */,
-				85477F3B2094A7F9002D26F9 /* PlacemarkNode.swift in Sources */,
+				85477F3B2094A7F9002D26F9 /* PlaceNode.swift in Sources */,
 				85477EBC20947393002D26F9 /* SCNTransaction+Extensions.swift in Sources */,
 				851702272071579E0081F611 /* QuestDetailsViewController.swift in Sources */,
 				853DD5202042FC6600E82595 /* LoginView.swift in Sources */,
@@ -2711,7 +2694,7 @@
 				85477F0120948474002D26F9 /* ARSceneViewState.swift in Sources */,
 				853DD4EE2042C79800E82595 /* ResponseResult.swift in Sources */,
 				85C3C21A20837692009AEF58 /* MenuProtocols.swift in Sources */,
-				85477F372094A7F9002D26F9 /* GlobalNode.swift in Sources */,
+				85477F372094A7F9002D26F9 /* BaseNode.swift in Sources */,
 				85C3C21D20837692009AEF58 /* MenuView.swift in Sources */,
 				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
 				857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */,
@@ -2731,7 +2714,6 @@
 				85C3C2682083C569009AEF58 /* ConstructorView.swift in Sources */,
 				855D7490207B77ED000421DA /* ProfileInteractor.swift in Sources */,
 				85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */,
-				85477F352094A7F9002D26F9 /* PathNode.swift in Sources */,
 				85F74102204C8A25002AC5FE /* SideMenuContainerPresenter.swift in Sources */,
 				85170236207161F90081F611 /* QuestTaskTableViewCell.swift in Sources */,
 				853DD52C2042FE7800E82595 /* NavigationInteractor.swift in Sources */,
@@ -2774,7 +2756,6 @@
 				850751BA208DBE5900A1221C /* TaskBuilderView.swift in Sources */,
 				85477EC5209473EA002D26F9 /* ARSceneViewHandler.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
-				85477F392094A7F9002D26F9 /* SphereNode.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
 				85C3C2372083BACB009AEF58 /* LocationPickerPresenter.swift in Sources */,
@@ -2857,7 +2838,6 @@
 				85C3C2752083C583009AEF58 /* ConstructorFinishAssembly.swift in Sources */,
 				850751C5208DC4A900A1221C /* LocationTaskFormView.swift in Sources */,
 				851A4C412078C24A008F488E /* CodeValidator.swift in Sources */,
-				85477F382094A7F9002D26F9 /* RouteNode.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,
 				855D74B7207BB045000421DA /* AboutView.swift in Sources */,
 				855D74B2207BB045000421DA /* AboutRouter.swift in Sources */,

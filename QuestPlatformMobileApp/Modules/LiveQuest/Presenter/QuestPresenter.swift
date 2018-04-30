@@ -143,7 +143,7 @@
 //    }
 //    
 //    func updateNodes(for placeMarks: [Container<CLLocationCoordinate2D>]) {
-//        let existingNodes: [PlacemarkNode] = view.sceneView.scene.rootNode.childs()
+//        let existingNodes: [PlaceNode] = view.sceneView.scene.rootNode.childs()
 //        var nodesTable: [String: PlacemarkNode] = [:]
 //        existingNodes.forEach { nodesTable[$0.element.id] = $0 }
 //        
