@@ -178,7 +178,7 @@ extension LiveQuestPresenter {
         
         nodesToUpdate.forEach { $0.updateWith(currentCameraTransform: cameraTransform,
                                               currentCoordinates: currentLocation.coordinate,
-                                              thresholdDistance: DeveloperSettings.maxSceneRadius) }
+                                              thresholdDistance: SceneUtils.sceneRadius) }
         
         let estimatedFloorHeight = sceneHandler.estimatedHeight()
         SCNTransaction.animate(withDuration: 0.25, animations: { [weak self] in
@@ -186,7 +186,7 @@ extension LiveQuestPresenter {
             
             nodesToUpdate.forEach { (node) in
                 let distance = currentLocation.coordinate.distance(to: node.element.element)
-                let sceneDistance = distance > DeveloperSettings.maxSceneRadius ? DeveloperSettings.maxSceneRadius : distance
+                let sceneDistance = distance > SceneUtils.sceneRadius ? SceneUtils.sceneRadius : distance
                 
                 node.applyScale(wSelf.scaleForDistance(sceneDistance))
                 node.applyHeight(wSelf.heightForDistance(distance, floorHeight: estimatedFloorHeight))

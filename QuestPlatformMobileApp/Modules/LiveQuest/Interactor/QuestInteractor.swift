@@ -32,7 +32,7 @@ final class QuestInteractor: Interactor, QuestInteractorInput {
     // MARK: - Input
     
     func startLocationUpdates() {
-        navigationService.launchUpdating()
+        navigationService.startLocationTracking()
     }
     
     func stopLocationUpdates() {

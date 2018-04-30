@@ -1,5 +1,5 @@
 //
-//  DeveloperSettings.swift
+//  SceneUtils.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DeveloperSettings {
-    static var isDebug = true
-    static var maxSceneRadius: Double = 300
+enum SceneUtils {
+    /// Maximum visible radius in meters
+    static let sceneRadius = 250.0
 }

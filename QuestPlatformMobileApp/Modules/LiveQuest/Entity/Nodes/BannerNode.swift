@@ -15,14 +15,14 @@ extension UIColor {
 
 class BannerNode: SCNNode {
     static var defaultFontSize: CGFloat {
-        let defaultWidth = CGFloat(DeveloperSettings.maxSceneRadius)
+        let defaultWidth = CGFloat(SceneUtils.sceneRadius)
         return (defaultWidth * 0.3 + defaultWidth / 12) / 7
     }
     
     override init() {
         super.init()
 
-        geometry = BannerShape(width: CGFloat(DeveloperSettings.maxSceneRadius))
+        geometry = BannerShape(width: CGFloat(SceneUtils.sceneRadius))
         applyScale(1)
         updateContentLayer(text: "")
     }
@@ -32,7 +32,7 @@ class BannerNode: SCNNode {
     }
 
     func applyScale(_ scale: Float) {
-        let scaleValue = (1 / Float(DeveloperSettings.maxSceneRadius)) * scale
+        let scaleValue = (1 / Float(SceneUtils.sceneRadius)) * scale
         self.scale = SCNVector3(scaleValue, scaleValue, scaleValue)
     }
 
@@ -59,10 +59,10 @@ class BannerNode: SCNNode {
 
     fileprivate func updateContentLayer(text: Any, backgroundColor: UIColor = .defaultPinColor) {
         let layer = CALayer()
-        let pointerHeight = DeveloperSettings.maxSceneRadius / 12
-        let rectHeight = DeveloperSettings.maxSceneRadius * 0.3
+        let pointerHeight = SceneUtils.sceneRadius / 12
+        let rectHeight = SceneUtils.sceneRadius * 0.3
 
-        layer.frame = CGRect(x: 0, y: 0, width: DeveloperSettings.maxSceneRadius, height: rectHeight + pointerHeight)
+        layer.frame = CGRect(x: 0, y: 0, width: SceneUtils.sceneRadius, height: rectHeight + pointerHeight)
         layer.backgroundColor = backgroundColor.cgColor
 
         let textLayer = CATextLayer()

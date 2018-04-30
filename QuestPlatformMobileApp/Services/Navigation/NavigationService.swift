@@ -15,8 +15,7 @@ final class NavigationService: NSObject {
     
     private let locationManager = CLLocationManager()
     
-    private var currentSearch: MKLocalSearch?
-    private var queue = DispatchQueue(label: "navigation-manager-queue", qos: .default, attributes: .concurrent)
+    private let queue = DispatchQueue.queue(for: NavigationService.self, qos: .default, attributes: .concurrent)
     
     private var coordinateRequestCache: [Coordinate: CLPlacemark] = [:]
     
@@ -36,7 +35,7 @@ final class NavigationService: NSObject {
     
     // MARK: - Actions
     
-    func launchUpdating() {
+    func startLocationTracking() {
         shouldStartUpdating = true
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways, .authorizedWhenInUse:
@@ -46,24 +45,6 @@ final class NavigationService: NSObject {
             locationManager.requestWhenInUseAuthorization()
         default:
             delegate?.navigationService(self, didReceiveNoAuthorization: CLLocationManager.authorizationStatus())
-        }
-    }
-    
-    func requestDirections(from source: Coordinate,
-                           to destination: Coordinate,
-                           type: MKDirectionsTransportType,
-                           completion: @escaping (_ route: MKRoute?, _ error: Error?) -> Void) {
-        
-        let request = MKDirectionsRequest()
-        request.source = MKMapItem(placemark: source.placemark)
-        request.destination = MKMapItem(placemark: destination.placemark)
-        request.transportType = type
-        
-        let directions = MKDirections(request: request)
-        queue.async {
-            directions.calculate { (response, error) in
-                completion(response?.routes.first, error)
-            }
         }
     }
     
@@ -80,35 +61,7 @@ final class NavigationService: NSObject {
                 if let placemark = placeMarks?.first {
                     self.coordinateRequestCache[coordinates] = placemark
                 }
-                
                 callback(placeMarks?.first, error)
-            }
-        }
-    }
-    
-    func requestPlaces(for text: String, from location: CLLocation?, callback: @escaping (_ region: MKCoordinateRegion, _ items: [MKMapItem]) -> Void) {
-        let request = MKLocalSearchRequest()
-        request.naturalLanguageQuery = text
-        
-        if let location = location {
-            let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-            request.region = MKCoordinateRegion(center: location.coordinate, span: span)
-        }
-        
-        currentSearch?.cancel()
-        let search = MKLocalSearch(request: request)
-        currentSearch = search
-        
-        queue.async { [weak self] in
-            guard let wSelf = self else { return }
-            search.start { (response, error) in
-                guard let response = response else {
-                    debugPrint(error?.localizedDescription ?? "")
-                    return
-                }
-                
-                callback(response.boundingRegion, response.mapItems)
-                wSelf.currentSearch = nil
             }
         }
     }

@@ -15,4 +15,10 @@ extension DispatchQueue {
         let label = "\(bundle.bundleIdentifier).\(String(describing: type))"
         return DispatchQueue(label: label, qos: qos)
     }
+    
+    static func queue(for type: AnyClass, qos: DispatchQoS = .default, attributes: DispatchQueue.Attributes) -> DispatchQueue {
+        let bundle = Bundle(for: type)
+        let label = "\(bundle.bundleIdentifier).\(String(describing: type))"
+        return DispatchQueue(label: label, qos: qos)
+    }
 }
