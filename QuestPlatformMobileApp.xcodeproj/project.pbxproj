@@ -235,6 +235,8 @@
 		85D4F15E209719AC00C56930 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F15D209719AC00C56930 /* UIEdgeInsets.swift */; };
 		85D4F16020971F8200C56930 /* LocationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F15F20971F8200C56930 /* LocationTypes.swift */; };
 		85D4F162209727F100C56930 /* matrix_float4x4+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F161209727F100C56930 /* matrix_float4x4+Transformation.swift */; };
+		85D4F164209731A500C56930 /* LocationServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F163209731A500C56930 /* LocationServiceInput.swift */; };
+		85D4F166209734F700C56930 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F165209734F700C56930 /* WeakReference.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */; };
 		85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A58F205EF4A000C6F547 /* SCNNode.swift */; };
 		85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCB208B43AA004950B9 /* MenuInteractive.swift */; };
@@ -514,6 +516,8 @@
 		85D4F15D209719AC00C56930 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		85D4F15F20971F8200C56930 /* LocationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTypes.swift; sourceTree = "<group>"; };
 		85D4F161209727F100C56930 /* matrix_float4x4+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "matrix_float4x4+Transformation.swift"; sourceTree = "<group>"; };
+		85D4F163209731A500C56930 /* LocationServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceInput.swift; sourceTree = "<group>"; };
+		85D4F165209734F700C56930 /* WeakReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakReference.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMatrix4+Orientation.swift"; sourceTree = "<group>"; };
 		85D8A58F205EF4A000C6F547 /* SCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
 		85F07DCB208B43AA004950B9 /* MenuInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractive.swift; sourceTree = "<group>"; };
@@ -836,6 +840,8 @@
 			isa = PBXGroup;
 			children = (
 				14FE2FB01FC96636001EDEAB /* Result.swift */,
+				85D4F165209734F700C56930 /* WeakReference.swift */,
+				85D4F163209731A500C56930 /* LocationServiceInput.swift */,
 				14FE2FA91FC9661E001EDEAB /* LocationService.swift */,
 			);
 			path = Location;
@@ -2721,6 +2727,7 @@
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,
 				855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */,
 				853DD4EF2042C79800E82595 /* ResponseResult+Models.swift in Sources */,
+				85D4F166209734F700C56930 /* WeakReference.swift in Sources */,
 				850751B6208DBE5900A1221C /* TaskBuilderViewController.swift in Sources */,
 				85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */,
 				855D74B6207BB045000421DA /* AboutInteractor.swift in Sources */,
@@ -2816,6 +2823,7 @@
 				85C3C2632083C569009AEF58 /* ConstructorRouter.swift in Sources */,
 				141AC4031FC764D000200877 /* AppDelegate.swift in Sources */,
 				8511E558208C7593006DFCFE /* UserInfo.swift in Sources */,
+				85D4F164209731A500C56930 /* LocationServiceInput.swift in Sources */,
 				85477F412094A99B002D26F9 /* Container.swift in Sources */,
 				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
 				85C3C2392083BACB009AEF58 /* LocationPickerViewController.swift in Sources */,

@@ -9,19 +9,8 @@
 import Foundation
 import CoreLocation
 
-typealias LocationSubscriber = AnyObject
-
-typealias LocationCompletion = (Result<Location>) -> Void
-typealias PlacemarkCompletion = (Result<CLPlacemark>) -> Void
-
-struct Location {
-    var latitude: Double
-    var longitude: Double
-    var horizontalAccuracy: CLLocationAccuracy
-    var verticalAccuracy: CLLocationAccuracy
-}
-
 final class LocationService: NSObject {
+    
     private enum State {
         case none
         case singleLocationRequest  // single request
@@ -30,16 +19,17 @@ final class LocationService: NSObject {
     
     // MARK: - Properties
     
-    private let locationManager: CLLocationManager
+    private let locationManager = CLLocationManager()
     
     private var lastAcquiredLocation: CLLocation?
     private var lastAcquiredPlacemark: CLPlacemark?
     
-    private var locationOnceCompletions: [LocationCompletion] = []
-    private var placemarkOnceCompletions: [PlacemarkCompletion] = []
+    private var locationOnceCompletions: [LocationHandler] = []
+    private var placemarkOnceCompletions: [PlacemarkHandler] = []
     
-    private var locationSubscribers: [ObjectIdentifier: LocationCompletion] = [:]
-    private var placemarkSubscribers: [ObjectIdentifier: PlacemarkCompletion] = [:]
+    private var authorizationStatusSubscribers: [SubscriberContainer<LocationAuthorizationStatusHandler>] = []
+    private var locationSubscribers: [SubscriberContainer<LocationHandler>] = []
+    private var placemarkSubscribers: [SubscriberContainer<PlacemarkHandler>] = []
     
     private var state: State = .none {
         didSet {
@@ -64,7 +54,7 @@ final class LocationService: NSObject {
     
     var isLocationUpdatesAvailable: Bool {
         let authStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
-        return self.isAuthorized || authStatus == .notDetermined
+        return isAuthorized || authStatus == .notDetermined
     }
     
     var isAuthorized: Bool {
@@ -76,67 +66,64 @@ final class LocationService: NSObject {
     // MARK: - Init
     
     override init() {
-        self.locationManager = CLLocationManager()
         super.init()
-        self.locationManager.distanceFilter = kCLDistanceFilterNone
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.delegate = self
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
     }
+}
+
+// MARK: - LocationServiceInput
+extension LocationService: LocationServiceInput {
     
-    
-    // MARK: - Public API
-    
-    func start() {
-        self.state = .locationUpdates
-    }
-    
-    func stop() {
-        self.state = .none
-    }
-    
-    // MARK: Last Received
-    
-    func lastReceivedLocation() -> Location? {
-        if let lastLocation = lastAcquiredLocation {
-            return Location(from: lastLocation)
-        }
-        return nil
-    }
-    
-    func lastReceivedPlacemark() -> CLPlacemark? {
-        return lastAcquiredPlacemark
-    }
-    
-    // MARK: Location
-    
-    func addSubscriberForLocationUpdates(_ subscriber: LocationSubscriber, completion: @escaping LocationCompletion) {
-        let identifier = ObjectIdentifier(subscriber)
-        locationSubscribers[identifier] = completion
+    func startLocationTracking() {
         state = .locationUpdates
     }
     
-    func getCurrentLocation(completion: @escaping LocationCompletion) {
+    func stopLocationTracking() {
+        state = .none
+    }
+    
+    var lastReceivedLocation: Coordinate? {
+        return lastAcquiredLocation?.coordinate
+    }
+    
+    var lastReceivedPlacemark: CLPlacemark? {
+        return lastAcquiredPlacemark
+    }
+    
+    func observeAuthorizationStatus(_ subscriber: LocationSubscriber, handler: @escaping LocationAuthorizationStatusHandler) {
+        let container = SubscriberContainer(ref: subscriber, handler: handler)
+        authorizationStatusSubscribers.append(container)
+        state = .locationUpdates
+    }
+    
+    func observeLocationUpdates(_ subscriber: LocationSubscriber, handler: @escaping LocationHandler) {
+        let container = SubscriberContainer(ref: subscriber, handler: handler)
+        locationSubscribers.append(container)
+        state = .locationUpdates
+    }
+    
+    func getCurrentLocation(completion: @escaping LocationHandler) {
         locationOnceCompletions.append(completion)
         state = .singleLocationRequest
     }
     
-    // MARK: Placemark
-    
-    func addSubscriberForPlacemarkUpdates(_ subscriber: LocationSubscriber, completion: @escaping PlacemarkCompletion) {
-        let identifier = ObjectIdentifier(subscriber)
-        placemarkSubscribers[identifier] = completion
+    func observePlacemarkUpdates(_ subscriber: LocationSubscriber, handler: @escaping PlacemarkHandler) {
+        let container = SubscriberContainer(ref: subscriber, handler: handler)
+        placemarkSubscribers.append(container)
         state = .locationUpdates
     }
     
-    func getCurrentPlacemark(completion: @escaping PlacemarkCompletion) {
+    func getCurrentPlacemark(completion: @escaping PlacemarkHandler) {
         placemarkOnceCompletions.append(completion)
         state = .singleLocationRequest
     }
     
     func removeSubscriber(_ subscriber: LocationSubscriber) {
-        let identifier = ObjectIdentifier(subscriber)
-        locationSubscribers[identifier] = nil
-        placemarkSubscribers[identifier] = nil
+        locationSubscribers = locationSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
+        placemarkSubscribers = placemarkSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
+        authorizationStatusSubscribers = authorizationStatusSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
     }
 }
 
@@ -169,26 +156,25 @@ extension LocationService: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let currentLocation = locations.last else { return }
-        
+        guard let currentLocation = locations.last else {
+            return
+        }
         self.lastAcquiredLocation = currentLocation
         
-        handleReceivedLocationResult(.success(Location(from: currentLocation)))
+        handleReceivedCoordinate(currentLocation.coordinate)
 
         reverseGeocodeLocation(currentLocation) { [weak self] result in
             switch result {
             case let .success(placemark):
                 self?.lastAcquiredPlacemark = placemark
+                self?.handleReceivedPlacemar(placemark)
             case let .failure(error):
                 debugPrint("Did receive error while try to get placemark for location: \(currentLocation), error: \(error)", inCase: .location)
             }
-            self?.handleReceivedPlacemarkResult(result)
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        handleReceivedLocationResult(.failure(error))
-        handleReceivedPlacemarkResult(.failure(error))
     }
     
     private func reverseGeocodeLocation(_ location: CLLocation, completion: @escaping (Result<CLPlacemark>) -> Void) {
@@ -202,34 +188,23 @@ extension LocationService: CLLocationManagerDelegate {
         }
     }
     
-    private func handleReceivedLocationResult(_ result: Result<Location>) {
-        for completion in locationSubscribers.values {
-            completion(result)
+    private func handleReceivedCoordinate(_ coordinate: Coordinate) {
+        for subscriber in locationSubscribers {
+            subscriber.handler?(coordinate)
         }
         for completion in locationOnceCompletions {
-            completion(result)
+            completion(coordinate)
         }
         locationOnceCompletions.removeAll()
     }
     
-    private func handleReceivedPlacemarkResult(_ result: Result<CLPlacemark>) {
-        for completion in placemarkSubscribers.values {
-            completion(result)
+    private func handleReceivedPlacemar(_ placemark: CLPlacemark) {
+        for subscriber in placemarkSubscribers {
+            subscriber.handler?(placemark)
         }
         for completion in placemarkOnceCompletions {
-            completion(result)
+            completion(placemark)
         }
         placemarkOnceCompletions.removeAll()
-    }
-}
-
-// MARK: - Location
-
-private extension Location {
-    init(from location: CLLocation) {
-        self.latitude = location.coordinate.latitude
-        self.longitude = location.coordinate.longitude
-        self.horizontalAccuracy = location.horizontalAccuracy
-        self.verticalAccuracy = location.verticalAccuracy
     }
 }
