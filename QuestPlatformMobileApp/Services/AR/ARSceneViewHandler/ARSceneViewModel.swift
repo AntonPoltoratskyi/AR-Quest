@@ -24,7 +24,7 @@ public final class ARSceneViewModel: NSObject {
         return scene.session
     }
     
-    private let updateQueue = DispatchQueue(label: "scene-update-queue")
+    private let updateQueue = DispatchQueue.queue(for: ARSceneViewModel.self)
     
     private var displayFloor = true
     private var recognizedHeights: [ARAnchor: Float] = [:]

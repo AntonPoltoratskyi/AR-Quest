@@ -14,53 +14,56 @@ final class QuestInteractor: Interactor, QuestInteractorInput {
     weak var output: QuestInteractorOutput!
     
     private var receivedLocations: [CLLocation] = []
+    private let cacheSize = 500
     
     
     // MARK: - Dependencies
     
-    private let navigationService: NavigationService
+    private let locationService: LocationService
     
     
     // MARK: - Init
     
-    init(navigationService: NavigationService) {
-        self.navigationService = navigationService
-        self.navigationService.delegate = self
+    init(locationService: LocationService) {
+        self.locationService = locationService
+    }
+    
+    deinit {
+        locationService.removeSubscriber(self)
+        deinited(self)
     }
     
     
     // MARK: - Input
     
     func startLocationUpdates() {
-        navigationService.startLocationTracking()
+        locationService.observeAuthorizationStatus(self) { [weak self] status in
+            guard let `self` = self else { return }
+            self.output?.didChangeLocationAuthorizationStatus(status)
+        }
+        locationService.observeLocationUpdates(self) { [weak self] location in
+            guard let `self` = self else { return }
+            
+            let previousLocation = self.receivedLocations.last
+            self.receivedLocations.append(location)
+            
+            if self.receivedLocations.count > self.cacheSize {
+                self.receivedLocations.removeFirst(self.cacheSize / 2)
+            }
+            self.output?.didUpdateLocation(location, previousLocation: previousLocation)
+        }
+        locationService.observeHeadingUpdates(self) { [weak self] heading in
+            guard let `self` = self else { return }
+            self.output?.didUpdateHeading(heading)
+        }
+        locationService.observeErrors(self) { [weak self] error in
+            guard let `self` = self else { return }
+            self.output?.didReceiveLocationFailure(error)
+        }
+        locationService.startLocationTracking()
     }
     
     func stopLocationUpdates() {
-        
-    }
-}
-
-// MARK: - NavigationServiceDelegate
-extension QuestInteractor: NavigationServiceDelegate {
-    
-    func navigationService(_ service: NavigationService, didReceiveNoAuthorization state: CLAuthorizationStatus) {
-        
-    }
-    
-    func navigationService(_ service: NavigationService, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-        output.handleUpdatedLocation(location, previousLocation: receivedLocations.last)
-        
-        receivedLocations.append(location)
-    }
-    
-    func navigationService(_ service: NavigationService, didUpdateHeading newHeading: CLHeading) {
-        output.handleUpdatedHeading(newHeading)
-    }
-    
-    func navigationService(_ service: NavigationService, didFailWithError error: Error) {
-        output.handleLocationUpdateFailure(error)
+        locationService.stopLocationTracking()
     }
 }

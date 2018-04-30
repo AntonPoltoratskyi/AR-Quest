@@ -38,9 +38,10 @@ protocol QuestInteractorInput: class {
 
 // MARK: -
 protocol QuestInteractorOutput: class {
-    func handleUpdatedLocation(_ newLocation: CLLocation, previousLocation: CLLocation?)
-    func handleUpdatedHeading(_ newHeading: CLHeading)
-    func handleLocationUpdateFailure(_ error: Error)
+    func didChangeLocationAuthorizationStatus(_ status: CLAuthorizationStatus)
+    func didUpdateLocation(_ newLocation: CLLocation, previousLocation: CLLocation?)
+    func didUpdateHeading(_ newHeading: CLHeading)
+    func didReceiveLocationFailure(_ error: Error)
 }
 
 // MARK: - Router

@@ -33,17 +33,20 @@ final class ARTrackingService: ARTrackingServiceInput {
     
     public func handleLocationUpdate(newLocation: CLLocation, currentCameraTransform: matrix_float4x4) {
         if let lastLocation = lastRecognizedLocation, let lastTransform = lastRecognizedCameraTransform {
-            let locationDifference = Difference(oldValue: lastLocation, newValue: newLocation)
-            let cameraDifference = Difference(oldValue: currentCameraTransform, newValue: lastTransform)
+            let locationDifference = DistanceInfo(old: lastLocation, new: newLocation)
+            let cameraDifference = DistanceInfo(old: currentCameraTransform, new: lastTransform)
             
-            if isChangesAcceptable(locationDiff: locationDifference, cameraDiff: cameraDifference) {
+            let trackingInfo = TrackingInfo(location: locationDifference, camera: cameraDifference)
+            
+            // Check if changed is valid
+            if trackingInfo.accuracy() <= acceptableDistanceDiff {
                 errorFactorCount = 0
-                delegate?.handlePositionUpdate(locationDiff: locationDifference, cameraDiff: cameraDifference)
+                delegate?.didUpdateTrackedPosition(with: trackingInfo)
             } else {
                 errorFactorCount += 1
                 if errorFactorCount >= errorThreshold {
                     errorFactorCount = 0
-                    delegate?.handleReset()
+                    delegate?.handleARSessionReset()
                 }
             }
             
@@ -52,16 +55,7 @@ final class ARTrackingService: ARTrackingServiceInput {
         } else {
             lastRecognizedLocation = newLocation
             lastRecognizedCameraTransform = currentCameraTransform
-            delegate?.handleInitialPositioning()
+            delegate?.didStartPositionTracking()
         }
-    }
-    
-    private func isChangesAcceptable(locationDiff: Difference<CLLocation>, cameraDiff: Difference<matrix_float4x4>) -> Bool {
-        let locationTranslation = locationDiff.bias()
-        let cameraTranslation = cameraDiff.bias()
-        
-        let actualDiff = abs(locationTranslation - cameraTranslation)
-        
-        return actualDiff <= acceptableDistanceDiff
     }
 }

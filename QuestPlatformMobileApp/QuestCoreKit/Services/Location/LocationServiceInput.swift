@@ -12,7 +12,7 @@ import CoreLocation
 typealias LocationSubscriber = AnyObject
 
 typealias LocationAuthorizationStatusHandler = (CLAuthorizationStatus) -> Void
-typealias LocationHandler = (Coordinate) -> Void
+typealias LocationHandler = (CLLocation) -> Void
 typealias HeadingHandler = (CLHeading) -> Void
 typealias PlacemarkHandler = (CLPlacemark) -> Void
 typealias LocationErrorHandler = (Error) -> Void

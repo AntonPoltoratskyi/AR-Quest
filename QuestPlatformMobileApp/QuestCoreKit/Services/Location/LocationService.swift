@@ -16,7 +16,6 @@ final class LocationService: NSObject {
         case locationUpdates        // continual location updates
     }
     
-    
     // MARK: - Properties
     
     private let locationManager = CLLocationManager()
@@ -37,12 +36,14 @@ final class LocationService: NSObject {
             }
             switch state {
             case .none:
-                self.locationManager.stopUpdatingLocation()
+                locationManager.stopUpdatingLocation()
+                locationManager.stopUpdatingHeading()
             case .locationUpdates:
-                if self.isAuthorized {
-                    self.locationManager.startUpdatingLocation()
+                if isAuthorized {
+                    locationManager.startUpdatingLocation()
+                    locationManager.startUpdatingHeading()
                 } else {
-                    self.locationManager.requestAlwaysAuthorization()
+                    locationManager.requestAlwaysAuthorization()
                 }
             }
         }
@@ -63,9 +64,10 @@ final class LocationService: NSObject {
     
     // MARK: - Init
     
-    override init() {
+    static let shared = LocationService()
+    
+    private override init() {
         super.init()
-//        locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.showsBackgroundLocationIndicator = true
         locationManager.delegate = self
@@ -92,36 +94,55 @@ extension LocationService: LocationServiceInput {
     }
     
     func observeAuthorizationStatus(_ subscriber: LocationSubscriber, handler: @escaping LocationAuthorizationStatusHandler) {
-        locationManager.requestAlwaysAuthorization()
-        
+        if let index = authorizationStatusSubscribers.index(where: { $0.ref === subscriber }) {
+            authorizationStatusSubscribers.remove(at: index)
+        }
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         authorizationStatusSubscribers.append(container)
+        
+        if !isAuthorized {
+            locationManager.requestAlwaysAuthorization()
+        }
     }
     
     func observeLocationUpdates(_ subscriber: LocationSubscriber, handler: @escaping LocationHandler) {
+        if let index = locationSubscribers.index(where: { $0.ref === subscriber }) {
+            locationSubscribers.remove(at: index)
+        }
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         locationSubscribers.append(container)
     }
     
     func observeHeadingUpdates(_ subscriber: LocationSubscriber, handler: @escaping HeadingHandler) {
+        if let index = headingSubscribers.index(where: { $0.ref === subscriber }) {
+            headingSubscribers.remove(at: index)
+        }
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         headingSubscribers.append(container)
     }
 
     func observePlacemarkUpdates(_ subscriber: LocationSubscriber, handler: @escaping PlacemarkHandler) {
+        if let index = placemarkSubscribers.index(where: { $0.ref === subscriber }) {
+            placemarkSubscribers.remove(at: index)
+        }
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         placemarkSubscribers.append(container)
     }
     
     func observeErrors(_ subscriber: LocationSubscriber, handler: @escaping LocationErrorHandler) {
+        if let index = errorSubscribers.index(where: { $0.ref === subscriber }) {
+            errorSubscribers.remove(at: index)
+        }
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         errorSubscribers.append(container)
     }
     
     func removeSubscriber(_ subscriber: LocationSubscriber) {
-        locationSubscribers = locationSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
-        placemarkSubscribers = placemarkSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
         authorizationStatusSubscribers = authorizationStatusSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
+        locationSubscribers = locationSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
+        headingSubscribers = headingSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
+        placemarkSubscribers = placemarkSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
+        errorSubscribers = errorSubscribers.filter { $0.ref != nil && $0.ref !== subscriber }
     }
 }
 
@@ -129,6 +150,8 @@ extension LocationService: LocationServiceInput {
 extension LocationService: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        handleReceivedAuthorizationStatus(status)
+        
         switch status {
         case .notDetermined:
             debugPrint("Access to location not determined", inCase: .location)
@@ -147,7 +170,7 @@ extension LocationService: CLLocationManagerDelegate {
             return
         }
         lastAcquiredLocation = currentLocation
-        handleReceivedCoordinate(currentLocation.coordinate)
+        handleReceivedLocation(currentLocation)
 
         guard isGeocodingEnabled else {
             return
@@ -175,9 +198,7 @@ extension LocationService: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        for subscriber in errorSubscribers {
-            subscriber.handler?(error)
-        }
+        handleReceivedError(error)
     }
     
     private func continueLocationUpdates() {
@@ -190,9 +211,15 @@ extension LocationService: CLLocationManagerDelegate {
         }
     }
     
-    private func handleReceivedCoordinate(_ coordinate: Coordinate) {
+    private func handleReceivedAuthorizationStatus(_ status: CLAuthorizationStatus) {
+        for subscriber in authorizationStatusSubscribers {
+            subscriber.handler?(status)
+        }
+    }
+    
+    private func handleReceivedLocation(_ location: CLLocation) {
         for subscriber in locationSubscribers {
-            subscriber.handler?(coordinate)
+            subscriber.handler?(location)
         }
     }
     
@@ -205,6 +232,12 @@ extension LocationService: CLLocationManagerDelegate {
     private func handleReceivedHeading(_ heading: CLHeading) {
         for subscriber in headingSubscribers {
             subscriber.handler?(heading)
+        }
+    }
+    
+    private func handleReceivedError(_ error: Error) {
+        for subscriber in errorSubscribers {
+            subscriber.handler?(error)
         }
     }
 }

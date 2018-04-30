@@ -21,7 +21,9 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
     var interactor: Interactor!
     var router: Router!
     
-    private var isARSessionReady = false
+    deinit {
+        deinited(self)
+    }
     
     private var locations: [Container<Coordinate>] = [
         Container(element: Coordinate.debugCoordinate)
@@ -62,27 +64,23 @@ extension LiveQuestPresenter: QuestViewOutput {
 // MARK: - QuestInteractorOutput
 extension LiveQuestPresenter: QuestInteractorOutput {
     
-    func handleUpdatedLocation(_ newLocation: CLLocation, previousLocation: CLLocation?) {
+    func didChangeLocationAuthorizationStatus(_ status: CLAuthorizationStatus) {
+        
+    }
+    
+    func didUpdateLocation(_ newLocation: CLLocation, previousLocation: CLLocation?) {
         guard let cameraTransform = sceneHandler.currentCameraTransform() else {
             return
         }
         trackingService.handleLocationUpdate(newLocation: newLocation, currentCameraTransform: cameraTransform)
     }
     
-    func handleUpdatedHeading(_ newHeading: CLHeading) {
+    func didUpdateHeading(_ newHeading: CLHeading) {
         
     }
     
-    func handleLocationUpdateFailure(_ error: Error) {
+    func didReceiveLocationFailure(_ error: Error) {
         view.showMessage(error.localizedDescription)
-    }
-}
-
-
-extension LiveQuestPresenter {
-    
-    func handleLocationUpdate(newLocation: CLLocation, previous: CLLocation?) {
-        
     }
 }
 
@@ -92,10 +90,8 @@ extension LiveQuestPresenter: ARSceneViewModelDelegate {
     func sceneViewModel(_ sceneModel: ARSceneViewModel, didUpdateState state: ARSceneViewState) {
         switch state {
         case .normal, .normalEmptyAnchors:
-            isARSessionReady = true
             displayNodesIfNeeded()
         default:
-            isARSessionReady = false
             removeAndCacheNodesIfNeeded()
         }
     }
@@ -104,24 +100,20 @@ extension LiveQuestPresenter: ARSceneViewModelDelegate {
 // MARK: - ARTrackingServiceDelegate
 extension LiveQuestPresenter: ARTrackingServiceDelegate {
     
-    func handleInitialPositioning() {
-    }
-    
-    func handlePositionUpdate(locationDiff: Difference<CLLocation>, cameraDiff: Difference<matrix_float4x4>) {
-        let locationTranslation = locationDiff.bias()
-        let cameraTranslation = cameraDiff.bias()
-        
-        let accuracy = Double(Int(abs(locationTranslation - cameraTranslation) * 1000)) / 1000
-        view.showMessage("Accuracy: ±\(accuracy)(m)")
+    func didUpdateTrackedPosition(with trackingInfo: TrackingInfo) {
+        let accuracy = trackingInfo.accuracy()
+        view.showMessage("Accuracy: \u{0394} \(accuracy) m.")
         
         updatePlacemarkNodesContent(self.locations)
-        
         if accuracy <= 1 && accuracy >= 0.0001 {
             updatePlacemarkNodesPosition(self.locations)
         }
     }
     
-    func handleReset() {
+    func didStartPositionTracking() {
+    }
+    
+    func handleARSessionReset() {
         removeAndCacheNodesIfNeeded()
         sceneHandler.reloadSession()
     }
@@ -253,9 +245,6 @@ extension LiveQuestPresenter {
         nodesToRemove.forEach { $0.removeFromParentNode() }
     }
 }
-
-
-
 
 extension Coordinate {
     static var debugCoordinate: Coordinate {

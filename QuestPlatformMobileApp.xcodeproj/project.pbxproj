@@ -143,7 +143,7 @@
 		85477EC5209473EA002D26F9 /* ARSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC4209473EA002D26F9 /* ARSceneViewModel.swift */; };
 		85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC6209473F4002D26F9 /* NavigationService.swift */; };
 		85477ECB20947438002D26F9 /* QuestNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECA20947438002D26F9 /* QuestNetworkService.swift */; };
-		85477ECF209474E3002D26F9 /* Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECE209474E3002D26F9 /* Difference.swift */; };
+		85477ECF209474E3002D26F9 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECE209474E3002D26F9 /* Distance.swift */; };
 		85477EEE209475B1002D26F9 /* SCNVector3+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */; };
 		85477EF02094790C002D26F9 /* SCNVector3+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */; };
 		85477EF220947939002D26F9 /* SCNVector3+Algebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EF120947939002D26F9 /* SCNVector3+Algebra.swift */; };
@@ -236,6 +236,8 @@
 		85D4F162209727F100C56930 /* matrix_float4x4+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F161209727F100C56930 /* matrix_float4x4+Transformation.swift */; };
 		85D4F164209731A500C56930 /* LocationServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F163209731A500C56930 /* LocationServiceInput.swift */; };
 		85D4F166209734F700C56930 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F165209734F700C56930 /* WeakReference.swift */; };
+		85D4F16A20975AC600C56930 /* DistanceRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F16920975AC600C56930 /* DistanceRepresentable.swift */; };
+		85D4F16C20975BAB00C56930 /* TrackingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4F16B20975BAB00C56930 /* TrackingInfo.swift */; };
 		85D8A56C205ECAB200C6F547 /* SCNMatrix4+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */; };
 		85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D8A58F205EF4A000C6F547 /* SCNNode.swift */; };
 		85F07DCC208B43AA004950B9 /* MenuInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F07DCB208B43AA004950B9 /* MenuInteractive.swift */; };
@@ -423,7 +425,7 @@
 		85477EC4209473EA002D26F9 /* ARSceneViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneViewModel.swift; sourceTree = "<group>"; };
 		85477EC6209473F4002D26F9 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		85477ECA20947438002D26F9 /* QuestNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestNetworkService.swift; sourceTree = "<group>"; };
-		85477ECE209474E3002D26F9 /* Difference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difference.swift; sourceTree = "<group>"; };
+		85477ECE209474E3002D26F9 /* Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 		85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Operators.swift"; sourceTree = "<group>"; };
 		85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Hashable.swift"; sourceTree = "<group>"; };
 		85477EF120947939002D26F9 /* SCNVector3+Algebra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Algebra.swift"; sourceTree = "<group>"; };
@@ -516,6 +518,8 @@
 		85D4F161209727F100C56930 /* matrix_float4x4+Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "matrix_float4x4+Transformation.swift"; sourceTree = "<group>"; };
 		85D4F163209731A500C56930 /* LocationServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceInput.swift; sourceTree = "<group>"; };
 		85D4F165209734F700C56930 /* WeakReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakReference.swift; sourceTree = "<group>"; };
+		85D4F16920975AC600C56930 /* DistanceRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceRepresentable.swift; sourceTree = "<group>"; };
+		85D4F16B20975BAB00C56930 /* TrackingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInfo.swift; sourceTree = "<group>"; };
 		85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMatrix4+Orientation.swift"; sourceTree = "<group>"; };
 		85D8A58F205EF4A000C6F547 /* SCNNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNNode.swift; sourceTree = "<group>"; };
 		85F07DCB208B43AA004950B9 /* MenuInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractive.swift; sourceTree = "<group>"; };
@@ -704,6 +708,9 @@
 				85D4F15D209719AC00C56930 /* UIEdgeInsets.swift */,
 				14FE2F6F1FC96382001EDEAB /* CGPoint.swift */,
 				85477EB620947393002D26F9 /* Radians.swift */,
+				85477ECE209474E3002D26F9 /* Distance.swift */,
+				85D4F16920975AC600C56930 /* DistanceRepresentable.swift */,
+				85D4F16B20975BAB00C56930 /* TrackingInfo.swift */,
 				85477EB120947393002D26F9 /* CLLocationCoordinate2D.swift */,
 				85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */,
 				85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */,
@@ -711,7 +718,6 @@
 				85D8A56B205ECAB200C6F547 /* SCNMatrix4+Orientation.swift */,
 				85477EB820947393002D26F9 /* SCNMatrix4+Transformation.swift */,
 				85D4F161209727F100C56930 /* matrix_float4x4+Transformation.swift */,
-				85477ECE209474E3002D26F9 /* Difference.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -2612,6 +2618,7 @@
 				853DD5292042FE7800E82595 /* NavigationRouter.swift in Sources */,
 				853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */,
 				855D748F207B77ED000421DA /* ProfileAssembly.swift in Sources */,
+				85D4F16A20975AC600C56930 /* DistanceRepresentable.swift in Sources */,
 				85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */,
 				85C3C21720837692009AEF58 /* MenuPresenter.swift in Sources */,
 				85F74106204C8A25002AC5FE /* SideMenuContainerInteractor.swift in Sources */,
@@ -2673,6 +2680,7 @@
 				857ADD8A204319FA00CA0D42 /* User.swift in Sources */,
 				8511E560208C88CB006DFCFE /* MenuItemCellModel.swift in Sources */,
 				85C3C23A2083BACB009AEF58 /* LocationPickerProtocols.swift in Sources */,
+				85D4F16C20975BAB00C56930 /* TrackingInfo.swift in Sources */,
 				85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */,
 				85477F1B20948A72002D26F9 /* QuestInteractor.swift in Sources */,
 				85C3C2662083C569009AEF58 /* ConstructorAssembly.swift in Sources */,
@@ -2771,7 +2779,7 @@
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
 				85477F1820948A72002D26F9 /* QuestViewController.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
-				85477ECF209474E3002D26F9 /* Difference.swift in Sources */,
+				85477ECF209474E3002D26F9 /* Distance.swift in Sources */,
 				85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */,
 				85D4F16020971F8200C56930 /* LocationTypes.swift in Sources */,
 				85F07DDB208B5B77004950B9 /* OwnQuestsPresenter.swift in Sources */,
