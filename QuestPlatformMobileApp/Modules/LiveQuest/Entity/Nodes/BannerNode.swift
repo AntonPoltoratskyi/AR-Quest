@@ -111,14 +111,14 @@ class BannerShape: SCNShape {
         let poinerWidth = contentRect.width / 4
         let pointerHeight = poinerWidth / 3
 
-        let bottomCenterPoint = contentRect.origin.translated(contentRect.width / 2, 0)
-        pointerPath.move(to: bottomCenterPoint.translated(-poinerWidth / 2, 0))
+        let bottomCenterPoint = contentRect.origin.translated(byX: contentRect.width / 2, y: 0)
+        pointerPath.move(to: bottomCenterPoint.translated(byX: -poinerWidth / 2, y: 0))
 
-        pointerPath.addQuadCurve(to: bottomCenterPoint.translated(0, -pointerHeight),
-                                 controlPoint: bottomCenterPoint.translated(-poinerWidth / 8, -pointerHeight / 4))
+        pointerPath.addQuadCurve(to: bottomCenterPoint.translated(byX: 0, y: -pointerHeight),
+                                 controlPoint: bottomCenterPoint.translated(byX: -poinerWidth / 8, y: -pointerHeight / 4))
 
-        pointerPath.addQuadCurve(to: bottomCenterPoint.translated(poinerWidth / 2, 0),
-                                 controlPoint: bottomCenterPoint.translated(poinerWidth / 8, -pointerHeight / 4))
+        pointerPath.addQuadCurve(to: bottomCenterPoint.translated(byX: poinerWidth / 2, y: 0),
+                                 controlPoint: bottomCenterPoint.translated(byX: poinerWidth / 8, y: -pointerHeight / 4))
         pointerPath.close()
 
         rectPath.append(pointerPath)

@@ -18,7 +18,7 @@ final class NavigationService: NSObject {
     private var currentSearch: MKLocalSearch?
     private var queue = DispatchQueue(label: "navigation-manager-queue", qos: .default, attributes: .concurrent)
     
-    private var coordinateRequestCache: [CLLocationCoordinate2D: CLPlacemark] = [:]
+    private var coordinateRequestCache: [Coordinate: CLPlacemark] = [:]
     
     private var shouldStartUpdating = false
     
@@ -49,8 +49,8 @@ final class NavigationService: NSObject {
         }
     }
     
-    func requestDirections(from source: CLLocationCoordinate2D,
-                           to destination: CLLocationCoordinate2D,
+    func requestDirections(from source: Coordinate,
+                           to destination: Coordinate,
                            type: MKDirectionsTransportType,
                            completion: @escaping (_ route: MKRoute?, _ error: Error?) -> Void) {
         
@@ -67,7 +67,7 @@ final class NavigationService: NSObject {
         }
     }
     
-    func requestPlaces(for coordinates: CLLocationCoordinate2D, callback: @escaping (_ mark: CLPlacemark?, _ error: Error?) -> Void) {
+    func requestPlaces(for coordinates: Coordinate, callback: @escaping (_ mark: CLPlacemark?, _ error: Error?) -> Void) {
         if let cachedValue = coordinateRequestCache[coordinates] {
             callback(cachedValue, nil); return
         }

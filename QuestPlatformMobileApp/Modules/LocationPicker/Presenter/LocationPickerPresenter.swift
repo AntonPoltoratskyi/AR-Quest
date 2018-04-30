@@ -21,13 +21,13 @@ final class LocationPickerPresenter: Presenter, LocationPickerModuleInput {
     
     weak var output: LocationPickerModuleOutput?
  
-    private var selectedCoordinate: CLLocationCoordinate2D?
+    private var selectedCoordinate: Coordinate?
 }
 
 // MARK: - LocationPickerViewOutput
 extension LocationPickerPresenter: LocationPickerViewOutput {
     
-    func didSelectCoordinate(_ coordinate: CLLocationCoordinate2D) {
+    func didSelectCoordinate(_ coordinate: Coordinate) {
         selectedCoordinate = coordinate
     }
     

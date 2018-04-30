@@ -22,7 +22,7 @@ final class ARTrackingService: ARTrackingServiceInput {
     
     private let navigationManager = NavigationService()
     
-    public func requestPlaces(for coordinate: CLLocationCoordinate2D, callback: @escaping (CLPlacemark?) -> Void) {
+    public func requestPlaces(for coordinate: Coordinate, callback: @escaping (CLPlacemark?) -> Void) {
         navigationManager.requestPlaces(for: coordinate) { (placemark, error) in
             if let error = error {
                 debugPrint(error)

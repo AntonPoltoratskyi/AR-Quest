@@ -11,11 +11,11 @@ import MapKit
 
 final class LocationAnnotation: NSObject, MKAnnotation, CellViewModel {
     
-    var coordinate: CLLocationCoordinate2D
+    var coordinate: Coordinate
     var title: String?
     var subtitle: String?
     
-    init(coordinate: CLLocationCoordinate2D, title: String? = nil, subtitle: String? = nil) {
+    init(coordinate: Coordinate, title: String? = nil, subtitle: String? = nil) {
         self.coordinate = coordinate
         self.title = title
         self.subtitle = subtitle

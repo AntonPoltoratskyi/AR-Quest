@@ -23,11 +23,11 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
     
     private var isARSessionReady = false
     
-    private var locations: [Container<CLLocationCoordinate2D>] = [
-        Container(element: CLLocationCoordinate2D.debugCoordinate)
+    private var locations: [Container<Coordinate>] = [
+        Container(element: Coordinate.debugCoordinate)
     ]
     
-    var destination: CLLocationCoordinate2D?
+    var destination: Coordinate?
     
     private var sceneHandler: ARSceneViewHandlerInput!
     
@@ -142,8 +142,8 @@ extension LiveQuestPresenter {
 //        interactor.cacheNodes(nodesToCache)
     }
     
-    func updateNodes(for placeMarks: [Container<CLLocationCoordinate2D>]) {
-        let existingNodes: [PlaceNode] = view.sceneView.scene.rootNode.childs()
+    func updateNodes(for placeMarks: [Container<Coordinate>]) {
+        let existingNodes: [PlaceNode] = view.sceneView.scene.rootNode.childNodes()
         var nodesTable: [String: PlaceNode] = [:]
         existingNodes.forEach { nodesTable[$0.element.id] = $0 }
         
@@ -162,26 +162,26 @@ extension LiveQuestPresenter {
         removePlacemarkNodes(placemarksToRemove)
     }
     
-    private func addPlacemarkNodes(_ placemarks: [Container<CLLocationCoordinate2D>]) {
+    private func addPlacemarkNodes(_ placemarks: [Container<Coordinate>]) {
         let nodes = placemarks.map { PlaceNode(element: $0) }
         
         nodes.forEach { view.sceneView.scene.rootNode.addChildNode($0) }
         updatePlacemarkNodesPosition(placemarks)
     }
     
-    private func updatePlacemarkNodesPosition(_ placemarks: [Container<CLLocationCoordinate2D>]) {
+    private func updatePlacemarkNodesPosition(_ placemarks: [Container<Coordinate>]) {
         guard let currentLocation = trackingService.lastRecognizedLocation else { return }
         guard let cameraTransform = sceneHandler.currentCameraTransform() else { return }
         
         let idsToUpdate = Set(placemarks.map { $0.id })
-        let nodesToUpdate: [PlaceNode] = view.sceneView.scene.rootNode.childs { idsToUpdate.contains($0.element.id) }
+        let nodesToUpdate: [PlaceNode] = view.sceneView.scene.rootNode.childNodes { idsToUpdate.contains($0.element.id) }
         
         nodesToUpdate.forEach { $0.updateWith(currentCameraTransform: cameraTransform,
                                               currentCoordinates: currentLocation.coordinate,
                                               thresholdDistance: DeveloperSettings.maxSceneRadius) }
         
         let estimatedFloorHeight = sceneHandler.estimatedHeight()
-        SCNTransaction.animate(with: 0.25, { [weak self] in
+        SCNTransaction.animate(withDuration: 0.25, animations: { [weak self] in
             guard let wSelf = self else { return }
             
             nodesToUpdate.forEach { (node) in
@@ -212,10 +212,10 @@ extension LiveQuestPresenter {
         return scale
     }
     
-    private func updatePlacemarkNodesContent(_ placemarks: [Container<CLLocationCoordinate2D>]) {
+    private func updatePlacemarkNodesContent(_ placemarks: [Container<Coordinate>]) {
         guard let currentLocation = trackingService.lastRecognizedLocation else { return }
         let idsToUpdate = Set(placemarks.map { $0.id })
-        let nodesToUpdate: [PlaceNode] = view.sceneView.scene.rootNode.childs { idsToUpdate.contains($0.element.id) }
+        let nodesToUpdate: [PlaceNode] = view.sceneView.scene.rootNode.childNodes { idsToUpdate.contains($0.element.id) }
         
         nodesToUpdate.forEach { (node) in
             trackingService.requestPlaces(for: node.element.element) { [weak self] (placemark) in
@@ -247,9 +247,9 @@ extension LiveQuestPresenter {
         return fullString
     }
     
-    private func removePlacemarkNodes(_ placemarks: [Container<CLLocationCoordinate2D>]) {
+    private func removePlacemarkNodes(_ placemarks: [Container<Coordinate>]) {
         let idsToRemove = Set(placemarks.map { $0.id })
-        let nodesToRemove: [PlaceNode] = view.sceneView.scene.rootNode.childs { idsToRemove.contains($0.element.id) }
+        let nodesToRemove: [PlaceNode] = view.sceneView.scene.rootNode.childNodes { idsToRemove.contains($0.element.id) }
         nodesToRemove.forEach { $0.removeFromParentNode() }
     }
 }
@@ -257,9 +257,9 @@ extension LiveQuestPresenter {
 
 
 
-extension CLLocationCoordinate2D {
-    static var debugCoordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: 50.005938, longitude: 36.230718)
+extension Coordinate {
+    static var debugCoordinate: Coordinate {
+        return Coordinate(latitude: 50.005938, longitude: 36.230718)
     }
 }
 

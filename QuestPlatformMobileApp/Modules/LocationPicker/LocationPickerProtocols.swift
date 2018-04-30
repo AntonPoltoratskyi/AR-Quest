@@ -15,7 +15,7 @@ protocol LocationPickerModuleInput: ModuleInput {
 }
 
 protocol LocationPickerModuleOutput: ModuleInput {
-    func didSelectLocation(at coordinate: CLLocationCoordinate2D)
+    func didSelectLocation(at coordinate: Coordinate)
 }
 
 // MARK: - View
@@ -25,7 +25,7 @@ protocol LocationPickerViewInput: class {
 
 // MARK: -
 protocol LocationPickerViewOutput: class {
-    func didSelectCoordinate(_ coordinate: CLLocationCoordinate2D)
+    func didSelectCoordinate(_ coordinate: Coordinate)
     func didClickDone()
     func didClickCancel()
 }

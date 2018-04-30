@@ -1,5 +1,5 @@
 //
-//  SCNVector3+Location.swift
+//  SCNVector3+Algebra.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -26,12 +26,12 @@ extension SCNVector3 {
         return (self - vector).length
     }
     
-    func transform(initialCoordinates: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) -> matrix_float4x4 {
+    func transform(initialCoordinates: Coordinate, destination: Coordinate) -> matrix_float4x4 {
         var matrix = matrix_identity_float4x4
         matrix.columns.3.x = x
         matrix.columns.3.y = y
         matrix.columns.3.z = z
         
-        return matrix.transformedWithCoordinates(current: initialCoordinates, destination: destination)
+        return matrix.transformed(from: initialCoordinates, destination: destination)
     }
 }

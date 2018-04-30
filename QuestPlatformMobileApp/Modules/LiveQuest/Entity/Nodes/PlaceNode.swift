@@ -10,7 +10,7 @@ import SceneKit
 import ARKit
 import MapKit
 
-final class PlaceNode: BaseNode<Container<CLLocationCoordinate2D>> {
+final class PlaceNode: BaseNode<Container<Coordinate>> {
     
     var bannerNode: BannerNode!
     
@@ -18,7 +18,7 @@ final class PlaceNode: BaseNode<Container<CLLocationCoordinate2D>> {
         return 1
     }
     
-    override init(element: Container<CLLocationCoordinate2D>) {
+    override init(element: Container<Coordinate>) {
         super.init(element: element)
         sourceId = element.id
         bannerNode = BannerNode()
@@ -33,15 +33,15 @@ final class PlaceNode: BaseNode<Container<CLLocationCoordinate2D>> {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func updateWith(currentCameraTransform: matrix_float4x4, currentCoordinates: CLLocationCoordinate2D, thresholdDistance: Double) {
+    override func updateWith(currentCameraTransform: matrix_float4x4, currentCoordinates: Coordinate, thresholdDistance: Double) {
         var identity = matrix_identity_float4x4
         identity.columns.3.x = currentCameraTransform.columns.3.x
         identity.columns.3.y = simdTransform.columns.3.y
         identity.columns.3.z = currentCameraTransform.columns.3.z
         
-        transform = identity.toSCNMatrix4().transformedWithCoordinates(current: currentCoordinates,
-                                                                       destination: element.element,
-                                                                       thresholdDistance: thresholdDistance)
+        transform = identity.scnMatrix.transformed(from: currentCoordinates,
+                                                                  destination: element.element,
+                                                                  thresholdDistance: thresholdDistance)
     }
     
     override func applyScale(_ scaleFactor: Float) {
