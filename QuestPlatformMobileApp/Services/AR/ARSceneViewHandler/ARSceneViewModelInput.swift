@@ -1,5 +1,5 @@
 //
-//  ARSceneViewHandlerInput.swift
+//  ARSceneViewModelInput.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -9,7 +9,7 @@
 import SceneKit
 import ARKit
 
-public protocol ARSceneViewHandlerInput {
+public protocol ARSceneViewModelInput {
     var state: ARSceneViewState { get }
     
     func launchSession()

@@ -140,7 +140,7 @@
 		85477EBC20947393002D26F9 /* SCNTransaction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB420947393002D26F9 /* SCNTransaction+Extensions.swift */; };
 		85477EBE20947393002D26F9 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB620947393002D26F9 /* Radians.swift */; };
 		85477EC020947393002D26F9 /* SCNMatrix4+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB820947393002D26F9 /* SCNMatrix4+Transformation.swift */; };
-		85477EC5209473EA002D26F9 /* ARSceneViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */; };
+		85477EC5209473EA002D26F9 /* ARSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC4209473EA002D26F9 /* ARSceneViewModel.swift */; };
 		85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC6209473F4002D26F9 /* NavigationService.swift */; };
 		85477ECB20947438002D26F9 /* QuestNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECA20947438002D26F9 /* QuestNetworkService.swift */; };
 		85477ECF209474E3002D26F9 /* Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECE209474E3002D26F9 /* Difference.swift */; };
@@ -150,8 +150,8 @@
 		85477EF920947ED2002D26F9 /* ARTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EF820947ED2002D26F9 /* ARTrackingService.swift */; };
 		85477EFF209482D0002D26F9 /* NavigationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */; };
 		85477F0120948474002D26F9 /* ARSceneViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0020948474002D26F9 /* ARSceneViewState.swift */; };
-		85477F05209484C7002D26F9 /* ARSceneViewHandlerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */; };
-		85477F0720948708002D26F9 /* ARSceneViewHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */; };
+		85477F05209484C7002D26F9 /* ARSceneViewModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F04209484C7002D26F9 /* ARSceneViewModelInput.swift */; };
+		85477F0720948708002D26F9 /* ARSceneViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewModelDelegate.swift */; };
 		85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */; };
 		85477F0C20948848002D26F9 /* ARTrackingServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */; };
 		85477F1720948A72002D26F9 /* QuestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1020948A72002D26F9 /* QuestRouter.swift */; };
@@ -420,7 +420,7 @@
 		85477EB420947393002D26F9 /* SCNTransaction+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNTransaction+Extensions.swift"; sourceTree = "<group>"; };
 		85477EB620947393002D26F9 /* Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
 		85477EB820947393002D26F9 /* SCNMatrix4+Transformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNMatrix4+Transformation.swift"; sourceTree = "<group>"; };
-		85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandler.swift; sourceTree = "<group>"; };
+		85477EC4209473EA002D26F9 /* ARSceneViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneViewModel.swift; sourceTree = "<group>"; };
 		85477EC6209473F4002D26F9 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		85477ECA20947438002D26F9 /* QuestNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestNetworkService.swift; sourceTree = "<group>"; };
 		85477ECE209474E3002D26F9 /* Difference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difference.swift; sourceTree = "<group>"; };
@@ -430,8 +430,8 @@
 		85477EF820947ED2002D26F9 /* ARTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingService.swift; sourceTree = "<group>"; };
 		85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationServiceDelegate.swift; sourceTree = "<group>"; };
 		85477F0020948474002D26F9 /* ARSceneViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewState.swift; sourceTree = "<group>"; };
-		85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerInput.swift; sourceTree = "<group>"; };
-		85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewHandlerDelegate.swift; sourceTree = "<group>"; };
+		85477F04209484C7002D26F9 /* ARSceneViewModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewModelInput.swift; sourceTree = "<group>"; };
+		85477F0620948708002D26F9 /* ARSceneViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewModelDelegate.swift; sourceTree = "<group>"; };
 		85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceDelegate.swift; sourceTree = "<group>"; };
 		85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceInput.swift; sourceTree = "<group>"; };
 		85477F1020948A72002D26F9 /* QuestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestRouter.swift; sourceTree = "<group>"; };
@@ -1524,9 +1524,9 @@
 			isa = PBXGroup;
 			children = (
 				85477F0020948474002D26F9 /* ARSceneViewState.swift */,
-				85477F04209484C7002D26F9 /* ARSceneViewHandlerInput.swift */,
-				85477F0620948708002D26F9 /* ARSceneViewHandlerDelegate.swift */,
-				85477EC4209473EA002D26F9 /* ARSceneViewHandler.swift */,
+				85477F04209484C7002D26F9 /* ARSceneViewModelInput.swift */,
+				85477F0620948708002D26F9 /* ARSceneViewModelDelegate.swift */,
+				85477EC4209473EA002D26F9 /* ARSceneViewModel.swift */,
 			);
 			path = ARSceneViewHandler;
 			sourceTree = "<group>";
@@ -2680,7 +2680,7 @@
 				85C3C2652083C569009AEF58 /* ConstructorProtocols.swift in Sources */,
 				853DD51C2042FC6600E82595 /* LoginRouter.swift in Sources */,
 				850751AB208DB9F000A1221C /* TaskTableHeaderView.swift in Sources */,
-				85477F0720948708002D26F9 /* ARSceneViewHandlerDelegate.swift in Sources */,
+				85477F0720948708002D26F9 /* ARSceneViewModelDelegate.swift in Sources */,
 				853DD51D2042FC6600E82595 /* LoginViewController.swift in Sources */,
 				853DD50D2042CE3200E82595 /* Router.swift in Sources */,
 				853DD4DB2042C4E900E82595 /* UICollectionView+ReusableCell.swift in Sources */,
@@ -2752,7 +2752,7 @@
 				85477EF02094790C002D26F9 /* SCNVector3+Hashable.swift in Sources */,
 				85C3C208208373DE009AEF58 /* MainInteractor.swift in Sources */,
 				850751BA208DBE5900A1221C /* TaskBuilderView.swift in Sources */,
-				85477EC5209473EA002D26F9 /* ARSceneViewHandler.swift in Sources */,
+				85477EC5209473EA002D26F9 /* ARSceneViewModel.swift in Sources */,
 				85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */,
 				853DD4DF2042C4E900E82595 /* CellViewModel.swift in Sources */,
 				85F740C3204C1DDA002AC5FE /* QuestErrorLabel.swift in Sources */,
@@ -2843,7 +2843,7 @@
 				855D74B2207BB045000421DA /* AboutRouter.swift in Sources */,
 				85170213207125800081F611 /* Quest.swift in Sources */,
 				8517022A2071579E0081F611 /* QuestDetailsInteractor.swift in Sources */,
-				85477F05209484C7002D26F9 /* ARSceneViewHandlerInput.swift in Sources */,
+				85477F05209484C7002D26F9 /* ARSceneViewModelInput.swift in Sources */,
 				8517020520711E370081F611 /* QuestListInteractor.swift in Sources */,
 				85477EF920947ED2002D26F9 /* ARTrackingService.swift in Sources */,
 			);

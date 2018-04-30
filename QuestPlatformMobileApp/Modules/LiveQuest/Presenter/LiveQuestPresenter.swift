@@ -29,7 +29,7 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
     
     var destination: Coordinate?
     
-    private var sceneHandler: ARSceneViewHandlerInput!
+    private var sceneHandler: ARSceneViewModelInput!
     
     private let trackingService: ARTrackingService = {
         let service = ARTrackingService()
@@ -41,7 +41,7 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
 extension LiveQuestPresenter: QuestViewOutput {
     
     func viewDidLoad() {
-        let handler = ARSceneViewHandler(with: view.sceneView)
+        let handler = ARSceneViewModel(with: view.sceneView)
         handler.delegate = self
         sceneHandler = handler
         
@@ -86,10 +86,10 @@ extension LiveQuestPresenter {
     }
 }
 
-// MARK: - ARSceneViewHandlerDelegate
-extension LiveQuestPresenter: ARSceneViewHandlerDelegate {
+// MARK: - ARSceneViewModelDelegate
+extension LiveQuestPresenter: ARSceneViewModelDelegate {
     
-    func sceneViewHandler(_ handler: ARSceneViewHandler, didUpdateState state: ARSceneViewState) {
+    func sceneViewModel(_ sceneModel: ARSceneViewModel, didUpdateState state: ARSceneViewState) {
         switch state {
         case .normal, .normalEmptyAnchors:
             isARSessionReady = true

@@ -1,5 +1,5 @@
 //
-//  ARSceneViewHandler.swift
+//  ARSceneViewModel.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -9,14 +9,14 @@
 import ARKit
 import SceneKit
 
-public final class ARSceneViewHandler: NSObject {
+public final class ARSceneViewModel: NSObject {
     
-    public weak var delegate: ARSceneViewHandlerDelegate?
+    public weak var delegate: ARSceneViewModelDelegate?
     public weak var scene: ARSCNView!
     
     public var state: ARSceneViewState = .limitedInitializing {
         didSet {
-            delegate?.sceneViewHandler(self, didUpdateState: state)
+            delegate?.sceneViewModel(self, didUpdateState: state)
         }
     }
     
@@ -78,7 +78,7 @@ public final class ARSceneViewHandler: NSObject {
 }
 
 // MARK: - Public Input
-extension ARSceneViewHandler: ARSceneViewHandlerInput {
+extension ARSceneViewModel: ARSceneViewModelInput {
     
     public func currentCameraTransform() -> matrix_float4x4? {
         return session.currentFrame?.camera.transform
@@ -124,7 +124,7 @@ extension ARSceneViewHandler: ARSceneViewHandlerInput {
 }
 
 // MARK: - ARSCNViewDelegate
-extension ARSceneViewHandler: ARSCNViewDelegate {
+extension ARSceneViewModel: ARSCNViewDelegate {
     
     public func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
     }
@@ -155,7 +155,7 @@ extension ARSceneViewHandler: ARSCNViewDelegate {
 }
 
 // MARK: - ARSessionDelegate
-extension ARSceneViewHandler: ARSessionDelegate {
+extension ARSceneViewModel: ARSessionDelegate {
     
     public func updateState(for frame: ARFrame, trackingState: ARCamera.TrackingState) {
         switch trackingState {
@@ -193,7 +193,7 @@ extension ARSceneViewHandler: ARSessionDelegate {
 }
 
 // MARK: - ARSessionObserver
-extension ARSceneViewHandler {
+extension ARSceneViewModel {
     
     public func sessionWasInterrupted(_ session: ARSession) {
         state = .interrupted
