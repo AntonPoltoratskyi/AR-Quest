@@ -28,7 +28,6 @@
 		14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FA91FC9661E001EDEAB /* LocationService.swift */; };
 		14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */; };
 		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
-		14FE2FB11FC96636001EDEAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FB01FC96636001EDEAB /* Result.swift */; };
 		850751AB208DB9F000A1221C /* TaskTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */; };
 		850751B4208DBE5900A1221C /* TaskBuilderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AD208DBE5900A1221C /* TaskBuilderPresenter.swift */; };
 		850751B5208DBE5900A1221C /* TaskBuilderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AE208DBE5900A1221C /* TaskBuilderRouter.swift */; };
@@ -308,7 +307,6 @@
 		14FE2FA91FC9661E001EDEAB /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
-		14FE2FB01FC96636001EDEAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
 		850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableHeaderView.swift; sourceTree = "<group>"; };
 		850751AD208DBE5900A1221C /* TaskBuilderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderPresenter.swift; sourceTree = "<group>"; };
@@ -839,7 +837,6 @@
 		14FE2FA81FC9661E001EDEAB /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				14FE2FB01FC96636001EDEAB /* Result.swift */,
 				85D4F165209734F700C56930 /* WeakReference.swift */,
 				85D4F163209731A500C56930 /* LocationServiceInput.swift */,
 				14FE2FA91FC9661E001EDEAB /* LocationService.swift */,
@@ -2623,7 +2620,6 @@
 				8511E54D208C6DC4006DFCFE /* EditProfileProtocols.swift in Sources */,
 				855D748E207B77ED000421DA /* ProfileProtocols.swift in Sources */,
 				853DD5002042CCEB00E82595 /* SplashRouter.swift in Sources */,
-				14FE2FB11FC96636001EDEAB /* Result.swift in Sources */,
 				853DD4DC2042C4E900E82595 /* MKMapView+ViewModels.swift in Sources */,
 				85D8A590205EF4A000C6F547 /* SCNNode.swift in Sources */,
 				85C3C226208378F1009AEF58 /* QuestNavigationView.swift in Sources */,

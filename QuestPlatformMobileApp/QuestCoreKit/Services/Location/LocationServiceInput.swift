@@ -9,15 +9,21 @@
 import Foundation
 import CoreLocation
 
+typealias LocationSubscriber = AnyObject
+
 typealias LocationAuthorizationStatusHandler = (CLAuthorizationStatus) -> Void
 typealias LocationHandler = (Coordinate) -> Void
+typealias HeadingHandler = (CLHeading) -> Void
 typealias PlacemarkHandler = (CLPlacemark) -> Void
+typealias LocationErrorHandler = (Error) -> Void
 
-typealias LocationSubscriber = AnyObject
 
 protocol LocationServiceInput: class {
     var isLocationUpdatesAvailable: Bool { get }
     var isAuthorized: Bool { get}
+    
+    /// Service will attempt to geocode received coordinate into placemark object
+    var isGeocodingEnabled: Bool { get set }
     
     var lastReceivedLocation: Coordinate? { get }
     var lastReceivedPlacemark: CLPlacemark? { get}
@@ -26,12 +32,10 @@ protocol LocationServiceInput: class {
     func stopLocationTracking()
     
     func observeAuthorizationStatus(_ subscriber: LocationSubscriber, handler: @escaping LocationAuthorizationStatusHandler)
-    
     func observeLocationUpdates(_ subscriber: LocationSubscriber, handler: @escaping LocationHandler)
-    func getCurrentLocation(completion: @escaping LocationHandler)
-    
+    func observeHeadingUpdates(_ subscriber: LocationSubscriber, handler: @escaping HeadingHandler)
     func observePlacemarkUpdates(_ subscriber: LocationSubscriber, handler: @escaping PlacemarkHandler)
-    func getCurrentPlacemark(completion: @escaping PlacemarkHandler)
+    func observeErrors(_ subscriber: LocationSubscriber, handler: @escaping LocationErrorHandler)
     
     func removeSubscriber(_ subscriber: LocationSubscriber)
 }

@@ -13,9 +13,9 @@ final class LocationService: NSObject {
     
     private enum State {
         case none
-        case singleLocationRequest  // single request
         case locationUpdates        // continual location updates
     }
+    
     
     // MARK: - Properties
     
@@ -24,24 +24,20 @@ final class LocationService: NSObject {
     private var lastAcquiredLocation: CLLocation?
     private var lastAcquiredPlacemark: CLPlacemark?
     
-    private var locationOnceCompletions: [LocationHandler] = []
-    private var placemarkOnceCompletions: [PlacemarkHandler] = []
-    
     private var authorizationStatusSubscribers: [SubscriberContainer<LocationAuthorizationStatusHandler>] = []
     private var locationSubscribers: [SubscriberContainer<LocationHandler>] = []
+    private var headingSubscribers: [SubscriberContainer<HeadingHandler>] = []
     private var placemarkSubscribers: [SubscriberContainer<PlacemarkHandler>] = []
+    private var errorSubscribers: [SubscriberContainer<LocationErrorHandler>] = []
     
     private var state: State = .none {
         didSet {
+            guard state != oldValue else {
+                return
+            }
             switch state {
             case .none:
                 self.locationManager.stopUpdatingLocation()
-            case .singleLocationRequest:
-                if self.isAuthorized {
-                    self.locationManager.requestLocation()
-                } else {
-                    self.locationManager.requestAlwaysAuthorization()
-                }
             case .locationUpdates:
                 if self.isAuthorized {
                     self.locationManager.startUpdatingLocation()
@@ -52,14 +48,16 @@ final class LocationService: NSObject {
         }
     }
     
+    var isGeocodingEnabled: Bool = false
+    
     var isLocationUpdatesAvailable: Bool {
         let authStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
         return isAuthorized || authStatus == .notDetermined
     }
     
     var isAuthorized: Bool {
-        let authStatus: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
-        return CLLocationManager.locationServicesEnabled() && (authStatus == .authorizedAlways || authStatus == .authorizedWhenInUse)
+        let status = CLLocationManager.authorizationStatus()
+        return CLLocationManager.locationServicesEnabled() && (status == .authorizedAlways || status == .authorizedWhenInUse)
     }
     
     
@@ -67,8 +65,9 @@ final class LocationService: NSObject {
     
     override init() {
         super.init()
-        locationManager.distanceFilter = kCLDistanceFilterNone
+//        locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.showsBackgroundLocationIndicator = true
         locationManager.delegate = self
     }
 }
@@ -93,31 +92,30 @@ extension LocationService: LocationServiceInput {
     }
     
     func observeAuthorizationStatus(_ subscriber: LocationSubscriber, handler: @escaping LocationAuthorizationStatusHandler) {
+        locationManager.requestAlwaysAuthorization()
+        
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         authorizationStatusSubscribers.append(container)
-        state = .locationUpdates
     }
     
     func observeLocationUpdates(_ subscriber: LocationSubscriber, handler: @escaping LocationHandler) {
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         locationSubscribers.append(container)
-        state = .locationUpdates
     }
     
-    func getCurrentLocation(completion: @escaping LocationHandler) {
-        locationOnceCompletions.append(completion)
-        state = .singleLocationRequest
+    func observeHeadingUpdates(_ subscriber: LocationSubscriber, handler: @escaping HeadingHandler) {
+        let container = SubscriberContainer(ref: subscriber, handler: handler)
+        headingSubscribers.append(container)
     }
-    
+
     func observePlacemarkUpdates(_ subscriber: LocationSubscriber, handler: @escaping PlacemarkHandler) {
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         placemarkSubscribers.append(container)
-        state = .locationUpdates
     }
     
-    func getCurrentPlacemark(completion: @escaping PlacemarkHandler) {
-        placemarkOnceCompletions.append(completion)
-        state = .singleLocationRequest
+    func observeErrors(_ subscriber: LocationSubscriber, handler: @escaping LocationErrorHandler) {
+        let container = SubscriberContainer(ref: subscriber, handler: handler)
+        errorSubscribers.append(container)
     }
     
     func removeSubscriber(_ subscriber: LocationSubscriber) {
@@ -136,22 +134,11 @@ extension LocationService: CLLocationManagerDelegate {
             debugPrint("Access to location not determined", inCase: .location)
         case .restricted, .denied:
             debugPrint("Access to location denied", inCase: .location)
-            self.state = .none
+            state = .none
         case .authorizedAlways, .authorizedWhenInUse:
             debugPrint("Access to location granted", inCase: .location)
             // Start updating location only after success authorization
-            self.continueLocationUpdates()
-        }
-    }
-    
-    private func continueLocationUpdates() {
-        switch self.state {
-        case .none:
-            break
-        case .locationUpdates:
-            locationManager.startUpdatingLocation()
-        case .singleLocationRequest:
-            locationManager.requestLocation()
+            continueLocationUpdates()
         }
     }
     
@@ -159,25 +146,79 @@ extension LocationService: CLLocationManagerDelegate {
         guard let currentLocation = locations.last else {
             return
         }
-        self.lastAcquiredLocation = currentLocation
-        
+        lastAcquiredLocation = currentLocation
         handleReceivedCoordinate(currentLocation.coordinate)
 
+        guard isGeocodingEnabled else {
+            return
+        }
         reverseGeocodeLocation(currentLocation) { [weak self] result in
             switch result {
             case let .success(placemark):
                 self?.lastAcquiredPlacemark = placemark
-                self?.handleReceivedPlacemar(placemark)
+                self?.handleReceivedPlacemark(placemark)
             case let .failure(error):
                 debugPrint("Did receive error while try to get placemark for location: \(currentLocation), error: \(error)", inCase: .location)
             }
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        guard newHeading.headingAccuracy >= 0 else {
+            return
+        }
+        handleReceivedHeading(newHeading)
     }
     
-    private func reverseGeocodeLocation(_ location: CLLocation, completion: @escaping (Result<CLPlacemark>) -> Void) {
+    func locationManagerShouldDisplayHeadingCalibration(_ manager: CLLocationManager) -> Bool {
+        return true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        for subscriber in errorSubscribers {
+            subscriber.handler?(error)
+        }
+    }
+    
+    private func continueLocationUpdates() {
+        switch state {
+        case .none:
+            break
+        case .locationUpdates:
+            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
+        }
+    }
+    
+    private func handleReceivedCoordinate(_ coordinate: Coordinate) {
+        for subscriber in locationSubscribers {
+            subscriber.handler?(coordinate)
+        }
+    }
+    
+    private func handleReceivedPlacemark(_ placemark: CLPlacemark) {
+        for subscriber in placemarkSubscribers {
+            subscriber.handler?(placemark)
+        }
+    }
+    
+    private func handleReceivedHeading(_ heading: CLHeading) {
+        for subscriber in headingSubscribers {
+            subscriber.handler?(heading)
+        }
+    }
+}
+
+// MARK: - Geocoding
+
+extension LocationService {
+    
+    private enum GeocodingResult<T> {
+        case success(T)
+        case failure(Error)
+    }
+    
+    private func reverseGeocodeLocation(_ location: CLLocation, completion: @escaping (GeocodingResult<CLPlacemark>) -> Void) {
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { placemarks, error in
             if let placemark = placemarks?.first {
@@ -186,25 +227,5 @@ extension LocationService: CLLocationManagerDelegate {
                 completion(.failure(error))
             }
         }
-    }
-    
-    private func handleReceivedCoordinate(_ coordinate: Coordinate) {
-        for subscriber in locationSubscribers {
-            subscriber.handler?(coordinate)
-        }
-        for completion in locationOnceCompletions {
-            completion(coordinate)
-        }
-        locationOnceCompletions.removeAll()
-    }
-    
-    private func handleReceivedPlacemar(_ placemark: CLPlacemark) {
-        for subscriber in placemarkSubscribers {
-            subscriber.handler?(placemark)
-        }
-        for completion in placemarkOnceCompletions {
-            completion(placemark)
-        }
-        placemarkOnceCompletions.removeAll()
     }
 }
