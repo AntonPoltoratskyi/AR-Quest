@@ -111,6 +111,10 @@ extension LocationService: LocationServiceInput {
         }
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         locationSubscribers.append(container)
+        
+        if let lastLocation = lastAcquiredLocation {
+            handler(lastLocation)
+        }
     }
     
     func observeHeadingUpdates(_ subscriber: LocationSubscriber, handler: @escaping HeadingHandler) {
@@ -127,6 +131,10 @@ extension LocationService: LocationServiceInput {
         }
         let container = SubscriberContainer(ref: subscriber, handler: handler)
         placemarkSubscribers.append(container)
+        
+        if let lastPlacemark = lastAcquiredPlacemark {
+            handler(lastPlacemark)
+        }
     }
     
     func observeErrors(_ subscriber: LocationSubscriber, handler: @escaping LocationErrorHandler) {

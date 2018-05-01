@@ -17,5 +17,5 @@ enum ARConstants {
     static let maxErrorLimit = 10
     
     /// Distance to quest task's destination node (in meters).
-    static let destinationDistance: Double = 5
+    static let destinationDistance: Double = 4
 }

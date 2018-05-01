@@ -16,7 +16,11 @@ final class LoginRouter: Router, LoginRouterInput {
     
     weak var viewController: UIViewController!
     
+    private let locationService = LocationService.shared
+    
     func showContent() {
+        locationService.startLocationTracking()
+        
         let menuContainer = SideMenuContainerAssembly().build()
         
         let leftMenu = MenuAssembly().build()
