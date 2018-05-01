@@ -31,7 +31,7 @@ final class DestinationNode: ARQuestNode {
     
     override func setup() {
         super.setup()
-        let box = SCNBox(width: 5, height: 5, length: 5, chamferRadius: 0)
+        let box = SCNSphere(radius: 4)
         
         box.firstMaterial?.diffuse.contents = UIColor.red
         box.firstMaterial?.isDoubleSided = true
