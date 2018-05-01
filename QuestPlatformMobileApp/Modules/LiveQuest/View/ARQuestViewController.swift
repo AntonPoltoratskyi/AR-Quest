@@ -1,5 +1,5 @@
 //
-//  QuestViewController.swift
+//  ARQuestViewController.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -9,16 +9,16 @@
 import UIKit
 import ARKit
 
-final class QuestViewController: UIViewController, View {
+final class ARQuestViewController: UIViewController, View {
     
-    typealias Output = QuestViewOutput
+    typealias Output = ARQuestViewOutput
     var output: Output!
     
     
     // MARK: - Views
     
-    private lazy var contentView: QuestView = {
-        let contentView = QuestView()
+    private lazy var contentView: ARQuestView = {
+        let contentView = ARQuestView()
         contentView.nextButton.addTarget(self, action: #selector(actionNextButtonTapped(sender:)), for: .touchUpInside)
         return contentView
     }()
@@ -54,8 +54,8 @@ final class QuestViewController: UIViewController, View {
     }
 }
 
-// MARK: - QuestViewInput
-extension QuestViewController: QuestViewInput {
+// MARK: - ARQuestViewInput
+extension ARQuestViewController: ARQuestViewInput {
     
     var sceneView: ARSCNView {
         return contentView.sceneView

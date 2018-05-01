@@ -1,5 +1,5 @@
 //
-//  QuestProtocols.swift
+//  ARQuestProtocols.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -12,12 +12,12 @@ import CoreLocation
 
 // MARK: - Module Input
 
-protocol QuestModuleInput: ModuleInput {
+protocol ARQuestModuleInput: ModuleInput {
 }
 
 // MARK: - View
 
-protocol QuestViewInput: class {
+protocol ARQuestViewInput: class {
     var sceneView: ARSCNView { get }
     
     func showMessage(_ message: String)
@@ -29,7 +29,7 @@ protocol QuestViewInput: class {
 }
 
 // MARK: -
-protocol QuestViewOutput: class {
+protocol ARQuestViewOutput: class {
     func viewDidLoad()
     func viewDidAppear()
     func viewDidDisappear()
@@ -38,13 +38,13 @@ protocol QuestViewOutput: class {
 
 // MARK: - Interactor
 
-protocol QuestInteractorInput: class {
+protocol ARQuestInteractorInput: class {
     func startLocationUpdates()
     func stopLocationUpdates()
 }
 
 // MARK: -
-protocol QuestInteractorOutput: class {
+protocol ARQuestInteractorOutput: class {
     func didChangeLocationAuthorizationStatus(_ status: CLAuthorizationStatus)
     func didUpdateLocation(_ newLocation: CLLocation, previousLocation: CLLocation?)
     func didUpdateHeading(_ newHeading: CLHeading)
@@ -53,6 +53,6 @@ protocol QuestInteractorOutput: class {
 
 // MARK: - Router
 
-protocol QuestRouterInput: class {
+protocol ARQuestRouterInput: class {
     func showFinish(for quest: Quest)
 }

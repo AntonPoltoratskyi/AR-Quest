@@ -1,5 +1,5 @@
 //
-//  QuestInteractor.swift
+//  ARQuestInteractor.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -9,9 +9,9 @@
 import Foundation
 import CoreLocation
 
-final class QuestInteractor: Interactor, QuestInteractorInput {
-    typealias Output = QuestInteractorOutput
-    weak var output: QuestInteractorOutput!
+final class ARQuestInteractor: Interactor, ARQuestInteractorInput {
+    typealias Output = ARQuestInteractorOutput
+    weak var output: ARQuestInteractorOutput!
     
     private var receivedLocations: [CLLocation] = []
     private let cacheSize = 500

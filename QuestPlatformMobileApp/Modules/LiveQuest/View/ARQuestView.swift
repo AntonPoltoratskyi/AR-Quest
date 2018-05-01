@@ -1,5 +1,5 @@
 //
-//  QuestView.swift
+//  ARQuestView.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -10,7 +10,7 @@ import UIKit
 import ARKit
 import SnapKit
 
-final class QuestView: BaseView {
+final class ARQuestView: BaseView {
     
     private let formatter: LengthFormatter = {
         let formatter = LengthFormatter()

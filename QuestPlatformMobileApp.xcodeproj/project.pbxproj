@@ -164,12 +164,12 @@
 		85477F0720948708002D26F9 /* ARSceneViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewModelDelegate.swift */; };
 		85477F0A20948825002D26F9 /* ARTrackingServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */; };
 		85477F0C20948848002D26F9 /* ARTrackingServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */; };
-		85477F1720948A72002D26F9 /* QuestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1020948A72002D26F9 /* QuestRouter.swift */; };
-		85477F1820948A72002D26F9 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1120948A72002D26F9 /* QuestViewController.swift */; };
-		85477F1920948A72002D26F9 /* QuestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1220948A72002D26F9 /* QuestProtocols.swift */; };
-		85477F1A20948A72002D26F9 /* QuestAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1320948A72002D26F9 /* QuestAssembly.swift */; };
-		85477F1B20948A72002D26F9 /* QuestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1420948A72002D26F9 /* QuestInteractor.swift */; };
-		85477F1C20948A72002D26F9 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1520948A72002D26F9 /* QuestView.swift */; };
+		85477F1720948A72002D26F9 /* ARQuestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1020948A72002D26F9 /* ARQuestRouter.swift */; };
+		85477F1820948A72002D26F9 /* ARQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1120948A72002D26F9 /* ARQuestViewController.swift */; };
+		85477F1920948A72002D26F9 /* ARQuestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1220948A72002D26F9 /* ARQuestProtocols.swift */; };
+		85477F1A20948A72002D26F9 /* ARQuestAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1320948A72002D26F9 /* ARQuestAssembly.swift */; };
+		85477F1B20948A72002D26F9 /* ARQuestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1420948A72002D26F9 /* ARQuestInteractor.swift */; };
+		85477F1C20948A72002D26F9 /* ARQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F1520948A72002D26F9 /* ARQuestView.swift */; };
 		85477F2520949419002D26F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85477F2420949419002D26F9 /* MapKit.framework */; };
 		85477F372094A7F9002D26F9 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F2E2094A7F8002D26F9 /* BaseNode.swift */; };
 		85477F3A2094A7F9002D26F9 /* FloorAnchorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F312094A7F8002D26F9 /* FloorAnchorNode.swift */; };
@@ -177,7 +177,7 @@
 		85477F3C2094A7F9002D26F9 /* BannerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F332094A7F8002D26F9 /* BannerNode.swift */; };
 		85477F3F2094A879002D26F9 /* SceneUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F3E2094A879002D26F9 /* SceneUtils.swift */; };
 		85477F412094A99B002D26F9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F402094A99B002D26F9 /* Container.swift */; };
-		85477F442094B53F002D26F9 /* LiveQuestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F432094B53E002D26F9 /* LiveQuestPresenter.swift */; };
+		85477F442094B53F002D26F9 /* ARQuestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F432094B53E002D26F9 /* ARQuestPresenter.swift */; };
 		855D748B207B77ED000421DA /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7484207B77ED000421DA /* ProfilePresenter.swift */; };
 		855D748C207B77ED000421DA /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7485207B77ED000421DA /* ProfileRouter.swift */; };
 		855D748D207B77ED000421DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D7486207B77ED000421DA /* ProfileViewController.swift */; };
@@ -459,12 +459,12 @@
 		85477F0620948708002D26F9 /* ARSceneViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewModelDelegate.swift; sourceTree = "<group>"; };
 		85477F0920948825002D26F9 /* ARTrackingServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceDelegate.swift; sourceTree = "<group>"; };
 		85477F0B20948848002D26F9 /* ARTrackingServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingServiceInput.swift; sourceTree = "<group>"; };
-		85477F1020948A72002D26F9 /* QuestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestRouter.swift; sourceTree = "<group>"; };
-		85477F1120948A72002D26F9 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
-		85477F1220948A72002D26F9 /* QuestProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestProtocols.swift; sourceTree = "<group>"; };
-		85477F1320948A72002D26F9 /* QuestAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestAssembly.swift; sourceTree = "<group>"; };
-		85477F1420948A72002D26F9 /* QuestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInteractor.swift; sourceTree = "<group>"; };
-		85477F1520948A72002D26F9 /* QuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
+		85477F1020948A72002D26F9 /* ARQuestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestRouter.swift; sourceTree = "<group>"; };
+		85477F1120948A72002D26F9 /* ARQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestViewController.swift; sourceTree = "<group>"; };
+		85477F1220948A72002D26F9 /* ARQuestProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestProtocols.swift; sourceTree = "<group>"; };
+		85477F1320948A72002D26F9 /* ARQuestAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestAssembly.swift; sourceTree = "<group>"; };
+		85477F1420948A72002D26F9 /* ARQuestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestInteractor.swift; sourceTree = "<group>"; };
+		85477F1520948A72002D26F9 /* ARQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestView.swift; sourceTree = "<group>"; };
 		85477F2420949419002D26F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		85477F2E2094A7F8002D26F9 /* BaseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		85477F312094A7F8002D26F9 /* FloorAnchorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorAnchorNode.swift; sourceTree = "<group>"; };
@@ -472,7 +472,7 @@
 		85477F332094A7F8002D26F9 /* BannerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerNode.swift; sourceTree = "<group>"; };
 		85477F3E2094A879002D26F9 /* SceneUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneUtils.swift; sourceTree = "<group>"; };
 		85477F402094A99B002D26F9 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
-		85477F432094B53E002D26F9 /* LiveQuestPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveQuestPresenter.swift; sourceTree = "<group>"; };
+		85477F432094B53E002D26F9 /* ARQuestPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARQuestPresenter.swift; sourceTree = "<group>"; };
 		855D7484207B77ED000421DA /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		855D7485207B77ED000421DA /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		855D7486207B77ED000421DA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -1649,7 +1649,7 @@
 		85477F0E20948A10002D26F9 /* LiveQuest */ = {
 			isa = PBXGroup;
 			children = (
-				85477F1220948A72002D26F9 /* QuestProtocols.swift */,
+				85477F1220948A72002D26F9 /* ARQuestProtocols.swift */,
 				85477F2A2094A728002D26F9 /* Entity */,
 				85477F1D20948A79002D26F9 /* View */,
 				85477F1E20948A85002D26F9 /* Presenter */,
@@ -1663,8 +1663,8 @@
 		85477F1D20948A79002D26F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85477F1520948A72002D26F9 /* QuestView.swift */,
-				85477F1120948A72002D26F9 /* QuestViewController.swift */,
+				85477F1520948A72002D26F9 /* ARQuestView.swift */,
+				85477F1120948A72002D26F9 /* ARQuestViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1672,7 +1672,7 @@
 		85477F1E20948A85002D26F9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				85477F432094B53E002D26F9 /* LiveQuestPresenter.swift */,
+				85477F432094B53E002D26F9 /* ARQuestPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1680,7 +1680,7 @@
 		85477F1F20948A8E002D26F9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				85477F1020948A72002D26F9 /* QuestRouter.swift */,
+				85477F1020948A72002D26F9 /* ARQuestRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1688,7 +1688,7 @@
 		85477F2020948A93002D26F9 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				85477F1320948A72002D26F9 /* QuestAssembly.swift */,
+				85477F1320948A72002D26F9 /* ARQuestAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -1696,7 +1696,7 @@
 		85477F2120948A99002D26F9 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				85477F1420948A72002D26F9 /* QuestInteractor.swift */,
+				85477F1420948A72002D26F9 /* ARQuestInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -2740,10 +2740,10 @@
 				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
 				85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
-				85477F442094B53F002D26F9 /* LiveQuestPresenter.swift in Sources */,
+				85477F442094B53F002D26F9 /* ARQuestPresenter.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
 				8511E564208C9234006DFCFE /* QuestSideMenuHeaderView.swift in Sources */,
-				85477F1C20948A72002D26F9 /* QuestView.swift in Sources */,
+				85477F1C20948A72002D26F9 /* ARQuestView.swift in Sources */,
 				853DD4FE2042CCE100E82595 /* SplashInteractor.swift in Sources */,
 				857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */,
 				853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */,
@@ -2786,7 +2786,7 @@
 				85C3C23A2083BACB009AEF58 /* LocationPickerProtocols.swift in Sources */,
 				85D4F16C20975BAB00C56930 /* TrackingInfo.swift in Sources */,
 				85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */,
-				85477F1B20948A72002D26F9 /* QuestInteractor.swift in Sources */,
+				85477F1B20948A72002D26F9 /* ARQuestInteractor.swift in Sources */,
 				85C3C2662083C569009AEF58 /* ConstructorAssembly.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				85C3C2652083C569009AEF58 /* ConstructorProtocols.swift in Sources */,
@@ -2814,7 +2814,7 @@
 				853DD51E2042FC6600E82595 /* LoginAssembly.swift in Sources */,
 				8511E55F208C88CB006DFCFE /* MenuItemTableViewCell.swift in Sources */,
 				851702262071579E0081F611 /* QuestDetailsRouter.swift in Sources */,
-				85477F1A20948A72002D26F9 /* QuestAssembly.swift in Sources */,
+				85477F1A20948A72002D26F9 /* ARQuestAssembly.swift in Sources */,
 				14FE2F861FC96382001EDEAB /* Dictionary.swift in Sources */,
 				853DD4DE2042C4E900E82595 /* UICollectionView+ViewModel.swift in Sources */,
 				14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */,
@@ -2890,7 +2890,7 @@
 				85126408209849E9000174ED /* Double+LatLng.swift in Sources */,
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
 				85D4F1712097611F00C56930 /* DestinationNode.swift in Sources */,
-				85477F1820948A72002D26F9 /* QuestViewController.swift in Sources */,
+				85477F1820948A72002D26F9 /* ARQuestViewController.swift in Sources */,
 				853DD4DA2042C4E900E82595 /* UITableView+ReusableCell.swift in Sources */,
 				85477ECF209474E3002D26F9 /* Distance.swift in Sources */,
 				85C3C21B20837692009AEF58 /* MenuAssembly.swift in Sources */,
@@ -2907,7 +2907,7 @@
 				85477EFF209482D0002D26F9 /* NavigationServiceDelegate.swift in Sources */,
 				85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
-				85477F1720948A72002D26F9 /* QuestRouter.swift in Sources */,
+				85477F1720948A72002D26F9 /* ARQuestRouter.swift in Sources */,
 				8512641A2098641D000174ED /* QuestInfoPopupView.swift in Sources */,
 				14FE2F871FC96382001EDEAB /* FileManager.swift in Sources */,
 				8511E54A208C6DC4006DFCFE /* EditProfilePresenter.swift in Sources */,
@@ -2947,7 +2947,7 @@
 				853DD4C62042C3BF00E82595 /* ClosureTapRecognizer.swift in Sources */,
 				85C3C2392083BACB009AEF58 /* LocationPickerViewController.swift in Sources */,
 				85D4F162209727F100C56930 /* matrix_float4x4+Transformation.swift in Sources */,
-				85477F1920948A72002D26F9 /* QuestProtocols.swift in Sources */,
+				85477F1920948A72002D26F9 /* ARQuestProtocols.swift in Sources */,
 				14FE2F911FC96382001EDEAB /* UIViewController+Navigation.swift in Sources */,
 				14FE2F891FC96382001EDEAB /* Integer.swift in Sources */,
 				8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */,

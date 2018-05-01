@@ -1,5 +1,5 @@
 //
-//  LiveQuestPresenter.swift
+//  ARQuestPresenter.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -11,11 +11,11 @@ import SceneKit
 import ARKit
 import MapKit
 
-final class LiveQuestPresenter: Presenter, QuestModuleInput {
+final class ARQuestPresenter: Presenter, ARQuestModuleInput {
     
-    typealias View = QuestViewInput
-    typealias Interactor = QuestInteractorInput
-    typealias Router = QuestRouterInput
+    typealias View = ARQuestViewInput
+    typealias Interactor = ARQuestInteractorInput
+    typealias Router = ARQuestRouterInput
     
     weak var view: View!
     var interactor: Interactor!
@@ -48,7 +48,7 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
         }
     }
     
-    private let updateQueue = DispatchQueue.queue(for: LiveQuestPresenter.self)
+    private let updateQueue = DispatchQueue.queue(for: ARQuestPresenter.self)
     
     private var isTextPopupPresented = false
     private var isFinished = false
@@ -65,8 +65,8 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
     }
 }
 
-// MARK: - QuestViewOutput
-extension LiveQuestPresenter: QuestViewOutput {
+// MARK: - ARQuestViewOutput
+extension ARQuestPresenter: ARQuestViewOutput {
     
     func viewDidLoad() {
         view.disableNextButton()
@@ -103,8 +103,8 @@ extension LiveQuestPresenter: QuestViewOutput {
 }
 
 
-// MARK: - QuestInteractorOutput
-extension LiveQuestPresenter: QuestInteractorOutput {
+// MARK: - ARQuestInteractorOutput
+extension ARQuestPresenter: ARQuestInteractorOutput {
     
     func didChangeLocationAuthorizationStatus(_ status: CLAuthorizationStatus) {
         print("Authorization status: \(status)")
@@ -126,7 +126,7 @@ extension LiveQuestPresenter: QuestInteractorOutput {
 }
 
 // MARK: - ARSceneViewModelDelegate
-extension LiveQuestPresenter: ARSceneViewModelDelegate {
+extension ARQuestPresenter: ARSceneViewModelDelegate {
     
     func sceneViewModel(_ sceneModel: ARSceneViewModel, didUpdateState state: ARSceneViewState) {
         switch state {
@@ -139,7 +139,7 @@ extension LiveQuestPresenter: ARSceneViewModelDelegate {
 }
 
 // MARK: - Task Actions
-extension LiveQuestPresenter {
+extension ARQuestPresenter {
     
     private func handleQuestFinish() {
         updateQueue.async {
@@ -186,7 +186,7 @@ extension LiveQuestPresenter {
 }
 
 // MARK: - ARTrackingServiceDelegate
-extension LiveQuestPresenter: ARTrackingServiceDelegate {
+extension ARQuestPresenter: ARTrackingServiceDelegate {
     
     func didUpdateTrackedPosition(with trackingInfo: TrackingInfo) {
         DispatchQueue.main.async {
@@ -212,7 +212,7 @@ extension LiveQuestPresenter: ARTrackingServiceDelegate {
 
 // MARK: - Nodes
 
-extension LiveQuestPresenter {
+extension ARQuestPresenter {
     
     private func updateDestinationNodePosition(for location: Coordinate) {
         guard let camera = sceneHandler?.currentCameraTransform(),

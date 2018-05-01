@@ -1,5 +1,5 @@
 //
-//  QuestRouter.swift
+//  ARQuestRouter.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class QuestRouter: Router, QuestRouterInput {
+final class ARQuestRouter: Router, ARQuestRouterInput {
     
     weak var viewController: UIViewController!
     

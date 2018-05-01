@@ -1,5 +1,5 @@
 //
-//  QuestAssembly.swift
+//  ARQuestAssembly.swift
 //  QuestPlatformMobileApp
 //
 //  Created by Anton Poltoratskyi on 28.04.2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class QuestAssembly: Assembly {
+final class ARQuestAssembly: Assembly {
     
-    typealias Input = Module<QuestModuleInput>
+    typealias Input = Module<ARQuestModuleInput>
     
     private let quest: Quest
     
@@ -20,10 +20,10 @@ final class QuestAssembly: Assembly {
     
     func build() -> Input {
         // Module
-        let view = QuestViewController()
-        let presenter = LiveQuestPresenter(quest: quest)
-        let interactor = QuestInteractor(locationService: .shared)
-        let router = QuestRouter()
+        let view = ARQuestViewController()
+        let presenter = ARQuestPresenter(quest: quest)
+        let interactor = ARQuestInteractor(locationService: .shared)
+        let router = ARQuestRouter()
         
         view.output = presenter
         
