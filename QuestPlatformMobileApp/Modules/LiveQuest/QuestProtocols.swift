@@ -19,7 +19,13 @@ protocol QuestModuleInput: ModuleInput {
 
 protocol QuestViewInput: class {
     var sceneView: ARSCNView { get }
+    
     func showMessage(_ message: String)
+    func showDistance(_ distance: Distance)
+    func showTextPopup(_ text: String)
+    
+    func enableNextAction()
+    func disableNextButton()
 }
 
 // MARK: -
@@ -27,6 +33,7 @@ protocol QuestViewOutput: class {
     func viewDidLoad()
     func viewDidAppear()
     func viewDidDisappear()
+    func didHideTextPopup()
 }
 
 // MARK: - Interactor
@@ -47,4 +54,5 @@ protocol QuestInteractorOutput: class {
 // MARK: - Router
 
 protocol QuestRouterInput: class {
+    func showFinish(for quest: Quest)
 }

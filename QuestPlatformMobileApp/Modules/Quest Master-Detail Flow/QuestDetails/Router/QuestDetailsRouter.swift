@@ -13,6 +13,7 @@ final class QuestDetailsRouter: Router, QuestDetailsRouterInput {
     weak var viewController: UIViewController!
     
     func join(to quest: Quest) {
-        
+        let module = QuestAssembly(quest: quest).build()
+        viewController.navigationController?.pushViewController(module.view, animated: true)
     }
 }

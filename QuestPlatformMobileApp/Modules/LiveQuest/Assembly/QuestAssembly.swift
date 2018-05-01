@@ -12,10 +12,16 @@ final class QuestAssembly: Assembly {
     
     typealias Input = Module<QuestModuleInput>
     
+    private let quest: Quest
+    
+    init(quest: Quest) {
+        self.quest = quest
+    }
+    
     func build() -> Input {
         // Module
         let view = QuestViewController()
-        let presenter = LiveQuestPresenter(destination: .debugCoordinate)
+        let presenter = LiveQuestPresenter(quest: quest)
         let interactor = QuestInteractor(locationService: .shared)
         let router = QuestRouter()
         

@@ -44,6 +44,13 @@ final class QuestViewController: UIViewController, View {
         super.viewDidDisappear(animated)
         output.viewDidDisappear()
     }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionNextButtonTapped(sender: UIButton) {
+        output.didHideTextPopup()
+    }
 }
 
 // MARK: - QuestViewInput
@@ -55,5 +62,21 @@ extension QuestViewController: QuestViewInput {
     
     func showMessage(_ message: String) {
         contentView.debugLabel.text = message
+    }
+    
+    func showTextPopup(_ text: String) {
+        contentView.popupLabel.text = text
+    }
+    
+    func showDistance(_ distance: Distance) {
+        contentView.showDistance(distance)
+    }
+    
+    func enableNextAction() {
+        contentView.nextButton.isEnabled = true
+    }
+    
+    func disableNextButton() {
+        contentView.nextButton.isEnabled = false
     }
 }

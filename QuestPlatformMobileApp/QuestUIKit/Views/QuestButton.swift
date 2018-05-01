@@ -11,6 +11,16 @@ import SnapKit
 
 class QuestButton: UIButton {
     
+    override var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                backgroundColor =  Theme.Button.Color.lightBlue
+            } else {
+                backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubviews()

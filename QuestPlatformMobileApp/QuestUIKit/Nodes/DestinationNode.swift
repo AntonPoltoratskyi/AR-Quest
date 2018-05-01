@@ -22,10 +22,10 @@ final class DestinationNode: ARQuestNode {
     
     // MARK: - Init
     
-    init(coordinate: Coordinate) {
+    init(coordinate: Coordinate, identifier: String) {
         self.coordinate = coordinate
         super.init()
-        self.identifier = coordinate.identifier
+        self.identifier = identifier
     }
     
     required init?(coder aDecoder: NSCoder) {

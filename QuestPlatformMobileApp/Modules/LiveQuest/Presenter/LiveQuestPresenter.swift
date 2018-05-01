@@ -21,8 +21,6 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
     var interactor: Interactor!
     var router: Router!
     
-    private var destinationCoordinate: Coordinate
-    
     private var sceneHandler: ARSceneViewModelInput!
     
     private let trackingService: ARTrackingService = {
@@ -30,11 +28,36 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
         return service
     }()
     
+    private let quest: Quest
+    
+    private var currentTask: Task? {
+        didSet {
+            guard let task = currentTask else {
+                handleQuestFinish()
+                return
+            }
+            switch task.goal {
+            case let .hint(text):
+                if !isTextPopupPresented {
+                    showHint(text)
+                    view.enableNextAction()
+                }
+            case let .location(destinationCoordinate):
+                updateDestinationNodePosition(for: destinationCoordinate)
+            }
+        }
+    }
+    
+    private let updateQueue = DispatchQueue.queue(for: LiveQuestPresenter.self)
+    
+    private var isTextPopupPresented = false
+    private var isFinished = false
+    
     
     // MARK: - Init
     
-    init(destination: Coordinate) {
-        self.destinationCoordinate = destination
+    init(quest: Quest) {
+        self.quest = quest
     }
     
     deinit {
@@ -46,9 +69,13 @@ final class LiveQuestPresenter: Presenter, QuestModuleInput {
 extension LiveQuestPresenter: QuestViewOutput {
     
     func viewDidLoad() {
+        view.disableNextButton()
+        
         let handler = ARSceneViewModel(with: view.sceneView)
         handler.delegate = self
         sceneHandler = handler
+        
+        self.currentTask = quest.tasks.first
         
         trackingService.delegate = self
         interactor.startLocationUpdates()
@@ -61,7 +88,20 @@ extension LiveQuestPresenter: QuestViewOutput {
     func viewDidDisappear() {
         sceneHandler.pauseSession()
     }
+    
+    func didHideTextPopup() {
+        view.disableNextButton()
+        updateQueue.sync {
+            self.isTextPopupPresented = false
+        }
+        goToNextTask()
+    }
+    
+    private func goToNextTask() {
+        currentTask = quest.tasks.next(after: { $0 === currentTask })
+    }
 }
+
 
 // MARK: - QuestInteractorOutput
 extension LiveQuestPresenter: QuestInteractorOutput {
@@ -91,11 +131,56 @@ extension LiveQuestPresenter: ARSceneViewModelDelegate {
     func sceneViewModel(_ sceneModel: ARSceneViewModel, didUpdateState state: ARSceneViewState) {
         switch state {
         case .normal, .normalEmptyAnchors:
-//            displayNodesIfNeeded()
             break
         default:
-//            removeAndCacheNodesIfNeeded()
             break
+        }
+    }
+}
+
+// MARK: - Task Actions
+extension LiveQuestPresenter {
+    
+    private func handleQuestFinish() {
+        updateQueue.async {
+            guard !self.isFinished else {
+                return
+            }
+            self.isFinished = true
+            
+            DispatchQueue.main.async {
+                self.view.disableNextButton()
+                self.router.showFinish(for: self.quest)
+            }
+        }
+    }
+    
+    private func showHint(_ text: String) {
+        updateQueue.async {
+            guard !self.isTextPopupPresented else {
+                return
+            }
+            self.isTextPopupPresented = true
+            
+            DispatchQueue.main.async {
+                self.removeDestinationNode()
+                self.view.enableNextAction()
+                self.view.showTextPopup(text)
+            }
+        }
+    }
+    
+    private func handleDistanceToDestination(_ distance: Distance) {
+        updateQueue.async {
+            // < 10 meters
+            DispatchQueue.main.async {
+                print("Dis: \(distance)")
+                
+                self.view.showDistance(distance)
+                if distance < 5 {
+                    self.goToNextTask()
+                }
+            }
         }
     }
 }
@@ -104,11 +189,16 @@ extension LiveQuestPresenter: ARSceneViewModelDelegate {
 extension LiveQuestPresenter: ARTrackingServiceDelegate {
     
     func didUpdateTrackedPosition(with trackingInfo: TrackingInfo) {
-        let accuracy = trackingInfo.accuracy()
-        view.showMessage("Accuracy: \u{0394} \(accuracy) m.")
-    
-        if accuracy <= 1 && accuracy >= 0.0001 {
-            updateDestinationNodePosition(for: self.destinationCoordinate)
+        DispatchQueue.main.async {
+            let accuracy = trackingInfo.accuracy()
+            self.view.showMessage("Accuracy: \u{0394} \(accuracy) m.")
+            
+            if accuracy <= 1 && accuracy >= 0.0001 {
+                guard let currentTask = self.currentTask, case let .location(destinationCoordinate) = currentTask.goal else {
+                    return
+                }
+                self.updateDestinationNodePosition(for: destinationCoordinate)
+            }
         }
     }
     
@@ -116,25 +206,26 @@ extension LiveQuestPresenter: ARTrackingServiceDelegate {
     }
     
     func handleARSessionReset() {
-//        removeAndCacheNodesIfNeeded()
         sceneHandler.reloadSession()
     }
 }
 
+// MARK: - Nodes
+
 extension LiveQuestPresenter {
     
     private func updateDestinationNodePosition(for location: Coordinate) {
-        guard let camera = sceneHandler.currentCameraTransform(),
+        guard let camera = sceneHandler?.currentCameraTransform(),
             let currentLocation = trackingService.lastRecognizedLocation else {
                 return
         }
-        let identifier = location.identifier
+        let identifier = "destination-location"
         
         var existingNodes: [DestinationNode] = view.sceneView.scene.rootNode.childNodes {
             $0.identifier == identifier
         }
         if existingNodes.isEmpty {
-            let destinationNode = DestinationNode(coordinate: location)
+            let destinationNode = DestinationNode(coordinate: location, identifier: identifier)
             view.sceneView.scene.rootNode.addChildNode(destinationNode)
             existingNodes.append(destinationNode)
         }
@@ -153,14 +244,15 @@ extension LiveQuestPresenter {
                 
                 node.applyScale(self.scaleForDistance(sceneDistance))
                 node.applyHeight(self.heightForDistance(distance, floorHeight: estimatedFloorHeight))
+                
+                self.handleDistanceToDestination(distance)
             }
         })
     }
     
-    private func removeDestinationNode(for location: Coordinate) {
-        let identifier = location.identifier
+    private func removeDestinationNode() {
         let nodes: [DestinationNode] = view.sceneView.scene.rootNode.childNodes {
-            $0.identifier == identifier
+            $0.identifier == "destination-location"
         }
         for node in nodes {
             node.removeFromParentNode()
@@ -183,8 +275,24 @@ extension LiveQuestPresenter {
     }
 }
 
-extension Coordinate {
-    static var debugCoordinate: Coordinate {
-        return Coordinate(latitude: 50.005938, longitude: 36.230718)
+// MARK: - Collection
+extension Collection {
+    
+    func next(after predicate: (Iterator.Element) -> Bool) -> Iterator.Element? {
+        var idx: Index? = nil
+        for (i, element) in zip(indices, self) {
+            if predicate(element) {
+                idx = i
+                break
+            }
+        }
+        
+        if let index = idx,
+            let resultIndex = self.index(index, offsetBy: 1, limitedBy: self.endIndex),
+            resultIndex != endIndex {
+            
+            return self[resultIndex]
+        }
+        return nil
     }
 }

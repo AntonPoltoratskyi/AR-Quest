@@ -28,7 +28,7 @@ final class MenuRouter: Router, MenuRouterInput {
     }
     
     func showAbout() {
-        let module = QuestAssembly().build()
+        let module = AboutAssembly().build()
         pushModule(module.view)
     }
     
