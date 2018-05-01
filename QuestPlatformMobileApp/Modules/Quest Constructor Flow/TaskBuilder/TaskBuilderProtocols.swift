@@ -12,6 +12,7 @@ import UIKit
 
 protocol TaskBuilderModuleInput: ModuleInput {
     var output: TaskBuilderModuleOutput? { get set }
+    func dismiss()
 }
 
 protocol TaskBuilderModuleOutput: class {
@@ -21,10 +22,13 @@ protocol TaskBuilderModuleOutput: class {
 // MARK: - View
 
 protocol TaskBuilderViewInput: class {
+    func setupSelectedLocation(_ coordinate: Coordinate)
 }
 
 // MARK: -
 protocol TaskBuilderViewOutput: class {
+    func didTapDone(title: String?, text: String?)
+    func didTapSelectLocation()
 }
 
 // MARK: - Interactor
@@ -39,4 +43,6 @@ protocol TaskBuilderInteractorOutput: class {
 // MARK: - Router
 
 protocol TaskBuilderRouterInput: class {
+    func dismiss()
+    func showLocationPicker(delegate: LocationPickerModuleOutput)
 }

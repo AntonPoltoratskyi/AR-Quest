@@ -98,6 +98,7 @@ extension ConstructorViewController: UITableViewDataSource, UITableViewDelegate 
     
     private func setupBackgroundView(for tableView: UITableView) {
         let backgroundView = UIView()
+        
         let label = UILabel()
         label.font = UIFont.appFont(ofSize: 20, weight: .medium)
         label.text = "Don't have tasks yet"
@@ -106,7 +107,7 @@ extension ConstructorViewController: UITableViewDataSource, UITableViewDelegate 
         tableView.backgroundView = backgroundView
 
         label.snp.makeConstraints { maker in
-            maker.horizontalInset(32)
+            maker.horizontalInset(24)
             maker.centerY.equalToSuperview()
         }
     }

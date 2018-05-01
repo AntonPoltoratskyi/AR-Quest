@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TaskBuilderView: BaseView {
+final class TaskBuilderView: BaseScrollableView {
     
     override var title: String? {
         return "New Task"
@@ -20,13 +20,22 @@ final class TaskBuilderView: BaseView {
     
     // MARK: - Views
     
+    private(set) lazy var titleField: QuestTextField = {
+        let textField = QuestTextField()
+        textField.placeholder = "Enter title"
+        contentView.addSubview(textField)
+        return textField
+    }()
+    
     private(set) lazy var segmentedControl: QuestSegmentedControl = {
         let actions: [ControlAction] = [
-            ControlAction(title: "Question") { [unowned self] in
-                
+            ControlAction(title: "Text Hint") { [unowned self] in
+                self.textFormView.isHidden = false
+                self.locationFormView.isHidden = true
             },
             ControlAction(title: "Location") { [unowned self] in
-                
+                self.textFormView.isHidden = true
+                self.locationFormView.isHidden = false
             }
         ]
         let control = QuestSegmentedControl(actions: actions)
@@ -34,10 +43,10 @@ final class TaskBuilderView: BaseView {
         return control
     }()
     
-    private(set) lazy var questionFormView: QuestionTaskFormView = {
-        let questionFormView = QuestionTaskFormView()
-        contentView.addSubview(questionFormView)
-        return questionFormView
+    private(set) lazy var textFormView: TextHintFormView = {
+        let textFormView = TextHintFormView()
+        contentView.addSubview(textFormView)
+        return textFormView
     }()
     
     private(set) lazy var locationFormView: LocationTaskFormView = {
@@ -46,16 +55,50 @@ final class TaskBuilderView: BaseView {
         return locationFormView
     }()
     
+    private(set) lazy var doneButton: QuestButton = {
+        let button = QuestButton()
+        button.setTitle("Done", for: .normal)
+        contentView.addSubview(button)
+        return button
+    }()
+    
     
     // MARK: - Setup
     
     override func setup() {
         super.setup()
         
+        textFormView.isHidden = false
+        locationFormView.isHidden = true
+        
+        titleField.snp.makeConstraints { maker in
+            maker.top.equalTo(self.navigationView.snp.bottom).offset(16)
+            maker.horizontalInset(16)
+            maker.textFieldHeight()
+        }
+        
         segmentedControl.snp.makeConstraints { maker in
-            maker.top.equalTo(self.navigationView.snp.bottom).offset(8)
+            maker.top.equalTo(self.titleField.snp.bottom).offset(16)
             maker.leading.trailing.equalToSuperview()
             maker.segmentedControlActionHeight()
+        }
+        
+        textFormView.snp.makeConstraints { maker in
+            maker.top.equalTo(segmentedControl.snp.bottom).offset(16)
+            maker.horizontalInset(16)
+            maker.bottom.equalTo(doneButton.snp.top).offset(-16)
+        }
+        
+        locationFormView.snp.makeConstraints { maker in
+            maker.top.equalTo(segmentedControl.snp.bottom).offset(16)
+            maker.horizontalInset(16)
+            maker.bottom.equalTo(doneButton.snp.top).offset(-16)
+        }
+        
+        doneButton.snp.makeConstraints { maker in
+            maker.horizontalInset(16)
+            maker.buttonHeight()
+            maker.bottom.equalToSuperview().inset(16)
         }
     }
 }

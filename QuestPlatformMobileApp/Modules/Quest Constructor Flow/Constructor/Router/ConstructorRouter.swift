@@ -25,5 +25,6 @@ extension ConstructorRouter: TaskBuilderModuleOutput {
     
     func taskBuilderModule(_ moduleInput: TaskBuilderModuleInput, didCreateTask task: Task) {
         output?.didCreateTask(task)
+        moduleInput.dismiss()
     }
 }

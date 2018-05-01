@@ -11,4 +11,14 @@ import UIKit
 final class TaskBuilderRouter: Router, TaskBuilderRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func dismiss() {
+        viewController.navigationController?.popViewController(animated: true)
+    }
+    
+    func showLocationPicker(delegate: LocationPickerModuleOutput) {
+        let module = LocationPickerAssembly().build()
+        module.input.output = delegate
+        viewController.navigationController?.pushViewController(module.view, animated: true)
+    }
 }

@@ -12,6 +12,7 @@ import CoreLocation
 // MARK: - Module Input
 
 protocol LocationPickerModuleInput: ModuleInput {
+    var output: LocationPickerModuleOutput? { get set }
 }
 
 protocol LocationPickerModuleOutput: ModuleInput {

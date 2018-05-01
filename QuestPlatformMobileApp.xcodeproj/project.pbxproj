@@ -36,7 +36,7 @@
 		850751B8208DBE5900A1221C /* TaskBuilderAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B1208DBE5900A1221C /* TaskBuilderAssembly.swift */; };
 		850751B9208DBE5900A1221C /* TaskBuilderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */; };
 		850751BA208DBE5900A1221C /* TaskBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751B3208DBE5900A1221C /* TaskBuilderView.swift */; };
-		850751C3208DC48200A1221C /* QuestionTaskFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751C2208DC48200A1221C /* QuestionTaskFormView.swift */; };
+		850751C3208DC48200A1221C /* TextHintFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751C2208DC48200A1221C /* TextHintFormView.swift */; };
 		850751C5208DC4A900A1221C /* LocationTaskFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751C4208DC4A900A1221C /* LocationTaskFormView.swift */; };
 		8511E53E208C6125006DFCFE /* UserNetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */; };
 		8511E540208C612F006DFCFE /* UserNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E53F208C612F006DFCFE /* UserNetworkService.swift */; };
@@ -56,6 +56,7 @@
 		85125717204AEFEA00995543 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125716204AEFEA00995543 /* Validator.swift */; };
 		85125719204AF04700995543 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125718204AF04700995543 /* EmailValidator.swift */; };
 		8512571B204AF72200995543 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512571A204AF72200995543 /* PasswordValidator.swift */; };
+		85126408209849E9000174ED /* Double+LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85126407209849E9000174ED /* Double+LatLng.swift */; };
 		851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F620710D100081F611 /* QuestBackgroundView.swift */; };
 		8517020020711E370081F611 /* QuestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F920711E370081F611 /* QuestListPresenter.swift */; };
 		8517020120711E370081F611 /* QuestListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FA20711E370081F611 /* QuestListRouter.swift */; };
@@ -321,7 +322,7 @@
 		850751B1208DBE5900A1221C /* TaskBuilderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderAssembly.swift; sourceTree = "<group>"; };
 		850751B2208DBE5900A1221C /* TaskBuilderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderInteractor.swift; sourceTree = "<group>"; };
 		850751B3208DBE5900A1221C /* TaskBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderView.swift; sourceTree = "<group>"; };
-		850751C2208DC48200A1221C /* QuestionTaskFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTaskFormView.swift; sourceTree = "<group>"; };
+		850751C2208DC48200A1221C /* TextHintFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHintFormView.swift; sourceTree = "<group>"; };
 		850751C4208DC4A900A1221C /* LocationTaskFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTaskFormView.swift; sourceTree = "<group>"; };
 		8511E53D208C6125006DFCFE /* UserNetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkRouter.swift; sourceTree = "<group>"; };
 		8511E53F208C612F006DFCFE /* UserNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkService.swift; sourceTree = "<group>"; };
@@ -341,6 +342,7 @@
 		85125716204AEFEA00995543 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		85125718204AF04700995543 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		8512571A204AF72200995543 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		85126407209849E9000174ED /* Double+LatLng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+LatLng.swift"; sourceTree = "<group>"; };
 		851701F620710D100081F611 /* QuestBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBackgroundView.swift; sourceTree = "<group>"; };
 		851701F920711E370081F611 /* QuestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListPresenter.swift; sourceTree = "<group>"; };
 		851701FA20711E370081F611 /* QuestListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListRouter.swift; sourceTree = "<group>"; };
@@ -716,6 +718,7 @@
 				85477EB620947393002D26F9 /* Radians.swift */,
 				85477ECE209474E3002D26F9 /* Distance.swift */,
 				85D4F16920975AC600C56930 /* DistanceRepresentable.swift */,
+				85126407209849E9000174ED /* Double+LatLng.swift */,
 				85D4F16B20975BAB00C56930 /* TrackingInfo.swift */,
 				85477EB120947393002D26F9 /* CLLocationCoordinate2D.swift */,
 				85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */,
@@ -888,9 +891,9 @@
 				850751B0208DBE5900A1221C /* TaskBuilderProtocols.swift */,
 				850751BB208DBE6100A1221C /* View */,
 				850751BC208DBE6B00A1221C /* Presenter */,
+				850751BF208DBE7B00A1221C /* Interactor */,
 				850751BD208DBE7200A1221C /* Router */,
 				850751BE208DBE7600A1221C /* Assembly */,
-				850751BF208DBE7B00A1221C /* Interactor */,
 			);
 			path = TaskBuilder;
 			sourceTree = "<group>";
@@ -948,8 +951,8 @@
 		850751C1208DC46F00A1221C /* Forms */ = {
 			isa = PBXGroup;
 			children = (
-				850751C2208DC48200A1221C /* QuestionTaskFormView.swift */,
 				850751C4208DC4A900A1221C /* LocationTaskFormView.swift */,
+				850751C2208DC48200A1221C /* TextHintFormView.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -2749,7 +2752,7 @@
 				85C3C2722083C583009AEF58 /* ConstructorFinishRouter.swift in Sources */,
 				850751B7208DBE5900A1221C /* TaskBuilderProtocols.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
-				850751C3208DC48200A1221C /* QuestionTaskFormView.swift in Sources */,
+				850751C3208DC48200A1221C /* TextHintFormView.swift in Sources */,
 				8517022B2071579E0081F611 /* QuestDetailsView.swift in Sources */,
 				850751B9208DBE5900A1221C /* TaskBuilderInteractor.swift in Sources */,
 				85477F3F2094A879002D26F9 /* SceneUtils.swift in Sources */,
@@ -2787,6 +2790,7 @@
 				85F740C5204C24D8002AC5FE /* ConstraintMaker.swift in Sources */,
 				14FE2F961FC96466001EDEAB /* AppDelegateProxy.swift in Sources */,
 				851702252071579E0081F611 /* QuestDetailsPresenter.swift in Sources */,
+				85126408209849E9000174ED /* Double+LatLng.swift in Sources */,
 				85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */,
 				85D4F1712097611F00C56930 /* DestinationNode.swift in Sources */,
 				85477F1820948A72002D26F9 /* QuestViewController.swift in Sources */,

@@ -23,6 +23,7 @@ final class ConstructorAssembly: Assembly {
         interactor.output = presenter
         
         router.viewController = view
+        router.output = presenter
         
         presenter.view = view
         presenter.interactor = interactor

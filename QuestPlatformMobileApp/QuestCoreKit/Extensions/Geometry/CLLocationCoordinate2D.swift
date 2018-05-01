@@ -73,16 +73,3 @@ extension Coordinate {
         return MKPlacemark(coordinate: self)
     }
 }
-
-// MARK: - Latitude / Longitude
-
-private extension Double {
-    
-    var metersToLatitude: Double {
-        return self / 6_373_000
-    }
-    
-    var metersToLongitude: Double {
-        return self / 5_602_900
-    }
-}
