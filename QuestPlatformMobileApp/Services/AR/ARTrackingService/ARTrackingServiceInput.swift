@@ -14,6 +14,5 @@ protocol ARTrackingServiceInput: class {
     var lastRecognizedLocation: CLLocation? { get set }
     var lastRecognizedCameraTransform: matrix_float4x4? { get set }
     
-    func requestPlaces(for coordinate: Coordinate, callback: @escaping (CLPlacemark?) -> Void)
     func handleLocationUpdate(newLocation: CLLocation, currentCameraTransform: matrix_float4x4)
 }

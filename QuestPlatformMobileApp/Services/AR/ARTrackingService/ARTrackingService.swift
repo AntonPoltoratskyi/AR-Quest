@@ -20,17 +20,6 @@ final class ARTrackingService: ARTrackingServiceInput {
     private let errorThreshold = 10
     private let acceptableDistanceDiff: Double = 5 // in meters
     
-    private let navigationManager = NavigationService()
-    
-    public func requestPlaces(for coordinate: Coordinate, callback: @escaping (CLPlacemark?) -> Void) {
-        navigationManager.requestPlaces(for: coordinate) { (placemark, error) in
-            if let error = error {
-                debugPrint(error)
-            }
-            callback(placemark)
-        }
-    }
-    
     public func handleLocationUpdate(newLocation: CLLocation, currentCameraTransform: matrix_float4x4) {
         if let lastLocation = lastRecognizedLocation, let lastTransform = lastRecognizedCameraTransform {
             let locationDifference = DistanceInfo(old: lastLocation, new: newLocation)

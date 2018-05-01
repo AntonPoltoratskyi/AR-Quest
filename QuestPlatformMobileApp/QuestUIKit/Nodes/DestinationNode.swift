@@ -9,12 +9,6 @@
 import SceneKit
 import ARKit
 
-extension Coordinate {
-    var identifier: String {
-        return "\(latitude);\(longitude)"
-    }
-}
-
 final class DestinationNode: ARQuestNode {
     
     let coordinate: Coordinate
@@ -65,7 +59,6 @@ final class DestinationNode: ARQuestNode {
     func applyScale(_ scale: Float) {
         let scaleValue = (1 / Float(SceneUtils.sceneRadius)) * scale
         self.scale = SCNVector3(scaleValue, scaleValue, scaleValue)
-        // TODO: apply scale to childs
     }
     
     func applyHeight(_ newHeight: Float) {

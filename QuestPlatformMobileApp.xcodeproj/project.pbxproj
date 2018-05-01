@@ -66,6 +66,7 @@
 		851264192098641D000174ED /* QuestInfoPopupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264122098641D000174ED /* QuestInfoPopupInteractor.swift */; };
 		8512641A2098641D000174ED /* QuestInfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264132098641D000174ED /* QuestInfoPopupView.swift */; };
 		8512642220987AE6000174ED /* DebugStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512642120987AE6000174ED /* DebugStorage.swift */; };
+		851264252098C8C0000174ED /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264242098C8C0000174ED /* Collection.swift */; };
 		851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F620710D100081F611 /* QuestBackgroundView.swift */; };
 		8517020020711E370081F611 /* QuestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F920711E370081F611 /* QuestListPresenter.swift */; };
 		8517020120711E370081F611 /* QuestListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FA20711E370081F611 /* QuestListRouter.swift */; };
@@ -151,14 +152,12 @@
 		85477EBE20947393002D26F9 /* Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB620947393002D26F9 /* Radians.swift */; };
 		85477EC020947393002D26F9 /* SCNMatrix4+Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EB820947393002D26F9 /* SCNMatrix4+Transformation.swift */; };
 		85477EC5209473EA002D26F9 /* ARSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC4209473EA002D26F9 /* ARSceneViewModel.swift */; };
-		85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EC6209473F4002D26F9 /* NavigationService.swift */; };
 		85477ECB20947438002D26F9 /* QuestNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECA20947438002D26F9 /* QuestNetworkService.swift */; };
 		85477ECF209474E3002D26F9 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477ECE209474E3002D26F9 /* Distance.swift */; };
 		85477EEE209475B1002D26F9 /* SCNVector3+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */; };
 		85477EF02094790C002D26F9 /* SCNVector3+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */; };
 		85477EF220947939002D26F9 /* SCNVector3+Algebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EF120947939002D26F9 /* SCNVector3+Algebra.swift */; };
 		85477EF920947ED2002D26F9 /* ARTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EF820947ED2002D26F9 /* ARTrackingService.swift */; };
-		85477EFF209482D0002D26F9 /* NavigationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */; };
 		85477F0120948474002D26F9 /* ARSceneViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0020948474002D26F9 /* ARSceneViewState.swift */; };
 		85477F05209484C7002D26F9 /* ARSceneViewModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F04209484C7002D26F9 /* ARSceneViewModelInput.swift */; };
 		85477F0720948708002D26F9 /* ARSceneViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85477F0620948708002D26F9 /* ARSceneViewModelDelegate.swift */; };
@@ -361,6 +360,7 @@
 		851264122098641D000174ED /* QuestInfoPopupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInfoPopupInteractor.swift; sourceTree = "<group>"; };
 		851264132098641D000174ED /* QuestInfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInfoPopupView.swift; sourceTree = "<group>"; };
 		8512642120987AE6000174ED /* DebugStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugStorage.swift; sourceTree = "<group>"; };
+		851264242098C8C0000174ED /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		851701F620710D100081F611 /* QuestBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBackgroundView.swift; sourceTree = "<group>"; };
 		851701F920711E370081F611 /* QuestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListPresenter.swift; sourceTree = "<group>"; };
 		851701FA20711E370081F611 /* QuestListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListRouter.swift; sourceTree = "<group>"; };
@@ -446,14 +446,12 @@
 		85477EB620947393002D26F9 /* Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radians.swift; sourceTree = "<group>"; };
 		85477EB820947393002D26F9 /* SCNMatrix4+Transformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNMatrix4+Transformation.swift"; sourceTree = "<group>"; };
 		85477EC4209473EA002D26F9 /* ARSceneViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneViewModel.swift; sourceTree = "<group>"; };
-		85477EC6209473F4002D26F9 /* NavigationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		85477ECA20947438002D26F9 /* QuestNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestNetworkService.swift; sourceTree = "<group>"; };
 		85477ECE209474E3002D26F9 /* Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 		85477EED209475B1002D26F9 /* SCNVector3+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Operators.swift"; sourceTree = "<group>"; };
 		85477EEF2094790C002D26F9 /* SCNVector3+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Hashable.swift"; sourceTree = "<group>"; };
 		85477EF120947939002D26F9 /* SCNVector3+Algebra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Algebra.swift"; sourceTree = "<group>"; };
 		85477EF820947ED2002D26F9 /* ARTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingService.swift; sourceTree = "<group>"; };
-		85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationServiceDelegate.swift; sourceTree = "<group>"; };
 		85477F0020948474002D26F9 /* ARSceneViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewState.swift; sourceTree = "<group>"; };
 		85477F04209484C7002D26F9 /* ARSceneViewModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewModelInput.swift; sourceTree = "<group>"; };
 		85477F0620948708002D26F9 /* ARSceneViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -1161,6 +1159,14 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
+		851264232098C8B2000174ED /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				851264242098C8C0000174ED /* Collection.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		851701F820711DD20081F611 /* QuestList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1419,6 +1425,7 @@
 				14FE2F6A1FC96382001EDEAB /* Dictionary */,
 				14FE2F701FC96382001EDEAB /* Integer */,
 				14FE2F721FC96382001EDEAB /* Sequence */,
+				851264232098C8B2000174ED /* Collection */,
 			);
 			path = "Standart Library";
 			sourceTree = "<group>";
@@ -1614,15 +1621,6 @@
 				85170214207127710081F611 /* Quests */,
 			);
 			path = REST;
-			sourceTree = "<group>";
-		};
-		85477EFC209482B8002D26F9 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				85477EC6209473F4002D26F9 /* NavigationService.swift */,
-				85477EFE209482D0002D26F9 /* NavigationServiceDelegate.swift */,
-			);
-			path = Navigation;
 			sourceTree = "<group>";
 		};
 		85477F0820948811002D26F9 /* ARSceneViewHandler */ = {
@@ -1855,7 +1853,6 @@
 			children = (
 				85125715204AEFCC00995543 /* Validation */,
 				85477EC3209473D0002D26F9 /* REST */,
-				85477EFC209482B8002D26F9 /* Navigation */,
 				85477EC2209473C4002D26F9 /* AR */,
 			);
 			path = Services;
@@ -2738,7 +2735,6 @@
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
-				85477EC8209473F4002D26F9 /* NavigationService.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				85477F442094B53F002D26F9 /* ARQuestPresenter.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
@@ -2754,6 +2750,7 @@
 				14FE2F881FC96382001EDEAB /* CGPoint.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
 				853DD4F42042C79800E82595 /* URLRequestConvertible.swift in Sources */,
+				851264252098C8C0000174ED /* Collection.swift in Sources */,
 				853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */,
 				85C3C23C2083BACB009AEF58 /* LocationPickerInteractor.swift in Sources */,
 				85477F3A2094A7F9002D26F9 /* FloorAnchorNode.swift in Sources */,
@@ -2904,7 +2901,6 @@
 				853DD51B2042FC6600E82595 /* LoginPresenter.swift in Sources */,
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				8517020420711E370081F611 /* QuestListAssembly.swift in Sources */,
-				85477EFF209482D0002D26F9 /* NavigationServiceDelegate.swift in Sources */,
 				85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
 				85477F1720948A72002D26F9 /* ARQuestRouter.swift in Sources */,

@@ -30,6 +30,7 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
     
     private let quest: Quest
     
+    /// Update it only on main queue
     private var currentTask: Task? {
         didSet {
             guard let task = currentTask else {
@@ -49,6 +50,8 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
     }
     
     private let updateQueue = DispatchQueue.queue(for: ARQuestPresenter.self)
+    
+    private let distanceFormatter = LengthFormatter()
     
     private var isTextPopupPresented = false
     private var isFinished = false
@@ -107,17 +110,14 @@ extension ARQuestPresenter: ARQuestViewOutput {
 extension ARQuestPresenter: ARQuestInteractorOutput {
     
     func didChangeLocationAuthorizationStatus(_ status: CLAuthorizationStatus) {
-        print("Authorization status: \(status)")
-    }
-    
-    func didUpdateLocation(_ newLocation: CLLocation, previousLocation: CLLocation?) {
-        guard let cameraTransform = sceneHandler.currentCameraTransform() else {
-            return
-        }
-        trackingService.handleLocationUpdate(newLocation: newLocation, currentCameraTransform: cameraTransform)
     }
     
     func didUpdateHeading(_ newHeading: CLHeading) {
+    }
+    
+    func didUpdateLocation(_ newLocation: CLLocation, previousLocation: CLLocation?) {
+        guard let cameraTransform = sceneHandler.currentCameraTransform() else { return }
+        trackingService.handleLocationUpdate(newLocation: newLocation, currentCameraTransform: cameraTransform)
     }
     
     func didReceiveLocationFailure(_ error: Error) {
@@ -143,9 +143,7 @@ extension ARQuestPresenter {
     
     private func handleQuestFinish() {
         updateQueue.async {
-            guard !self.isFinished else {
-                return
-            }
+            guard !self.isFinished else { return }
             self.isFinished = true
             
             DispatchQueue.main.async {
@@ -157,9 +155,7 @@ extension ARQuestPresenter {
     
     private func showHint(_ text: String) {
         updateQueue.async {
-            guard !self.isTextPopupPresented else {
-                return
-            }
+            guard !self.isTextPopupPresented else { return }
             self.isTextPopupPresented = true
             
             DispatchQueue.main.async {
@@ -172,10 +168,7 @@ extension ARQuestPresenter {
     
     private func handleDistanceToDestination(_ distance: Distance) {
         updateQueue.async {
-            // < 10 meters
             DispatchQueue.main.async {
-                print("Dis: \(distance)")
-                
                 self.view.showDistance(distance)
                 if distance < 5 {
                     self.goToNextTask()
@@ -191,7 +184,7 @@ extension ARQuestPresenter: ARTrackingServiceDelegate {
     func didUpdateTrackedPosition(with trackingInfo: TrackingInfo) {
         DispatchQueue.main.async {
             let accuracy = trackingInfo.accuracy()
-            self.view.showMessage("Accuracy: \u{0394} \(accuracy) m.")
+            self.view.showMessage(self.distanceFormatter.string(fromMeters: accuracy))
             
             if accuracy <= 1 && accuracy >= 0.0001 {
                 guard let currentTask = self.currentTask, case let .location(destinationCoordinate) = currentTask.goal else {
@@ -206,6 +199,7 @@ extension ARQuestPresenter: ARTrackingServiceDelegate {
     }
     
     func handleARSessionReset() {
+        removeDestinationNode()
         sceneHandler.reloadSession()
     }
 }
@@ -231,9 +225,7 @@ extension ARQuestPresenter {
         }
         
         for node in existingNodes {
-            node.update(with: camera,
-                        currentCoordinates: currentLocation.coordinate,
-                        thresholdDistance: SceneUtils.sceneRadius)
+            node.update(with: camera, currentCoordinates: currentLocation.coordinate, thresholdDistance: SceneUtils.sceneRadius)
         }
         
         let estimatedFloorHeight = sceneHandler.estimatedHeight()
@@ -272,27 +264,5 @@ extension ARQuestPresenter {
             scale = 2
         }
         return scale
-    }
-}
-
-// MARK: - Collection
-extension Collection {
-    
-    func next(after predicate: (Iterator.Element) -> Bool) -> Iterator.Element? {
-        var idx: Index? = nil
-        for (i, element) in zip(indices, self) {
-            if predicate(element) {
-                idx = i
-                break
-            }
-        }
-        
-        if let index = idx,
-            let resultIndex = self.index(index, offsetBy: 1, limitedBy: self.endIndex),
-            resultIndex != endIndex {
-            
-            return self[resultIndex]
-        }
-        return nil
     }
 }
