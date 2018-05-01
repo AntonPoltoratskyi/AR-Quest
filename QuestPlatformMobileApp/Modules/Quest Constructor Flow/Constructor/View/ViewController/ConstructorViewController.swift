@@ -101,6 +101,16 @@ extension ConstructorViewController: UITableViewDataSource, UITableViewDelegate 
         tasks.swapAt(sourceIndexPath.row, destinationIndexPath.row)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        case .insert, .none:
+            break
+        }
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(ofType: TaskTableHeaderView.self)
         headerView.handler = { [weak output] _ in
