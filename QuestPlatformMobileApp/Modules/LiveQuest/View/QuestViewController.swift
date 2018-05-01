@@ -19,6 +19,7 @@ final class QuestViewController: UIViewController, View {
     
     private lazy var contentView: QuestView = {
         let contentView = QuestView()
+        contentView.nextButton.addTarget(self, action: #selector(actionNextButtonTapped(sender:)), for: .touchUpInside)
         return contentView
     }()
     

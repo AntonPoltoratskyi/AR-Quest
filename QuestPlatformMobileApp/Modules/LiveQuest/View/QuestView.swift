@@ -92,6 +92,6 @@ final class QuestView: BaseView {
     }
     
     func showDistance(_ distance: Distance) {
-        distanceLabel.text = "Distance: \(formatter.string(fromMeters: distance)) (m)"
+        distanceLabel.text = "Distance: \(formatter.string(fromMeters: distance))"
     }
 }
