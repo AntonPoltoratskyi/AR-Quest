@@ -7,7 +7,9 @@
 //
 
 import CoreLocation
+import SceneKit
 
 public typealias Coordinate = CLLocationCoordinate2D
 public typealias Distance   = CLLocationDistance
 public typealias Direction  = CLLocationDirection
+public typealias CameraTransform = matrix_float4x4

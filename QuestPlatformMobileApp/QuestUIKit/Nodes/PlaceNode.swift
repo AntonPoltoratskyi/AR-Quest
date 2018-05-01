@@ -33,7 +33,7 @@ final class PlaceNode: BaseNode<Container<Coordinate>> {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func updateWith(currentCameraTransform: matrix_float4x4, currentCoordinates: Coordinate, thresholdDistance: Double) {
+    override func updateWith(currentCameraTransform: CameraTransform, currentCoordinates: Coordinate, thresholdDistance: Double) {
         var identity = matrix_identity_float4x4
         identity.columns.3.x = currentCameraTransform.columns.3.x
         identity.columns.3.y = simdTransform.columns.3.y

@@ -11,8 +11,10 @@ import SceneKit
 
 protocol ARTrackingServiceInput: class {
     
-    var lastRecognizedLocation: CLLocation? { get set }
-    var lastRecognizedCameraTransform: matrix_float4x4? { get set }
+    var delegate: ARTrackingServiceDelegate? { get set }
     
-    func handleLocationUpdate(newLocation: CLLocation, currentCameraTransform: matrix_float4x4)
+    var lastRecognizedLocation: CLLocation? { get set }
+    var lastRecognizedCameraTransform: CameraTransform? { get set }
+    
+    func update(location: CLLocation, camera: CameraTransform)
 }

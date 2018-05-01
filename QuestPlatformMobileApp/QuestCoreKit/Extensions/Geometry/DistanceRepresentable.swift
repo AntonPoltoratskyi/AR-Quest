@@ -20,8 +20,8 @@ extension CLLocation: DistanceRepresentable {
     }
 }
 
-extension matrix_float4x4: DistanceRepresentable {
-    func distance(to target: matrix_float4x4) -> Distance {
+extension CameraTransform: DistanceRepresentable {
+    func distance(to target: CameraTransform) -> Distance {
         return Distance(translationVector.distance(to: target.translationVector))
     }
 }

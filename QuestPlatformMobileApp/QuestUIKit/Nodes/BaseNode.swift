@@ -23,7 +23,7 @@ class BaseNode<Source>: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateWith(currentCameraTransform: matrix_float4x4, currentCoordinates: Coordinate, thresholdDistance: Double) {
+    func updateWith(currentCameraTransform: CameraTransform, currentCoordinates: Coordinate, thresholdDistance: Double) {
         fatalError("Not implemented")
     }
     

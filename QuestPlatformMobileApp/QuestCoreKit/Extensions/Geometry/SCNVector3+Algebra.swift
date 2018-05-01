@@ -26,7 +26,7 @@ extension SCNVector3 {
         return (self - vector).length
     }
     
-    func transform(initialCoordinates: Coordinate, destination: Coordinate) -> matrix_float4x4 {
+    func transform(initialCoordinates: Coordinate, destination: Coordinate) -> CameraTransform {
         var matrix = matrix_identity_float4x4
         matrix.columns.3.x = x
         matrix.columns.3.y = y

@@ -14,37 +14,38 @@ final class ARTrackingService: ARTrackingServiceInput {
     weak var delegate: ARTrackingServiceDelegate?
     
     public var lastRecognizedLocation: CLLocation?
-    public var lastRecognizedCameraTransform: matrix_float4x4?
+    public var lastRecognizedCameraTransform: CameraTransform?
     
-    private var errorFactorCount = 0
-    private let errorThreshold = 10
-    private let acceptableDistanceDiff: Double = 5 // in meters
+    private var errorsCount = 0
     
-    public func handleLocationUpdate(newLocation: CLLocation, currentCameraTransform: matrix_float4x4) {
-        if let lastLocation = lastRecognizedLocation, let lastTransform = lastRecognizedCameraTransform {
-            let locationDifference = DistanceInfo(old: lastLocation, new: newLocation)
-            let cameraDifference = DistanceInfo(old: currentCameraTransform, new: lastTransform)
-            
-            let trackingInfo = TrackingInfo(location: locationDifference, camera: cameraDifference)
-            
-            // Check if changed is valid
-            if trackingInfo.accuracy() <= acceptableDistanceDiff {
-                errorFactorCount = 0
-                delegate?.didUpdateTrackedPosition(with: trackingInfo)
-            } else {
-                errorFactorCount += 1
-                if errorFactorCount >= errorThreshold {
-                    errorFactorCount = 0
-                    delegate?.handleARSessionReset()
-                }
-            }
-            
-            lastRecognizedLocation = newLocation
-            lastRecognizedCameraTransform = currentCameraTransform
+    public func update(location: CLLocation, camera: CameraTransform) {
+        guard let lastLocation = lastRecognizedLocation, let lastTransform = lastRecognizedCameraTransform else {
+            lastRecognizedLocation = location
+            lastRecognizedCameraTransform = camera
+            delegate?.sessionDidStartTracking()
+            return
+        }
+
+        let locationDelta = DistanceInfo(old: lastLocation, new: location)
+        let cameraDelta = DistanceInfo(old: lastTransform, new: camera)
+        
+        let distanceInfo = TrackingInfo(location: locationDelta, camera: cameraDelta)
+        handleTrackingInfo(distanceInfo)
+        
+        lastRecognizedLocation = location
+        lastRecognizedCameraTransform = camera
+    }
+    
+    private func handleTrackingInfo(_ trackingInfo: TrackingInfo) {
+        if trackingInfo.isValid {
+            errorsCount = 0
+            delegate?.sessionDidUpdate(with: trackingInfo)
         } else {
-            lastRecognizedLocation = newLocation
-            lastRecognizedCameraTransform = currentCameraTransform
-            delegate?.didStartPositionTracking()
+            errorsCount += 1
+            if errorsCount >= ARConstants.maxErrorLimit {
+                errorsCount = 0
+                delegate?.sessionDidBecomeInvalid()
+            }
         }
     }
 }

@@ -10,10 +10,16 @@ import CoreLocation
 import SceneKit
 
 struct TrackingInfo {
+    private static let validDistanceDelta: Double = 5
+    
     let location: DistanceInfo<CLLocation>
-    let camera: DistanceInfo<matrix_float4x4>
+    let camera: DistanceInfo<CameraTransform>
     
     func accuracy() -> Double {
         return abs(location.distance() - camera.distance())
+    }
+    
+    var isValid: Bool {
+        return accuracy() <= TrackingInfo.validDistanceDelta
     }
 }

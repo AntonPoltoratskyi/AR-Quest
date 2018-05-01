@@ -12,11 +12,12 @@ import ARKit
 public protocol ARSceneViewModelInput {
     var state: ARSceneViewState { get }
     
+    var cameraTransform: CameraTransform? { get }
+    
     func launchSession()
     func pauseSession()
     func reloadSession()
     
-    func currentCameraTransform() -> matrix_float4x4?
     func estimatedHeight() -> Float
     
     func addNode(_ node: SCNNode)

@@ -19,9 +19,11 @@ final class ARQuestAssembly: Assembly {
     }
     
     func build() -> Input {
+        let trackingService = ARTrackingService()
+        
         // Module
         let view = ARQuestViewController()
-        let presenter = ARQuestPresenter(quest: quest)
+        let presenter = ARQuestPresenter(quest: quest, trackingService: trackingService)
         let interactor = ARQuestInteractor(locationService: .shared)
         let router = ARQuestRouter()
         
@@ -34,6 +36,8 @@ final class ARQuestAssembly: Assembly {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
+        
+        trackingService.delegate = presenter
         
         return Module(input: presenter, view: view)
     }

@@ -10,7 +10,7 @@ import CoreLocation
 import SceneKit
 
 protocol ARTrackingServiceDelegate: class {
-    func didStartPositionTracking()
-    func didUpdateTrackedPosition(with trackingInfo: TrackingInfo)
-    func handleARSessionReset()
+    func sessionDidStartTracking()
+    func sessionDidUpdate(with trackingInfo: TrackingInfo)
+    func sessionDidBecomeInvalid()
 }

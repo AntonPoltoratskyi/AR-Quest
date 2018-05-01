@@ -21,12 +21,9 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
     var interactor: Interactor!
     var router: Router!
     
-    private var sceneHandler: ARSceneViewModelInput!
+    private let trackingService: ARTrackingServiceInput
     
-    private let trackingService: ARTrackingService = {
-        let service = ARTrackingService()
-        return service
-    }()
+    private var sceneHandler: ARSceneViewModelInput!
     
     private let quest: Quest
     
@@ -39,17 +36,13 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
             }
             switch task.goal {
             case let .hint(text):
-                if !isTextPopupPresented {
-                    showHint(text)
-                    view.enableNextAction()
-                }
+                showMessage(text)
+                view.enableNextAction()
             case let .location(destinationCoordinate):
                 updateDestinationNodePosition(for: destinationCoordinate)
             }
         }
     }
-    
-    private let updateQueue = DispatchQueue.queue(for: ARQuestPresenter.self)
     
     private let distanceFormatter = LengthFormatter()
     
@@ -59,8 +52,9 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
     
     // MARK: - Init
     
-    init(quest: Quest) {
+    init(quest: Quest, trackingService: ARTrackingServiceInput) {
         self.quest = quest
+        self.trackingService = trackingService
     }
     
     deinit {
@@ -78,9 +72,8 @@ extension ARQuestPresenter: ARQuestViewOutput {
         handler.delegate = self
         sceneHandler = handler
         
-        self.currentTask = quest.tasks.first
+        currentTask = quest.tasks.first
         
-        trackingService.delegate = self
         interactor.startLocationUpdates()
     }
     
@@ -94,9 +87,7 @@ extension ARQuestPresenter: ARQuestViewOutput {
     
     func didHideTextPopup() {
         view.disableNextButton()
-        updateQueue.sync {
-            self.isTextPopupPresented = false
-        }
+        isTextPopupPresented = false
         goToNextTask()
     }
     
@@ -109,19 +100,20 @@ extension ARQuestPresenter: ARQuestViewOutput {
 // MARK: - ARQuestInteractorOutput
 extension ARQuestPresenter: ARQuestInteractorOutput {
     
-    func didChangeLocationAuthorizationStatus(_ status: CLAuthorizationStatus) {
-    }
+    func didChangeLocationAuthorizationStatus(_ status: CLAuthorizationStatus) { }
     
-    func didUpdateHeading(_ newHeading: CLHeading) {
-    }
+    func didUpdateHeading(_ newHeading: CLHeading) { }
     
     func didUpdateLocation(_ newLocation: CLLocation, previousLocation: CLLocation?) {
-        guard let cameraTransform = sceneHandler.currentCameraTransform() else { return }
-        trackingService.handleLocationUpdate(newLocation: newLocation, currentCameraTransform: cameraTransform)
+        sceneHandler.cameraTransform.map {
+            trackingService.update(location: newLocation, camera: $0)
+        }
     }
     
     func didReceiveLocationFailure(_ error: Error) {
-        view.showMessage(error.localizedDescription)
+        DispatchQueue.main.async {
+            self.view.showMessage(error.localizedDescription)
+        }
     }
 }
 
@@ -138,78 +130,70 @@ extension ARQuestPresenter: ARSceneViewModelDelegate {
     }
 }
 
-// MARK: - Task Actions
-extension ARQuestPresenter {
+// MARK: - ARTrackingServiceDelegate
+extension ARQuestPresenter: ARTrackingServiceDelegate {
     
-    private func handleQuestFinish() {
-        updateQueue.async {
-            guard !self.isFinished else { return }
-            self.isFinished = true
+    func sessionDidUpdate(with trackingInfo: TrackingInfo) {
+        DispatchQueue.main.async {
+            let accuracy = trackingInfo.accuracy()
+            let message = self.distanceFormatter.string(fromMeters: accuracy)
+            self.view.showMessage(message)
             
-            DispatchQueue.main.async {
-                self.view.disableNextButton()
-                self.router.showFinish(for: self.quest)
+            guard accuracy <= 1 && accuracy >= 0.0001 else {
+                return
             }
+            
+            guard let currentTask = self.currentTask, case let .location(destinationCoordinate) = currentTask.goal else {
+                return
+            }
+            self.updateDestinationNodePosition(for: destinationCoordinate)
         }
     }
     
-    private func showHint(_ text: String) {
-        updateQueue.async {
-            guard !self.isTextPopupPresented else { return }
-            self.isTextPopupPresented = true
-            
-            DispatchQueue.main.async {
-                self.removeDestinationNode()
-                self.view.enableNextAction()
-                self.view.showTextPopup(text)
-            }
-        }
+    func sessionDidStartTracking() {
     }
     
-    private func handleDistanceToDestination(_ distance: Distance) {
-        updateQueue.async {
-            DispatchQueue.main.async {
-                self.view.showDistance(distance)
-                if distance < 5 {
-                    self.goToNextTask()
-                }
-            }
+    func sessionDidBecomeInvalid() {
+        DispatchQueue.main.async {
+            self.removeDestinationNode()
+            self.sceneHandler.reloadSession()
         }
     }
 }
 
-// MARK: - ARTrackingServiceDelegate
-extension ARQuestPresenter: ARTrackingServiceDelegate {
+// MARK: - User Events
+extension ARQuestPresenter {
     
-    func didUpdateTrackedPosition(with trackingInfo: TrackingInfo) {
-        DispatchQueue.main.async {
-            let accuracy = trackingInfo.accuracy()
-            self.view.showMessage(self.distanceFormatter.string(fromMeters: accuracy))
-            
-            if accuracy <= 1 && accuracy >= 0.0001 {
-                guard let currentTask = self.currentTask, case let .location(destinationCoordinate) = currentTask.goal else {
-                    return
-                }
-                self.updateDestinationNodePosition(for: destinationCoordinate)
-            }
-        }
+    private func handleQuestFinish() {
+        guard !isFinished else { return }
+        isFinished = true
+        
+        view.disableNextButton()
+        router.showFinish(for: quest)
     }
     
-    func didStartPositionTracking() {
-    }
-    
-    func handleARSessionReset() {
+    private func showMessage(_ text: String) {
+        guard !isTextPopupPresented else { return }
+        isTextPopupPresented = true
+        
         removeDestinationNode()
-        sceneHandler.reloadSession()
+        view.enableNextAction()
+        view.showTextPopup(text)
+    }
+    
+    private func handleDistanceToDestination(_ distance: Distance) {
+        view.showDistance(distance)
+        if distance < ARConstants.destinationDistance {
+            goToNextTask()
+        }
     }
 }
 
 // MARK: - Nodes
-
 extension ARQuestPresenter {
     
     private func updateDestinationNodePosition(for location: Coordinate) {
-        guard let camera = sceneHandler?.currentCameraTransform(),
+        guard let camera = sceneHandler?.cameraTransform,
             let currentLocation = trackingService.lastRecognizedLocation else {
                 return
         }
@@ -225,14 +209,14 @@ extension ARQuestPresenter {
         }
         
         for node in existingNodes {
-            node.update(with: camera, currentCoordinates: currentLocation.coordinate, thresholdDistance: SceneUtils.sceneRadius)
+            node.update(with: camera, currentCoordinates: currentLocation.coordinate, thresholdDistance: ARConstants.sceneRadius)
         }
         
         let estimatedFloorHeight = sceneHandler.estimatedHeight()
         SCNTransaction.animate(withDuration: 0.25, animations: {
             for node in existingNodes {
                 let distance = currentLocation.coordinate.distance(to: location)
-                let sceneDistance = distance > SceneUtils.sceneRadius ? SceneUtils.sceneRadius : distance
+                let sceneDistance = distance > ARConstants.sceneRadius ? ARConstants.sceneRadius : distance
                 
                 node.applyScale(self.scaleForDistance(sceneDistance))
                 node.applyHeight(self.heightForDistance(distance, floorHeight: estimatedFloorHeight))

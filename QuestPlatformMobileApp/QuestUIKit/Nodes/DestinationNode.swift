@@ -43,7 +43,7 @@ final class DestinationNode: ARQuestNode {
         constraints = [billboardConstraint]
     }
     
-    func update(with cameraTransform: matrix_float4x4, currentCoordinates: Coordinate, thresholdDistance: Double) {
+    func update(with cameraTransform: CameraTransform, currentCoordinates: Coordinate, thresholdDistance: Double) {
         var maxtix = matrix_identity_float4x4
         maxtix.columns.3.x = cameraTransform.columns.3.x
         maxtix.columns.3.y = simdTransform.columns.3.y
@@ -57,7 +57,7 @@ final class DestinationNode: ARQuestNode {
     }
     
     func applyScale(_ scale: Float) {
-        let scaleValue = (1 / Float(SceneUtils.sceneRadius)) * scale
+        let scaleValue = (1 / Float(ARConstants.sceneRadius)) * scale
         self.scale = SCNVector3(scaleValue, scaleValue, scaleValue)
     }
     

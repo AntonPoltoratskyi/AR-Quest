@@ -65,6 +65,8 @@ public final class ARSceneViewModel: NSObject {
         scene.automaticallyUpdatesLighting = true
         scene.autoenablesDefaultLighting = true
         
+        scene.showsStatistics = true
+        
         scene.debugOptions = [
             ARSCNDebugOptions.showWorldOrigin,
             ARSCNDebugOptions.showFeaturePoints
@@ -80,7 +82,7 @@ public final class ARSceneViewModel: NSObject {
 // MARK: - Public Input
 extension ARSceneViewModel: ARSceneViewModelInput {
     
-    public func currentCameraTransform() -> matrix_float4x4? {
+    public var cameraTransform: CameraTransform? {
         return session.currentFrame?.camera.transform
     }
     
