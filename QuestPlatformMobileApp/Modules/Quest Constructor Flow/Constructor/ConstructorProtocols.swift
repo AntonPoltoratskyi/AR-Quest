@@ -22,7 +22,7 @@ protocol ConstructorViewInput: class {
 // MARK: -
 protocol ConstructorViewOutput: class {
     func didClickAddTask()
-    func didClickDone()
+    func didClickDone(tasks: [Task])
 }
 
 // MARK: - Interactor
@@ -41,7 +41,7 @@ protocol ConstructorInteractorOutput: class {
 
 protocol ConstructorRouterInput: class {
     func showTaskCreator()
-    func showQuestInfoPopup()
+    func showQuestInfoPopup(delegate: QuestInfoPopupModuleOutput)
     func showConstructorFinish(for quest: Quest, code: String)
 }
 

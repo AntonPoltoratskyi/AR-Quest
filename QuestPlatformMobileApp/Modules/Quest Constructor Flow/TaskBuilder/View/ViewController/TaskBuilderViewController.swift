@@ -55,6 +55,16 @@ final class TaskBuilderViewController: UIViewController, View, KeyboardInteracti
         swipeController.addGesture()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        registerForKeyboardNotifications()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        unregisterForKeyboardNotifications()
+    }
+    
     
     // MARK: - Actions
     

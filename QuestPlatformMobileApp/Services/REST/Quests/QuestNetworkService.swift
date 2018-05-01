@@ -118,7 +118,8 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     
     private func questStub(for number: Int) -> Quest {
         let owner = User(id: number, name: "User \(number)", email: "a@a.com")
-        return Quest(id: number, name: "Quest #\(number)", status: .active, accessLevel: .public, owner: owner)
+        let tasks = (0..<5).map { taskStub(for: $0) }
+        return Quest(id: number, name: "Quest #\(number)", status: .active, accessLevel: .public, tasks: tasks, owner: owner)
     }
     
     private func taskStub(for number: Int) -> Task {

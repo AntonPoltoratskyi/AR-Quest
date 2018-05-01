@@ -18,6 +18,7 @@ final class ConstructorPresenter: Presenter, ConstructorModuleInput {
     var interactor: Interactor!
     var router: Router!
     
+    private var tasks: [Task] = []
 }
 
 // MARK: - ConstructorViewOutput
@@ -27,8 +28,9 @@ extension ConstructorPresenter: ConstructorViewOutput {
         router.showTaskCreator()
     }
     
-    func didClickDone() {
-        router.showQuestInfoPopup()
+    func didClickDone(tasks: [Task]) {
+        self.tasks = tasks
+        router.showQuestInfoPopup(delegate: self)
     }
 }
 
@@ -49,5 +51,20 @@ extension ConstructorPresenter: ConstructorRouterOutput {
     
     func didCreateTask(_ task: Task) {
         view.addTask(task)
+    }
+}
+
+// MARK: - QuestInfoPopupModuleOutput
+extension ConstructorPresenter: QuestInfoPopupModuleOutput {
+    
+    func questInfoPopup(_ moduleInput: QuestInfoPopupModuleInput, didSaveQuestWithTitle title: String, accessLevel: Quest.AccessLevel) {
+        
+        moduleInput.dismiss {
+            guard let user = SessionStorage.shared.user else {
+                return
+            }
+            let quest = Quest(name: title, status: .waiting, accessLevel: accessLevel, tasks: self.tasks, owner: user)
+            self.interactor.create(quest)
+        }
     }
 }

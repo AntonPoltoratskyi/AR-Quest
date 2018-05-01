@@ -67,7 +67,7 @@ final class ConstructorViewController: UIViewController, View {
     // MARK: - Actions
     
     @objc private func actionDoneButtonTapped(sender: UIButton) {
-        output.didClickDone()
+        output.didClickDone(tasks: tasks.map { $0.task })
     }
 }
 

@@ -25,8 +25,11 @@ final class ConstructorRouter: Router, ConstructorRouterInput {
         viewController.navigationController?.pushViewController(module.view, animated: true)
     }
     
-    func showQuestInfoPopup() {
-        let module = ConstructorFinishAssembly().build()
+    func showQuestInfoPopup(delegate: QuestInfoPopupModuleOutput) {
+        let module = QuestInfoPopupAssembly().build()
+        module.input.output = delegate
+        module.view.modalTransitionStyle = .crossDissolve
+        module.view.modalPresentationStyle = .overCurrentContext
         viewController.present(module.view, animated: true, completion: nil)
     }
 }
