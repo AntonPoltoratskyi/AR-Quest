@@ -13,6 +13,7 @@ final class OwnQuestsRouter: Router, OwnQuestsRouterInput {
     weak var viewController: UIViewController!
     
     func showQuest(_ quest: Quest) {
-        
+        let module = QuestDetailsAssembly(quest: quest).build()
+        viewController.navigationController?.pushViewController(module.view, animated: true)
     }
 }
