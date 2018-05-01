@@ -65,6 +65,7 @@
 		851264182098641D000174ED /* QuestInfoPopupAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264112098641D000174ED /* QuestInfoPopupAssembly.swift */; };
 		851264192098641D000174ED /* QuestInfoPopupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264122098641D000174ED /* QuestInfoPopupInteractor.swift */; };
 		8512641A2098641D000174ED /* QuestInfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264132098641D000174ED /* QuestInfoPopupView.swift */; };
+		8512642220987AE6000174ED /* DebugStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512642120987AE6000174ED /* DebugStorage.swift */; };
 		851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F620710D100081F611 /* QuestBackgroundView.swift */; };
 		8517020020711E370081F611 /* QuestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F920711E370081F611 /* QuestListPresenter.swift */; };
 		8517020120711E370081F611 /* QuestListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FA20711E370081F611 /* QuestListRouter.swift */; };
@@ -359,6 +360,7 @@
 		851264112098641D000174ED /* QuestInfoPopupAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInfoPopupAssembly.swift; sourceTree = "<group>"; };
 		851264122098641D000174ED /* QuestInfoPopupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInfoPopupInteractor.swift; sourceTree = "<group>"; };
 		851264132098641D000174ED /* QuestInfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestInfoPopupView.swift; sourceTree = "<group>"; };
+		8512642120987AE6000174ED /* DebugStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugStorage.swift; sourceTree = "<group>"; };
 		851701F620710D100081F611 /* QuestBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBackgroundView.swift; sourceTree = "<group>"; };
 		851701F920711E370081F611 /* QuestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListPresenter.swift; sourceTree = "<group>"; };
 		851701FA20711E370081F611 /* QuestListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListRouter.swift; sourceTree = "<group>"; };
@@ -1151,6 +1153,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		8512642020987ACF000174ED /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				8512642120987AE6000174ED /* DebugStorage.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		851701F820711DD20081F611 /* QuestList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1597,6 +1607,7 @@
 		85477EC3209473D0002D26F9 /* REST */ = {
 			isa = PBXGroup;
 			children = (
+				8512642020987ACF000174ED /* Debug */,
 				14FE2FAA1FC9661E001EDEAB /* Session */,
 				857ADD8B2043203800CA0D42 /* Auth */,
 				8511E53C208C6110006DFCFE /* User */,
@@ -2738,6 +2749,7 @@
 				853DD50B2042CE2B00E82595 /* Interactor.swift in Sources */,
 				851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */,
 				85C3C2622083C569009AEF58 /* ConstructorPresenter.swift in Sources */,
+				8512642220987AE6000174ED /* DebugStorage.swift in Sources */,
 				855D74A4207BA629000421DA /* SlideAnimatedTransitioning.swift in Sources */,
 				14FE2F881FC96382001EDEAB /* CGPoint.swift in Sources */,
 				853DD5092042CE2300E82595 /* Presenter.swift in Sources */,
