@@ -12,6 +12,14 @@ final class ConstructorFinishAssembly: Assembly {
     
     typealias Input = Module<ConstructorFinishModuleInput>
     
+    private let quest: Quest
+    private let code: String
+    
+    init(quest: Quest, code: String) {
+        self.quest = quest
+        self.code = code
+    }
+    
     func build() -> Input {
         let view = ConstructorFinishViewController()
         let presenter = ConstructorFinishPresenter()
@@ -27,6 +35,8 @@ final class ConstructorFinishAssembly: Assembly {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
+        
+        presenter.code = code
         
         return Module(input: presenter, view: view)
     }

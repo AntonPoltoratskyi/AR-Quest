@@ -31,7 +31,9 @@ final class TaskBuilderPresenter: Presenter, TaskBuilderModuleInput {
 extension TaskBuilderPresenter: TaskBuilderViewOutput {
     
     func didTapDone(title: String?, text: String?) {
-        guard let title = title else { return }
+        guard let title = title, !title.isEmpty else {
+            return
+        }
         
         var goal: Task.Goal?
         if let text = text {

@@ -21,7 +21,7 @@ final class ConstructorRouter: Router, ConstructorRouterInput {
     }
     
     func showConstructorFinish(for quest: Quest, code: String) {
-        let module = ConstructorFinishAssembly().build()
+        let module = ConstructorFinishAssembly(quest: quest, code: code).build()
         viewController.navigationController?.pushViewController(module.view, animated: true)
     }
     

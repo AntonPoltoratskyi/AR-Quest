@@ -18,11 +18,19 @@ final class ConstructorFinishPresenter: Presenter, ConstructorFinishModuleInput 
     var interactor: Interactor!
     var router: Router!
     
+    var code: String!
 }
 
 // MARK: - ConstructorFinishViewOutput
 extension ConstructorFinishPresenter: ConstructorFinishViewOutput {
     
+    func viewDidLoad() {
+        view.setupCode(code)
+    }
+    
+    func didTapDoneButton() {
+        router.finish()
+    }
 }
 
 // MARK: - ConstructorFinishInteractorOutput

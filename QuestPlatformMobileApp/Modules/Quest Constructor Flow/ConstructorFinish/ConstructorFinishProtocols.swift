@@ -16,10 +16,13 @@ protocol ConstructorFinishModuleInput: ModuleInput {
 // MARK: - View
 
 protocol ConstructorFinishViewInput: class {
+    func setupCode(_ code: String)
 }
 
 // MARK: -
 protocol ConstructorFinishViewOutput: class {
+    func viewDidLoad()
+    func didTapDoneButton()
 }
 
 // MARK: - Interactor
@@ -34,4 +37,5 @@ protocol ConstructorFinishInteractorOutput: class {
 // MARK: - Router
 
 protocol ConstructorFinishRouterInput: class {
+    func finish()
 }

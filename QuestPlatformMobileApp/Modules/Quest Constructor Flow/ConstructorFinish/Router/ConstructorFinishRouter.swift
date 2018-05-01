@@ -11,4 +11,9 @@ import UIKit
 final class ConstructorFinishRouter: Router, ConstructorFinishRouterInput {
     
     weak var viewController: UIViewController!
+    
+    func finish() {
+        let module = OwnQuestsAssembly().build()
+        viewController.navigationController?.setViewControllers([module.view], animated: true)
+    }
 }

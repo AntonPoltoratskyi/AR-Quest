@@ -18,6 +18,7 @@ final class ConstructorFinishViewController: UIViewController, View {
     
     private lazy var contentView: ConstructorFinishView = {
         let contentView = ConstructorFinishView()
+        contentView.doneButton.addTarget(self, action: #selector(actionDoneButtonTapped(sender:)), for: .touchUpInside)
         return contentView
     }()
     
@@ -31,10 +32,21 @@ final class ConstructorFinishViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        output.viewDidLoad()
+    }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionDoneButtonTapped(sender: UIButton) {
+        output.didTapDoneButton()
     }
 }
 
 // MARK: - ConstructorFinishViewInput
 extension ConstructorFinishViewController: ConstructorFinishViewInput {
     
+    func setupCode(_ code: String) {
+        contentView.setupCode(code)
+    }
 }
