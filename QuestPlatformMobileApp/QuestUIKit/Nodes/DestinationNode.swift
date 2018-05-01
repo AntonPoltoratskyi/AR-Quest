@@ -13,6 +13,8 @@ final class DestinationNode: ARQuestNode {
     
     let coordinate: Coordinate
     
+    private var cylinder: DestinationCylinderNode!
+    
     
     // MARK: - Init
     
@@ -20,6 +22,9 @@ final class DestinationNode: ARQuestNode {
         self.coordinate = coordinate
         super.init()
         self.identifier = identifier
+        
+        cylinder = DestinationCylinderNode()
+        addChildNode(cylinder)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -63,5 +68,20 @@ final class DestinationNode: ARQuestNode {
     
     func applyHeight(_ newHeight: Float) {
         simdTransform.columns.3.y = newHeight
+    }
+}
+
+final class DestinationCylinderNode: ARQuestNode {
+    
+    override func setup() {
+        super.setup()
+        
+        let box = SCNTube(innerRadius: 6.5, outerRadius: 7, height: 0.1)
+        
+        box.firstMaterial?.diffuse.contents = UIColor.white
+        box.firstMaterial?.isDoubleSided = true
+        
+        geometry = box
+        eulerAngles = SCNVector3(Float(90.0.degreesToRadians), 0, 0)
     }
 }
