@@ -57,6 +57,7 @@
 		85125719204AF04700995543 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125718204AF04700995543 /* EmailValidator.swift */; };
 		8512571B204AF72200995543 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512571A204AF72200995543 /* PasswordValidator.swift */; };
 		85126408209849E9000174ED /* Double+LatLng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85126407209849E9000174ED /* Double+LatLng.swift */; };
+		8512640A20985AAB000174ED /* QuestCreationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512640920985AAB000174ED /* QuestCreationResponse.swift */; };
 		851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F620710D100081F611 /* QuestBackgroundView.swift */; };
 		8517020020711E370081F611 /* QuestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F920711E370081F611 /* QuestListPresenter.swift */; };
 		8517020120711E370081F611 /* QuestListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FA20711E370081F611 /* QuestListRouter.swift */; };
@@ -343,6 +344,7 @@
 		85125718204AF04700995543 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		8512571A204AF72200995543 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		85126407209849E9000174ED /* Double+LatLng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+LatLng.swift"; sourceTree = "<group>"; };
+		8512640920985AAB000174ED /* QuestCreationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestCreationResponse.swift; sourceTree = "<group>"; };
 		851701F620710D100081F611 /* QuestBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBackgroundView.swift; sourceTree = "<group>"; };
 		851701F920711E370081F611 /* QuestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListPresenter.swift; sourceTree = "<group>"; };
 		851701FA20711E370081F611 /* QuestListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListRouter.swift; sourceTree = "<group>"; };
@@ -1073,6 +1075,14 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
+		8512640B20985B75000174ED /* CompoundResponse */ = {
+			isa = PBXGroup;
+			children = (
+				8512640920985AAB000174ED /* QuestCreationResponse.swift */,
+			);
+			path = CompoundResponse;
+			sourceTree = "<group>";
+		};
 		851701F820711DD20081F611 /* QuestList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1150,6 +1160,7 @@
 			children = (
 				85170217207127A80081F611 /* QuestNetworkRouter.swift */,
 				85477ECA20947438002D26F9 /* QuestNetworkService.swift */,
+				8512640B20985B75000174ED /* CompoundResponse */,
 			);
 			path = Quests;
 			sourceTree = "<group>";
@@ -2739,6 +2750,7 @@
 				85F07DCE208B44E6004950B9 /* BaseView.swift in Sources */,
 				85F07DDD208B5B77004950B9 /* OwnQuestsViewController.swift in Sources */,
 				8517020120711E370081F611 /* QuestListRouter.swift in Sources */,
+				8512640A20985AAB000174ED /* QuestCreationResponse.swift in Sources */,
 				851702412071671C0081F611 /* CodeInputPresenter.swift in Sources */,
 				8511E54E208C6DC4006DFCFE /* EditProfileAssembly.swift in Sources */,
 				14FE2FA51FC9653B001EDEAB /* FatalErrors.swift in Sources */,

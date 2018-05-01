@@ -22,21 +22,27 @@ protocol ConstructorViewInput: class {
 // MARK: -
 protocol ConstructorViewOutput: class {
     func didClickAddTask()
+    func didClickDone()
 }
 
 // MARK: - Interactor
 
 protocol ConstructorInteractorInput: class {
+    func create(_ quest: Quest)
 }
 
 // MARK: -
 protocol ConstructorInteractorOutput: class {
+    func didCreate(_ quest: Quest, withCode code: String)
+    func didReceiveFailure(_ error: Error)
 }
 
 // MARK: - Router
 
 protocol ConstructorRouterInput: class {
     func showTaskCreator()
+    func showQuestInfoPopup()
+    func showConstructorFinish(for quest: Quest, code: String)
 }
 
 protocol ConstructorRouterOutput: class {

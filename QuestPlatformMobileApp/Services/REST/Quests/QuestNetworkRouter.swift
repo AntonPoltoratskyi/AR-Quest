@@ -14,6 +14,7 @@ enum QuestNetworkRouter: URLRequestConvertible {
     case tasks(quest: Quest, token: String?)
     case joinBy(code: String, token: String?)
     case joinTo(quest: Quest, token: String?)
+    case create(quest: Quest, token: String?)
     
     var path: String {
         switch self {
@@ -27,6 +28,8 @@ enum QuestNetworkRouter: URLRequestConvertible {
             return "join"
         case .joinTo:
             return "join"
+        case .create:
+            return "create"
         }
     }
     

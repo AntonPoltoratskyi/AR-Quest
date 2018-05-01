@@ -26,11 +26,22 @@ extension ConstructorPresenter: ConstructorViewOutput {
     func didClickAddTask() {
         router.showTaskCreator()
     }
+    
+    func didClickDone() {
+        router.showQuestInfoPopup()
+    }
 }
 
 // MARK: - ConstructorInteractorOutput
 extension ConstructorPresenter: ConstructorInteractorOutput {
     
+    func didCreate(_ quest: Quest, withCode code: String) {
+        router.showConstructorFinish(for: quest, code: code)
+    }
+    
+    func didReceiveFailure(_ error: Error) {
+        
+    }
 }
 
 // MARK: - ConstructorRouterOutput

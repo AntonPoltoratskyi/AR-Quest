@@ -19,6 +19,16 @@ final class ConstructorRouter: Router, ConstructorRouterInput {
         module.input.output = self
         viewController.navigationController?.pushViewController(module.view, animated: true)
     }
+    
+    func showConstructorFinish(for quest: Quest, code: String) {
+        let module = ConstructorFinishAssembly().build()
+        viewController.navigationController?.pushViewController(module.view, animated: true)
+    }
+    
+    func showQuestInfoPopup() {
+        let module = ConstructorFinishAssembly().build()
+        viewController.present(module.view, animated: true, completion: nil)
+    }
 }
 
 extension ConstructorRouter: TaskBuilderModuleOutput {

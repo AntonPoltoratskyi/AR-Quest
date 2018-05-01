@@ -16,6 +16,7 @@ protocol QuestNetworkService: NetworkService {
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void)
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void)
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void)
+    func create(quest: Quest, completion: @escaping (ResponseResult<QuestCreationResponse>) -> Void)
 }
 
 // MARK: - Service
@@ -64,6 +65,13 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
             completion(result.process())
         }
     }
+    
+    func create(quest: Quest, completion: @escaping (ResponseResult<QuestCreationResponse>) -> Void) {
+        let target = QuestNetworkRouter.create(quest: quest, token: session.token)
+        client.request(to: target) { (result: ResponseResult<WebResponse<QuestCreationResponse>>) in
+            completion(result.process())
+        }
+    }
 }
 
 // MARK: - Stub
@@ -100,6 +108,12 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
         completion(.success(quest))
+    }
+    
+    func create(quest: Quest, completion: @escaping (ResponseResult<QuestCreationResponse>) -> Void) {
+        quest.id = 1
+        let response = QuestCreationResponse(quest: quest, code: "111111")
+        completion(.success(response))
     }
     
     private func questStub(for number: Int) -> Quest {

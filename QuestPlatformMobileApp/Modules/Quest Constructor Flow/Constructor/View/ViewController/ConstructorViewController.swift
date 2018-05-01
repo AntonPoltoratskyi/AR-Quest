@@ -13,7 +13,11 @@ final class ConstructorViewController: UIViewController, View {
     typealias Output = ConstructorViewOutput
     var output: Output!
     
-    private var tasks: [QuestTaskCellModel] = []
+    private var tasks: [QuestTaskCellModel] = [] {
+        didSet {
+            contentView.navigationView.rightBarButton.isHidden = tasks.isEmpty
+        }
+    }
     
     
     // MARK: - Views
@@ -40,6 +44,7 @@ final class ConstructorViewController: UIViewController, View {
             tableView.setEditing(isEditing, animated: true)
             sender.setTitle(title, for: .normal)
         }
+        contentView.doneButton.addTarget(self, action: #selector(actionDoneButtonTapped(sender:)), for: .touchUpInside)
         
         return contentView
     }()
@@ -54,7 +59,15 @@ final class ConstructorViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tasks = []
         contentView.tableView.reloadData()
+    }
+    
+    
+    // MARK: - Actions
+    
+    @objc private func actionDoneButtonTapped(sender: UIButton) {
+        output.didClickDone()
     }
 }
 

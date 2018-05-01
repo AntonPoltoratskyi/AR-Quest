@@ -13,9 +13,14 @@ final class ConstructorAssembly: Assembly {
     typealias Input = Module<ConstructorModuleInput>
     
     func build() -> Input {
+        // Dependencies
+        let client = URLSessionNetworkClient()
+        let questService = QuestNetworkServiceStub(client: client, session: .shared)
+        
+        // Module
         let view = ConstructorViewController()
         let presenter = ConstructorPresenter()
-        let interactor = ConstructorInteractor()
+        let interactor = ConstructorInteractor(questService: questService)
         let router = ConstructorRouter()
         
         view.output = presenter

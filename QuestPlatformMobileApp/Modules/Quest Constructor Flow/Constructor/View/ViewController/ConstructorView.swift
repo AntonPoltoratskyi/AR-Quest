@@ -24,8 +24,16 @@ final class ConstructorView: BaseView {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
+        tableView.contentInset.bottom = 16
         contentView.addSubview(tableView)
         return tableView
+    }()
+    
+    private(set) lazy var doneButton: QuestButton = {
+        let button = QuestButton()
+        button.setTitle("Done", for: .normal)
+        contentView.addSubview(button)
+        return button
     }()
     
     
@@ -35,7 +43,14 @@ final class ConstructorView: BaseView {
         super.setup()
         
         tableView.snp.makeConstraints { maker in
-            maker.edges.equalToSuperview()
+            maker.top.left.right.equalToSuperview()
+        }
+        
+        doneButton.snp.makeConstraints { maker in
+            maker.top.equalTo(tableView.snp.bottom)
+            maker.horizontalInset(16)
+            maker.buttonHeight()
+            maker.bottom.equalToSuperview().inset(16)
         }
     }
 }
