@@ -70,18 +70,3 @@ final class DestinationNode: ARQuestNode {
         simdTransform.columns.3.y = newHeight
     }
 }
-
-final class DestinationCylinderNode: ARQuestNode {
-    
-    override func setup() {
-        super.setup()
-        
-        let box = SCNTube(innerRadius: 6.5, outerRadius: 7, height: 0.1)
-        
-        box.firstMaterial?.diffuse.contents = UIColor.white
-        box.firstMaterial?.isDoubleSided = true
-        
-        geometry = box
-        eulerAngles = SCNVector3(Float(90.0.degreesToRadians), 0, 0)
-    }
-}
