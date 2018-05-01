@@ -29,6 +29,9 @@ extension ConstructorPresenter: ConstructorViewOutput {
     }
     
     func didClickDone(tasks: [Task]) {
+        guard !tasks.isEmpty else {
+            return
+        }
         self.tasks = tasks
         router.showQuestInfoPopup(delegate: self)
     }
