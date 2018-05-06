@@ -67,7 +67,7 @@ final class LoginViewController: UIViewController, View, KeyboardInteracting {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-            contentView.loginForm.emailTextField.text = "test@test.com"
+            contentView.loginForm.emailTextField.text = "testpolant@gmail.com"
             contentView.loginForm.passwordTextField.text = "qwerty123"
         #endif
     }

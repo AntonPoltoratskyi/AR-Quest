@@ -14,7 +14,7 @@ struct LoginCredentials {
 }
 
 struct SignUpCredentials {
-    var name: String?
+    var name: String
     var email: String
     var password: String
 }

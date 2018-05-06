@@ -30,23 +30,28 @@ final class AuthNetworkServiceImpl: AuthNetworkService {
     
     func login(with credentials: LoginCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
         let target = AuthNetworkRouter.login(credentials: credentials)
-        client.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
-            // TODO: store session
-            completion(result.process())
+        client.request(to: target) { (result: ResponseResult<WebResponse<AuthResponse>>) in
+            completion(result.process().map { response in
+                self.session.setSession(response.token, forUser: response.user)
+                return response.user
+            })
         }
     }
     
     func register(with credentials: SignUpCredentials, completion: @escaping (ResponseResult<User>) -> Void) {
         let target = AuthNetworkRouter.register(credentials: credentials)
-        client.request(to: target) { (result: ResponseResult<WebResponse<User>>) in
-            // TODO: store session
-            completion(result.process())
+        client.request(to: target) { (result: ResponseResult<WebResponse<AuthResponse>>) in
+            completion(result.process().map { response in
+                self.session.setSession(response.token, forUser: response.user)
+                return response.user
+            })
         }
     }
     
     func logout(completion: @escaping (ResponseResult<Bool>) -> Void) {
         let target = AuthNetworkRouter.logout(token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Bool>>) in
+            self.session.invalidateSession()
             completion(result.process())
         }
     }

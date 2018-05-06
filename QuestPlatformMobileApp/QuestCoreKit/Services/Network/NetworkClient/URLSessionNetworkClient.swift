@@ -22,16 +22,18 @@ public final class URLSessionNetworkClient: NetworkClient {
     public func request<T: Decodable>(to target: URLRequestConvertible,
                                       decoder: JSONDecoder,
                                       completion: ((ResponseResult<T>) -> Void)?) -> URLSessionTask {
-        let urlRequest = target.asURLRequest()
+        let urlRequest = try! target.asURLRequest()
         let task = session.dataTask(with: urlRequest) { data, urlResponse, error in
-            if let error = error {
-                completion?(.failure(error))
-            } else if let data = data {
-                do {
-                    let decodedData = try decoder.decode(T.self, from: data)
-                    completion?(.success(decodedData))
-                } catch {
-                    completion?(.failure(APIError.jsonDecodingError(error)))
+            DispatchQueue.main.async {
+                if let error = error {
+                    completion?(.failure(error))
+                } else if let data = data {
+                    do {
+                        let decodedData = try decoder.decode(T.self, from: data)
+                        completion?(.success(decodedData))
+                    } catch {
+                        completion?(.failure(APIError.jsonDecodingError(error)))
+                    }
                 }
             }
         }

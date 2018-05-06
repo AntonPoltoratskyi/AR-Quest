@@ -13,14 +13,34 @@ enum AuthNetworkRouter: URLRequestConvertible {
     case register(credentials: SignUpCredentials)
     case logout(token: String?)
     
+    static let baseURL = URL(string: "http://localhost:8080/auth")!
+    
     var path: String {
         switch self {
         case .login:
             return "login"
         case .register:
-            return "register"
+            return "signup"
         case .logout:
             return "logout"
+        }
+    }
+    
+    var params: [String: String] {
+        switch self {
+        case let .login(credentials):
+            return [
+                "email": credentials.email,
+                "password": credentials.password
+            ]
+        case let .register(credentials):
+            return [
+                "name": credentials.name,
+                "email": credentials.email,
+                "password": credentials.password
+            ]
+        case .logout:
+            return [:]
         }
     }
     
@@ -28,7 +48,14 @@ enum AuthNetworkRouter: URLRequestConvertible {
         return "POST"
     }
     
-    func asURLRequest() -> URLRequest {
-        notImplemented()
+    func asURLRequest() throws -> URLRequest {
+        let url = type(of: self).baseURL.appendingPathComponent(path)
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONEncoder().encode(params)
+        request.httpMethod = method
+        
+        return request
     }
 }

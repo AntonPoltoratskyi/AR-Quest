@@ -68,6 +68,8 @@
 		8512642220987AE6000174ED /* DebugStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512642120987AE6000174ED /* DebugStorage.swift */; };
 		851264252098C8C0000174ED /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264242098C8C0000174ED /* Collection.swift */; };
 		851264292098EFFF000174ED /* DestinationCylinderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264282098EFFF000174ED /* DestinationCylinderNode.swift */; };
+		8513E809209F826E00D77DBD /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513E808209F826E00D77DBD /* NameValidator.swift */; };
+		8513E80C209F849300D77DBD /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513E80B209F849300D77DBD /* AuthResponse.swift */; };
 		851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F620710D100081F611 /* QuestBackgroundView.swift */; };
 		8517020020711E370081F611 /* QuestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F920711E370081F611 /* QuestListPresenter.swift */; };
 		8517020120711E370081F611 /* QuestListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FA20711E370081F611 /* QuestListRouter.swift */; };
@@ -359,6 +361,8 @@
 		8512642120987AE6000174ED /* DebugStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugStorage.swift; sourceTree = "<group>"; };
 		851264242098C8C0000174ED /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		851264282098EFFF000174ED /* DestinationCylinderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCylinderNode.swift; sourceTree = "<group>"; };
+		8513E808209F826E00D77DBD /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidator.swift; sourceTree = "<group>"; };
+		8513E80B209F849300D77DBD /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		851701F620710D100081F611 /* QuestBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBackgroundView.swift; sourceTree = "<group>"; };
 		851701F920711E370081F611 /* QuestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListPresenter.swift; sourceTree = "<group>"; };
 		851701FA20711E370081F611 /* QuestListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListRouter.swift; sourceTree = "<group>"; };
@@ -1076,6 +1080,7 @@
 			isa = PBXGroup;
 			children = (
 				85125716204AEFEA00995543 /* Validator.swift */,
+				8513E808209F826E00D77DBD /* NameValidator.swift */,
 				85125718204AF04700995543 /* EmailValidator.swift */,
 				8512571A204AF72200995543 /* PasswordValidator.swift */,
 				851A4C402078C24A008F488E /* CodeValidator.swift */,
@@ -1083,12 +1088,12 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		8512640B20985B75000174ED /* CompoundResponse */ = {
+		8512640B20985B75000174ED /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				8512640920985AAB000174ED /* QuestCreationResponse.swift */,
 			);
-			path = CompoundResponse;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		8512640C20986402000174ED /* QuestInfoPopup */ = {
@@ -1159,6 +1164,15 @@
 				851264242098C8C0000174ED /* Collection.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		8513E80A209F847F00D77DBD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				857ADD912043216B00CA0D42 /* AuthCredentials.swift */,
+				8513E80B209F849300D77DBD /* AuthResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		851701F820711DD20081F611 /* QuestList */ = {
@@ -1236,9 +1250,9 @@
 		85170214207127710081F611 /* Quests */ = {
 			isa = PBXGroup;
 			children = (
+				8512640B20985B75000174ED /* Entity */,
 				85170217207127A80081F611 /* QuestNetworkRouter.swift */,
 				85477ECA20947438002D26F9 /* QuestNetworkService.swift */,
-				8512640B20985B75000174ED /* CompoundResponse */,
 			);
 			path = Quests;
 			sourceTree = "<group>";
@@ -1863,7 +1877,7 @@
 		857ADD8B2043203800CA0D42 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				857ADD912043216B00CA0D42 /* AuthCredentials.swift */,
+				8513E80A209F847F00D77DBD /* Entity */,
 				857ADD8E2043206E00CA0D42 /* AuthNetworkRouter.swift */,
 				857ADD8C2043204D00CA0D42 /* AuthNetworkService.swift */,
 			);
@@ -2774,6 +2788,7 @@
 				85F74103204C8A25002AC5FE /* SideMenuContainerRouter.swift in Sources */,
 				85477F1B20948A72002D26F9 /* ARQuestInteractor.swift in Sources */,
 				85C3C2662083C569009AEF58 /* ConstructorAssembly.swift in Sources */,
+				8513E80C209F849300D77DBD /* AuthResponse.swift in Sources */,
 				14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */,
 				85C3C2652083C569009AEF58 /* ConstructorProtocols.swift in Sources */,
 				853DD51C2042FC6600E82595 /* LoginRouter.swift in Sources */,
@@ -2831,6 +2846,7 @@
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
 				85C3C2722083C583009AEF58 /* ConstructorFinishRouter.swift in Sources */,
 				850751B7208DBE5900A1221C /* TaskBuilderProtocols.swift in Sources */,
+				8513E809209F826E00D77DBD /* NameValidator.swift in Sources */,
 				851264292098EFFF000174ED /* DestinationCylinderNode.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,
 				850751C3208DC48200A1221C /* TextHintFormView.swift in Sources */,

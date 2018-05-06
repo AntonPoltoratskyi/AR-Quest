@@ -14,6 +14,15 @@ public enum ResponseResult<T> {
 }
 
 extension ResponseResult {
+    public func map<NextValue>(transform: (T) -> NextValue) -> ResponseResult<NextValue> {
+        switch self {
+        case let .success(value):
+            return .success(transform(value))
+        case let .failure(error):
+            return .failure(error)
+        }
+    }
+    
     public func flatMap<NextValue>(transform: (T) -> ResponseResult<NextValue>) -> ResponseResult<NextValue> {
         switch self {
         case let .success(value):

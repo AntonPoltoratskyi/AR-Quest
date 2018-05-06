@@ -46,6 +46,7 @@ extension LoginPresenter: LoginViewOutput {
     
     func didClickSignUp(name: String?, email: String?, password: String?, confirmationPassword: String?) {
         do {
+            let validName = try NameValidator().validated(name)
             let validEmail = try EmailValidator().validated(email)
             let validPassword = try PasswordValidator().validated(password)
             
@@ -53,7 +54,7 @@ extension LoginPresenter: LoginViewOutput {
                 throw ValidationError.passwordNotMatch
             }
             
-            let credentials = SignUpCredentials(name: name, email: validEmail, password: validPassword)
+            let credentials = SignUpCredentials(name: validName, email: validEmail, password: validPassword)
             interactor.register(with: credentials)
         } catch {
             if let error = error as? ErrorRepresentable {

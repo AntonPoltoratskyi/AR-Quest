@@ -32,7 +32,12 @@ public extension ResponseResult where T: ResponseRepresentable {
 extension ResponseResult {
     
     fileprivate func processing<ResultType>(errorMessage: String?) -> ResponseResult<ResultType> {
-        return .failure(APIError.unknownError)
+        switch errorMessage {
+        case "UserNotFound":
+            return .failure(APIError.userNotFound)
+        default:
+            return .failure(APIError.unknownError)
+        }
     }
     
     fileprivate func processing<ResultType>(error: Error) -> ResponseResult<ResultType> {

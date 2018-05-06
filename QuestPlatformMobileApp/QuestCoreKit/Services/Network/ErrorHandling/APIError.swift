@@ -14,3 +14,14 @@ enum APIError: Error {
     case unknownError
     case jsonDecodingError(Error)
 }
+
+extension APIError: ErrorRepresentable {
+    var errorMessage: String {
+        switch self {
+        case .userNotFound:
+            return "Invalid credentials"
+        default:
+            return "Something went wrong"
+        }
+    }
+}

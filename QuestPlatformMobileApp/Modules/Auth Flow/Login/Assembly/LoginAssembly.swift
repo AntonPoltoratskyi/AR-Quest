@@ -15,7 +15,7 @@ final class LoginAssembly: Assembly {
     func build() -> Input {
         // Dependency
         let client = URLSessionNetworkClient()
-        let authService = AuthNetworkServiceStub(client: client, session: .shared)
+        let authService = AuthNetworkServiceImpl(client: client, session: .shared)
         
         // Module
         let view = LoginViewController()
