@@ -8,9 +8,11 @@
 
 import Foundation
 
-enum UserNetworkRouter: URLRequestConvertible {
+enum UserNetworkRouter: NetworkRouter {
     case getCurrentUser(token: String?)
     case edit(user: User, token: String?)
+    
+    static let baseURL = URL(string: "http://localhost:8080/user")!
     
     var path: String {
         switch self {
@@ -25,7 +27,11 @@ enum UserNetworkRouter: URLRequestConvertible {
         return "POST"
     }
     
-    func asURLRequest() throws -> URLRequest {
-        notImplemented()
+    var params: [String : String] {
+        return [:]
+    }
+    
+    var headers: [String : String] {
+        return [:]
     }
 }

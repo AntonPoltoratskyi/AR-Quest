@@ -70,6 +70,7 @@
 		851264292098EFFF000174ED /* DestinationCylinderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851264282098EFFF000174ED /* DestinationCylinderNode.swift */; };
 		8513E809209F826E00D77DBD /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513E808209F826E00D77DBD /* NameValidator.swift */; };
 		8513E80C209F849300D77DBD /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513E80B209F849300D77DBD /* AuthResponse.swift */; };
+		8513E80E209F9A8D00D77DBD /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513E80D209F9A8D00D77DBD /* NetworkRouter.swift */; };
 		851701F720710D100081F611 /* QuestBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F620710D100081F611 /* QuestBackgroundView.swift */; };
 		8517020020711E370081F611 /* QuestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701F920711E370081F611 /* QuestListPresenter.swift */; };
 		8517020120711E370081F611 /* QuestListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851701FA20711E370081F611 /* QuestListRouter.swift */; };
@@ -363,6 +364,7 @@
 		851264282098EFFF000174ED /* DestinationCylinderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCylinderNode.swift; sourceTree = "<group>"; };
 		8513E808209F826E00D77DBD /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidator.swift; sourceTree = "<group>"; };
 		8513E80B209F849300D77DBD /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		8513E80D209F9A8D00D77DBD /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		851701F620710D100081F611 /* QuestBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestBackgroundView.swift; sourceTree = "<group>"; };
 		851701F920711E370081F611 /* QuestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListPresenter.swift; sourceTree = "<group>"; };
 		851701FA20711E370081F611 /* QuestListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestListRouter.swift; sourceTree = "<group>"; };
@@ -1528,8 +1530,9 @@
 			children = (
 				853DD4EB2042C79800E82595 /* NetworkClient.swift */,
 				857ADD932043221800CA0D42 /* NetworkService.swift */,
-				853DD4EC2042C79800E82595 /* URLSessionNetworkClient.swift */,
+				8513E80D209F9A8D00D77DBD /* NetworkRouter.swift */,
 				853DD4ED2042C79800E82595 /* URLRequestConvertible.swift */,
+				853DD4EC2042C79800E82595 /* URLSessionNetworkClient.swift */,
 			);
 			path = NetworkClient;
 			sourceTree = "<group>";
@@ -2844,6 +2847,7 @@
 				85F740E0204C4D9E002AC5FE /* Collection+ViewLayout.swift in Sources */,
 				855D74B6207BB045000421DA /* AboutInteractor.swift in Sources */,
 				14FE2F841FC96382001EDEAB /* Bundle.swift in Sources */,
+				8513E80E209F9A8D00D77DBD /* NetworkRouter.swift in Sources */,
 				85C3C2722083C583009AEF58 /* ConstructorFinishRouter.swift in Sources */,
 				850751B7208DBE5900A1221C /* TaskBuilderProtocols.swift in Sources */,
 				8513E809209F826E00D77DBD /* NameValidator.swift in Sources */,

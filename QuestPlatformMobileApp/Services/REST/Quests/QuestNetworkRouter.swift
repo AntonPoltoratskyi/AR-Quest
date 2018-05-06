@@ -8,13 +8,15 @@
 
 import Foundation
 
-enum QuestNetworkRouter: URLRequestConvertible {
+enum QuestNetworkRouter: NetworkRouter {
     case list(token: String?)
     case ownList(token: String?)
     case tasks(quest: Quest, token: String?)
     case joinBy(code: String, token: String?)
     case joinTo(quest: Quest, token: String?)
     case create(quest: Quest, token: String?)
+    
+    static let baseURL = URL(string: "http://localhost:8080/quest")!
     
     var path: String {
         switch self {
@@ -37,7 +39,11 @@ enum QuestNetworkRouter: URLRequestConvertible {
         return "POST"
     }
     
-    func asURLRequest() throws -> URLRequest {
-        notImplemented()
+    var params: [String : String] {
+        return [:]
+    }
+    
+    var headers: [String : String] {
+        return [:]
     }
 }
