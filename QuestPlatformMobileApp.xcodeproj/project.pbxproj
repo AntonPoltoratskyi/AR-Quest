@@ -28,6 +28,7 @@
 		14FE2FAD1FC9661E001EDEAB /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FA91FC9661E001EDEAB /* LocationService.swift */; };
 		14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */; };
 		14FE2FAF1FC9661E001EDEAB /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */; };
+		8507460120A03BC000F33132 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8507460020A03BC000F33132 /* HTTPMethod.swift */; };
 		850751AB208DB9F000A1221C /* TaskTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */; };
 		850751B4208DBE5900A1221C /* TaskBuilderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AD208DBE5900A1221C /* TaskBuilderPresenter.swift */; };
 		850751B5208DBE5900A1221C /* TaskBuilderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850751AE208DBE5900A1221C /* TaskBuilderRouter.swift */; };
@@ -322,6 +323,7 @@
 		14FE2FAB1FC9661E001EDEAB /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		14FE2FAC1FC9661E001EDEAB /* SessionStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		82D2B6DEEC52072BC1CA0F87 /* Pods-QuestPlatformMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestPlatformMobileApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp.release.xcconfig"; sourceTree = "<group>"; };
+		8507460020A03BC000F33132 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		850751AA208DB9F000A1221C /* TaskTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableHeaderView.swift; sourceTree = "<group>"; };
 		850751AD208DBE5900A1221C /* TaskBuilderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderPresenter.swift; sourceTree = "<group>"; };
 		850751AE208DBE5900A1221C /* TaskBuilderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBuilderRouter.swift; sourceTree = "<group>"; };
@@ -687,8 +689,8 @@
 				853DD4BA2042BE8500E82595 /* Foundation */,
 				14FE2F761FC96382001EDEAB /* UIKit */,
 				85F740DE204C46BB002AC5FE /* SnapKit */,
-				14FE2F6E1FC96382001EDEAB /* Geometry */,
 				85477EB020947340002D26F9 /* SceneKit */,
+				14FE2F6E1FC96382001EDEAB /* Geometry */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1528,6 +1530,7 @@
 		853DD4EA2042C79800E82595 /* NetworkClient */ = {
 			isa = PBXGroup;
 			children = (
+				8507460020A03BC000F33132 /* HTTPMethod.swift */,
 				853DD4EB2042C79800E82595 /* NetworkClient.swift */,
 				857ADD932043221800CA0D42 /* NetworkService.swift */,
 				8513E80D209F9A8D00D77DBD /* NetworkRouter.swift */,
@@ -2775,6 +2778,7 @@
 				851702472071671C0081F611 /* CodeInputView.swift in Sources */,
 				8517020F207121650081F611 /* QuestTableViewCell.swift in Sources */,
 				85477ECB20947438002D26F9 /* QuestNetworkService.swift in Sources */,
+				8507460120A03BC000F33132 /* HTTPMethod.swift in Sources */,
 				853DD4F02042C79800E82595 /* WebResponse.swift in Sources */,
 				853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */,
 				853DD4F22042C79800E82595 /* NetworkClient.swift in Sources */,

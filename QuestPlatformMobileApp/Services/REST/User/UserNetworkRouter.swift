@@ -23,8 +23,8 @@ enum UserNetworkRouter: NetworkRouter {
         }
     }
     
-    var method: String {
-        return "POST"
+    var method: HTTPMethod {
+        return .post
     }
     
     var params: [String : String] {
