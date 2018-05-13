@@ -37,7 +37,7 @@ extension TaskBuilderPresenter: TaskBuilderViewOutput {
         
         var goal: Task.Goal?
         if let text = text {
-            goal = .hint(text)
+            goal = .text(text)
         } else if let location = selectedLocation {
             goal = .location(location)
         }

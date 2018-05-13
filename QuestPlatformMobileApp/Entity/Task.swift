@@ -14,7 +14,7 @@ final class Task: Codable {
     
     enum Goal {
         case location(Coordinate)
-        case hint(String)
+        case text(String)
     }
     var goal: Goal
     
@@ -29,7 +29,7 @@ final class Task: Codable {
         case title      = "title"
         case latitude   = "latitude"
         case longitude  = "longitude"
-        case hint       = "hint"
+        case text       = "text"
     }
     
     init(from decoder: Decoder) throws {
@@ -40,13 +40,13 @@ final class Task: Codable {
         
         let latitude = try container.decodeIfPresent(Double.self, forKey: .latitude)
         let longitude = try container.decodeIfPresent(Double.self, forKey: .longitude)
-        let hint = try container.decodeIfPresent(String.self, forKey: .hint)
+        let text = try container.decodeIfPresent(String.self, forKey: .text)
         
         if let lat = latitude, let lng = longitude {
             let coordinate = Coordinate(latitude: lat, longitude: lng)
             goal = .location(coordinate)
         } else {
-            goal = .hint(hint ?? "")
+            goal = .text(text ?? "")
         }
     }
     
@@ -61,8 +61,8 @@ final class Task: Codable {
         case let .location(coordinate):
             try container.encode(coordinate.latitude, forKey: .latitude)
             try container.encode(coordinate.longitude, forKey: .longitude)
-        case let .hint(text):
-            try container.encode(text, forKey: .hint)
+        case let .text(text):
+            try container.encode(text, forKey: .text)
         }
     }
 }

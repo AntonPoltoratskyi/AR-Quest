@@ -35,7 +35,7 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
                 return
             }
             switch task.goal {
-            case let .hint(text):
+            case let .text(text):
                 showMessage(text)
                 view.enableNextAction()
             case let .location(destinationCoordinate):
