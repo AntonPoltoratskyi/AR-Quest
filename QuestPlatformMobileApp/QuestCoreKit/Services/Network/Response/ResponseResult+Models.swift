@@ -33,8 +33,16 @@ extension ResponseResult {
     
     fileprivate func processing<ResultType>(errorMessage: String?) -> ResponseResult<ResultType> {
         switch errorMessage {
-        case "UserNotFound":
+        case "invalid_token":
+            return .failure(APIError.invalidToken)
+        case "invalid_credentials":
+            return .failure(APIError.invalidCredentials)
+        case "invalid_input":
+            return .failure(APIError.invalidInput)
+        case "user_not_found":
             return .failure(APIError.userNotFound)
+        case "quest_not_found":
+            return .failure(APIError.questNotFound)
         default:
             return .failure(APIError.unknownError)
         }

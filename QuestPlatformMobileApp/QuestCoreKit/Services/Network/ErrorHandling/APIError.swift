@@ -10,7 +10,10 @@ import Foundation
 
 enum APIError: Error {
     case invalidToken
+    case invalidCredentials
+    case invalidInput
     case userNotFound
+    case questNotFound
     case unknownError
     case jsonDecodingError(Error)
 }
@@ -18,8 +21,16 @@ enum APIError: Error {
 extension APIError: ErrorRepresentable {
     var errorMessage: String {
         switch self {
+        case .invalidToken:
+            return "Invalid token"
+        case .invalidCredentials:
+            return "Invalid_credentials"
+        case .invalidInput:
+            return "Invalid input"
         case .userNotFound:
-            return "Invalid credentials"
+            return "User not found"
+        case .questNotFound:
+            return "Quest not found"
         default:
             return "Something went wrong"
         }

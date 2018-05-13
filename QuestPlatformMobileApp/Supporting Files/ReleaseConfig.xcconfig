@@ -1,0 +1,9 @@
+//
+//  ReleaseConfig.xcconfig
+//  QuestPlatformMobileApp
+//
+//  Created by Anton Poltoratskyi on 14.05.2018.
+//  Copyright © 2018 Anton Poltoratskyi. All rights reserved.
+//
+
+SERVER_URL=http:/$()/ar-quest.herokuapp.com

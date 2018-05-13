@@ -19,7 +19,7 @@ protocol NetworkRouter: URLRequestConvertible {
 extension NetworkRouter {
     
     static var baseURL: URL {
-        return URL(string: "http://localhost:8080")!
+        return Bundle.main.serverURL
     }
 
     var params: HTTPParameters {

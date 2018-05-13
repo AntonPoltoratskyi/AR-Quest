@@ -28,4 +28,9 @@ extension Bundle {
     public var buildVersion: String? {
         return object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String
     }
+    
+    public var serverURL: URL {
+        let urlString = object(forInfoDictionaryKey: "SERVER_URL") as! String
+        return URL(string: urlString)!
+    }
 }
