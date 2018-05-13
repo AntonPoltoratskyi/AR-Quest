@@ -12,26 +12,42 @@ enum UserNetworkRouter: NetworkRouter {
     case getCurrentUser(token: String?)
     case edit(user: User, token: String?)
     
-    static let baseURL = URL(string: "http://localhost:8080/user")!
-    
     var path: String {
         switch self {
         case .getCurrentUser:
-            return "me"
+            return "/user"
         case .edit:
-            return "edit"
+            return "/user"
         }
     }
     
     var method: HTTPMethod {
-        return .post
+        switch self {
+        case .getCurrentUser:
+            return .get
+        case .edit:
+            return .put
+        }
     }
     
-    var params: [String : String] {
-        return [:]
+    var params: HTTPParameters {
+        switch self {
+        case .getCurrentUser:
+            return [:]
+        case let .edit(user, _):
+            if let name = user.name {
+                return ["name": name]
+            }
+            return [:]
+        }
     }
     
-    var headers: [String : String] {
-        return [:]
+    var headers: HTTPHeaders {
+        switch self {
+        case .getCurrentUser:
+            return [:]
+        case let .edit(_, token):
+            return token.map { HTTPHeaders.authorization($0) } ?? [:]
+        }
     }
 }

@@ -12,17 +12,21 @@ protocol NetworkRouter: URLRequestConvertible {
     static var baseURL: URL { get }
     var path: String { get }
     var method: HTTPMethod { get }
-    var params: [String: String] { get }
-    var headers: [String: String] { get }
+    var params: HTTPParameters { get }
+    var headers: HTTPHeaders { get }
 }
 
 extension NetworkRouter {
+    
+    static var baseURL: URL {
+        return URL(string: "http://localhost:8080")!
+    }
 
-    var params: [String: String] {
+    var params: HTTPParameters {
         return [:]
     }
     
-    var headers: [String: String] {
+    var headers: HTTPHeaders {
         return [:]
     }
     
@@ -31,7 +35,7 @@ extension NetworkRouter {
         
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try JSONEncoder().encode(params)
+        request.httpBody = try JSONSerialization.data(withJSONObject: params)
         request.httpMethod = method.rawValue
         
         for (key, value) in headers {

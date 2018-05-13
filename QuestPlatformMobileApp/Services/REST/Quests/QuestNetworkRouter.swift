@@ -9,41 +9,84 @@
 import Foundation
 
 enum QuestNetworkRouter: NetworkRouter {
-    case list(token: String?)
-    case ownList(token: String?)
-    case tasks(quest: Quest, token: String?)
-    case joinBy(code: String, token: String?)
-    case joinTo(quest: Quest, token: String?)
     case create(quest: Quest, token: String?)
-    
-    static let baseURL = URL(string: "http://localhost:8080/quest")!
+    case questList(token: String?)
+    case ownQuestList(token: String?)
+    case joinToQuest(quest: Quest, token: String?)
+    case joinByCode(code: String, token: String?)
+    case tasks(quest: Quest, token: String?)
     
     var path: String {
         switch self {
-        case .list:
-            return "list"
-        case .ownList:
-            return "list/own"
-        case .tasks:
-            return "tasks"
-        case .joinBy:
-            return "join"
-        case .joinTo:
-            return "join"
         case .create:
-            return "create"
+            return "/quest/"
+        case .questList:
+            return "/quest/all"
+        case .ownQuestList:
+            return "/quest/own"
+        case let .joinToQuest(quest, _):
+            guard let id = quest.id else {
+                fatalError("Quest must != nil")
+            }
+            return "/quest/join/\(id)"
+        case .joinByCode:
+            return "/quest/join/code"
+        case let .tasks(quest, _):
+            guard let id = quest.id else {
+                fatalError("Quest must != nil")
+            }
+            return "/quest\(id)/tasks"
         }
     }
     
     var method: HTTPMethod {
-        return .post
+        switch self {
+        case .create, .joinByCode, .joinToQuest:
+            return .post
+        case .questList, .ownQuestList, .tasks:
+            return .get
+        }
     }
     
-    var params: [String : String] {
-        return [:]
+    var params: HTTPParameters {
+        switch self {
+        case let .create(quest, _):
+            return [
+                "name": quest.name,
+                "status": quest.status.rawValue,
+                "accessLevel": quest.accessLevel.rawValue,
+                "tasks": quest.tasks.map {
+                    [
+                        "title": $0.title,
+                        "latitude": $0.latitude as Any,
+                        "longitude": $0.longitude as Any,
+                        "text": $0.text as Any
+                    ]
+                }
+            ]
+        case let .joinByCode(code, _):
+            return ["code": code]
+        case .questList, .ownQuestList, .joinToQuest, .tasks:
+            return [:]
+        }
     }
     
-    var headers: [String : String] {
-        return [:]
+    var headers: HTTPHeaders {
+        let headers: HTTPHeaders?
+        switch self {
+        case let .create(_, token):
+            headers = token.map { HTTPHeaders.authorization($0) }
+        case let .questList(token):
+            headers = token.map { HTTPHeaders.authorization($0) }
+        case let .ownQuestList(token):
+            headers = token.map { HTTPHeaders.authorization($0) }
+        case let .tasks(_, token):
+            headers = token.map { HTTPHeaders.authorization($0) }
+        case let .joinToQuest(_, token):
+            headers = token.map { HTTPHeaders.authorization($0) }
+        case let .joinByCode(_, token):
+            headers = token.map { HTTPHeaders.authorization($0) }
+        }
+        return headers ?? [:]
     }
 }

@@ -32,14 +32,14 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     }
     
     func loadQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
-        let target = QuestNetworkRouter.list(token: session.token)
+        let target = QuestNetworkRouter.questList(token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
             completion(result.process())
         }
     }
     
     func loadOwnQuests(completion: @escaping (ResponseResult<[Quest]>) -> Void) {
-        let target = QuestNetworkRouter.ownList(token: session.token)
+        let target = QuestNetworkRouter.ownQuestList(token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<[Quest]>>) in
             completion(result.process())
         }
@@ -53,14 +53,14 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     }
     
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
-        let target = QuestNetworkRouter.joinBy(code: code, token: session.token)
+        let target = QuestNetworkRouter.joinByCode(code: code, token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
             completion(result.process())
         }
     }
     
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
-        let target = QuestNetworkRouter.joinTo(quest: quest, token: session.token)
+        let target = QuestNetworkRouter.joinToQuest(quest: quest, token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
             completion(result.process())
         }

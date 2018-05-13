@@ -13,16 +13,14 @@ enum AuthNetworkRouter: NetworkRouter {
     case register(credentials: SignUpCredentials)
     case logout(token: String?)
     
-    static let baseURL = URL(string: "http://localhost:8080/auth")!
-    
     var path: String {
         switch self {
         case .login:
-            return "login"
+            return "/auth/login"
         case .register:
-            return "signup"
+            return "/auth/signup"
         case .logout:
-            return "logout"
+            return "/auth/logout"
         }
     }
     
@@ -30,7 +28,7 @@ enum AuthNetworkRouter: NetworkRouter {
         return .post
     }
     
-    var params: [String: String] {
+    var params: HTTPParameters {
         switch self {
         case let .login(credentials):
             return [
@@ -48,15 +46,12 @@ enum AuthNetworkRouter: NetworkRouter {
         }
     }
     
-    var headers: [String: String] {
+    var headers: HTTPHeaders {
         switch self {
         case .login, .register:
             return [:]
         case let .logout(token):
-            if let token = token {
-                return ["Authorization": "Bearer \(token)"]
-            }
-            return [:]
+            return token.map { HTTPHeaders.authorization($0) } ?? [:]
         }
     }
 }

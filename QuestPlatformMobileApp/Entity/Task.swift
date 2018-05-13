@@ -66,3 +66,27 @@ final class Task: Codable {
         }
     }
 }
+
+extension Task {
+    
+    var latitude: Double? {
+        guard case let .location(coordinate) = goal else {
+            return nil
+        }
+        return coordinate.latitude
+    }
+    
+    var longitude: Double? {
+        guard case let .location(coordinate) = goal else {
+            return nil
+        }
+        return coordinate.longitude
+    }
+    
+    var text: String? {
+        guard case let .text(text) = goal else {
+            return nil
+        }
+        return text
+    }
+}

@@ -105,6 +105,8 @@
 		8517024F207169320081F611 /* UITableView+HeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517024E207169320081F611 /* UITableView+HeaderFooter.swift */; };
 		85170255207169D60081F611 /* CodeInputHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170254207169D60081F611 /* CodeInputHeaderView.swift */; };
 		851A4C412078C24A008F488E /* CodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851A4C402078C24A008F488E /* CodeValidator.swift */; };
+		851F8B9D20A8CF5500767B20 /* HTTPHeader+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */; };
+		851F8B9F20A8D7C700767B20 /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -400,6 +402,8 @@
 		8517024E207169320081F611 /* UITableView+HeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+HeaderFooter.swift"; sourceTree = "<group>"; };
 		85170254207169D60081F611 /* CodeInputHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputHeaderView.swift; sourceTree = "<group>"; };
 		851A4C402078C24A008F488E /* CodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidator.swift; sourceTree = "<group>"; };
+		851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPHeader+Authorization.swift"; sourceTree = "<group>"; };
+		851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -1531,6 +1535,8 @@
 			isa = PBXGroup;
 			children = (
 				8507460020A03BC000F33132 /* HTTPMethod.swift */,
+				851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */,
+				851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */,
 				853DD4EB2042C79800E82595 /* NetworkClient.swift */,
 				857ADD932043221800CA0D42 /* NetworkService.swift */,
 				8513E80D209F9A8D00D77DBD /* NetworkRouter.swift */,
@@ -2815,6 +2821,7 @@
 				85C3C21A20837692009AEF58 /* MenuProtocols.swift in Sources */,
 				85C3C21D20837692009AEF58 /* MenuView.swift in Sources */,
 				851264192098641D000174ED /* QuestInfoPopupInteractor.swift in Sources */,
+				851F8B9F20A8D7C700767B20 /* HTTPParameters.swift in Sources */,
 				853DD4C02042BF8B00E82595 /* ClosureGestureRecognizer.swift in Sources */,
 				857ADD9720432A8D00CA0D42 /* QuestButton.swift in Sources */,
 				14FE2F8A1FC96382001EDEAB /* Sequence.swift in Sources */,
@@ -2934,6 +2941,7 @@
 				85C3C23D2083BACB009AEF58 /* LocationPickerView.swift in Sources */,
 				85F07DDE208B5B77004950B9 /* OwnQuestsProtocols.swift in Sources */,
 				857ADD942043221800CA0D42 /* NetworkService.swift in Sources */,
+				851F8B9D20A8CF5500767B20 /* HTTPHeader+Authorization.swift in Sources */,
 				853DD4DD2042C4E900E82595 /* UITableView+ViewModels.swift in Sources */,
 				853DD5132042E54100E82595 /* Module.swift in Sources */,
 				851702452071671C0081F611 /* CodeInputAssembly.swift in Sources */,
