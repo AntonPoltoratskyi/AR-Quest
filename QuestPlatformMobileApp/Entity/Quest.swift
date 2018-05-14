@@ -23,8 +23,8 @@ final class Quest: Codable {
     var name: String
     var status: Status
     var accessLevel: AccessLevel
-    var tasks: [Task]
-    var owner: User
+    var tasks: [Task]?
+    var owner: User?
     
     init(id: EntityIdentifier? = nil, name: String, status: Status, accessLevel: AccessLevel, tasks: [Task], owner: User) {
         self.id = id

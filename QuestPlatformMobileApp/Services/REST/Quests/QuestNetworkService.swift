@@ -104,7 +104,7 @@ final class QuestNetworkServiceStub: QuestNetworkService {
     
     func loadTasks(for quest: Quest, completion: @escaping (ResponseResult<[Task]>) -> Void) {
 //        let tasks: [Task] = (1...20).map { taskStub(for: $0) }
-        completion(.success(quest.tasks))
+        completion(.success(quest.tasks ?? []))
     }
     
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {

@@ -72,7 +72,7 @@ extension ARQuestPresenter: ARQuestViewOutput {
         handler.delegate = self
         sceneHandler = handler
         
-        currentTask = quest.tasks.first
+        currentTask = quest.tasks?.first
         
         interactor.startLocationUpdates()
     }
@@ -92,7 +92,7 @@ extension ARQuestPresenter: ARQuestViewOutput {
     }
     
     private func goToNextTask() {
-        currentTask = quest.tasks.next(after: { $0 === currentTask })
+        currentTask = quest.tasks?.next(after: { $0 === currentTask })
     }
 }
 

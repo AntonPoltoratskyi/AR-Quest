@@ -44,7 +44,7 @@ enum QuestNetworkRouter: NetworkRouter {
         case .create, .joinByCode, .joinToQuest:
             return .post
         case .questList, .ownQuestList, .tasks:
-            return .get
+            return .post
         }
     }
     
@@ -55,14 +55,14 @@ enum QuestNetworkRouter: NetworkRouter {
                 "name": quest.name,
                 "status": quest.status.rawValue,
                 "accessLevel": quest.accessLevel.rawValue,
-                "tasks": quest.tasks.map {
+                "tasks": quest.tasks?.map {
                     [
                         "title": $0.title,
                         "latitude": $0.latitude as Any,
                         "longitude": $0.longitude as Any,
                         "text": $0.text as Any
                     ]
-                }
+                } ?? []
             ]
         case let .joinByCode(code, _):
             return ["code": code]
