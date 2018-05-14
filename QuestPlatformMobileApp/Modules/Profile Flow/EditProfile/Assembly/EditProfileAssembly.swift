@@ -14,13 +14,12 @@ final class EditProfileAssembly: Assembly {
     
     func build() -> Input {
         // Dependencies
-        let client = URLSessionNetworkClient()
-        let userService = UserNetworkServiceStub(client: client, session: .shared)
+        let factory = ServiceFactory.shared
         
         // Module
         let view = EditProfileViewController()
         let presenter = EditProfilePresenter()
-        let interactor = EditProfileInteractor(userService: userService)
+        let interactor = EditProfileInteractor(userService: factory.makeUserService())
         let router = EditProfileRouter()
         
         view.output = presenter

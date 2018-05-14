@@ -54,6 +54,7 @@
 		8511E560208C88CB006DFCFE /* MenuItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E55E208C88CB006DFCFE /* MenuItemCellModel.swift */; };
 		8511E564208C9234006DFCFE /* QuestSideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E563208C9234006DFCFE /* QuestSideMenuHeaderView.swift */; };
 		8511E56B208CA17A006DFCFE /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8511E56A208CA17A006DFCFE /* LocationAnnotation.swift */; };
+		8512042920AA1F9000A6259E /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512042820AA1F9000A6259E /* ServiceFactory.swift */; };
 		85125717204AEFEA00995543 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125716204AEFEA00995543 /* Validator.swift */; };
 		85125719204AF04700995543 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85125718204AF04700995543 /* EmailValidator.swift */; };
 		8512571B204AF72200995543 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512571A204AF72200995543 /* PasswordValidator.swift */; };
@@ -352,6 +353,7 @@
 		8511E55E208C88CB006DFCFE /* MenuItemCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCellModel.swift; sourceTree = "<group>"; };
 		8511E563208C9234006DFCFE /* QuestSideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestSideMenuHeaderView.swift; sourceTree = "<group>"; };
 		8511E56A208CA17A006DFCFE /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		8512042820AA1F9000A6259E /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		85125716204AEFEA00995543 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		85125718204AF04700995543 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		8512571A204AF72200995543 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
@@ -1875,6 +1877,7 @@
 		857ADD872043196D00CA0D42 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8512042820AA1F9000A6259E /* ServiceFactory.swift */,
 				85125715204AEFCC00995543 /* Validation */,
 				85477EC3209473D0002D26F9 /* REST */,
 				85477EC2209473C4002D26F9 /* AR */,
@@ -2930,6 +2933,7 @@
 				14FE2FAE1FC9661E001EDEAB /* KeychainStorage.swift in Sources */,
 				8517020420711E370081F611 /* QuestListAssembly.swift in Sources */,
 				85F07DDC208B5B77004950B9 /* OwnQuestsRouter.swift in Sources */,
+				8512042920AA1F9000A6259E /* ServiceFactory.swift in Sources */,
 				85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */,
 				85477F1720948A72002D26F9 /* ARQuestRouter.swift in Sources */,
 				8512641A2098641D000174ED /* QuestInfoPopupView.swift in Sources */,

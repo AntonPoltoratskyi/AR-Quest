@@ -14,13 +14,12 @@ final class ConstructorAssembly: Assembly {
     
     func build() -> Input {
         // Dependencies
-        let client = URLSessionNetworkClient()
-        let questService = QuestNetworkServiceStub(client: client, session: .shared)
+        let factory = ServiceFactory.shared
         
         // Module
         let view = ConstructorViewController()
         let presenter = ConstructorPresenter()
-        let interactor = ConstructorInteractor(questService: questService)
+        let interactor = ConstructorInteractor(questService: factory.makeQuestService())
         let router = ConstructorRouter()
         
         view.output = presenter

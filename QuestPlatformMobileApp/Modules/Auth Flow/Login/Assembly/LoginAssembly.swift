@@ -14,13 +14,12 @@ final class LoginAssembly: Assembly {
     
     func build() -> Input {
         // Dependency
-        let client = URLSessionNetworkClient()
-        let authService = AuthNetworkServiceImpl(client: client, session: .shared)
+        let factory = ServiceFactory.shared
         
         // Module
         let view = LoginViewController()
         let presenter = LoginPresenter()
-        let interactor = LoginInteractor(authService: authService)
+        let interactor = LoginInteractor(authService: factory.makeAuthService())
         let router = LoginRouter()
         
         view.output = presenter

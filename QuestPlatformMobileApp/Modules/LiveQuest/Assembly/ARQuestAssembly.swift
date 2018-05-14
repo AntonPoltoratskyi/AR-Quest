@@ -19,12 +19,13 @@ final class ARQuestAssembly: Assembly {
     }
     
     func build() -> Input {
+        let factory = ServiceFactory.shared
         let trackingService = ARTrackingService()
         
         // Module
         let view = ARQuestViewController()
         let presenter = ARQuestPresenter(quest: quest, trackingService: trackingService)
-        let interactor = ARQuestInteractor(locationService: .shared)
+        let interactor = ARQuestInteractor(locationService: factory.makeLocationService())
         let router = ARQuestRouter()
         
         view.output = presenter

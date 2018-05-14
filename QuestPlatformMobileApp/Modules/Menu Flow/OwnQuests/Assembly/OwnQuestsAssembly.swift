@@ -14,13 +14,12 @@ final class OwnQuestsAssembly: Assembly {
     
     func build() -> Input {
         // Dependencies
-        let client = URLSessionNetworkClient()
-        let questService = QuestNetworkServiceStub(client: client, session: .shared)
+        let factory = ServiceFactory.shared
         
         // Module
         let view = OwnQuestsViewController()
         let presenter = OwnQuestsPresenter()
-        let interactor = OwnQuestsInteractor(questNetworkService: questService)
+        let interactor = OwnQuestsInteractor(questNetworkService: factory.makeQuestService())
         let router = OwnQuestsRouter()
         
         view.output = presenter
