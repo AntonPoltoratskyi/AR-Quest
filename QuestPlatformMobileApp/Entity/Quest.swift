@@ -10,13 +10,13 @@ import Foundation
 
 final class Quest: Codable {
     enum Status: Int, Codable {
-        case waiting = 1
-        case active  = 2
-        case closed  = 3
+        case created = 0
+        case active  = 1
+        case closed  = 2
     }
     enum AccessLevel: Int, Codable {
-        case `public`  = 1
-        case `private` = 2
+        case `public`  = 0
+        case `private` = 1
     }
     
     var id: EntityIdentifier?

@@ -66,7 +66,7 @@ extension ConstructorPresenter: QuestInfoPopupModuleOutput {
             guard let user = SessionStorage.shared.user else {
                 return
             }
-            let quest = Quest(name: title, status: .waiting, accessLevel: accessLevel, tasks: self.tasks, owner: user)
+            let quest = Quest(name: title, status: .created, accessLevel: accessLevel, tasks: self.tasks, owner: user)
             self.interactor.create(quest)
         }
     }
