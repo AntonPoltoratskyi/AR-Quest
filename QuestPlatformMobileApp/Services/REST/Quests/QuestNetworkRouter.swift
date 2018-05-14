@@ -35,7 +35,7 @@ enum QuestNetworkRouter: NetworkRouter {
             guard let id = quest.id else {
                 fatalError("Quest must != nil")
             }
-            return "/quest\(id)/tasks"
+            return "/quest/\(id)/tasks"
         }
     }
     
