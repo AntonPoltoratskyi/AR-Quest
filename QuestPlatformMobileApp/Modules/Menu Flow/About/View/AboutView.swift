@@ -23,7 +23,7 @@ final class AboutView: BaseView {
     
     private(set) lazy var appIconImageView: UIImageView = {
         let imageView = UIImageView()
-        // TODO: set app icon image
+        imageView.image = #imageLiteral(resourceName: "ic_launcher")
         imageView.backgroundColor = .lightGray
         contentView.addSubview(imageView)
         return imageView

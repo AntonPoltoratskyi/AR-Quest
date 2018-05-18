@@ -62,7 +62,7 @@ extension ARQuestViewController: ARQuestViewInput {
     }
     
     func showMessage(_ message: String) {
-        contentView.debugLabel.text = message
+        // contentView.debugLabel.text = message
     }
     
     func showTextPopup(_ text: String) {

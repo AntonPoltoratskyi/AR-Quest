@@ -28,8 +28,6 @@ public final class ARSceneViewModel: NSObject {
     
     private var displayFloor = true
     private var recognizedHeights: [ARAnchor: Float] = [:]
-    private var floorNodes: [ARAnchor: FloorAnchorNode] = [:]
-    
     
     // MARK: - Init
     
@@ -65,17 +63,15 @@ public final class ARSceneViewModel: NSObject {
         scene.automaticallyUpdatesLighting = true
         scene.autoenablesDefaultLighting = true
         
-        scene.showsStatistics = true
+        scene.showsStatistics = false
         
         scene.debugOptions = [
-            ARSCNDebugOptions.showWorldOrigin,
-            ARSCNDebugOptions.showFeaturePoints
+            ARSCNDebugOptions.showWorldOrigin
         ]
     }
     
     private func clearStoredDate() {
         recognizedHeights.removeAll()
-        floorNodes.removeAll()
     }
 }
 
@@ -134,25 +130,16 @@ extension ARSceneViewModel: ARSCNViewDelegate {
     public func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let anchor = anchor as? ARPlaneAnchor else { return }
         recognizedHeights[anchor] = node.position.y
-        
-        let floorNode = FloorAnchorNode(anchor: anchor)
-        floorNode.setColor(UIColor.white.withAlphaComponent(0.2))
-        node.addChildNode(floorNode)
-        floorNodes[anchor] = floorNode
     }
     
     public func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let anchor = anchor as? ARPlaneAnchor else { return }
         recognizedHeights[anchor] = node.position.y
-        
-        guard let floorNode = floorNodes[anchor] else { return }
-        floorNode.updatePostition(anchor)
     }
     
     public func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         guard let anchor = anchor as? ARPlaneAnchor else { return }
         recognizedHeights[anchor] = nil
-        floorNodes[anchor] = nil
     }
 }
 
@@ -179,17 +166,23 @@ extension ARSceneViewModel: ARSessionDelegate {
     }
     
     public func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        guard let frame = session.currentFrame else { return }
+        guard let frame = session.currentFrame else {
+            return
+        }
         updateState(for: frame, trackingState: frame.camera.trackingState)
     }
     
     public func session(_ session: ARSession, didRemove anchors: [ARAnchor]) {
-        guard let frame = session.currentFrame else { return }
+        guard let frame = session.currentFrame else {
+            return
+        }
         updateState(for: frame, trackingState: frame.camera.trackingState)
     }
     
     public func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        guard let frame = session.currentFrame else { return }
+        guard let frame = session.currentFrame else {
+            return
+        }
         updateState(for: frame, trackingState: camera.trackingState)
     }
 }

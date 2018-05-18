@@ -117,14 +117,14 @@ final class SplashView: UIView {
         
         // Buttons
         
-        facebookButton.snp.makeConstraints { maker in
-            maker.bottom.leading.trailing.equalToSuperview()
-            maker.buttonHeight()
-        }
+//        facebookButton.snp.makeConstraints { maker in
+//            maker.bottom.leading.trailing.equalToSuperview()
+//            maker.buttonHeight()
+//        }
         
         emailButton.snp.makeConstraints { maker in
             maker.leading.trailing.equalToSuperview()
-            maker.bottom.equalTo(facebookButton.snp.top).offset(-12)
+            maker.bottom.equalToSuperview() //equalTo(facebookButton.snp.top).offset(-12)
             maker.buttonHeight()
         }
         
@@ -137,7 +137,7 @@ final class SplashView: UIView {
         
         subtitleLabel.snp.makeConstraints { maker in
             maker.leading.trailing.equalToSuperview()
-            maker.bottom.equalTo(buttonsContainer.snp.top).offset(-32)
+            maker.bottom.equalTo(buttonsContainer.snp.top).offset(-96)
         }
         
         largeTitleLabel.setContentCompressionResistancePriority(.required, for: .vertical)

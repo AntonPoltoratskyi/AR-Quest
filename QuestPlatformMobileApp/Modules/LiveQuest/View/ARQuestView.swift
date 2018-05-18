@@ -92,6 +92,6 @@ final class ARQuestView: BaseView {
     }
     
     func showDistance(_ distance: Distance) {
-        distanceLabel.text = "Distance: \(formatter.string(fromMeters: distance))"
+        distanceLabel.text = "Go \(formatter.string(fromMeters: distance))"
     }
 }

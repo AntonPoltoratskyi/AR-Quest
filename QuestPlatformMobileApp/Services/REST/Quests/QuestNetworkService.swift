@@ -55,14 +55,40 @@ final class QuestNetworkServiceImpl: QuestNetworkService {
     func joinToQuest(with code: String, completion: @escaping (ResponseResult<Quest>) -> Void) {
         let target = QuestNetworkRouter.joinByCode(code: code, token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
-            completion(result.process())
+            switch result.process() {
+            case let .success(quest):
+                self.loadTasks(for: quest) { tasksResult in
+                    switch tasksResult {
+                    case let .success(tasks):
+                        quest.tasks = tasks
+                        completion(.success(quest))
+                    case let .failure(error):
+                        completion(.failure(error))
+                    }
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
         }
     }
     
     func join(to quest: Quest, completion: @escaping (ResponseResult<Quest>) -> Void) {
         let target = QuestNetworkRouter.joinToQuest(quest: quest, token: session.token)
         client.request(to: target) { (result: ResponseResult<WebResponse<Quest>>) in
-            completion(result.process())
+            switch result.process() {
+            case let .success(quest):
+                self.loadTasks(for: quest) { tasksResult in
+                    switch tasksResult {
+                    case let .success(tasks):
+                        quest.tasks = tasks
+                        completion(.success(quest))
+                    case let .failure(error):
+                        completion(.failure(error))
+                    }
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
         }
     }
     
