@@ -11,8 +11,7 @@ import MapKit
 
 extension Coordinate {
     
-    /// In radians
-    func bearingAngle(to coordinate: Coordinate) -> Double {
+    func angle(to coordinate: Coordinate) -> Radians {
         let destLat = coordinate.latitude.degreesToRadians
         let destLng = coordinate.longitude.degreesToRadians
         
@@ -24,27 +23,9 @@ extension Coordinate {
         
         return atan2(a, b)
     }
-    
-    /// In degrees
-    func directionAngle(to coordinate: Coordinate) -> Direction {
-        return bearingAngle(to: coordinate).radiansToDegrees
-    }
-    
+
     func distance(to coordinate: Coordinate) -> Distance {
         return clLocation.distance(from: coordinate.clLocation)
-    }
-    
-    func coordinate(with bearingAngle: Double, distance: Double) -> Coordinate {
-        let latDistance = distance.metersToLatitude
-        let lngDistance = distance.metersToLongitude
-        
-        let lat1 = latitude.degreesToRadians
-        let lng1 = longitude.degreesToRadians
-        
-        let lat2 = asin(sin(lat1) * cos(latDistance) + cos(lat1) * sin(latDistance) * cos(bearingAngle))
-        let lng2 = lng1 + atan2(sin(bearingAngle) * sin(lngDistance) * cos(lat1), cos(lngDistance) - sin(lat1) * sin(lat2))
-        
-        return Coordinate(latitude: lat2.radiansToDegrees, longitude: lng2.radiansToDegrees)
     }
 }
 

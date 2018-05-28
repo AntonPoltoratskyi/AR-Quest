@@ -24,7 +24,7 @@ extension matrix_float4x4 {
     
     func transformed(from current: Coordinate, destination: Coordinate) -> matrix_float4x4 {
         let distance = current.distance(to: destination)
-        let bearingAngle = current.bearingAngle(to: destination)
+        let bearingAngle = current.angle(to: destination)
         
         let position = vector_float4(0, 0, -Float(distance), 1)
         let translatedMatrix = translated(to: position)
@@ -32,14 +32,7 @@ extension matrix_float4x4 {
         
         return rotatedMatrix
     }
-    
-    // column 0  column 1  column 2  column 3
-    // --------------------------------------
-    //    cosθ      0       sinθ      0    
-    //     0        1         0       0    
-    //   −sinθ      0       cosθ      0    
-    //     0        0         0       1    
-    // --------------------------------------
+
     private func rotated(byY radians: Float) -> matrix_float4x4 {
         var rotation = matrix_identity_float4x4
         

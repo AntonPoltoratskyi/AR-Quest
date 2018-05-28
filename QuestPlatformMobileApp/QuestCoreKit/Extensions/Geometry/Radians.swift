@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Radians = Double
+
 extension FloatingPoint {
     var degreesToRadians: Self { return self / 180 * .pi }
     var radiansToDegrees: Self { return self * 180 / .pi }

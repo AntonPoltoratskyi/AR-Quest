@@ -11,9 +11,26 @@ import CoreLocation
 
 extension SCNMatrix4 {
     
+    func applyTransformBetween(currentCoordinate: Coordinate, destinationCoordinate: Coordinate) -> SCNMatrix4 {
+        var result = self
+        
+        let distance = Float(currentCoordinate.distance(to: destinationCoordinate))
+        let translation = SCNMatrix4MakeTranslation(0, 0, -distance)
+        result = SCNMatrix4Mult(result, translation)
+        
+        let angle = Float(currentCoordinate.angle(to: destinationCoordinate))
+        let rotationMatrix = SCNMatrix4MakeRotation(angle, 0, 1, 0)
+        result = SCNMatrix4Mult(result, SCNMatrix4Invert(rotationMatrix))
+        
+        return result
+    }
+}
+
+extension SCNMatrix4 {
+    
     func transformed(from current: Coordinate, destination: Coordinate, thresholdDistance: Double) -> SCNMatrix4 {
         let distance = min(current.distance(to: destination), thresholdDistance)
-        let bearing = current.bearingAngle(to: destination)
+        let bearing = current.angle(to: destination)
         
         var transform = self
         
