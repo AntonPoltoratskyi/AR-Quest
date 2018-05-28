@@ -16,7 +16,7 @@ final class ARTrackingService: ARTrackingServiceInput {
     public var lastRecognizedLocation: CLLocation?
     public var lastRecognizedCameraTransform: CameraTransform?
     
-    private var errorsCount = 0
+    private var errorCounter = 0
     
     public func update(location: CLLocation, camera: CameraTransform) {
         guard let lastLocation = lastRecognizedLocation, let lastTransform = lastRecognizedCameraTransform else {
@@ -38,14 +38,23 @@ final class ARTrackingService: ARTrackingServiceInput {
     
     private func handleTrackingInfo(_ trackingInfo: TrackingInfo) {
         if trackingInfo.isValid {
-            errorsCount = 0
-            delegate?.sessionDidUpdate(with: trackingInfo)
+            handleLocationUpdate(trackingInfo)
         } else {
-            errorsCount += 1
-            if errorsCount >= ARConstants.maxErrorLimit {
-                errorsCount = 0
-                delegate?.sessionDidBecomeInvalid()
-            }
+            handleLocationError()
         }
+    }
+    
+    private func handleLocationUpdate(_ trackingInfo: TrackingInfo) {
+        errorCounter = 0
+        delegate?.sessionDidUpdate(with: trackingInfo)
+    }
+    
+    private func handleLocationError() {
+        errorCounter += 1
+        guard errorCounter >= ARConstants.maxErrorLimit else {
+            return
+        }
+        errorCounter = 0
+        delegate?.sessionDidBecomeInvalid()
     }
 }
