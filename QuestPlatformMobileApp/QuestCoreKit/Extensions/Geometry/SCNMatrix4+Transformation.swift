@@ -11,7 +11,8 @@ import CoreLocation
 
 extension SCNMatrix4 {
     
-    func applyTransformBetween(currentCoordinate: Coordinate, destinationCoordinate: Coordinate) -> SCNMatrix4 {
+    func applyTransformBetween(currentCoordinate: Coordinate,
+                               destinationCoordinate: Coordinate) -> SCNMatrix4 {
         var result = self
         
         let distance = Float(currentCoordinate.distance(to: destinationCoordinate))

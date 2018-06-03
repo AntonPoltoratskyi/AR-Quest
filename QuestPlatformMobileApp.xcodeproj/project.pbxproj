@@ -208,6 +208,8 @@
 		857ADD9B20432B0C00CA0D42 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9A20432B0C00CA0D42 /* UIColor.swift */; };
 		857ADD9D20432BCA00CA0D42 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9C20432BCA00CA0D42 /* Theme.swift */; };
 		857ADDA020432E6300CA0D42 /* QuestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857ADD9F20432E6300CA0D42 /* QuestTextField.swift */; };
+		858E64A120BE732B003B8F55 /* QuestNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E64A020BE732B003B8F55 /* QuestNetworkServiceTests.swift */; };
+		858E64A320BE752C003B8F55 /* NetworkClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E64A220BE752C003B8F55 /* NetworkClientStub.swift */; };
 		85C3C203208373DE009AEF58 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C1FC208373DE009AEF58 /* MainPresenter.swift */; };
 		85C3C204208373DE009AEF58 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C1FD208373DE009AEF58 /* MainRouter.swift */; };
 		85C3C205208373DE009AEF58 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3C1FE208373DE009AEF58 /* MainViewController.swift */; };
@@ -507,6 +509,8 @@
 		857ADD9A20432B0C00CA0D42 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		857ADD9C20432BCA00CA0D42 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		857ADD9F20432E6300CA0D42 /* QuestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTextField.swift; sourceTree = "<group>"; };
+		858E64A020BE732B003B8F55 /* QuestNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestNetworkServiceTests.swift; sourceTree = "<group>"; };
+		858E64A220BE752C003B8F55 /* NetworkClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientStub.swift; sourceTree = "<group>"; };
 		85C3C1FC208373DE009AEF58 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		85C3C1FD208373DE009AEF58 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		85C3C1FE208373DE009AEF58 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -652,6 +656,8 @@
 			isa = PBXGroup;
 			children = (
 				141AC4171FC764D000200877 /* QuestPlatformMobileAppTests.swift */,
+				858E64A020BE732B003B8F55 /* QuestNetworkServiceTests.swift */,
+				858E64A220BE752C003B8F55 /* NetworkClientStub.swift */,
 				141AC4191FC764D000200877 /* Info.plist */,
 			);
 			path = QuestPlatformMobileAppTests;
@@ -1422,6 +1428,35 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		85233FE320C3D37F0084FC81 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				8507460020A03BC000F33132 /* HTTPMethod.swift */,
+				851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */,
+				851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		85233FE420C3D38D0084FC81 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4EB2042C79800E82595 /* NetworkClient.swift */,
+				857ADD932043221800CA0D42 /* NetworkService.swift */,
+				8513E80D209F9A8D00D77DBD /* NetworkRouter.swift */,
+				853DD4ED2042C79800E82595 /* URLRequestConvertible.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		85233FE520C3D3970084FC81 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				853DD4EC2042C79800E82595 /* URLSessionNetworkClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		853DD4B72042BB9600E82595 /* QuestCoreKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,14 +1578,9 @@
 		853DD4EA2042C79800E82595 /* NetworkClient */ = {
 			isa = PBXGroup;
 			children = (
-				8507460020A03BC000F33132 /* HTTPMethod.swift */,
-				851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */,
-				851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */,
-				853DD4EB2042C79800E82595 /* NetworkClient.swift */,
-				857ADD932043221800CA0D42 /* NetworkService.swift */,
-				8513E80D209F9A8D00D77DBD /* NetworkRouter.swift */,
-				853DD4ED2042C79800E82595 /* URLRequestConvertible.swift */,
-				853DD4EC2042C79800E82595 /* URLSessionNetworkClient.swift */,
+				85233FE320C3D37F0084FC81 /* HTTP */,
+				85233FE420C3D38D0084FC81 /* Protocols */,
+				85233FE520C3D3970084FC81 /* Client */,
 			);
 			path = NetworkClient;
 			sourceTree = "<group>";
@@ -3005,7 +3035,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858E64A320BE752C003B8F55 /* NetworkClientStub.swift in Sources */,
 				141AC4181FC764D000200877 /* QuestPlatformMobileAppTests.swift in Sources */,
+				858E64A120BE732B003B8F55 /* QuestNetworkServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
