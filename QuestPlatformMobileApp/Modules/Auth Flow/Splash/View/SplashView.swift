@@ -30,7 +30,10 @@ final class SplashView: UIView {
     private(set) lazy var largeTitleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.appFont(ofSize: 52, weight: .semibold)
-        label.text = "Welcome to Quest"
+        label.text = """
+        Welcome to
+        \(Bundle.main.displayName)
+        """
         label.textAlignment = .center
         label.numberOfLines = 0
         label.textColor = .white
@@ -142,7 +145,7 @@ final class SplashView: UIView {
         
         largeTitleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         largeTitleLabel.snp.makeConstraints { maker in
-            maker.height.equalTo(128)
+            maker.height.equalTo(160)
             maker.leading.trailing.equalToSuperview()
             maker.bottom.equalTo(subtitleLabel.snp.top).offset(-32)
         }
