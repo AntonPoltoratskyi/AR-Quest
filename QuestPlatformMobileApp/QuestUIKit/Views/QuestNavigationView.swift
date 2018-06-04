@@ -51,6 +51,7 @@ final class QuestNavigationView: UIView {
     private(set) lazy var leftBarButton: UIButton = {
         let button = UIButton()
         button.isHidden = true
+        button.tintColor = .white
         button.addTarget(self, action: #selector(actionLeftButtonTapped(sender:)), for: .touchUpInside)
         button.contentEdgeInsets = Layout.buttons.contentInset
         navigationView.addSubview(button)
@@ -60,6 +61,7 @@ final class QuestNavigationView: UIView {
     private(set) lazy var rightBarButton: UIButton = {
         let button = UIButton()
         button.isHidden = true
+        button.tintColor = .white
         button.addTarget(self, action: #selector(actionRightButtonTapped(sender:)), for: .touchUpInside)
         button.contentEdgeInsets = Layout.buttons.contentInset
         navigationView.addSubview(button)

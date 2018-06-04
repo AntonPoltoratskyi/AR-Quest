@@ -35,7 +35,7 @@ final class MainViewController: UIViewController, View {
     private lazy var contentView: MainView = {
         let contentView = MainView()
         contentView.joinButton.addTarget(self, action: #selector(actionJoin(sender:)), for: .touchUpInside)
-        contentView.navigationView.setupLeftButton(title: "Menu") { [weak self] sender in
+        contentView.navigationView.setupLeftButton(icon: #imageLiteral(resourceName: "ic_burger")) { [weak self] sender in
             self?.output?.toggleMenu()
         }
         return contentView
