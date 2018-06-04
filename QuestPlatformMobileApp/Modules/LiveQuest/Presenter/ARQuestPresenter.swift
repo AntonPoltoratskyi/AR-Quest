@@ -34,6 +34,8 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
                 handleQuestFinish()
                 return
             }
+            view.showTaskName(task.title)
+            
             switch task.goal {
             case let .text(text):
                 showMessage(text)
@@ -90,8 +92,8 @@ extension ARQuestPresenter: ARQuestViewOutput {
     }
     
     func didClickNextButton() {
-        isTextPopupPresented = false
         view.disableNextButton()
+        isTextPopupPresented = false
         goToNextTask()
     }
 }

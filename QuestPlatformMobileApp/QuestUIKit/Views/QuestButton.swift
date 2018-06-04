@@ -25,8 +25,10 @@ class QuestButton: UIButton {
         didSet {
             if isHighlighted {
                 backgroundColor =  Theme.Button.Color.lightBlueHighlighted
-            } else {
+            } else if isEnabled {
                 backgroundColor =  Theme.Button.Color.lightBlue
+            } else {
+                backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
             }
         }
     }

@@ -54,7 +54,7 @@ final class ARQuestView: BaseView {
     // MARK: State
     
     private lazy var stateView: UIVisualEffectView = {
-        let effect = UIBlurEffect(style: .light)
+        let effect = UIBlurEffect(style: .dark)
         let visualEffectView = UIVisualEffectView(effect: effect)
         
         visualEffectView.clipsToBounds = true
@@ -67,11 +67,36 @@ final class ARQuestView: BaseView {
     
     private(set) lazy var stateLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .white
         label.numberOfLines = 0
         label.textAlignment = .center
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
         stateView.contentView.addSubview(label)
+        return label
+    }()
+    
+    // MARK: - Task Name
+    
+    private lazy var taskNameView: UIVisualEffectView = {
+        let effect = UIBlurEffect(style: .light)
+        let visualEffectView = UIVisualEffectView(effect: effect)
+        
+        visualEffectView.clipsToBounds = true
+        visualEffectView.layer.cornerRadius = 8
+        
+        contentView.addSubview(visualEffectView)
+        
+        return visualEffectView
+    }()
+    
+    private(set) lazy var taskNameLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.setContentCompressionResistancePriority(.required, for: .vertical)
+        label.setContentCompressionResistancePriority(.required, for: .horizontal)
+        taskNameView.contentView.addSubview(label)
         return label
     }()
     
@@ -87,6 +112,7 @@ final class ARQuestView: BaseView {
         
         setupDistanceContainer()
         setupStateContainer()
+        setupTaskNameContainer()
         
         nextButton.snp.makeConstraints { maker in
             maker.bottom.equalToSuperview().inset(16)
@@ -120,6 +146,25 @@ final class ARQuestView: BaseView {
             maker.bottom.lessThanOrEqualToSuperview().offset(-8)
             maker.centerY.equalToSuperview()
         }
+    }
+    
+    private func setupTaskNameContainer() {
+        taskNameView.snp.makeConstraints { maker in
+            maker.top.equalTo(stateView.snp.bottom).offset(16)
+            maker.horizontalInset(16)
+            maker.height.greaterThanOrEqualTo(48)
+        }
+        
+        taskNameLabel.snp.makeConstraints { maker in
+            maker.left.right.equalToSuperview().inset(24)
+            maker.top.greaterThanOrEqualToSuperview().offset(8)
+            maker.bottom.lessThanOrEqualToSuperview().offset(-8)
+            maker.centerY.equalToSuperview()
+        }
+    }
+    
+    func showTaskName(_ name: String) {
+        taskNameLabel.text = name
     }
     
     func showDistance(_ distance: Distance) {

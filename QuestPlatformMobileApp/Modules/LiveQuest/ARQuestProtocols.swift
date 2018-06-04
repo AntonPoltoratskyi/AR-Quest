@@ -27,8 +27,8 @@ protocol ARQuestViewInput: class {
     func showDistance(_ distance: Distance)
     func showLocationSearch()
     
+    func showTaskName(_ name: String)
     func showTextPopup(_ text: String)
-    
     
     func enableNextAction()
     func disableNextButton()

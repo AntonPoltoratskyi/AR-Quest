@@ -65,6 +65,10 @@ extension ARQuestViewController: ARQuestViewInput {
     func showDebugMessage(_ message: String) {
     }
     
+    func showTaskName(_ name: String) {
+        contentView.showTaskName(name)
+    }
+    
     func showTextPopup(_ text: String) {
         
         let popup = ARQuestPopupViewController()
@@ -76,33 +80,6 @@ extension ARQuestViewController: ARQuestViewInput {
         }
         popup.modalPresentationStyle = .overCurrentContext
         present(popup, animated: true, completion: nil)
-        
-//        let view = ARPopupView()
-//        view.closeHandler = { SwiftMessages.hide() }
-//
-//        var config = SwiftMessages.defaultConfig
-//
-//        config.presentationStyle = .bottom
-//        config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
-//        config.duration = .forever
-//        config.dimMode = .gray(interactive: true)
-//        config.interactiveHide = true
-//        config.preferredStatusBarStyle = .lightContent
-//
-//        config.eventListeners.append { event in
-//            switch event {
-//            case .willHide:
-//                break
-//            case .didHide:
-//                break
-//            case .willShow:
-//                break
-//            case .didShow:
-//                break
-//            }
-//        }
-//
-//        SwiftMessages.show(config: config, view: view)
     }
     
     func showDistance(_ distance: Distance) {
