@@ -21,6 +21,16 @@ class QuestButton: UIButton {
         }
     }
     
+    override var isHighlighted: Bool {
+        didSet {
+            if isHighlighted {
+                backgroundColor =  Theme.Button.Color.lightBlueHighlighted
+            } else {
+                backgroundColor =  Theme.Button.Color.lightBlue
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubviews()

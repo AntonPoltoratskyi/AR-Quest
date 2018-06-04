@@ -13,6 +13,7 @@ enum Theme {
         enum Color {
             static let title = UIColor.white
             static let lightBlue = UIColor(r: 58, g: 204, b: 225)
+            static let lightBlueHighlighted = UIColor(r: 62, g: 189, b: 209)
             static let darkGray = UIColor(r: 53, g: 58, b: 80)
         }
         enum Font {
