@@ -62,7 +62,7 @@ final class QuestTableViewCell: UITableViewCell {
         titleLabel.snp.makeConstraints { maker in
             maker.leading.equalToSuperview().offset(Layout.titleLabel.horizontalInset)
             maker.trailing.equalToSuperview().inset(Layout.titleLabel.horizontalInset)
-            maker.centerY.equalToSuperview()
+            maker.centerY.equalToSuperview().offset(-6)
         }
         
         subtitleLabel.snp.makeConstraints { maker in
