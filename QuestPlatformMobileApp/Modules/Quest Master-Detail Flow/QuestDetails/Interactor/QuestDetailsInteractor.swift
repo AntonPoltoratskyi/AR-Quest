@@ -27,7 +27,9 @@ final class QuestDetailsInteractor: Interactor, QuestDetailsInteractorInput {
     // MARK: - Actions
     
     func loadTasks(for quest: Quest) {
+        output.didStartLoading()
         questNetworkService.loadTasks(for: quest) { [weak self] result in
+            defer { self?.output?.didFinishLoading() }
             switch result {
             case let .success(tasks):
                 self?.output?.didLoadTasks(tasks)
@@ -38,7 +40,9 @@ final class QuestDetailsInteractor: Interactor, QuestDetailsInteractorInput {
     }
     
     func join(to quest: Quest) {
+        output.didStartLoading()
         questNetworkService.join(to: quest) { [weak self] result in
+            defer { self?.output?.didFinishLoading() }
             switch result {
             case let .success(quest):
                 self?.output?.didJoin(to: quest)

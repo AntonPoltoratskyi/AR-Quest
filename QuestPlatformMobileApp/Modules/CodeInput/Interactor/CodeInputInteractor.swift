@@ -27,7 +27,9 @@ final class CodeInputInteractor: Interactor, CodeInputInteractorInput {
     // MARK: - Actions
     
     func join(to questCode: String) {
+        output.didStartLoading()
         questNetworkService.joinToQuest(with: questCode) { [weak self] result in
+            defer { self?.output?.didFinishLoading() }
             switch result {
             case let .success(quest):
                 self?.output?.didJoin(to: quest)

@@ -34,7 +34,9 @@ final class EditProfileInteractor: Interactor, EditProfileInteractorInput {
     }
     
     func editUser(_ user: User) {
+        output.didStartLoading()
         userService.editUser(user) { [weak self] result in
+            defer { self?.output?.didFinishLoading() }
             switch result {
             case let .success(user):
                 self?.output?.didEditUser(user)

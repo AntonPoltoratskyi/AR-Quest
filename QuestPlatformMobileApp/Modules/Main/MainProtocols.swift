@@ -34,7 +34,7 @@ protocol MainInteractorInput: class {
 }
 
 // MARK: -
-protocol MainInteractorOutput: class {
+protocol MainInteractorOutput: LoadingRepresentable {
     func didLoadQuestCount(_ count: Int)
     func didReceiveError(_ error: Error)
 }

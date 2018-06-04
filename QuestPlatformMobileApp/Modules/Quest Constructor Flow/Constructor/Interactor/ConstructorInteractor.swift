@@ -27,7 +27,9 @@ final class ConstructorInteractor: Interactor, ConstructorInteractorInput {
     // MARK: - Actions
     
     func create(_ quest: Quest) {
+        output.didStartLoading()
         questService.create(quest: quest) { [weak self] result in
+            defer { self?.output?.didFinishLoading() }
             switch result {
             case let .success(response):
                 self?.output?.didCreate(response.quest, withCode: response.code)

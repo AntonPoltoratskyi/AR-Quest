@@ -31,7 +31,7 @@ protocol CodeInputInteractorInput: class {
 }
 
 // MARK: -
-protocol CodeInputInteractorOutput: class {
+protocol CodeInputInteractorOutput: LoadingRepresentable {
     func didJoin(to quest: Quest)
     func didReceiveError(_ error: Error)
 }

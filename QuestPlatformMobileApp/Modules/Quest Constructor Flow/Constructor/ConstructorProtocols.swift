@@ -32,7 +32,7 @@ protocol ConstructorInteractorInput: class {
 }
 
 // MARK: -
-protocol ConstructorInteractorOutput: class {
+protocol ConstructorInteractorOutput: LoadingRepresentable {
     func didCreate(_ quest: Quest, withCode code: String)
     func didReceiveFailure(_ error: Error)
 }

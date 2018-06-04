@@ -33,7 +33,7 @@ protocol EditProfileInteractorInput: class {
 }
 
 // MARK: -
-protocol EditProfileInteractorOutput: class {
+protocol EditProfileInteractorOutput: LoadingRepresentable {
     func didFetchUser(_ user: User)
     func didEditUser(_ user: User)
     func didReceiveFailure(_ error: Error)

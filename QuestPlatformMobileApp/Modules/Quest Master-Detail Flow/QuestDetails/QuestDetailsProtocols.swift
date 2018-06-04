@@ -34,7 +34,7 @@ protocol QuestDetailsInteractorInput: class {
 }
 
 // MARK: -
-protocol QuestDetailsInteractorOutput: class {
+protocol QuestDetailsInteractorOutput: LoadingRepresentable {
     func didLoadTasks(_ tasks: [Task])
     func didJoin(to quest: Quest)
     func didReceiveError(_ error: Error)

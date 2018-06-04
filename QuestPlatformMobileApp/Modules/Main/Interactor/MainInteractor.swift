@@ -28,7 +28,9 @@ final class MainInteractor: Interactor, MainInteractorInput {
     // MARK: - Actions
     
     func loadQuests() {
+        output.didStartLoading()
         questNetworkService.loadQuests { [weak self] result in
+            defer { self?.output?.didFinishLoading() }
             switch result {
             case let .success(quests):
                 self?.output?.didLoadQuestCount(quests.count)

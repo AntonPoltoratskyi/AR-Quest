@@ -109,6 +109,7 @@
 		851A4C412078C24A008F488E /* CodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851A4C402078C24A008F488E /* CodeValidator.swift */; };
 		851F8B9D20A8CF5500767B20 /* HTTPHeader+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */; };
 		851F8B9F20A8D7C700767B20 /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */; };
+		85233FE720C4EBE70084FC81 /* LoadingRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85233FE620C4EBE70084FC81 /* LoadingRepresentable.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -410,6 +411,7 @@
 		851A4C402078C24A008F488E /* CodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidator.swift; sourceTree = "<group>"; };
 		851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPHeader+Authorization.swift"; sourceTree = "<group>"; };
 		851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
+		85233FE620C4EBE70084FC81 /* LoadingRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRepresentable.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -1940,6 +1942,7 @@
 			isa = PBXGroup;
 			children = (
 				857ADD9C20432BCA00CA0D42 /* Theme.swift */,
+				85233FE620C4EBE70084FC81 /* LoadingRepresentable.swift */,
 				85F740DC204C469F002AC5FE /* Views */,
 				85477F2B2094A7F8002D26F9 /* Nodes */,
 				855D749E207BA359000421DA /* Gestures */,
@@ -2725,12 +2728,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-QuestPlatformMobileApp/Pods-QuestPlatformMobileApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2902,6 +2907,7 @@
 				8513E80E209F9A8D00D77DBD /* NetworkRouter.swift in Sources */,
 				85C3C2722083C583009AEF58 /* ConstructorFinishRouter.swift in Sources */,
 				850751B7208DBE5900A1221C /* TaskBuilderProtocols.swift in Sources */,
+				85233FE720C4EBE70084FC81 /* LoadingRepresentable.swift in Sources */,
 				8513E809209F826E00D77DBD /* NameValidator.swift in Sources */,
 				851264292098EFFF000174ED /* DestinationCylinderNode.swift in Sources */,
 				851702442071671C0081F611 /* CodeInputProtocols.swift in Sources */,

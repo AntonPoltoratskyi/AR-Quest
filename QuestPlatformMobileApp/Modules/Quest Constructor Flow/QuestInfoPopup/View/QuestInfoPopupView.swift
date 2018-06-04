@@ -31,6 +31,13 @@ final class QuestInfoPopupView: BaseScrollableView {
         return containerView
     }()
     
+    private(set) lazy var blurView: UIVisualEffectView = {
+        let effect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: effect)
+        contentView.addSubview(blurView)
+        return blurView
+    }()
+    
     private(set) lazy var titleField: QuestTextField = {
         let titleField = QuestTextField()
         titleField.placeholder = "Enter Title"
@@ -67,7 +74,11 @@ final class QuestInfoPopupView: BaseScrollableView {
         
         backgroundColor = .clear
         scrollView.backgroundColor = .clear
-        contentView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        
+//        contentView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        blurView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
         
         containerView.snp.makeConstraints { maker in
             maker.horizontalInset(16)
