@@ -27,7 +27,9 @@ final class OwnQuestsInteractor: Interactor, OwnQuestsInteractorInput {
     // MARK: - Actions
     
     func loadQuests() {
+        output.didStartLoading()
         questNetworkService.loadOwnQuests { [weak self] result in
+            defer { self?.output?.didFinishLoading() }
             switch result {
             case let .success(quests):
                 self?.output?.didLoadQuests(quests)

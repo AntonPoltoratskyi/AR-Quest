@@ -32,7 +32,7 @@ protocol OwnQuestsInteractorInput: class {
 }
 
 // MARK: -
-protocol OwnQuestsInteractorOutput: class {
+protocol OwnQuestsInteractorOutput: LoadingRepresentable {
     func didLoadQuests(_ quests: [Quest])
     func didReceiveError(_ error: Error)
 }
