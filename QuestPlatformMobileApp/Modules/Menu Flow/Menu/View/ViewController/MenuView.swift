@@ -12,6 +12,7 @@ import SnapKit
 protocol MenuViewDelegate: class {
     func menuViewDidSelectProfile(_ menuView: MenuView)
     func menuViewDidSelectMyQuests(_ menuView: MenuView)
+    func menuViewDidSelectPublicQuests(_ menuView: MenuView)
     func menuViewDidSelectStartNewQuest(_ menuView: MenuView)
     func menuViewDidSelectAbout(_ menuView: MenuView)
     func menuViewDidSelectLogout(_ menuView: MenuView)
@@ -25,6 +26,9 @@ final class MenuView: UIView {
         return [
             MenuItemCellModel(title: "Profile") { [unowned self] in
                 self.delegate?.menuViewDidSelectProfile(self)
+            },
+            MenuItemCellModel(title: "Public Quests") { [unowned self] in
+                self.delegate?.menuViewDidSelectPublicQuests(self)
             },
             MenuItemCellModel(title: "My Quests") { [unowned self] in
                 self.delegate?.menuViewDidSelectMyQuests(self)

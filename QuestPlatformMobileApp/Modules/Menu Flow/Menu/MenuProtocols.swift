@@ -21,6 +21,7 @@ protocol MenuViewInput: class {
 // MARK: -
 protocol MenuViewOutput: class {
     func showProfile()
+    func showPublicQuests()
     func showMyQuests()
     func startNewQuest()
     func showAbout()
@@ -43,6 +44,7 @@ protocol MenuInteractorOutput: class {
 
 protocol MenuRouterInput: class {
     func showProfile()
+    func showPublicQuests()
     func showMyQuests()
     func startNewQuest()
     func showAbout()

@@ -27,6 +27,10 @@ extension MenuPresenter: MenuViewOutput {
         router.showProfile()
     }
     
+    func showPublicQuests() {
+        router.showPublicQuests()
+    }
+    
     func showMyQuests() {
         router.showMyQuests()
     }

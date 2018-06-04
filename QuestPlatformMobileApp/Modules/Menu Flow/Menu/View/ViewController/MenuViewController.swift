@@ -41,6 +41,10 @@ extension MenuViewController: MenuViewDelegate {
         output.showProfile()
     }
     
+    func menuViewDidSelectPublicQuests(_ menuView: MenuView) {
+        output.showPublicQuests()
+    }
+    
     func menuViewDidSelectMyQuests(_ menuView: MenuView) {
         output.showMyQuests()
     }

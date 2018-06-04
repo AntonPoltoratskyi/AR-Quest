@@ -17,6 +17,11 @@ final class MenuRouter: Router, MenuRouterInput {
         pushModule(module.view)
     }
     
+    func showPublicQuests() {
+        let module = QuestListAssembly().build()
+        pushModule(module.view)
+    }
+    
     func showMyQuests() {
         let module = OwnQuestsAssembly().build()
         pushModule(module.view)
