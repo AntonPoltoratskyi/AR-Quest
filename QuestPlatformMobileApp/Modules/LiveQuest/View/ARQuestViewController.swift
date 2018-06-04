@@ -80,4 +80,8 @@ extension ARQuestViewController: ARQuestViewInput {
     func disableNextButton() {
         contentView.nextButton.isEnabled = false
     }
+    
+    func showSceneState(_ state: ARSceneViewState) {
+        contentView.stateLabel.text = state.hint
+    }
 }

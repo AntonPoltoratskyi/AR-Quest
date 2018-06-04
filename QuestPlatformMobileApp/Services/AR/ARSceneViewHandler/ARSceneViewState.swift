@@ -33,23 +33,23 @@ public enum ARSceneViewState {
     public var hint: String {
         switch self {
         case .normal:
-            return "AR Session prepared."
+            return "Go!"
         case .normalEmptyAnchors:
-            return "Move the device around to detect horizontal surfaces."
+            return "Move the device around"
         case .notAvailable:
-            return "Tracking unavailable."
+            return "Tracking unavailable"
         case .limitedExcessiveMotion:
-            return "Tracking limited - Move the device more slowly."
+            return "Tracking limited - Move the device more slowly"
         case .limitedInsufficientFeatures:
-            return "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions."
+            return "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions"
         case .limitedInitializing:
-            return "Initializing AR session."
+            return "Initializing"
         case .relocalizing:
-            return "Relocalizing AR session."
+            return "Relocalizing"
         case .interrupted:
-            return "Session was interrupted"
+            return "Interruption occurred"
         case .interruptionEnded:
-            return "Session interruption ended"
+            return "Interruption ended"
         case .failed(let error):
             return "Session failed: \(error.localizedDescription)"
         }

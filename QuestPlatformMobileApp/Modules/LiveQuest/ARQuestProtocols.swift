@@ -21,8 +21,12 @@ protocol ARQuestViewInput: class {
     var sceneView: ARSCNView { get }
     
     func showDebugMessage(_ message: String)
+    func showSceneState(_ state: ARSceneViewState)
+    
+    // Quest
     func showDistance(_ distance: Distance)
     func showTextPopup(_ text: String)
+    
     
     func enableNextAction()
     func disableNextButton()

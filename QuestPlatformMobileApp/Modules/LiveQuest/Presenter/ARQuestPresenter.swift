@@ -121,12 +121,7 @@ extension ARQuestPresenter: ARQuestInteractorOutput {
 extension ARQuestPresenter: ARSceneViewModelDelegate {
     
     func sceneViewModel(_ sceneModel: ARSceneViewModel, didUpdateState state: ARSceneViewState) {
-        switch state {
-        case .normal, .normalEmptyAnchors:
-            break
-        default:
-            break
-        }
+        view.showSceneState(state)
     }
 }
 

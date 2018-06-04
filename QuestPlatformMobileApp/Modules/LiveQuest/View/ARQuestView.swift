@@ -59,6 +59,28 @@ final class ARQuestView: BaseView {
         return button
     }()
     
+    private(set) lazy var stateView: UIVisualEffectView = {
+        let effect = UIBlurEffect(style: .light)
+        let visualEffectView = UIVisualEffectView(effect: effect)
+        
+        visualEffectView.clipsToBounds = true
+        visualEffectView.layer.cornerRadius = 6
+        
+        contentView.addSubview(visualEffectView)
+        
+        return visualEffectView
+    }()
+    
+    private(set) lazy var stateLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.setContentCompressionResistancePriority(.required, for: .vertical)
+        label.setContentCompressionResistancePriority(.required, for: .horizontal)
+        stateView.contentView.addSubview(label)
+        return label
+    }()
+    
 
     // MARK: - Setup
     
@@ -82,6 +104,19 @@ final class ARQuestView: BaseView {
         distanceLabel.snp.makeConstraints { maker in
             maker.bottom.equalTo(nextButton.snp.top).offset(-16)
             maker.horizontalInset(16)
+        }
+        
+        stateView.snp.makeConstraints { maker in
+            maker.top.equalToSuperview().offset(16)
+            maker.horizontalInset(16)
+            maker.height.greaterThanOrEqualTo(48)
+        }
+        
+        stateLabel.snp.makeConstraints { maker in
+            maker.left.right.equalToSuperview().inset(24)
+            maker.top.greaterThanOrEqualToSuperview().offset(8)
+            maker.bottom.lessThanOrEqualToSuperview().offset(-8)
+            maker.centerY.equalToSuperview()
         }
         
         nextButton.snp.makeConstraints { maker in
