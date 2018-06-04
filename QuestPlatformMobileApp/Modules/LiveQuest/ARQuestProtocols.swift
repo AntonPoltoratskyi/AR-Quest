@@ -39,7 +39,9 @@ protocol ARQuestViewOutput: class {
     func viewDidLoad()
     func viewDidAppear()
     func viewDidDisappear()
+    
     func didHideTextPopup()
+    func didClickNextButton()
 }
 
 // MARK: - Interactor

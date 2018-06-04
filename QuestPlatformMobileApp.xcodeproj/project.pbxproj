@@ -111,6 +111,8 @@
 		851F8B9F20A8D7C700767B20 /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */; };
 		85233FE720C4EBE70084FC81 /* LoadingRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85233FE620C4EBE70084FC81 /* LoadingRepresentable.swift */; };
 		85233FE920C5B2A30084FC81 /* ARDistanceContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85233FE820C5B2A30084FC81 /* ARDistanceContainerView.swift */; };
+		85233FED20C5BEA70084FC81 /* ARPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85233FEC20C5BEA70084FC81 /* ARPopupView.swift */; };
+		85233FEF20C5D34B0084FC81 /* ARQuestPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85233FEE20C5D34B0084FC81 /* ARQuestPopupViewController.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -414,6 +416,8 @@
 		851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
 		85233FE620C4EBE70084FC81 /* LoadingRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRepresentable.swift; sourceTree = "<group>"; };
 		85233FE820C5B2A30084FC81 /* ARDistanceContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDistanceContainerView.swift; sourceTree = "<group>"; };
+		85233FEC20C5BEA70084FC81 /* ARPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPopupView.swift; sourceTree = "<group>"; };
+		85233FEE20C5D34B0084FC81 /* ARQuestPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuestPopupViewController.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -1465,6 +1469,8 @@
 			isa = PBXGroup;
 			children = (
 				85233FE820C5B2A30084FC81 /* ARDistanceContainerView.swift */,
+				85233FEC20C5BEA70084FC81 /* ARPopupView.swift */,
+				85233FEE20C5D34B0084FC81 /* ARQuestPopupViewController.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -2819,6 +2825,7 @@
 				8517020020711E370081F611 /* QuestListPresenter.swift in Sources */,
 				853DD4E12042C4E900E82595 /* XibInitializable.swift in Sources */,
 				855D7491207B77ED000421DA /* ProfileView.swift in Sources */,
+				85233FED20C5BEA70084FC81 /* ARPopupView.swift in Sources */,
 				853DD4FA2042CB5E00E82595 /* SplashViewController.swift in Sources */,
 				85477F442094B53F002D26F9 /* ARQuestPresenter.swift in Sources */,
 				853DD5022042CCF500E82595 /* SplashAssembly.swift in Sources */,
@@ -2965,6 +2972,7 @@
 				85C3C2712083C583009AEF58 /* ConstructorFinishPresenter.swift in Sources */,
 				853DD5282042FE7800E82595 /* NavigationPresenter.swift in Sources */,
 				851264152098641D000174ED /* QuestInfoPopupRouter.swift in Sources */,
+				85233FEF20C5D34B0084FC81 /* ARQuestPopupViewController.swift in Sources */,
 				857ADD8F2043206E00CA0D42 /* AuthNetworkRouter.swift in Sources */,
 				85C3C2762083C583009AEF58 /* ConstructorFinishInteractor.swift in Sources */,
 				85F740DB204C4696002AC5FE /* QuestSegmentedControl.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import ARKit
+import SwiftMessages
 
 final class ARQuestViewController: UIViewController, View {
     
@@ -50,7 +51,7 @@ final class ARQuestViewController: UIViewController, View {
     // MARK: - Actions
     
     @objc private func actionNextButtonTapped(sender: UIButton) {
-        output.didHideTextPopup()
+        output.didClickNextButton()
     }
 }
 
@@ -65,7 +66,43 @@ extension ARQuestViewController: ARQuestViewInput {
     }
     
     func showTextPopup(_ text: String) {
-//        contentView.popupLabel.text = text
+        
+        let popup = ARQuestPopupViewController()
+        popup.text = text
+        popup.closeHandler = { vc in
+            vc.dismiss(animated: true) {
+                self.output.didHideTextPopup()
+            }
+        }
+        popup.modalPresentationStyle = .overCurrentContext
+        present(popup, animated: true, completion: nil)
+        
+//        let view = ARPopupView()
+//        view.closeHandler = { SwiftMessages.hide() }
+//
+//        var config = SwiftMessages.defaultConfig
+//
+//        config.presentationStyle = .bottom
+//        config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+//        config.duration = .forever
+//        config.dimMode = .gray(interactive: true)
+//        config.interactiveHide = true
+//        config.preferredStatusBarStyle = .lightContent
+//
+//        config.eventListeners.append { event in
+//            switch event {
+//            case .willHide:
+//                break
+//            case .didHide:
+//                break
+//            case .willShow:
+//                break
+//            case .didShow:
+//                break
+//            }
+//        }
+//
+//        SwiftMessages.show(config: config, view: view)
     }
     
     func showDistance(_ distance: Distance) {

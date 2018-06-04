@@ -37,7 +37,6 @@ final class ARQuestPresenter: Presenter, ARQuestModuleInput {
             switch task.goal {
             case let .text(text):
                 showMessage(text)
-                view.enableNextAction()
             case let .location(destinationCoordinate):
                 updateDestinationNodePosition(for: destinationCoordinate)
             }
@@ -87,16 +86,46 @@ extension ARQuestPresenter: ARQuestViewOutput {
     }
     
     func didHideTextPopup() {
-        view.disableNextButton()
+        view.enableNextAction()
+    }
+    
+    func didClickNextButton() {
         isTextPopupPresented = false
+        view.disableNextButton()
         goToNextTask()
+    }
+}
+
+// MARK: - User Events
+extension ARQuestPresenter {
+    
+    private func handleQuestFinish() {
+        guard !isFinished else { return }
+        isFinished = true
+        
+        view.disableNextButton()
+        router.showFinish(for: quest)
+    }
+    
+    private func showMessage(_ text: String) {
+        guard !isTextPopupPresented else { return }
+        isTextPopupPresented = true
+        
+        removeDestinationNode()
+        view.showTextPopup(text)
+    }
+    
+    private func handleDistanceToDestination(_ distance: Distance) {
+        view.showDistance(distance)
+        if distance < ARConstants.destinationDistance {
+            goToNextTask()
+        }
     }
     
     private func goToNextTask() {
         currentTask = quest.tasks?.next(after: { $0 === currentTask })
     }
 }
-
 
 // MARK: - ARQuestInteractorOutput
 extension ARQuestPresenter: ARQuestInteractorOutput {
@@ -146,41 +175,12 @@ extension ARQuestPresenter: ARTrackingServiceDelegate {
         }
     }
     
-    func sessionDidStartTracking() {
-    }
+    func sessionDidStartTracking() { }
     
     func sessionDidBecomeInvalid() {
         DispatchQueue.main.async {
             self.removeDestinationNode()
             self.sceneHandler.reloadSession()
-        }
-    }
-}
-
-// MARK: - User Events
-extension ARQuestPresenter {
-    
-    private func handleQuestFinish() {
-        guard !isFinished else { return }
-        isFinished = true
-        
-        view.disableNextButton()
-        router.showFinish(for: quest)
-    }
-    
-    private func showMessage(_ text: String) {
-        guard !isTextPopupPresented else { return }
-        isTextPopupPresented = true
-        
-        removeDestinationNode()
-        view.enableNextAction()
-        view.showTextPopup(text)
-    }
-    
-    private func handleDistanceToDestination(_ distance: Distance) {
-        view.showDistance(distance)
-        if distance < ARConstants.destinationDistance {
-            goToNextTask()
         }
     }
 }
