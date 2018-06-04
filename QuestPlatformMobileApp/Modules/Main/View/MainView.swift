@@ -41,6 +41,7 @@ final class MainView: BaseView {
         label.font = Layout.Fonts.descriptionFont
         label.textColor = Layout.Colors.textColor
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.setContentHuggingPriority(.required, for: .vertical)
         textContainerView.addSubview(label)
         return label
@@ -88,7 +89,7 @@ extension MainView {
     
     enum Layout {
         enum Fonts {
-            static let countFont = UIFont.appFont(ofSize: 32, weight: .medium)
+            static let countFont = UIFont.appFont(ofSize: 64, weight: .medium)
             static let descriptionFont = UIFont.appFont(ofSize: 18, weight: .medium)
         }
         enum Colors {

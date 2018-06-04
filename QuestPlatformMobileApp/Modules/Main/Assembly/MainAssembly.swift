@@ -13,9 +13,13 @@ final class MainAssembly: Assembly {
     typealias Input = Module<MainModuleInput>
     
     func build() -> Input {
+        // Dependencies
+        let factory = ServiceFactory.shared
+        
+        // Module
         let view = MainViewController()
         let presenter = MainPresenter()
-        let interactor = MainInteractor()
+        let interactor = MainInteractor(questNetworkService: factory.makeQuestService())
         let router = MainRouter()
         
         view.output = presenter

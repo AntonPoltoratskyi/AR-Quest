@@ -64,7 +64,11 @@ final class MainViewController: UIViewController, View {
             contentView.descriptionLabel.text = "Loading ..."
         case let .loaded(nearbyEventsCount):
             contentView.countLabel.text = String(nearbyEventsCount)
-            contentView.descriptionLabel.text = "Quests around You"
+            contentView.descriptionLabel.text = """
+            quests
+            are waiting for
+            You
+            """
         }
     }
     

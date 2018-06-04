@@ -49,4 +49,7 @@ extension MainPresenter: MainInteractorOutput {
         let viewModel = MainViewModel(state: .loaded(nearbyEvents: 5))
         view.setup(viewModel)
     }
+    
+    func didReceiveError(_ error: Error) {
+    }
 }

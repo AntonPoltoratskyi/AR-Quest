@@ -36,6 +36,7 @@ protocol MainInteractorInput: class {
 // MARK: -
 protocol MainInteractorOutput: class {
     func didLoadQuestCount(_ count: Int)
+    func didReceiveError(_ error: Error)
 }
 
 // MARK: - Router

@@ -13,7 +13,28 @@ final class MainInteractor: Interactor, MainInteractorInput {
     typealias Output = MainInteractorOutput
     weak var output: MainInteractorOutput!
     
+    // MARK: - Dependencies
+    
+    private let questNetworkService: QuestNetworkService
+    
+    
+    // MARK: - Init
+    
+    init(questNetworkService: QuestNetworkService) {
+        self.questNetworkService = questNetworkService
+    }
+    
+    
+    // MARK: - Actions
+    
     func loadQuests() {
-        output.didLoadQuestCount(5)
+        questNetworkService.loadQuests { [weak self] result in
+            switch result {
+            case let .success(quests):
+                self?.output?.didLoadQuestCount(quests.count)
+            case let .failure(error):
+                self?.output?.didReceiveError(error)
+            }
+        }
     }
 }
