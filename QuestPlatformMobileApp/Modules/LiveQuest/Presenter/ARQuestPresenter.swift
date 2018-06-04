@@ -112,7 +112,7 @@ extension ARQuestPresenter: ARQuestInteractorOutput {
     
     func didReceiveLocationFailure(_ error: Error) {
         DispatchQueue.main.async {
-            self.view.showMessage(error.localizedDescription)
+            self.view.showDebugMessage(error.localizedDescription)
         }
     }
 }
@@ -137,7 +137,7 @@ extension ARQuestPresenter: ARTrackingServiceDelegate {
         DispatchQueue.main.async {
             let accuracy = trackingInfo.accuracy()
             let message = self.distanceFormatter.string(fromMeters: accuracy)
-            self.view.showMessage(message)
+            self.view.showDebugMessage(message)
             
             guard accuracy <= 1 && accuracy >= 0.0001 else {
                 return

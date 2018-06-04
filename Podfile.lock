@@ -5,12 +5,14 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.2.0)
   - NVActivityIndicatorView/Presenter (4.2.0)
   - SnapKit (4.0.0)
+  - SwiftMessages (4.1.2)
 
 DEPENDENCIES:
   - KeychainSwift (~> 11.0)
   - LGSideMenuController
   - NVActivityIndicatorView
   - SnapKit (~> 4.0)
+  - SwiftMessages
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - LGSideMenuController
     - NVActivityIndicatorView
     - SnapKit
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
   LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
 
-PODFILE CHECKSUM: eb14d80f8574ac66ea25333e1054daee50b9db2d
+PODFILE CHECKSUM: 823f28fad0f4cf03d2710907bbd2fcd3d9c2e724
 
 COCOAPODS: 1.5.0

@@ -20,7 +20,7 @@ protocol ARQuestModuleInput: ModuleInput {
 protocol ARQuestViewInput: class {
     var sceneView: ARSCNView { get }
     
-    func showMessage(_ message: String)
+    func showDebugMessage(_ message: String)
     func showDistance(_ distance: Distance)
     func showTextPopup(_ text: String)
     

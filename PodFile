@@ -8,4 +8,5 @@ target 'QuestPlatformMobileApp' do
     pod 'KeychainSwift', '~> 11.0'
     pod 'LGSideMenuController'
     pod 'NVActivityIndicatorView'
+    pod 'SwiftMessages'
 end

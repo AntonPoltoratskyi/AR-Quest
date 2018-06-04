@@ -61,7 +61,7 @@ extension ARQuestViewController: ARQuestViewInput {
         return contentView.sceneView
     }
     
-    func showMessage(_ message: String) {
+    func showDebugMessage(_ message: String) {
         // contentView.debugLabel.text = message
     }
     
