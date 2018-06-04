@@ -66,7 +66,7 @@ public final class ARSceneViewModel: NSObject {
         scene.showsStatistics = false
         
         scene.debugOptions = [
-            ARSCNDebugOptions.showWorldOrigin
+//            ARSCNDebugOptions.showWorldOrigin
         ]
     }
     

@@ -62,15 +62,18 @@ extension ARQuestViewController: ARQuestViewInput {
     }
     
     func showDebugMessage(_ message: String) {
-        // contentView.debugLabel.text = message
     }
     
     func showTextPopup(_ text: String) {
-        contentView.popupLabel.text = text
+//        contentView.popupLabel.text = text
     }
     
     func showDistance(_ distance: Distance) {
         contentView.showDistance(distance)
+    }
+    
+    func showLocationSearch() {
+        contentView.showLocationSearch()
     }
     
     func enableNextAction() {

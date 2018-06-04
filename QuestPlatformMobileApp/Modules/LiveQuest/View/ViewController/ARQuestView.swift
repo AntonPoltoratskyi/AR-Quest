@@ -12,12 +12,6 @@ import SnapKit
 
 final class ARQuestView: BaseView {
     
-    private let formatter: LengthFormatter = {
-        let formatter = LengthFormatter()
-        return formatter
-    }()
-    
-    
     // MARK: - Views
     
     override var isNavigationViewVisible: Bool {
@@ -29,29 +23,7 @@ final class ARQuestView: BaseView {
         contentView.addSubview(sceneView)
         return sceneView
     }()
-    
-    private(set) lazy var debugLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        contentView.addSubview(label)
-        return label
-    }()
-    
-    private(set) lazy var popupLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        contentView.addSubview(label)
-        return label
-    }()
-    
-    private(set) lazy var distanceLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        contentView.addSubview(label)
-        return label
-    }()
-    
+
     private(set) lazy var nextButton: QuestButton = {
         let button = QuestButton()
         button.setTitle("Next", for: .normal)
@@ -59,12 +31,34 @@ final class ARQuestView: BaseView {
         return button
     }()
     
-    private(set) lazy var stateView: UIVisualEffectView = {
+    // MARK: Distance
+    
+    private lazy var distanceView: UIVisualEffectView = {
         let effect = UIBlurEffect(style: .light)
         let visualEffectView = UIVisualEffectView(effect: effect)
         
         visualEffectView.clipsToBounds = true
-        visualEffectView.layer.cornerRadius = 6
+        visualEffectView.layer.cornerRadius = 8
+        
+        contentView.addSubview(visualEffectView)
+        
+        return visualEffectView
+    }()
+    
+    private lazy var distanceContentView: ARDistanceContainerView = {
+        let distanceContentView = ARDistanceContainerView()
+        distanceView.contentView.addSubview(distanceContentView)
+        return distanceContentView
+    }()
+    
+    // MARK: State
+    
+    private lazy var stateView: UIVisualEffectView = {
+        let effect = UIBlurEffect(style: .light)
+        let visualEffectView = UIVisualEffectView(effect: effect)
+        
+        visualEffectView.clipsToBounds = true
+        visualEffectView.layer.cornerRadius = 8
         
         contentView.addSubview(visualEffectView)
         
@@ -91,21 +85,29 @@ final class ARQuestView: BaseView {
             maker.edges.equalToSuperview()
         }
         
-        debugLabel.snp.makeConstraints { maker in
-            maker.top.equalToSuperview().offset(16)
-            maker.horizontalInset(16)
-        }
+        setupDistanceContainer()
+        setupStateContainer()
         
-        popupLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(debugLabel.snp.bottom).offset(16)
+        nextButton.snp.makeConstraints { maker in
+            maker.bottom.equalToSuperview().inset(16)
             maker.horizontalInset(16)
+            maker.buttonHeight()
         }
-        
-        distanceLabel.snp.makeConstraints { maker in
+    }
+    
+    private func setupDistanceContainer() {
+        distanceView.snp.makeConstraints { maker in
             maker.bottom.equalTo(nextButton.snp.top).offset(-16)
             maker.horizontalInset(16)
+            maker.height.equalTo(48)
         }
         
+        distanceContentView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
+    }
+    
+    private func setupStateContainer() {
         stateView.snp.makeConstraints { maker in
             maker.top.equalToSuperview().offset(16)
             maker.horizontalInset(16)
@@ -118,15 +120,13 @@ final class ARQuestView: BaseView {
             maker.bottom.lessThanOrEqualToSuperview().offset(-8)
             maker.centerY.equalToSuperview()
         }
-        
-        nextButton.snp.makeConstraints { maker in
-            maker.bottom.equalToSuperview().inset(16)
-            maker.horizontalInset(16)
-            maker.buttonHeight()
-        }
     }
     
     func showDistance(_ distance: Distance) {
-        distanceLabel.text = "Go \(formatter.string(fromMeters: distance))"
+        distanceContentView.state = .distance(distance)
+    }
+
+    func showLocationSearch() {
+        distanceContentView.state = .loading
     }
 }

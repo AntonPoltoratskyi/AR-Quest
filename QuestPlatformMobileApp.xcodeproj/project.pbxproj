@@ -110,6 +110,7 @@
 		851F8B9D20A8CF5500767B20 /* HTTPHeader+Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */; };
 		851F8B9F20A8D7C700767B20 /* HTTPParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */; };
 		85233FE720C4EBE70084FC81 /* LoadingRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85233FE620C4EBE70084FC81 /* LoadingRepresentable.swift */; };
+		85233FE920C5B2A30084FC81 /* ARDistanceContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85233FE820C5B2A30084FC81 /* ARDistanceContainerView.swift */; };
 		853DD4B22042B51300E82595 /* DebugFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B12042B51300E82595 /* DebugFormatter.swift */; };
 		853DD4B42042B74D00E82595 /* DebugLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B32042B74D00E82595 /* DebugLogs.swift */; };
 		853DD4B62042B7EB00E82595 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DD4B52042B7EB00E82595 /* PropertyList.swift */; };
@@ -412,6 +413,7 @@
 		851F8B9C20A8CF5500767B20 /* HTTPHeader+Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPHeader+Authorization.swift"; sourceTree = "<group>"; };
 		851F8B9E20A8D7C700767B20 /* HTTPParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParameters.swift; sourceTree = "<group>"; };
 		85233FE620C4EBE70084FC81 /* LoadingRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRepresentable.swift; sourceTree = "<group>"; };
+		85233FE820C5B2A30084FC81 /* ARDistanceContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDistanceContainerView.swift; sourceTree = "<group>"; };
 		853DD4B12042B51300E82595 /* DebugFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFormatter.swift; sourceTree = "<group>"; };
 		853DD4B32042B74D00E82595 /* DebugLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogs.swift; sourceTree = "<group>"; };
 		853DD4B52042B7EB00E82595 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -1459,6 +1461,23 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		85233FEA20C5B80A0084FC81 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				85233FE820C5B2A30084FC81 /* ARDistanceContainerView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		85233FEB20C5B8150084FC81 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				85477F1520948A72002D26F9 /* ARQuestView.swift */,
+				85477F1120948A72002D26F9 /* ARQuestViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		853DD4B72042BB9600E82595 /* QuestCoreKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1722,8 +1741,8 @@
 		85477F1D20948A79002D26F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85477F1520948A72002D26F9 /* ARQuestView.swift */,
-				85477F1120948A72002D26F9 /* ARQuestViewController.swift */,
+				85233FEA20C5B80A0084FC81 /* Elements */,
+				85233FEB20C5B8150084FC81 /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3026,6 +3045,7 @@
 				85F74104204C8A25002AC5FE /* SideMenuContainerViewController.swift in Sources */,
 				853DD4F32042C79800E82595 /* URLSessionNetworkClient.swift in Sources */,
 				85C3C2752083C583009AEF58 /* ConstructorFinishAssembly.swift in Sources */,
+				85233FE920C5B2A30084FC81 /* ARDistanceContainerView.swift in Sources */,
 				850751C5208DC4A900A1221C /* LocationTaskFormView.swift in Sources */,
 				851A4C412078C24A008F488E /* CodeValidator.swift in Sources */,
 				14FE2FA31FC9653B001EDEAB /* Device.swift in Sources */,

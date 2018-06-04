@@ -67,6 +67,7 @@ extension ARQuestPresenter: ARQuestViewOutput {
     
     func viewDidLoad() {
         view.disableNextButton()
+        view.showLocationSearch()
         
         let handler = ARSceneViewModel(with: view.sceneView)
         handler.delegate = self
