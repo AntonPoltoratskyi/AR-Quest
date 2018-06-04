@@ -11,6 +11,22 @@ import SnapKit
 
 final class QuestSideMenuHeaderView: UIView {
     
+    // MARK: - Views
+    
+    private(set) lazy var backgroundView: QuestBackgroundView = {
+        let backgroundView = QuestBackgroundView()
+        addSubview(backgroundView)
+        return backgroundView
+    }()
+    
+    private(set) lazy var blurView: UIVisualEffectView = {
+        let effect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: effect)
+        addSubview(blurView)
+        return blurView
+    }()
+    
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -27,6 +43,13 @@ final class QuestSideMenuHeaderView: UIView {
     // MARK: - Setup
     
     private func setup() {
-        backgroundColor = .orange
+        clipsToBounds = true
+        backgroundView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
+        
+        blurView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+        }
     }
 }
