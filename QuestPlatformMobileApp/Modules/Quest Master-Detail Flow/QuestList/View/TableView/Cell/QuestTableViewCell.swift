@@ -27,6 +27,14 @@ final class QuestTableViewCell: UITableViewCell {
         return label
     }()
     
+    private(set) lazy var subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = Layout.Colors.subtitleColor
+        label.font = Layout.Fonts.subtitleFont
+        cardView.addSubview(label)
+        return label
+    }()
+    
     
     // MARK: - Init
     
@@ -56,6 +64,12 @@ final class QuestTableViewCell: UITableViewCell {
             maker.trailing.equalToSuperview().inset(Layout.titleLabel.horizontalInset)
             maker.centerY.equalToSuperview()
         }
+        
+        subtitleLabel.snp.makeConstraints { maker in
+            maker.leading.equalToSuperview().offset(Layout.titleLabel.horizontalInset)
+            maker.trailing.equalToSuperview().inset(Layout.titleLabel.horizontalInset)
+            maker.top.equalTo(titleLabel.snp.bottom).offset(1)
+        }
     }
     
     
@@ -76,10 +90,12 @@ extension QuestTableViewCell {
         
         enum Colors {
             static let titleColor = UIColor.darkText
+            static let subtitleColor = UIColor.darkText
         }
         
         enum Fonts {
             static let titleFont = UIFont.appFont(ofSize: 16, weight: .medium)
+            static let subtitleFont = UIFont.appFont(ofSize: 12, weight: .regular)
         }
         
         enum titleLabel {

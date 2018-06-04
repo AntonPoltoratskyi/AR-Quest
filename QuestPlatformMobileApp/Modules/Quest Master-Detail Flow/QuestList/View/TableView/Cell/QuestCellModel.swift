@@ -18,5 +18,6 @@ final class QuestCellModel: CellViewModel {
     
     func setup(cell: QuestTableViewCell) {
         cell.titleLabel.text = quest.name
+        cell.subtitleLabel.text = quest.status.displayName
     }
 }

@@ -13,6 +13,17 @@ final class Quest: Codable {
         case created = 0
         case active  = 1
         case closed  = 2
+        
+        var displayName: String {
+            switch self {
+            case .created:
+                return "Inactive"
+            case .active:
+                return "Active"
+            case .closed:
+                return "Closed"
+            }
+        }
     }
     enum AccessLevel: Int, Codable {
         case `public`  = 0
