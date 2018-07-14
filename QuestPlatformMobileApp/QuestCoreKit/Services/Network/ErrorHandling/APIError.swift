@@ -24,7 +24,7 @@ extension APIError: ErrorRepresentable {
         case .invalidToken:
             return "Invalid token"
         case .invalidCredentials:
-            return "Invalid_credentials"
+            return "Invalid credentials"
         case .invalidInput:
             return "Invalid input"
         case .userNotFound:
