@@ -1,12 +1,11 @@
 platform :ios, '11.0'
 use_frameworks!
 
-target 'QuestPlatformMobileApp' do
+target 'ARQuest' do
     inhibit_all_warnings!
     
     pod 'SnapKit', '~> 4.0'
     pod 'KeychainSwift', '~> 11.0'
     pod 'LGSideMenuController'
     pod 'NVActivityIndicatorView'
-    pod 'SwiftMessages'
 end
